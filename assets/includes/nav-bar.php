@@ -281,6 +281,71 @@
             padding: 0 0.75rem;
         }
     }
+
+    /* Hamburger Menu Styles */
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .toggler-icon {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: orange;
+        border-radius: 1px;
+        opacity: 1;
+        transition: .25s ease-in-out;
+    }
+
+    .toggler-icon.top-bar {
+        top: 25%;
+    }
+
+    .toggler-icon.middle-bar {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .toggler-icon.bottom-bar {
+        bottom: 25%;
+    }
+
+    .navbar-toggler.collapsed .top-bar {
+        transform: rotate(0);
+    }
+
+    .navbar-toggler.collapsed .middle-bar {
+        opacity: 1;
+    }
+
+    .navbar-toggler.collapsed .bottom-bar {
+        transform: rotate(0);
+    }
+
+    .navbar-toggler:not(.collapsed) .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 15%;
+        top: 6px;
+    }
+
+    .navbar-toggler:not(.collapsed) .middle-bar {
+        opacity: 0;
+    }
+
+    .navbar-toggler:not(.collapsed) .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 15%;
+        bottom: 6px;
+    }
 </style>
 
 <nav class="navbar navbar-expand-lg fixed-top">

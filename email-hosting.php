@@ -224,95 +224,6 @@
     flex-grow: 1; /* Ensures equal height even with different text lengths */
 }
 
-        /* Pricing Section */
-        .pricing-section {
-            padding: 100px 0;
-            background-color: white;
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            height: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pricing-card.featured {
-            border: 2px solid var(--primary-color);
-            transform: scale(1.05);
-        }
-        
-        .pricing-card.featured::before {
-            content: "POPULAR";
-            position: absolute;
-            top: 15px;
-            right: -25px;
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            transform: rotate(45deg);
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-        
-        .price {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin: 20px 0;
-        }
-        
-        .price span {
-            font-size: 1rem;
-            color: #6c757d;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(106, 13, 173, 0.4);
-        }
-        
-        .btn-outline-primary {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.3);
-        }
-        
         /* FAQ Section */
         .faq-section {
             padding: 100px 0;
@@ -483,6 +394,125 @@
             transform: rotate(-135deg);
             top: 8.5px;
         }
+
+        /* Updated Pricing Section */
+        .pricing-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #4B0082;
+            box-shadow: 0 20px 40px rgba(75, 0, 130, 0.1);
+        }
+        
+        .pricing-header {
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.1) 55%, transparent 55%);
+        }
+        
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .price-tag {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            line-height: 1;
+        }
+        
+        .price-duration {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        .pricing-features {
+            padding: 2rem;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #666;
+        }
+        
+        .pricing-features li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features i {
+            color: #4B0082;
+            font-size: 1.2rem;
+            background: rgba(75, 0, 130, 0.1);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pricing-footer {
+            padding: 0 2rem 2rem;
+            text-align: center;
+        }
+        
+        .pricing-card .btn {
+            border: 2px solid #4B0082;
+            border-radius: 30px;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background: transparent;
+            color: #4B0082;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .pricing-card .btn:hover {
+            color: white;
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -621,47 +651,68 @@
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-card">
-                        <h4>Startup</h4>
-                        <div class="price">$2.99<span>/month</span></div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2">5 Email Accounts</li>
-                            <li class="mb-2">5GB Storage per Account</li>
-                            <li class="mb-2">Webmail Access</li>
-                            <li class="mb-2">Basic Spam Protection</li>
-                            <li class="mb-2">Mobile Device Compatible</li>
-                            <li class="mb-2">24/7 Email Support</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline-primary">Get Started</a>
+                        <div class="pricing-header">
+                            <h3>Startup</h3>
+                            <div class="price-tag">$2.99<span class="price-duration">/month</span></div>
+                            <p>Perfect for small businesses</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> 5 Email Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> 5GB Storage per Account</li>
+                                <li><i class="bi bi-check-circle"></i> Webmail Access</li>
+                                <li><i class="bi bi-check-circle"></i> Basic Spam Protection</li>
+                                <li><i class="bi bi-check-circle"></i> Mobile Device Compatible</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Email Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-card featured">
-                        <h4>Business</h4>
-                        <div class="price">$5.99<span>/month</span></div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2">20 Email Accounts</li>
-                            <li class="mb-2">10GB Storage per Account</li>
-                            <li class="mb-2">Webmail & IMAP/POP3</li>
-                            <li class="mb-2">Advanced Spam & Virus Protection</li>
-                            <li class="mb-2">Email Forwarding & Autoresponders</li>
-                            <li class="mb-2">24/7 Phone & Email Support</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary">Get Started</a>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Business</h3>
+                            <div class="price-tag">$5.99<span class="price-duration">/month</span></div>
+                            <p>For growing teams</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> 20 Email Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> 10GB Storage per Account</li>
+                                <li><i class="bi bi-check-circle"></i> Webmail & IMAP/POP3</li>
+                                <li><i class="bi bi-check-circle"></i> Advanced Spam & Virus Protection</li>
+                                <li><i class="bi bi-check-circle"></i> Email Forwarding & Autoresponders</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Phone & Email Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="pricing-card">
-                        <h4>Enterprise</h4>
-                        <div class="price">$11.99<span>/month</span></div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2">Unlimited Email Accounts</li>
-                            <li class="mb-2">25GB Storage per Account</li>
-                            <li class="mb-2">Full Suite Access Options</li>
-                            <li class="mb-2">Premium Security Features</li>
-                            <li class="mb-2">Collaborative Tools & Calendar</li>
-                            <li class="mb-2">Priority 24/7 Support</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline-primary">Get Started</a>
+                        <div class="pricing-header">
+                            <h3>Enterprise</h3>
+                            <div class="price-tag">$11.99<span class="price-duration">/month</span></div>
+                            <p>For large organizations</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> Unlimited Email Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> 25GB Storage per Account</li>
+                                <li><i class="bi bi-check-circle"></i> Full Suite Access Options</li>
+                                <li><i class="bi bi-check-circle"></i> Premium Security Features</li>
+                                <li><i class="bi bi-check-circle"></i> Collaborative Tools & Calendar</li>
+                                <li><i class="bi bi-check-circle"></i> Priority 24/7 Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
                     </div>
                 </div>
             </div>

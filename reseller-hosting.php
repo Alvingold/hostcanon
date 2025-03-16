@@ -275,76 +275,121 @@
         
         /* Pricing Section */
         .pricing-section {
-            padding: var(--section-padding);
-            background-color: #f5f5f5;
+            padding: 100px 0;
+            background: #f8f9fa;
         }
         
         .pricing-card {
-            padding: 40px 30px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--primary-color);
-            height: 100%;
-        }
-        
-        .pricing-card.featured {
-            transform: scale(1.05);
-            border-top: 4px solid var(--accent-color);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .pricing-card.featured::before {
-            content: 'POPULAR';
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 5px 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
+            background: white;
             border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            border: 2px solid transparent;
         }
         
         .pricing-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: #4B0082;
+            box-shadow: 0 20px 40px rgba(75, 0, 130, 0.1);
         }
         
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
+        .pricing-header {
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.1) 55%, transparent 55%);
         }
         
-        .price {
-            font-size: 2.5rem;
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .price-tag {
+            font-size: 3rem;
             font-weight: 700;
-            margin: 20px 0;
-            color: var(--primary-color);
+            margin: 1rem 0;
+            line-height: 1;
         }
         
-        .price span {
+        .price-duration {
             font-size: 1rem;
-            font-weight: 400;
-            color: #777;
+            opacity: 0.8;
         }
         
         .pricing-features {
-            margin: 30px 0;
-            padding: 0;
+            padding: 2rem;
+        }
+        
+        .pricing-features ul {
             list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #666;
         }
         
         .pricing-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
         
-        .pricing-features li i {
-            margin-right: 10px;
-            color: var(--primary-color);
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features i {
+            color: #4B0082;
+            font-size: 1.2rem;
+            background: rgba(75, 0, 130, 0.1);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pricing-footer {
+            padding: 0 2rem 2rem;
+            text-align: center;
+        }
+        
+        .pricing-card .btn {
+            border: 2px solid #4B0082;
+            border-radius: 30px;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background: transparent;
+            color: #4B0082;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .pricing-card .btn:hover {
+            color: white;
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border-color: transparent;
+            transform: translateY(-2px);
         }
         
         /* FAQ Section */
@@ -609,55 +654,74 @@
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-card">
-                        <h3>Starter</h3>
-                        <div class="price">$24.99 <span>/month</span></div>
-                        <p>Perfect for beginners starting a hosting business</p>
-                        <ul class="pricing-features">
-                            <li><i class="bi bi-check-circle"></i> 30 GB SSD Storage</li>
-                            <li><i class="bi bi-check-circle"></i> 500 GB Bandwidth</li>
-                            <li><i class="bi bi-check-circle"></i> 30 cPanel Accounts</li>
-                            <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
-                            <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary w-100">Get Started</a>
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <div class="price-tag">$24.99<span class="price-duration">/month</span></div>
+                            <p>Perfect for beginners starting a hosting business</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> 30 GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> 500 GB Bandwidth</li>
+                                <li><i class="bi bi-check-circle"></i> 30 cPanel Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-card featured">
-                        <h3>Professional</h3>
-                        <div class="price">$49.99 <span>/month</span></div>
-                        <p>Ideal for growing hosting businesses</p>
-                        <ul class="pricing-features">
-                            <li><i class="bi bi-check-circle"></i> 75 GB SSD Storage</li>
-                            <li><i class="bi bi-check-circle"></i> 1000 GB Bandwidth</li>
-                            <li><i class="bi bi-check-circle"></i> 75 cPanel Accounts</li>
-                            <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
-                            <li><i class="bi bi-check-circle"></i> Priority Support</li>
-                            <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary w-100">Get Started</a>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <div class="price-tag">$49.99<span class="price-duration">/month</span></div>
+                            <p>Ideal for growing hosting businesses</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> 75 GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> 1000 GB Bandwidth</li>
+                                <li><i class="bi bi-check-circle"></i> 75 cPanel Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                                <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="pricing-card">
-                        <h3>Enterprise</h3>
-                        <div class="price">$89.99 <span>/month</span></div>
-                        <p>For established resellers with high-volume needs</p>
-                        <ul class="pricing-features">
-                            <li><i class="bi bi-check-circle"></i> 150 GB SSD Storage</li>
-                            <li><i class="bi bi-check-circle"></i> 2000 GB Bandwidth</li>
-                            <li><i class="bi bi-check-circle"></i> 150 cPanel Accounts</li>
-                            <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
-                            <li><i class="bi bi-check-circle"></i> Priority Support</li>
-                            <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
-                            <li><i class="bi bi-check-circle"></i> Dedicated IP Address</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary w-100">Get Started</a>
+                        <div class="pricing-header">
+                            <h3>Enterprise</h3>
+                            <div class="price-tag">$89.99<span class="price-duration">/month</span></div>
+                            <p>For established resellers with high-volume needs</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> 150 GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> 2000 GB Bandwidth</li>
+                                <li><i class="bi bi-check-circle"></i> 150 cPanel Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                                <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
+                                <li><i class="bi bi-check-circle"></i> Dedicated IP Address</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
      <!-- Guidance Section -->
      <div class="guidance">
             <h2>How to Start Selling</h2>
@@ -833,3 +897,5 @@
             });
         });
     </script>
+</body>
+</html>
