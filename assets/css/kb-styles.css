@@ -1,0 +1,92 @@
+/* Knowledge Base Navbar */
+.kb-navbar {
+    background: #4B0082;
+    padding: 1rem 0;
+}
+
+.kb-navbar .nav-link {
+    color: rgba(255,255,255,0.8) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.kb-navbar .nav-link:hover {
+    color: white !important;
+}
+
+/* Sidebar Styles */
+.kb-sidebar {
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+}
+
+.sidebar-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.sidebar-search .input-group {
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #666;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sidebar-nav .nav-link i {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    color: #4B0082;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+    background: linear-gradient(135deg, #4B0082, #932C8B);
+    color: white;
+}
+
+.sidebar-nav .nav-link:hover i,
+.sidebar-nav .nav-link.active i {
+    color: white;
+}
+
+/* Layout for knowledge base pages */
+.kb-wrapper {
+    display: flex;
+    gap: 2rem;
+    padding-top: 90px;
+}
+
+.kb-main {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 991.98px) {
+    .kb-wrapper {
+        flex-direction: column;
+    }
+
+    .kb-sidebar {
+        width: 100%;
+    }
+}
