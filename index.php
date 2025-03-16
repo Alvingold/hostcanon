@@ -234,5 +234,3 @@
     </script>
 </body>
 </html>
-
-git remote add origin https://github.com/Alvingold/hostcanon.git
