@@ -28,54 +28,7 @@
             color: #333;
             overflow-x: hidden;
         }
-        
-        /* Navigation */
-        .navbar {
-            transition: all 0.3s ease;
-            padding: 15px 0;
-        }
-        
-        .navbar-brand img {
-            transition: all 0.3s ease;
-        }
-        
-        .navbar.scrolled {
-            background-color: var(--primary-color);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-        }
-        
-        .navbar.scrolled .navbar-brand img {
-            height: 35px;
-        }
-        
-        .navbar .nav-link {
-            color: var(--light-color);
-            font-weight: 500;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar .nav-link:hover, .navbar .nav-link.active {
-            color: var(--accent-color);
-        }
-        
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        
-        .dropdown-item {
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .dropdown-item:hover {
-            background-color: rgba(75, 0, 130, 0.1);
-            color: var(--primary-color);
-        }
-        
+                
         /* Hero Section */
         .hero-section {
             background-color: var(--primary-color);
@@ -85,28 +38,55 @@
             overflow: hidden;
         }
         
-        .hero-section::before {
-            content: "";
+        .hero-btn .btn-primary {
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.3);
+            color: white;
+        }
+
+        .hero-btn .btn-primary::before {
+            content: '';
             position: absolute;
             top: 0;
-            right: 0;
-            width: 400px;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(100px, -200px);
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
         }
-        
-        .hero-section::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(-100px, 100px);
+
+        .hero-btn .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .hero-btn .btn-outline-light {
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .hero-btn .btn-outline-light:hover {
+            color: black;
+            background: white;
         }
         
         .hero-title {
@@ -515,7 +495,7 @@
         }
     </style>
 </head>
-<body>
+<body class="loading">
     
     <?php include('assets/includes/nav-bar.php'); ?>
     <?php include('assets/includes/preloader.php'); ?>
@@ -527,7 +507,7 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <h1 class="hero-title">Professional Email Hosting Solutions</h1>
                     <p class="hero-subtitle">Elevate your business communication with secure, reliable, and professional email hosting services tailored for African businesses.</p>
-                    <div class="d-flex gap-3">
+                    <div class="hero-btn d-flex gap-3">
                         <a href="#pricing" class="btn btn-primary">View Plans</a>
                         <a href="contacts.php" class="btn btn-outline-light">Contact Sales</a>
                     </div>
