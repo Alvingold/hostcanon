@@ -117,10 +117,10 @@
         }
         
         .feature-icon {
-            font-size: 1.9rem;
+            font-size: 1.5rem;
             color: white;
             margin-bottom: 20px;
-            padding: 5px; 
+            padding: 5px;
             background: linear-gradient(135deg, #4B0082 0%, #932C8B 100%);
             border-radius: 12px;
             margin-bottom: 20px;
