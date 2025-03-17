@@ -869,6 +869,18 @@
             <a href="#pricing" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">View Pricing Plans</a>
         </div>
     </section>
+
+
+    <!-- Footer -->
+    <?php include('assets/includes/footer.php'); ?>
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
+
+
+    
         <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

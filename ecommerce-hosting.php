@@ -875,56 +875,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4" data-aos="fade-up">
-                    <img src="assets/media/afriportal.png" alt="Afriportal Logo" class="footer-logo">
-                    <p class="footer-about">Afriportal is a leading web hosting provider that offers a wide range of hosting solutions for businesses and individuals. We provide high-quality hosting services at affordable prices to help our customers succeed online.</p>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <h5 class="footer-heading">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="Reseller_hosting.php">Reseller Hosting</a></li>
-                        <li><a href="ecommerce_hosting.php">E-commerce Hosting</a></li>
-                        <li><a href="social_hosting.php">Social Network Hosting</a></li>
-                        <li><a href="email_hosting.php">Email Hosting</a></li>
-                        <li><a href="CRM_hosting.php">CRM Hosting</a></li>
-                        <li><a href="radia_hosting.php">Radia Hosting</a></li>
-                        <li><a href="envato_hosting.php">Envato Hosting</a></li>
-                        <li><a href="websitechecker.php">Website Uptime Checker</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <h5 class="footer-heading">Contact Us</h5>
-                    <div class="footer-contact-item">
-                        <i class="bi bi-geo-alt footer-contact-icon"></i>
-                        <p>123 Street, City, Country</p>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="bi bi-telephone footer-contact-icon"></i>
-                        <p>+1 234 567890</p>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="bi bi-envelope footer-contact-icon"></i>
-                        <p>
-                            <a href="mailto:
+    <?php include('assets/includes/footer.php'); ?>
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
 
-                            ">
-
-                            </a>
-                        </p>
-                    </div>
-                    <div class="social-icons">
-                        <a href="#" class="bi bi-facebook"></a>
-                        <a href="#" class="bi bi-twitter"></a>
-                        <a href="#" class="bi bi-instagram"></a>
-                        <a href="#" class="bi bi-linkedin"></a>
-                    </div>
-                </div>
-    </footer>
+    
           <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
