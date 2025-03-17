@@ -394,7 +394,7 @@
                     <a href="#checker" class="btn btn-primary me-3" data-aos="fade-up" data-aos-delay="300">Check Your Website Now</a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="assets/media/web.webp" alt="Website Uptime Checker" class="img-fluid" data-aos="fade-left" data-aos-delay="300">
+                    <img src="assets/media/webchecker.png" alt="Website Uptime Checker" class="img-fluid" data-aos="fade-left" data-aos-delay="300">
                 </div>
             </div>
         </div>
