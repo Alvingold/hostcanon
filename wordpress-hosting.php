@@ -811,6 +811,16 @@
     </a>
 </div>
 
+<!-- Footer -->
+<?php include('assets/includes/footer.php'); ?>
+<!-- Scroll to Top Button -->
+<?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
+
+    
+
 <!-- AOS animation library initialization -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

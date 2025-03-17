@@ -15,49 +15,45 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/domain.css">
 </head>
-<body>
+<body class="loading">
 
 <?php include('assets/includes/nav-bar.php'); ?>
+<?php include('assets/includes/preloader.php'); ?>
 
 <!-- Hero Section -->
 <section class="hero-section">
     <div class="container">
-        <h1>Find Your Perfect Domain</h1>
-        <p class="sub-text">Secure your domain name today and build your brand.</p>
-        
-        <!-- Search Bar -->
-        <!-- <div class="search-container">
-            <input type="text" class="search-domain" placeholder="Enter your domain name">
-            <button class="search-btn">Search</button>
-        </div> -->
-        <div class="search-box bg-white p-2 rounded-pill shadow-sm">
-            <form class="d-flex">
-                <div class="input-group">
-                    <span class="input-group-text border-0 bg-transparent">
-                        <i class="bi bi-search"></i>
-                    </span>
-                    <input type="search" class="form-control border-0 shadow-none" placeholder="Enter Your Domain Name">
-                    <button class="btn btn-primary rounded-pill px-4" type="submit">Search</button>
+        <div class="hero-content">
+            <h1 class="hero-title">Find Your Perfect Domain</h1>
+            <p class="hero-subtitle">Secure your online presence today and build a lasting brand</p>
+            
+            <!-- Search Bar - Improved -->
+            <div class="search-wrapper">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Enter your domain name...">
+                    </div>
+                    <button class="search-btn">Search</button>
                 </div>
-            </form>
-        </div>
+            </div>
 
-        <!-- Domain Options -->
-        <!-- <div class="domain-options">
-            <label>
-                <input type="radio" name="domain-option" checked> Register a new domain
-            </label>
-            <label>
-                <input type="radio" name="domain-option"> Transfer your domain from another registrar
-            </label>
-            <label>
-                <input type="radio" name="domain-option"> I will use my existing domain and update my nameservers
-            </label>
-        </div> -->
-        <p>Already have a domain? <a href="">Transfer Now</a></p>
+            <!-- Domain Options - Simplified -->
+            <div class="domain-links">
+                <a href="#" class="domain-link">Transfer your domain</a>
+                <span class="separator">•</span>
+                <a href="#" class="domain-link">Use existing domain</a>
+            </div>
+
+            <!-- Features Pills -->
+            <div class="feature-pills">
+                <span class="pill">Free SSL Certificate</span>
+                <span class="pill">24/7 Support</span>
+                <span class="pill">WHOIS Privacy</span>
+            </div>
+        </div>
     </div>
 </section>
-
 
 
 <!-- Domain Sugesstion  -->
@@ -633,6 +629,16 @@
     </div>
 </section>
 
+
+
+    <!-- Footer -->
+    <?php include('assets/includes/footer.php'); ?>
+    
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

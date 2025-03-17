@@ -8,23 +8,20 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero-section {
     position: relative;
     background: url('../media/domain.webp');
     background-size: cover;
     background-position: center;
-    height: 600px;
-    /* box-shadow: 0px 0px 900000000000000000000000000000px inset; */
-    /* border: 4px solid purple; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
     min-height: 100vh;
-    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
     margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
 }
 
 .hero-section::before {
@@ -38,88 +35,268 @@ body {
     z-index: 1;
 }
 
-.hero-section > * {
+.hero-content {
     position: relative;
     z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-
-
-.hero-section h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.hero-section .sub-text {
-    font-size: 18px;
-    font-weight: 400;
+.hero-title {
+    font-size: 56px;
+    font-weight: 800;
     margin-bottom: 20px;
-    opacity: 0.8;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Search Bar */
-
-.kb-page .search-box{
-    max-width: 600px;
-    margin: 0 auto;
+.search-wrapper {
+    margin: 0 auto 30px;
+    max-width: 700px;
+    width: 100%;
 }
-/* .search-container {
+
+.search-container {
     display: flex;
     align-items: center;
     background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    padding: 10px;
-    width: 100%;
-    max-width: 900px;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 6px 6px 6px 20px;
+    overflow: hidden;
 }
 
-.search-domain {
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.search-icon {
+    color: #777;
+    font-size: 18px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.search-input {
     flex: 1;
     border: none;
     outline: none;
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px 5px;
+    width: 100%;
 }
 
 .search-btn {
-    background: #4B0082;
+    background: linear-gradient(to right, #4B0082, #8B008B);
     color: #fff;
-    font-size: 18px;
-    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 28px;
     border: none;
-    border-radius: 10px;
-    margin-left: 10px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .search-btn:hover {
-    background: #5D00A5;
-} */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(75, 0, 130, 0.3);
+}
 
+/* Domain Links */
+.domain-links {
+    margin-bottom: 30px;
+}
 
-/* Responsive Design */
+.domain-link {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.domain-link:hover {
+    color: #f0c4ff;
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 15px;
+    opacity: 0.7;
+}
+
+/* Feature Pills */
+.feature-pills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.pill {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Enhanced Responsive Design - Keeping search bar horizontal */
 @media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 36px;
+    .hero-section {
+        padding: 60px 15px;
+        min-height: 600px;
     }
     
-    /* .search-container {
-        flex-direction: column;
-        padding: 15px;
+    .hero-title {
+        font-size: 38px;
+        margin-bottom: 15px;
     }
     
-    .search-domain {
-        width: 100%;
-        margin-bottom: 10px;
+    .hero-subtitle {
+        font-size: 17px;
+        margin-bottom: 25px;
+        padding: 0 5px;
+    }
+    
+    .search-container {
+        padding: 4px 4px 4px 12px;
+    }
+    
+    .search-icon {
+        font-size: 16px;
+        margin-right: 6px;
+    }
+    
+    .search-input {
+        font-size: 15px;
+        padding: 10px 2px;
     }
     
     .search-btn {
-        width: 100%;
-    } */
+        padding: 10px 16px;
+        font-size: 15px;
+    }
+    
+    .domain-links {
+        margin-top: 20px;
+    }
+    
+    .feature-pills {
+        gap: 8px;
+        margin-top: 25px;
+    }
+    
+    .pill {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 50px 12px;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .search-container {
+        padding: 3px 3px 3px 10px;
+    }
+    
+    .search-icon {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+    
+    .search-input {
+        padding: 8px 2px;
+        font-size: 14px;
+    }
+    
+    .search-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .separator {
+        margin: 0 8px;
+    }
+    
+    .domain-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .separator {
+        display: none;
+    }
+    
+    .feature-pills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 350px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .search-container {
+        padding: 2px 2px 2px 8px;
+    }
+    
+    .search-icon {
+        font-size: 12px;
+        margin-right: 4px;
+    }
+    
+    .search-input {
+        padding: 6px 1px;
+        font-size: 12px;
+    }
+    
+    .search-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .feature-pills {
+        grid-template-columns: 1fr;
+    }
 }
 /* Domain Options */
 .domain-options {

@@ -567,7 +567,11 @@
     </section>
 
     <?php include 'assets/includes/footer.php'; ?>
+    
     <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

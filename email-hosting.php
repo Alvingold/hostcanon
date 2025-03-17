@@ -518,6 +518,7 @@
 <body>
     
     <?php include('assets/includes/nav-bar.php'); ?>
+    <?php include('assets/includes/preloader.php'); ?>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -823,6 +824,18 @@
     </section>
 
 
+
+
+    <!-- Footer -->
+    <?php include('assets/includes/footer.php'); ?>
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
+
+
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS Animation -->

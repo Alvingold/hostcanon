@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <style>
-    /* HostCanon Footer Styles - For Include Folder */
+/* HostCanon Footer Styles - For Include Folder */
 .footer {
     background-color: #2D0459;
     color: #ffffff;
@@ -278,26 +278,56 @@
     }
 
     .footer-links {
-        display: none;
-        padding: 0.5rem 0 1rem 1rem;
-        margin-top: 0.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+        padding: 0 0 0 1rem;
+        margin: 0;
     }
     
     .footer-links li {
         margin-bottom: 0.7rem;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition-delay: 0.1s;
     }
 
     .footer-column.active .footer-links {
-        display: block;
+        max-height: 300px;
+        padding: 0.5rem 0 1rem 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .footer-column.active .footer-links li {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .footer-column.active .dropdown-icon {
         transform: rotate(180deg);
     }
 
+    /* Generate transition delays for list items */
+    .footer-links li:nth-child(1) { transition-delay: 0.1s; }
+    .footer-links li:nth-child(2) { transition-delay: 0.15s; }
+    .footer-links li:nth-child(3) { transition-delay: 0.2s; }
+    .footer-links li:nth-child(4) { transition-delay: 0.25s; }
+    .footer-links li:nth-child(5) { transition-delay: 0.3s; }
+    .footer-links li:nth-child(6) { transition-delay: 0.35s; }
+
     /* Keep company info always visible */
     .footer-column:first-child .footer-links {
         display: block;
+        max-height: none;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+    }
+    
+    .footer-column:first-child .footer-links li {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .footer-column:first-child .footer-heading .dropdown-icon {
@@ -384,9 +414,11 @@
                     <li><a href="#">Shared Hosting</a></li>
                     <li><a href="#">VPS Hosting</a></li>
                     <li><a href="#">Dedicated Servers</a></li>
-                    <li><a href="#">Cloud Hosting</a></li>
                     <li><a href="#">WordPress Hosting</a></li>
-                    <li><a href="#">Reseller Hosting</a></li>
+                    <li><a href="reseller-hosting.php">Reseller Hosting</a></li>
+                    <li><a href="email-hosting.php">Email Hosting</a></li>
+                    <li><a href="website-checker.php">Website Checker</a></li>
+                    <li><a href="ecommerce-hosting.php">Ecommerce Hosting</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -398,7 +430,7 @@
                     <li><a href="#">Domain Registration</a></li>
                     <li><a href="#">Domain Transfer</a></li>
                     <li><a href="#">Domain Backorder</a></li>
-                    <li><a href="#">WHOIS Lookup</a></li>
+                    <li><a href="website-checker.php">Website Checker</a></li>
                     <li><a href="#">SSL Certificates</a></li>
                 </ul>
             </div>
@@ -413,7 +445,7 @@
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Press Releases</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contacts.php">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -423,11 +455,12 @@
                 </h4>
                 <ul class="footer-links">
                     <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Knowledge Base</a></li>
-                    <li><a href="#">Server Status</a></li>
+                    <li><a href="knowledge-base/index.php">Knowledge Base</a></li>
+                    <li><a href="contacts.php">Contact Us</a></li>
                     <li><a href="#">Submit a Ticket</a></li>
                     <li><a href="#">Live Chat</a></li>
-                    <li><a href="#">Phone Support</a></li>
+                    <li><a href="server-support.php">Server Support</a></li>
+                    <li><a href="knowledge-base/faq.php">FAQ</a></li>
                 </ul>
             </div>
         </div>

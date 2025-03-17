@@ -382,6 +382,7 @@
 <body>
     
     <?php include('assets/includes/nav-bar.php'); ?>
+    <?php include('assets/includes/preloader.php'); ?>
 
 
     <!-- Hero Section -->
@@ -637,6 +638,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <?php include('assets/includes/footer.php'); ?>
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
+
+    
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
