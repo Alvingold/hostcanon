@@ -382,6 +382,7 @@
 <body>
     
     <?php include('assets/includes/nav-bar.php'); ?>
+    <?php include('assets/includes/preloader.php'); ?>
 
 
     <!-- Hero Section -->

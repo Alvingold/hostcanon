@@ -597,6 +597,7 @@
 <body class="ecommerce-page loading">
     
 <?php include('assets/includes/nav-bar.php'); ?>
+<?php include('assets/includes/preloader.php'); ?>
  <!-- Hero Section -->
  <section class="hero-section">
         <div class="container">

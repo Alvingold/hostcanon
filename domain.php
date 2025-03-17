@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/domain.css">
 </head>
-<body>
+<body class="loading">
 
 <?php include('assets/includes/nav-bar.php'); ?>
+<?php include('assets/includes/preloader.php'); ?>
 
 <!-- Hero Section -->
 <section class="hero-section">
