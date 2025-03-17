@@ -10,7 +10,7 @@ body {
 /* Hero Section */
 .hero-section {
     position: relative;
-    background: url('../media/domain.png');
+    background: url('../media/domain.webp');
     background-size: cover;
     background-position: center;
     height: 600px;
