@@ -25,8 +25,8 @@
     }
 
     .floating-logo {
-        width: 120px;
-        height: 120px;
+        width: 150px; 
+        height: 150px; 
         position: relative;
         animation: float 3s ease-in-out forwards;
     }
@@ -47,8 +47,8 @@
 
     @media screen and (max-width: 768px) {
         .floating-logo {
-            width: 60px;
-            height: 60px;
+            width: 75px; 
+            height: 75px; 
             margin-left: 15px; 
         }
     }
@@ -57,7 +57,7 @@
 <div class="preloader">
     <div class="preloader-content">
         <div class="floating-logo">
-            <img src="/afriportalnetwork/assets/media/favicon.png" alt="Logo" class="logo">
+            <img src="/hostcanon/assets/media/preloader.gif" alt="Logo" class="logo">
         </div>
     </div>
 </div>
