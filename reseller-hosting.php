@@ -29,152 +29,7 @@
             overflow-x: hidden;
             background-color: #f9f9f9;
         }
-        
-        /* Navigation Styles */
-        .navbar {
-            padding: 15px 0;
-            transition: all 0.3s ease;
-            background-color: transparent;
-        }
-        
-        .navbar.scrolled {
-            background-color: var(--primary-color);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-        }
-        
-        .navbar-nav .nav-link {
-            color: var(--text-light);
-            font-weight: 500;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-nav .nav-link:hover, 
-        .navbar-nav .nav-link.active {
-            color: var(--accent-color);
-        }
-        
-        /* Custom toggler for mobile */
-        .navbar-toggler {
-            border: none;
-            padding: 0;
-            width: 30px;
-            height: 20px;
-            position: relative;
-        }
-        
-        .toggler-icon {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            background-color: var(--text-light);
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-        
-        .top-bar {
-            top: 0;
-        }
-        
-        .middle-bar {
-            top: 9px;
-        }
-        
-        .bottom-bar {
-            top: 18px;
-        }
-        
-        .navbar-toggler.collapsed .top-bar {
-            transform: none;
-        }
-        
-        .navbar-toggler.collapsed .middle-bar {
-            opacity: 1;
-        }
-        
-        .navbar-toggler.collapsed .bottom-bar {
-            transform: none;
-        }
-        
-        .navbar-toggler .top-bar {
-            transform: rotate(45deg);
-            transform-origin: 10% 10%;
-        }
-        
-        .navbar-toggler .middle-bar {
-            opacity: 0;
-        }
-        
-        .navbar-toggler .bottom-bar {
-            transform: rotate(-45deg);
-            transform-origin: 10% 90%;
-        }
-        
-        /* Dropdown styles */
-        .dropdown-menu {
-            display: block;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease-in-out;
-            border-radius: 8px;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            padding: 10px 0;
-            background-color: white;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        
-        .dropdown-item {
-            padding: 10px 20px;
-            transition: all 0.2s ease;
-            color: var(--text-dark);
-        }
-        
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-            transform: translateX(5px);
-            color: var(--primary-color);
-        }
-        
-        /* Animation for dropdown items */
-        .dropdown-animation .dropdown-item {
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-        
-        .dropdown:hover .dropdown-animation .dropdown-item {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        /* Staggered animation for each item */
-        .dropdown:hover .dropdown-animation .dropdown-item:nth-child(1) { transition-delay: 0.05s; }
-        .dropdown:hover .dropdown-animation .dropdown-item:nth-child(2) { transition-delay: 0.1s; }
-        .dropdown:hover .dropdown-animation .dropdown-item:nth-child(3) { transition-delay: 0.15s; }
-        .dropdown:hover .dropdown-animation .dropdown-item:nth-child(4) { transition-delay: 0.2s; }
-        .dropdown:hover .dropdown-animation .dropdown-item:nth-child(5) { transition-delay: 0.25s; }
-        .dropdown:hover .dropdown-animation .dropdown-item:nth-child(6) { transition-delay: 0.3s; }
-        .dropdown:hover .dropdown-animation .dropdown-item:nth-child(7) { transition-delay: 0.35s; }
-        .dropdown:hover .dropdown-animation .dropdown-item:nth-child(8) { transition-delay: 0.4s; }
-        
-        /* Dropdown toggle icon animation */
-        .dropdown-toggle::after {
-            transition: transform 0.3s ease;
-        }
-        
-        .dropdown:hover .dropdown-toggle::after {
-            transform: rotate(180deg);
-        }
-        
+                
         /* Hero Section */
         .hero-section {
             background-color: var(--primary-color);
@@ -183,19 +38,7 @@
             position: relative;
             overflow: hidden;
         }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60%;
-            height: 100%;
-            background-image: url('assets/media/pattern.svg');
-            background-size: cover;
-            opacity: 0.1;
-        }
-        
+                
         .hero-title {
             font-size: 3.5rem;
             font-weight: 700;
@@ -209,18 +52,39 @@
             opacity: 0.9;
         }
         
-        .btn-primary {
-            background-color: var(--accent-color);
+        .btn {
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            color: white;
             border: none;
-            padding: 12px 30px;
+            border-radius: 50px;
+            padding: 1rem 2.5rem;
             font-weight: 600;
+            font-size: 1rem;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
+            position: relative;
+            overflow: hidden;
         }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
+
+        .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.3);
+            color: white;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
         
         /* Features Section */
