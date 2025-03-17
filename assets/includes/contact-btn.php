@@ -1,6 +1,6 @@
 <div class="custom-contact-buttons">
     <div class="contact-btn main-btn" onclick="toggleContactButtons()">
-        <span class="icon-wrapper">
+        <span class="icon-wrap">
             <i class="bi bi-chat-dots-fill chat-icon"></i>
             <i class="bi bi-x-lg close-icon"></i>
         </span>
@@ -63,7 +63,7 @@
         overflow: hidden;
     }
 
-    .icon-wrapper {
+    .icon-wrap {
         position: relative;
         width: 18px;
         height: 18px;

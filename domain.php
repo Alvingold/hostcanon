@@ -629,10 +629,12 @@
 </section>
 
 
-<!-- Footer -->
-<?php include('assets/includes/footer.php'); ?>
-<!-- Scroll to Top Button -->
-<?php include 'assets/includes/scroll-up.php'; ?>
+
+    <!-- Footer -->
+    <?php include('assets/includes/footer.php'); ?>
+    
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
     
     <!-- Contact Buttons -->
     <?php include 'assets/includes/contact-btn.php'; ?>
