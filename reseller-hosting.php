@@ -98,7 +98,6 @@
             margin-bottom: 50px;
             position: relative;
             color: var(--primary-color);
-            /*display: inline-block;*/
         }
         
         @media (max-width: 768px) {
