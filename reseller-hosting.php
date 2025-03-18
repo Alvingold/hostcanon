@@ -101,27 +101,11 @@
             /*display: inline-block;*/
         }
         
-        /*.section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;*/
-        }
-
         @media (max-width: 768px) {
             .section-title {
                 font-size: 1.6rem;
                 font-weight: 600;
             }
-
-            .section-title::after {
-                width: 100%;
-            }
-            
         }
         
         .feature-card {
