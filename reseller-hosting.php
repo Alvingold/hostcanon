@@ -32,8 +32,8 @@
                 
         /* Hero Section */
         .hero-section {
-            background-color: var(--primary-color);
-            color: var(--text-light);
+            background: linear-gradient(135deg, #4B0082 0%, #932C8B 100%);
+            color: white;
             padding: 180px 0 100px;
             position: relative;
             overflow: hidden;
@@ -89,7 +89,7 @@
         
         /* Features Section */
         .features-section {
-            padding: var(--section-padding);
+            padding: 80px 0;
         }
         
         .section-title {
@@ -109,6 +109,18 @@
             height: 4px;
             background-color: var(--primary-color);
             border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+
+            .section-title::after {
+                width: 100%;
+            }
+            
         }
         
         .feature-card {
@@ -258,33 +270,34 @@
         
         /* FAQ Section */
         .faq-section {
-            padding: var(--section-padding);
             background-color: #f5f5f5;
         }
         
         .accordion-item {
             border: none;
-            margin-bottom: 15px;
-            border-radius: 10px !important;
+            margin-bottom: 1rem;
+            border-radius: 15px !important;
             overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .accordion-button {
+            padding: 1.5rem;
             font-weight: 600;
-            padding: 20px;
-            background-color: white;
-            color: var(--text-dark);
+            color: #2d2d2d;
+            background: white;
+            border: none;
+            box-shadow: none;
         }
         
         .accordion-button:not(.collapsed) {
-            background-color: white;
-            color: var(--primary-color);
-            box-shadow: none;
+            color: #4B0082;
+            background: linear-gradient(to right, rgba(75, 0, 130, 0.05), transparent);
         }
-        
-        .accordion-button:focus {
-            box-shadow: none;
-            border-color: transparent;
+
+        .faq-section .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234B0082'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transition: all 0.3s ease;
         }
         
         .accordion-body {
@@ -329,115 +342,6 @@
             margin-right: auto;
         }
         
-       /* Guidance Section */
-.guidance {
-    background:white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 140px ;  /* Centers and adds margin*/
-    text-align: center;
-    width: 80%;  /* Adjusted width */
-    max-width: 1300px; /* Ensures it doesn't stretch too much */
-}
-
-.guidance h2 {
-    color:var(--primary-color);;
-    font-size: 20px;
-    margin-bottom: 8px;
-    font-weight:bolder;
-}
-
-.guidance ol {
-    list-style: none;
-    padding: 0;
-}
-
-.guidance ol li {
-    background: white;
-    margin: 6px 0;
-    padding: 8px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .guidance, .faq {
-        width: 90%;
-        max-width: 900px;
-        margin: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .guidance, .faq {
-        width: 95%;
-        max-width: 600px;
-        margin: auto;
-        padding: 10px;
-    }
-
-    .guidance h2, .faq h2 {
-        font-size: 18px;
-    }
-
-    .faq-question {
-        font-size: 13px;
-        padding: 8px;
-    }
-
-    .faq-answer {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .guidance, .faq {
-        width: 100%;
-        max-width: 400px;
-        margin: auto;
-        padding: 8px;
-    }
-
-    .guidance h2, .faq h2 {
-        font-size: 16px;
-    }
-
-    .faq-question {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    .faq-answer {
-        font-size: 11px;
-    }
-}
-        /* Responsive */
-        @media (max-width: 767px) {
-            .hero-section {
-                padding: 150px 0 80px;
-                margin-bottom: 50px;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .pricing-card.featured {
-                transform: none;
-                margin: 20px 0;
-            }
-            
-            .pricing-card.featured:hover {
-                transform: translateY(-10px);
-            }
-        }
     </style>
 </head>
 <body class="reseller-page loading">
@@ -448,6 +352,7 @@
 
   <!-- Hero Section -->
 <section class="hero-section">
+    <div class="hero-shape"></div>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-right">
@@ -455,7 +360,7 @@
                 <p class="hero-subtitle">Start your own hosting business with our reliable, scalable, and profitable reseller hosting plans.</p>
                 <a href="#pricing" class="btn btn-primary mb-4">View Pricing Plans</a>
             </div>
-            <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+            <div class="col-lg-6 mt-3 mt-lg-0" data-aos="fade-left">
                 <img src="assets/media/reseller.png" alt="Reseller Hosting Illustration" class="img-fluid">
             </div>
         </div>
@@ -588,22 +493,11 @@
         </div>
     </section>
 
-     <!-- Guidance Section -->
-     <div class="guidance">
-            <h2>How to Start Selling</h2>
-            <ol>
-                <li>Sign up for our reseller hosting plan.</li>
-                <li>Customize and brand your hosting packages.</li>
-                <li>Set your own prices and market your services.</li>
-                <li>Start selling to your customers and earn profits.</li>
-            </ol>
-        </div>
-
-        <!-- FAQ Section -->
+    <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
             <div class="text-center mb-5">
-                <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
                 <p class="lead" data-aos="fade-up" data-aos-delay="100">Find answers to common questions about our reseller hosting service</p>
             </div>
 
@@ -643,12 +537,11 @@
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
                         Establishing your reseller hosting business takes a few steps. You have to:<br>
-
-1. Research the market and find an appropriate hosting company.<br>
-2. Purchase the reseller package that best suits the needs of your business.<br>
-3. Research your target market to locate potential customers.<br>
-4. Create your own brand and branded hosting packages, decide on their cost.<br>
-5. Sell them to clients.<br>
+                        1. Research the market and find an appropriate hosting company.<br>
+                        2. Purchase the reseller package that best suits the needs of your business.<br>
+                        3. Research your target market to locate potential customers.<br>
+                        4. Create your own brand and branded hosting packages, decide on their cost.<br>
+                        5. Sell them to clients.<br>
                         </div>
                     </div>
                 </div>
@@ -662,13 +555,12 @@
                     <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
                         There are benefits to becoming a reseller host, whether you're developing a new brand or want to strengthen an existing one:<br>
-
-1. Practice being a hosting company by building websites and gaining management expertise.<br>
-2. Generate additional revenue.<br>
-3. Create your own hosting packages that are especially suited to your target market.<br>
-4. Develop a distinctive brand.<br>
-5. Design a customized cPanel control panel for the users.<br>
-6. Most customers wind up saving money over time due to the initial low start-up costs and the ability to upgrade on-demand.
+                        1. Practice being a hosting company by building websites and gaining management expertise.<br>
+                        2. Generate additional revenue.<br>
+                        3. Create your own hosting packages that are especially suited to your target market.<br>
+                        4. Develop a distinctive brand.<br>
+                        5. Design a customized cPanel control panel for the users.<br>
+                        6. Most customers wind up saving money over time due to the initial low start-up costs and the ability to upgrade on-demand.
                         </div>
                     </div>
                 </div>
