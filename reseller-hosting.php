@@ -418,6 +418,7 @@
         @media (max-width: 767px) {
             .hero-section {
                 padding: 150px 0 80px;
+                margin-bottom: 50px;
             }
             
             .hero-title {
@@ -445,21 +446,21 @@
     <?php include('assets/includes/preloader.php'); ?>
 
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h1 class="hero-title">Premium Reseller Hosting Solutions</h1>
-                    <p class="hero-subtitle">Start your own hosting business with our reliable, scalable, and profitable reseller hosting plans.</p>
-                    <a href="#pricing" class="btn btn-primary">View Pricing Plans</a>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="assets/media/reseller.png" alt="Reseller Hosting Illustration" class="img-fluid">
-                </div>
+  <!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="hero-title">Premium Reseller Hosting Solutions</h1>
+                <p class="hero-subtitle">Start your own hosting business with our reliable, scalable, and profitable reseller hosting plans.</p>
+                <a href="#pricing" class="btn btn-primary mb-4">View Pricing Plans</a>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+                <img src="assets/media/reseller.png" alt="Reseller Hosting Illustration" class="img-fluid">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Features Section -->
     <section class="features-section">
