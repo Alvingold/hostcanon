@@ -194,9 +194,159 @@
         </div>
     </section>
 
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Affordable Reseller Hosting Plans</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <div class="price-tag">$24.99<span class="price-duration">/month</span></div>
+                            <p>Perfect for beginners starting a hosting business</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> 30 GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> 500 GB Bandwidth</li>
+                                <li><i class="bi bi-check-circle"></i> 30 cPanel Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <div class="price-tag">$49.99<span class="price-duration">/month</span></div>
+                            <p>Ideal for growing hosting businesses</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> 75 GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> 1000 GB Bandwidth</li>
+                                <li><i class="bi bi-check-circle"></i> 75 cPanel Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                                <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Enterprise</h3>
+                            <div class="price-tag">$89.99<span class="price-duration">/month</span></div>
+                            <p>For established resellers with high-volume needs</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> 150 GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> 2000 GB Bandwidth</li>
+                                <li><i class="bi bi-check-circle"></i> 150 cPanel Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                                <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
+                                <li><i class="bi bi-check-circle"></i> Dedicated IP Address</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php include 'test.php'; ?>
+
+    <!-- Speed -->
+
+    <section class="speed-domain">
+    <div class="container">
+        <div class="future-content">
+            <!-- First Row -->
+            <div class="row">
+                <!-- Text Content -->
+                <div class="text-section col-md-6">
+                    <h2 class="section-titled">Speed. Reliability. Efficiency.</h2>
+                    <p class="purple-section-subtitle">
+                        Deliver top-tier performance and ensure your visitors enjoy a seamless browsing experience.
+                    </p>
+
+                    <div class="domain-info">
+                        <div class="purple-domain-text">
+                            <!-- <i class="fas fa-globe"></i> -->
+                            <h3>Global Data Centers</h3>
+                            <p>
+                            Your website connects to the nearest data center in our worldwide network, maximizing speed and efficiency—at no extra cost.
+                            </p>
+                        </div>
+
+                        <div class="purple-domain-text">
+                            <!-- <i class="fas fa-tachometer-alt"></i> -->
+                            <h3>Optimized Performance</h3>
+                            <p>
+                            Experience lightning-fast load times and stable performance, even during peak traffic periods.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="image-section col-md-6">
+                    <img src="assets/media/dom.png" alt="Domain Management" width="100%">  
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="row mt-4">
+                <!-- Image Section First -->
+                <div class="image-section col-md-6">
+                    <img src="assets/media/domd.png" alt="Domain Search" width="100%">
+                </div>
+
+                <!-- Text Content Second -->
+                <div class="text-section col-md-6">
+                    <div class="domain-info">
+                        <div class="purple-domain-text">
+                            <!-- <i class="fas fa-shield-alt"></i> -->
+                            <h3>Rock-Solid Security</h3>
+                            <p>
+                            Secure your site with automated backups, two-factor authentication, and DDoS protection with Cloudflare.
+                            </p>
+                        </div>
+
+                        <div class="purple-domain-text">
+                            <!-- <i class="fas fa-clock"></i> -->
+                            <h3>Guaranteed 99.9% Uptime</h3>
+                            <p>
+                            Your website stays online 24/7 with our industry-leading uptime guarantee.
+                            </p>
+                        </div>
+
+                        <button class="purple-domain-btn">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     
     <!-- Footer -->
-    <?php include('assets/includes/footer.php'); ?>
+    <?php include 'assets/includes/footer.php'; ?>
     
     <!-- Scroll to Top Button -->
     <?php include 'assets/includes/scroll-up.php'; ?>

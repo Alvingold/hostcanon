@@ -30,111 +30,48 @@
             background-color: #f8f9fa;
         }
         
-        .navbar {
-            background-color: transparent;
-            transition: all 0.3s ease;
-            padding: 20px 0;
-        }
-        
-        .navbar.scrolled {
-            background-color: rgba(75, 0, 130, 0.95);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-        }
-        
-        .nav-link {
-            color: var(--text-light) !important;
-            font-weight: 500;
-            margin: 0 10px;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: var(--secondary-color) !important;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: var(--secondary-color);
-            bottom: 0;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
-        }
-        
-        .dropdown-menu {
-            background-color: rgba(75, 0, 130, 0.95);
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .dropdown-item {
-            color: var(--text-light);
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .dropdown-item:hover {
-            background-color: var(--secondary-color);
-            color: white;
-            transform: translateX(5px);
-        }
-        
-        .dropdown-animation {
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .toggler-icon {
-            display: block;
-            width: 30px;
-            height: 2px;
-            background-color: var(--text-light);
-            margin: 6px 0;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-toggler:not(.collapsed) .top-bar {
-            transform: rotate(45deg) translate(5px, 6px);
-        }
-        
-        .navbar-toggler:not(.collapsed) .middle-bar {
-            opacity: 0;
-        }
-        
-        .navbar-toggler:not(.collapsed) .bottom-bar {
-            transform: rotate(-45deg) translate(5px, -6px);
-        }
-        
         /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, var(--primary-color), #2c0449);
             padding: 160px 0 100px;
             position: relative;
             overflow: hidden;
+            height: 100vh;
         }
         
-        .hero-section::before {
+        .wc-btn .btn{
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wc-btn .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.3);
+            color: white;
+        }
+
+        .wc-btn .btn::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
+            left: -100%;
             width: 100%;
             height: 100%;
-            background: url('assets/media/pattern.svg');
-            opacity: 0.1;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .wc-btn .btn:hover::before {
+            left: 100%;
         }
         
         .hero-title {
@@ -148,24 +85,7 @@
             margin-bottom: 2rem;
             opacity: 0.9;
         }
-        
-        /* Button Styles */
-        .btn-primary {
-            background-color: var(--secondary-color);
-            border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(147, 112, 219, 0.4);
-        }
-        
-        .btn-primary:hover {
-            background-color: #8560c8;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(147, 112, 219, 0.5);
-        }
-        
+                
         /* Features Section */
         .features-section {
             padding: 100px 0;
@@ -379,7 +299,7 @@
         }
     </style>
 </head>
-<body>
+<body class="loading">
     
     <?php include('assets/includes/nav-bar.php'); ?>
     <?php include('assets/includes/preloader.php'); ?>
@@ -392,7 +312,9 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">24/7 Website Uptime Monitoring</h1>
                     <p class="hero-text" data-aos="fade-up" data-aos-delay="200">Monitor your website's performance and uptime with our advanced monitoring service. Get instant alerts when your site goes down and comprehensive uptime reports.</p>
-                    <a href="#checker" class="btn btn-primary me-3" data-aos="fade-up" data-aos-delay="300">Check Your Website Now</a>
+                    <div class="wc-btn mt-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#checker" class="btn btn-primary btn-lg" >Check Your Website Now</a>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <img src="assets/media/webchecker.png" alt="Website Uptime Checker" class="img-fluid" data-aos="fade-left" data-aos-delay="300">
