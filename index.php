@@ -476,7 +476,7 @@
             <div class="feature-cloud cloud-2"></div>
         </div>
     </section>
-    
+
 
     <!-- Speed -->
 
@@ -550,6 +550,155 @@
         </div>
     </div>
 </section>
+
+
+
+<!-- Difficulty Section -->
+ 
+<section class="page-container">
+        <h2 class="section-title">Zero Difficulty</h2>
+        
+        <div class="page-service-card">
+            <div class="page-service-title">WordPress Wizardry Unleashed</div>
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="page-feature-block">
+                        <div class="page-feature-icon">
+                            <i class="bi bi-rocket"></i>
+                        </div>
+                        <div class="page-feature-details">
+                            <div class="page-feature-name">Lightning-Fast Performance</div>
+                            <p class="page-service-text">Pages that load in milliseconds, not seconds, keeping visitors engaged.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="page-feature-block">
+                        <div class="page-feature-icon">
+                            <i class="bi bi-shield"></i>
+                        </div>
+                        <div class="page-feature-details">
+                            <div class="page-feature-name">Rock-Solid Reliability</div>
+                            <p class="page-service-text">Built on cutting-edge technology with expert support you can count on.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="page-service-text">Your WordPress dreams deserve <span class="text-accent">extraordinary hosting</span>. Our managed solutions don't just host - they elevate your digital presence. Powered by cutting-edge technology and backed by experts who truly care, HostCanon delivers performance that defies expectations. Imagine your site handling a sudden influx of visitors with grace, loading pages in milliseconds instead of seconds. This isn't just good for users - it's a love letter to Google's ranking algorithms that reward lightning-fast experiences. Your visitors won't just browse; they'll be captivated by seamless interactions that keep them coming back.</p>
+            
+            <a href="#" class="btn-primary-action">Discover WordPress Excellence</a>
+        </div>
+        
+        <div class="page-service-card">
+            <div class="page-service-title">E-Commerce, Simplified</div>
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="page-feature-block">
+                        <div class="page-feature-icon">
+                            <i class="bi bi-cart4"></i>
+                        </div>
+                        <div class="page-feature-details">
+                            <div class="page-feature-name">Conversion-Optimized</div>
+                            <p class="page-service-text">Every millisecond matters - we've engineered our platform to turn browsers into buyers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="page-feature-block">
+                        <div class="page-feature-icon">
+                            <i class="bi bi-speedometer"></i>
+                        </div>
+                        <div class="page-feature-details">
+                            <div class="page-feature-name">20X Faster Loading</div>
+                            <p class="page-service-text">Advanced caching technologies that leave competitors in the dust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="page-service-text"><span class="text-accent">Transform Your Vision</span> into a Digital Storefront</p>
+            
+            <p class="page-service-text">Forget complicated setups and frustrating technical hurdles. Our e-commerce hosting creates the perfect foundation for your online business ambitions. With intelligent caching and next-generation server architecture, your products shine in their best light - loading 20 times faster than standard solutions. Every millisecond matters in the race for conversions, and we've engineered every aspect of our platform to turn browsers into buyers. Build your empire on bedrock that scales with your success, keeping your store responsive even during your biggest sales events.</p>
+            
+            <a href="#" class="btn-primary-action">Explore E-Commerce Mastery</a>
+        </div>
+    </section>
+
+    
+    
+    <!-- MIGRATION SECTION -->
+    <section class="migration-wrapper">
+        <div class="migration-hero">
+            <div class="migration-icon-wrap">
+                <div class="migration-circle-icon">
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+                </div>
+            </div>
+            <h2>Website Migration <span>Effortlessly Simple</span></h2>
+            <p>Already hosting elsewhere? Join over 3 million website owners who've discovered the HostCanon advantage: lightning-fast, secure, and reliable web hosting that never compromises. Our expert migration team handles everything while your site remains fully operational throughout the entire process.</p>
+        </div>
+        
+        <div class="migration-grid">
+            <div class="migration-box">
+                <div class="migration-number">1</div>
+                <div class="migration-box-icon">
+                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                </div>
+                <h3>Select Your Plan</h3>
+                <p>Choose the perfect hosting plan for your website needs with our easy-to-understand comparison tools.</p>
+            </div>
+            
+            <div class="migration-box">
+                <div class="migration-number">2</div>
+                <div class="migration-box-icon">
+                    <i class="bi bi-file-earmark-text-fill"></i>
+                </div>
+                <h3>Quick Migration Form</h3>
+                <p>Fill in a few simple details about your current hosting setup, and we'll handle the technical aspects.</p>
+            </div>
+            
+            <div class="migration-box">
+                <div class="migration-number">3</div>
+                <div class="migration-box-icon">
+                    <i class="bi bi-cup-hot-fill"></i>
+                </div>
+                <h3>We Handle The Rest</h3>
+                <p>Relax while our experts seamlessly transfer your website. We'll notify you once everything is optimized.</p>
+            </div>
+        </div>
+        
+        <div class="migration-cta">
+            <a href="#" class="migration-button">
+                <i class="bi bi-arrow-right-circle"></i> Get Started
+            </a>
+        </div>
+    </section>
+
+    <!-- Success -->
+
+    <section class="success">
+        <h2>Everything You Need for Online Success</h2>
+        <div class="addon-section">
+            <div class="addon-card">
+                <h3 class="sub">Domain Registration</h3>
+                <p class="paragraph">Secure your perfect domain in minutes at competitive prices.</p>
+                <a href="#" class="calltoaction-button">Get Started Now</a>
+            </div>
+            <div class="addon-card">
+                <h3 class="sub">SSL Certificates</h3>
+                <p class="paragraph">Protect your website with industry-leading security solutions.</p>
+                <a href="#" class="calltoaction-button">View Pricing</a>
+            </div>
+            <div class="addon-card">
+                <h3 class="sub">Advanced Server Management & Security</h3>
+                <p class="paragraph">Keep your online business running smoothly with premium tools and services.</p>
+                <a href="#" class="calltoaction-button">Explore More Solutions</a>
+            </div>
+        </div>
+    </section>
 
     
     <!-- Footer -->

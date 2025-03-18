@@ -1973,6 +1973,365 @@
                         <td>$49.99 / $44.99</td>
                         <td>Production companies <span class="badge badge-warning">Media</span></td>
                     </tr>
+                    <!-- Added .wedding domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .wedding
+                                <span class="new-tag">new</span>
+                            </div>
+                        </td>
+                        <td class="price">$29.99</td>
+                        <td class="promo-text">
+                            WEDDING SPECIAL<br>
+                            <span class="special-text">40% OFF</span>
+                        </td>
+                        <td><span class="original-price">$49.99</span></td>
+                        <td>$54.99 / $49.99</td>
+                        <td>Wedding websites <span class="badge badge-info">Events</span></td>
+                    </tr>
+
+                    <!-- Added .travel domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .travel
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$69.99</td>
+                        <td class="promo-text">
+                            TRAVEL SPECIAL<br>
+                            <span class="special-text">25% OFF</span>
+                        </td>
+                        <td><span class="original-price">$89.99</span></td>
+                        <td>$94.99 / $89.99</td>
+                        <td>Travel agencies <span class="badge badge-success">Tourism</span></td>
+                    </tr>
+
+                    <!-- Added .video domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .video
+                                <span class="hot-tag">hot</span>
+                            </div>
+                        </td>
+                        <td class="price">$19.99</td>
+                        <td class="promo-text">
+                            VIDEO SPECIAL<br>
+                            <span class="special-text">50% OFF</span>
+                        </td>
+                        <td><span class="original-price">$39.99</span></td>
+                        <td>$44.99 / $39.99</td>
+                        <td>Video content <span class="badge badge-warning">Media</span></td>
+                    </tr>
+
+                    <!-- Added .consulting domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .consulting
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$34.99</td>
+                        <td class="promo-text">
+                            BUSINESS SPECIAL<br>
+                            <span class="special-text">35% OFF</span>
+                        </td>
+                        <td><span class="original-price">$54.99</span></td>
+                        <td>$59.99 / $54.99</td>
+                        <td>Consulting firms <span class="badge badge-success">Business</span></td>
+                    </tr>
+
+                    <!-- Added .luxury domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .luxury
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$499.99</td>
+                        <td class="promo-text">
+                            LUXURY SPECIAL<br>
+                            <span class="special-text">15% OFF</span>
+                        </td>
+                        <td><span class="original-price">$599.99</span></td>
+                        <td>$649.99 / $599.99</td>
+                        <td>Luxury brands <span class="badge badge-success">Premium</span></td>
+                    </tr>
+
+                    <!-- Added .games domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .games
+                                <span class="hot-tag">hot</span>
+                            </div>
+                        </td>
+                        <td class="price">$14.99</td>
+                        <td class="promo-text">
+                            GAMING SPECIAL<br>
+                            <span class="special-text">60% OFF</span>
+                        </td>
+                        <td><span class="original-price">$34.99</span></td>
+                        <td>$39.99 / $34.99</td>
+                        <td>Gaming websites <span class="badge badge-warning">Gaming</span></td>
+                    </tr>
+
+                    <!-- Added .healthcare domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .healthcare
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$44.99</td>
+                        <td class="promo-text">
+                            HEALTH SPECIAL<br>
+                            <span class="special-text">30% OFF</span>
+                        </td>
+                        <td><span class="original-price">$64.99</span></td>
+                        <td>$69.99 / $64.99</td>
+                        <td>Healthcare providers <span class="badge badge-success">Health</span></td>
+                    </tr>
+
+                    <!-- Added .rent domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .rent
+                                <span class="new-tag">new</span>
+                            </div>
+                        </td>
+                        <td class="price">$29.99</td>
+                        <td class="promo-text">
+                            RENTAL SPECIAL<br>
+                            <span class="special-text">45% OFF</span>
+                        </td>
+                        <td><span class="original-price">$54.99</span></td>
+                        <td>$59.99 / $54.99</td>
+                        <td>Rental businesses <span class="badge badge-info">Real Estate</span></td>
+                    </tr>
+
+                    <!-- Added .flowers domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .flowers
+                                <span class="new-tag">new</span>
+                            </div>
+                        </td>
+                        <td class="price">$24.99</td>
+                        <td class="promo-text">
+                            FLORIST SPECIAL<br>
+                            <span class="special-text">50% OFF</span>
+                        </td>
+                        <td><span class="original-price">$49.99</span></td>
+                        <td>$54.99 / $49.99</td>
+                        <td>Florist businesses <span class="badge badge-info">Retail</span></td>
+                    </tr>
+
+                    <!-- Added .golf domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .golf
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$39.99</td>
+                        <td class="promo-text">
+                            GOLF SPECIAL<br>
+                            <span class="special-text">35% OFF</span>
+                        </td>
+                        <td><span class="original-price">$59.99</span></td>
+                        <td>$64.99 / $59.99</td>
+                        <td>Golf related <span class="badge badge-success">Sports</span></td>
+                    </tr>
+
+                    <!-- Added .pizza domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .pizza
+                                <span class="hot-tag">hot</span>
+                            </div>
+                        </td>
+                        <td class="price">$29.99</td>
+                        <td class="promo-text">
+                            FOOD SPECIAL<br>
+                            <span class="special-text">40% OFF</span>
+                        </td>
+                        <td><span class="original-price">$49.99</span></td>
+                        <td>$54.99 / $49.99</td>
+                        <td>Pizza restaurants <span class="badge badge-warning">Food</span></td>
+                    </tr>
+
+                    <!-- Added .soccer domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .soccer
+                                <span class="new-tag">new</span>
+                            </div>
+                        </td>
+                        <td class="price">$19.99</td>
+                        <td class="promo-text">
+                            SPORTS SPECIAL<br>
+                            <span class="special-text">55% OFF</span>
+                        </td>
+                        <td><span class="original-price">$44.99</span></td>
+                        <td>$49.99 / $44.99</td>
+                        <td>Soccer related <span class="badge badge-info">Sports</span></td>
+                    </tr>
+
+                    <!-- Added .wine domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .wine
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$49.99</td>
+                        <td class="promo-text">
+                            WINE SPECIAL<br>
+                            <span class="special-text">30% OFF</span>
+                        </td>
+                        <td><span class="original-price">$69.99</span></td>
+                        <td>$74.99 / $69.99</td>
+                        <td>Wine businesses <span class="badge badge-success">Beverage</span></td>
+                    </tr>
+
+                    <!-- Added .yoga domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .yoga
+                                <span class="hot-tag">hot</span>
+                            </div>
+                        </td>
+                        <td class="price">$24.99</td>
+                        <td class="promo-text">
+                            WELLNESS SPECIAL<br>
+                            <span class="special-text">50% OFF</span>
+                        </td>
+                        <td><span class="original-price">$49.99</span></td>
+                        <td>$54.99 / $49.99</td>
+                        <td>Yoga studios <span class="badge badge-warning">Fitness</span></td>
+                    </tr>
+
+                    <!-- Added .eco domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .eco
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$59.99</td>
+                        <td class="promo-text">
+                            GREEN SPECIAL<br>
+                            <span class="special-text">25% OFF</span>
+                        </td>
+                        <td><span class="original-price">$79.99</span></td>
+                        <td>$84.99 / $79.99</td>
+                        <td>Environmental sites <span class="badge badge-success">Green</span></td>
+                    </tr>
+
+                    <!-- Added .house domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .house
+                                <span class="new-tag">new</span>
+                            </div>
+                        </td>
+                        <td class="price">$29.99</td>
+                        <td class="promo-text">
+                            REALTY SPECIAL<br>
+                            <span class="special-text">45% OFF</span>
+                        </td>
+                        <td><span class="original-price">$54.99</span></td>
+                        <td>$59.99 / $54.99</td>
+                        <td>Real estate <span class="badge badge-info">Property</span></td>
+                    </tr>
+
+                    <!-- Added .music domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .music
+                                <span class="hot-tag">hot</span>
+                            </div>
+                        </td>
+                        <td class="price">$19.99</td>
+                        <td class="promo-text">
+                            MUSIC SPECIAL<br>
+                            <span class="special-text">60% OFF</span>
+                        </td>
+                        <td><span class="original-price">$49.99</span></td>
+                        <td>$54.99 / $49.99</td>
+                        <td>Music industry <span class="badge badge-warning">Entertainment</span></td>
+                    </tr>
+
+                    <!-- Added .pet domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .pet
+                                <span class="new-tag">new</span>
+                            </div>
+                        </td>
+                        <td class="price">$24.99</td>
+                        <td class="promo-text">
+                            PET SPECIAL<br>
+                            <span class="special-text">50% OFF</span>
+                        </td>
+                        <td><span class="original-price">$49.99</span></td>
+                        <td>$54.99 / $49.99</td>
+                        <td>Pet services <span class="badge badge-info">Pets</span></td>
+                    </tr>
+
+                    <!-- Added .security domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .security
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$79.99</td>
+                        <td class="promo-text">
+                            SECURITY SPECIAL<br>
+                            <span class="special-text">20% OFF</span>
+                        </td>
+                        <td><span class="original-price">$99.99</span></td>
+                        <td>$104.99 / $99.99</td>
+                        <td>Security services <span class="badge badge-success">Security</span></td>
+                    </tr>
+
+                    <!-- Added .taxi domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .taxi
+                                <span class="hot-tag">hot</span>
+                            </div>
+                        </td>
+                        <td class="price">$34.99</td>
+                        <td class="promo-text">
+                            TRANSPORT SPECIAL<br>
+                            <span class="special-text">40% OFF</span>
+                        </td>
+                        <td><span class="original-price">$59.99</span></td>
+                        <td>$64.99 / $59.99</td>
+                        <td>Taxi services <span class="badge badge-warning">Transport</span></td>
+                    </tr>
                 </tbody>
             </table>
         </div> <br> <br>

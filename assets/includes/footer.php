@@ -19,7 +19,7 @@
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2.5rem;
+    /* gap: 2.5rem; */
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -27,7 +27,7 @@
 .footer-logo {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.6rem;
 }
 
 .footer-logo img {
@@ -53,7 +53,9 @@
     color: #e0e0e0;
     font-size: 0.95rem;
 }
-
+#footer-hosting{
+    margin-left: 2rem;
+}
 .footer-heading {
     font-size: 1.2rem;
     font-weight: 600;
@@ -89,7 +91,7 @@
 }
 
 .footer-links li {
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.3rem;
 }
 
 .footer-links a {
@@ -182,7 +184,7 @@
     }
     
     .footer-content {
-        gap: 3rem;
+        gap: 2rem;
     }
 }
 
@@ -381,7 +383,7 @@
             <div class="footer-column">
                 <div class="footer-logo">
                     <img src="/api/placeholder/40/40" alt="HostCanon Logo" />
-                    <h3>HostCanon</h3>
+                    <!-- <h3>HostCanon</h3> -->
                 </div>
                 <p>Reliable web hosting solutions for businesses of all sizes. Fast, secure, and backed by 24/7 expert support.</p>
                 <div class="contact-info">
@@ -405,7 +407,7 @@
                     <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
-            <div class="footer-column">
+            <div class="footer-column" id="footer-hosting">
                 <h4 class="footer-heading">
                     Hosting Services
                     <span class="dropdown-icon"><i class="bi bi-chevron-down"></i></span>
