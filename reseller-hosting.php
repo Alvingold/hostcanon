@@ -267,7 +267,248 @@
             border-color: transparent;
             transform: translateY(-2px);
         }
-        
+
+        /* Support Section */
+.support-section {
+    padding: var(--section-padding);
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+/* Support Cards */
+.support-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.support-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.support-icon {
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.1), rgba(147, 44, 139, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.support-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.support-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.support-card p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Benefits Section */
+.support-content, .support-channels-wrapper {
+    height: 100%;
+}
+
+.support-content h3, .support-channels-wrapper h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.support-content h3::after, .support-channels-wrapper h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.benefit-icon, .channel-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.1), rgba(147, 44, 139, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon i, .channel-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.support-benefit h4, .support-channel-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.support-benefit p, .support-channel-item p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Button */
+.support-section .btn {
+    margin-top: 20px;
+    padding: 0.8rem 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .support-channels-wrapper {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .support-card {
+        padding: 20px 15px;
+    }
+    
+    .support-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .support-icon i {
+        font-size: 2rem;
+    }
+    
+    .support-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .support-content h3, .support-channels-wrapper h3 {
+        font-size: 1.5rem;
+    }
+    
+    .benefit-icon, .channel-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+    
+    .benefit-icon i, .channel-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .support-benefit h4, .support-channel-item h4 {
+        font-size: 1.1rem;
+    }
+}
+
+        /* Guidance Section */
+        .guidance {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+}
+
+.guidance h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.step-number {
+    background-color: #4B0082;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.step-content p {
+    color: #7f8c8d;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.cta-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4B0082;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color:rgb(68, 27, 97);
+}
+
+.support-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
         /* FAQ Section */
         .faq-section {
             background-color: #f5f5f5;
@@ -492,6 +733,188 @@
             </div>
         </div>
     </section>
+
+    <!-- 24/7 Support Section -->
+<section class="support-section">
+    <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">24/7 Dedicated Support</h2>
+        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Your success is our priority. We're always here to help you and your customers.</p>
+        
+        <div class="row g-4">
+            <!-- Support Card 1 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h3>Around the Clock</h3>
+                    <p>Our support team is available 24/7/365, ensuring you're never left without assistance.</p>
+                </div>
+            </div>
+            
+            <!-- Support Card 2 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+                    <h3>Fast Response</h3>
+                    <p>Average response time under 15 minutes for critical issues.</p>
+                </div>
+            </div>
+            
+            <!-- Support Card 3 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Seasoned professionals with deep technical knowledge of hosting systems.</p>
+                </div>
+            </div>
+            
+            <!-- Support Card 4 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <h3>Multiple Channels</h3>
+                    <p>Get help via live chat, email, phone, or ticket system.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="support-content p-4 bg-white rounded-3 shadow-sm">
+                    <h3 class="mb-4">How Our Support Benefits Your Business</h3>
+                    
+                    <div class="support-benefit d-flex mb-4">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-patch-check"></i>
+                        </div>
+                        <div>
+                            <h4>Focus on Growth</h4>
+                            <p>We handle technical issues so you can concentrate on growing your client base and business.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-benefit d-flex mb-4">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <div>
+                            <h4>Build Reputation</h4>
+                            <p>Reliable hosting backed by responsive support helps you build a stellar reputation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-benefit d-flex">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <div>
+                            <h4>Reduce Churn</h4>
+                            <p>Quick issue resolution keeps your customers satisfied and reduces turnover.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+                <div class="support-channels-wrapper p-4 bg-white rounded-3 shadow-sm">
+                    <h3 class="mb-4">Contact Our Support Team</h3>
+                    
+                    <div class="support-channel-item d-flex align-items-center mb-4">
+                        <div class="channel-icon me-3">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                        <div>
+                            <h4>Live Chat</h4>
+                            <p class="mb-0">Available 24/7 with an average response time of 2 minutes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-channel-item d-flex align-items-center mb-4">
+                        <div class="channel-icon me-3">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Support</h4>
+                            <p class="mb-0">Send detailed requests to support@afriportal.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-channel-item d-flex align-items-center mb-4">
+                        <div class="channel-icon me-3">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Support</h4>
+                            <p class="mb-0">Call us directly at +1-234-567-8900</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-channel-item d-flex align-items-center">
+                        <div class="channel-icon me-3">
+                            <i class="bi bi-ticket"></i>
+                        </div>
+                        <div>
+                            <h4>Ticket System</h4>
+                            <p class="mb-0">Submit tickets through your client area for tracking issues</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="#" class="btn btn-primary">Contact Support</a>
+        </div>
+    </div>
+</section>
+<!--guidance-->
+<div class="guidance">
+    <h2>How to Start Selling</h2>
+    <div class="guidance-content">
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sign up for our reseller hosting plan</h3>
+                    <p>Get started with our affordable and reliable reseller packages that include all the tools you need.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Customize and brand your hosting packages</h3>
+                    <p>Make it your own with custom branding, plans, and features tailored to your target audience.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Set your own prices and market your services</h3>
+                    <p>Determine your pricing strategy and use our marketing tools to reach potential customers.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Start selling to your customers and earn profits</h3>
+                    <p>Begin growing your hosting business while we handle the technical infrastructure behind the scenes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cta-container">
+            <a href="#get-started" class="cta-button">Get Started Today</a>
+            <p class="support-text">Need help? <a href="#support">Contact our support team</a></p>
+        </div>
+    </div>
+</div>
 
     <!-- FAQ Section -->
     <section class="faq-section">
