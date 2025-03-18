@@ -269,7 +269,214 @@
             </div>
         </div>
     </section>
-    <?php include 'test.php'; ?>
+    
+
+
+    <!-- Feature Section -->
+    <section class="features-section">
+        <div class="clo-container">
+            <div class="section-header">
+                <h2>Cloud <span>Hosting</span> Features</h2>
+                <p>Elevate your digital presence with our enterprise-grade infrastructure and cutting-edge technologies</p>
+            </div>
+
+            <div class="features-container">
+                <!-- Card 1 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">RELIABILITY</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">99.99% Uptime Guarantee</h3>
+                        <p class="feature-description">Our enterprise-grade infrastructure ensures your website remains operational at all times, even during peak traffic periods.</p>
+                        <ul class="feature-list">
+                            <li>Multi-zone redundancy</li>
+                            <li>Proactive monitoring</li>
+                            <li>Instant failover systems</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">99.99</span>
+                                <span class="feature-stat-label">% uptime</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">SECURITY</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Advanced Security Suite</h3>
+                        <p class="feature-description">Protect your website with enterprise-grade security features designed to block threats before they reach your site.</p>
+                        <ul class="feature-list">
+                            <li>DDoS protection</li>
+                            <li>Free SSL certificates</li>
+                            <li>Web application firewall</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">24/7</span>
+                                <span class="feature-stat-label">monitoring</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">PERFORMANCE</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="16 12 12 8 8 12"></polyline>
+                                <line x1="12" y1="16" x2="12" y2="8"></line>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Lightning Fast Speed</h3>
+                        <p class="feature-description">Experience blazing-fast load times with our optimized hosting infrastructure and global CDN network.</p>
+                        <ul class="feature-list">
+                            <li>SSD storage</li>
+                            <li>Global CDN</li>
+                            <li>HTTP/3 support</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">0.5</span>
+                                <span class="feature-stat-label">s load time</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">SCALABILITY</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Elastic Scaling</h3>
+                        <p class="feature-description">Scale your resources instantly to meet any traffic demand with our auto-scaling infrastructure.</p>
+                        <ul class="feature-list">
+                            <li>Auto-scaling</li>
+                            <li>Load balancing</li>
+                            <li>Unlimited bandwidth</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">∞</span>
+                                <span class="feature-stat-label">scalability</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">SUPPORT</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">24/7 Expert Support</h3>
+                        <p class="feature-description">Get instant help from our team of experienced hosting professionals whenever you need it.</p>
+                        <ul class="feature-list">
+                            <li>Live chat support</li>
+                            <li>Technical expertise</li>
+                            <li>Quick response time</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">24/7</span>
+                                <span class="feature-stat-label">assistance</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">BACKUP</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Automatic Backups</h3>
+                        <p class="feature-description">Keep your data safe with automated daily backups and easy restore options.</p>
+                        <ul class="feature-list">
+                            <li>Daily snapshots</li>
+                            <li>One-click restore</li>
+                            <li>Secure storage</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">30</span>
+                                <span class="feature-stat-label">day retention</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-cloud cloud-1"></div>
+            <div class="feature-cloud cloud-2"></div>
+        </div>
+    </section>
+    
 
     <!-- Speed -->
 
