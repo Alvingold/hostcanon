@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +17,7 @@
         }
 
         .section-header::after {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: linear-gradient(90deg,  #4B0082, #932C8B);
         }
 
         .refeature-card::before {
@@ -26,12 +25,12 @@
         }
 
         .feature-icon::before {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(90deg,  #4B0082, #932C8B);
         }
 
         .feature-badge {
             background-color: rgba(75, 0, 130, 0.1);
-            color: var(--primary);
+            color: #4B0082;
         }
 
         .feature-arrow {
@@ -39,11 +38,11 @@
         }
 
         .cloud-1 {
-            background-color: var(--primary);
+            background-color: #4B0082;
         }
 
         .cloud-2 {
-            background-color: var(--secondary);
+            background-color:  #932C8B;
         }
 
         * {
@@ -54,8 +53,8 @@
         }
 
         body {
-            background-color: var(--light);
-            color: var(--dark);
+            background-color:  #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
         }
 
@@ -107,7 +106,7 @@
             position: absolute;
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: linear-gradient(90deg, #4B0082,  #932C8B);
             bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
@@ -117,14 +116,14 @@
         .section-header h2 {
             font-size: 42px;
             font-weight: 800;
-            color: var(--dark);
+            color: #1e293b;
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
         }
 
         .section-header h2 span {
-            color: var(--primary);
+            color: #4B0082;
         }
 
         .section-header p {
@@ -134,24 +133,13 @@
             color: #64748b;
         }
 
+        /* Modified to create a 3x3 grid */
         .features-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-        }
-
-        .feature-column {
-            flex: 1;
-            min-width: 300px;
-            max-width: 380px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .feature-column:nth-child(2) {
-            transform: translateY(50px);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .refeature-card {
@@ -163,6 +151,7 @@
             position: relative;
             z-index: 1;
             cursor: pointer;
+            height: 100%;
         }
 
         .refeature-card:hover {
@@ -177,7 +166,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #4B0082,  #932C8B);
             opacity: 0;
             z-index: -1;
             transition: opacity 0.5s ease;
@@ -208,7 +197,7 @@
             top: 0;
             left: 0;
             border-radius: 20px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #4B0082,  #932C8B);
             opacity: 0.1;
             z-index: -1;
         }
@@ -220,7 +209,7 @@
         .feature-icon svg {
             width: 40px;
             height: 40px;
-            color: var(--primary);
+            color: #4B0082;
             transition: all 0.5s ease;
         }
 
@@ -230,18 +219,21 @@
 
         .feature-content {
             padding: 30px;
+            height: 100%;
+            /* display: flex; */
+            flex-direction: column;
         }
 
         .feature-title {
             font-size: 24px;
             font-weight: 700;
-            color: var(--dark);
+            color: #1e293b;
             margin-bottom: 15px;
             transition: all 0.3s ease;
         }
 
         .refeature-card:hover .feature-title {
-            color: var(--primary);
+            color: #4B0082;
         }
 
         .feature-description {
@@ -254,7 +246,7 @@
             display: inline-block;
             padding: 5px 12px;
             background-color: rgba(37, 99, 235, 0.1);
-            color: var(--primary);
+            color: #4B0082;
             border-radius: 20px;
             font-size: 14px;
             font-weight: 600;
@@ -263,6 +255,7 @@
 
         .feature-list {
             list-style: none;
+            margin-bottom: auto;
         }
 
         .feature-list li {
@@ -300,7 +293,7 @@
         .feature-stat-number {
             font-size: 26px;
             font-weight: 800;
-            color: var(--primary);
+            color: #4B0082;
         }
 
         .feature-stat-label {
@@ -321,14 +314,14 @@
         }
 
         .refeature-card:hover .feature-arrow {
-            background-color: var(--primary);
+            background-color: #4B0082;
             transform: translateX(5px);
         }
 
         .feature-arrow svg {
             width: 20px;
             height: 20px;
-            color: var(--primary);
+            color: #4B0082;
             transition: all 0.3s ease;
         }
 
@@ -346,20 +339,20 @@
         }
 
         .cloud-1 {
-            background-color: var(--primary);
+            background-color: #4B0082;
             top: 20%;
             left: 5%;
         }
 
         .cloud-2 {
-            background-color: var(--secondary);
+            background-color:  #932C8B;
             bottom: 10%;
             right: 5%;
         }
 
         @media (max-width: 992px) {
-            .feature-column:nth-child(2) {
-                transform: translateY(0);
+            .features-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -368,8 +361,8 @@
                 font-size: 36px;
             }
 
-            .feature-column {
-                min-width: 100%;
+            .features-container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -383,140 +376,199 @@
             </div>
 
             <div class="features-container">
-                <div class="feature-column">
-                    <div class="refeature-card">
-                        <div class="feature-content">
-                            <div class="feature-badge">RELIABILITY</div>
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                </svg>
-                            </div>
-                            <h3 class="feature-title">99.99% Uptime Guarantee</h3>
-                            <p class="feature-description">Our enterprise-grade infrastructure ensures your website remains operational at all times, even during peak traffic periods.</p>
-                            <ul class="feature-list">
-                                <li>Multi-zone redundancy</li>
-                                <li>Proactive monitoring</li>
-                                <li>Instant failover systems</li>
-                            </ul>
-                            <div class="feature-cta">
-                                <div class="feature-stat">
-                                    <span class="feature-stat-number">99.99</span>
-                                    <span class="feature-stat-label">% uptime</span>
-                                </div>
-                                <div class="feature-arrow">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
-                                </div>
-                            </div>
+                <!-- Card 1 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">RELIABILITY</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
                         </div>
-                    </div>
-
-                    <div class="refeature-card">
-                        <div class="feature-content">
-                            <div class="feature-badge">SECURITY</div>
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="feature-title">Advanced Security Suite</h3>
-                            <p class="feature-description">Protect your website with enterprise-grade security features designed to block threats before they reach your site.</p>
-                            <ul class="feature-list">
-                                <li>DDoS protection</li>
-                                <li>Free SSL certificates</li>
-                                <li>Web application firewall</li>
-                            </ul>
-                            <div class="feature-cta">
-                                <div class="feature-stat">
-                                    <span class="feature-stat-number">24/7</span>
-                                    <span class="feature-stat-label">monitoring</span>
-                                </div>
-                                <div class="feature-arrow">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-column">
-                    <div class="refeature-card">
-                        <div class="feature-content">
-                            <div class="feature-badge">PERFORMANCE</div>
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="16 12 12 8 8 12"></polyline>
-                                    <line x1="12" y1="16" x2="12" y2="8"></line>
-                                </svg>
-                            </div>
-                            <h3 class="feature-title">Lightning Fast Speed</h3>
-                            <p class="feature-description">Experience blazing-fast load times with our optimized hosting infrastructure and global CDN network.</p>
-                            <ul class="feature-list">
-                                <li>SSD storage</li>
-                                <li>Global CDN</li>
-                                <li>HTTP/3 support</li>
-                            </ul>
-                            <div class="feature-cta">
-                                <div class="feature-stat">
-                                    <span class="feature-stat-number">0.5</span>
-                                    <span class="feature-stat-label">s load time</span>
-                                </div>
-                                <div class="feature-arrow">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-column">
-                    <div class="refeature-card">
-                        <div class="feature-content">
-                            <div class="feature-badge">SCALABILITY</div>
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                                </svg>
-                            </div>
-                            <h3 class="feature-title">Elastic Scaling</h3>
-                            <p class="feature-description">Scale your resources instantly to meet any traffic demand with our auto-scaling infrastructure.</p>
-                            <ul class="feature-list">
-                                <li>Auto-scaling</li>
-                                <li>Load balancing</li>
-                                <li>Unlimited bandwidth</li>
-                            </ul>
-                            <div class="feature-cta">
+                        <h3 class="feature-title">99.99% Uptime Guarantee</h3>
+                        <p class="feature-description">Our enterprise-grade infrastructure ensures your website remains operational at all times, even during peak traffic periods.</p>
+                        <ul class="feature-list">
+                            <li>Multi-zone redundancy</li>
+                            <li>Proactive monitoring</li>
+                            <li>Instant failover systems</li>
+                        </ul>
+                        <div class="feature-cta">
                             <div class="feature-stat">
-                            <span class="feature-stat-number">∞</span>
-                            <span class="feature-stat-label">scalability</span>
+                                <span class="feature-stat-number">99.99</span>
+                                <span class="feature-stat-label">% uptime</span>
                             </div>
                             <div class="feature-arrow">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                        <div class="feature-cloud cloud-1"></div>
-                                        <div class="feature-cloud cloud-2"></div>                                                                                                                                                                                                                                    
+                <!-- Card 2 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">SECURITY</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Advanced Security Suite</h3>
+                        <p class="feature-description">Protect your website with enterprise-grade security features designed to block threats before they reach your site.</p>
+                        <ul class="feature-list">
+                            <li>DDoS protection</li>
+                            <li>Free SSL certificates</li>
+                            <li>Web application firewall</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">24/7</span>
+                                <span class="feature-stat-label">monitoring</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">PERFORMANCE</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="16 12 12 8 8 12"></polyline>
+                                <line x1="12" y1="16" x2="12" y2="8"></line>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Lightning Fast Speed</h3>
+                        <p class="feature-description">Experience blazing-fast load times with our optimized hosting infrastructure and global CDN network.</p>
+                        <ul class="feature-list">
+                            <li>SSD storage</li>
+                            <li>Global CDN</li>
+                            <li>HTTP/3 support</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">0.5</span>
+                                <span class="feature-stat-label">s load time</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">SCALABILITY</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Elastic Scaling</h3>
+                        <p class="feature-description">Scale your resources instantly to meet any traffic demand with our auto-scaling infrastructure.</p>
+                        <ul class="feature-list">
+                            <li>Auto-scaling</li>
+                            <li>Load balancing</li>
+                            <li>Unlimited bandwidth</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">∞</span>
+                                <span class="feature-stat-label">scalability</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">SUPPORT</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">24/7 Expert Support</h3>
+                        <p class="feature-description">Get instant help from our team of experienced hosting professionals whenever you need it.</p>
+                        <ul class="feature-list">
+                            <li>Live chat support</li>
+                            <li>Technical expertise</li>
+                            <li>Quick response time</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">24/7</span>
+                                <span class="feature-stat-label">assistance</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="refeature-card">
+                    <div class="feature-content">
+                        <div class="feature-badge">BACKUP</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Automatic Backups</h3>
+                        <p class="feature-description">Keep your data safe with automated daily backups and easy restore options.</p>
+                        <ul class="feature-list">
+                            <li>Daily snapshots</li>
+                            <li>One-click restore</li>
+                            <li>Secure storage</li>
+                        </ul>
+                        <div class="feature-cta">
+                            <div class="feature-stat">
+                                <span class="feature-stat-number">30</span>
+                                <span class="feature-stat-label">day retention</span>
+                            </div>
+                            <div class="feature-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-cloud cloud-1"></div>
+            <div class="feature-cloud cloud-2"></div>
         </div>
     </section>
 </body>
