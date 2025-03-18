@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.csshttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <link rel="stylesheet" href="assets/css/domain.css">
 </head>
 <body class="loading">
@@ -57,7 +57,6 @@
 
 
 <!-- Domain Sugesstion  -->
-
 <section class="domain-pricing">
     <div class="container">
         <h2 class="section-titles">Find Your Perfect Domain</h2>
@@ -574,50 +573,121 @@
 
 
 <!-- FAQ SEction -->
-<section class="faq-section">
-    <h2 class="faq-title">Domain Name Search FAQs</h2>
-    <div class="faq-container">
-        <!-- Existing FAQs -->
-        <div class="faq-item">
-            <div class="faq-question">What is a domain name? <span class="toggle-icon">+</span></div>
-            <div class="faq-answer">A domain name is the web address of your site, allowing users to find you online easily.</div>
+<section class="faq-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is a domain name? 
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <br>
+                                    A domain name is the web address of your site, allowing users to find you online easily.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How do I buy a domain name?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <br>
+                                    You can buy a domain name through our platform by selecting the desired domain and following the checkout process.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Can I transfer my domain to Hostcanon?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <br>
+                                    Yes, you can transfer your domain to Hostcanon by following the domain transfer process.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What is domain privacy protection?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <br>
+                                    Domain privacy protection hides your personal information from the public WHOIS database.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do I renew my domain name?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <br>
+                                    Log in to your registrar account, select your domain, and follow the steps for renewal. Auto-renewal is also an option with most registrars.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    What happens if my domain expires?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <br>
+                                    If your domain expires, it may become available for others to purchase. Some registrars offer grace periods for renewal.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    Can I sell my domain name?
+                                </button>
+                            </h2>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <br>
+                                    Yes, domain names can be sold. You can list them on domain marketplaces or auction platforms.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                    What is a subdomain?
+                                </button>
+                            </h2>
+                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <br>
+                                    A subdomain is a prefix to your domain (e.g., blog.example.com) and is used to organize or separate content.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="faq-item">
-            <div class="faq-question">How do I buy a domain name? <span class="toggle-icon">+</span></div>
-            <div class="faq-answer">You can purchase a domain through Hostcanon by searching for availability and registering your chosen name.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Can I transfer my domain to Hostcanon? <span class="toggle-icon">+</span></div>
-            <div class="faq-answer">Yes! You can transfer your domain to Hostcanon in just a few steps.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">What is domain privacy and do I need it? <span class="toggle-icon">+</span></div>
-            <div class="faq-answer">Domain privacy protection hides your personal information from the public WHOIS database.</div>
-        </div>
-
-        <!-- Additional FAQs -->
-        <div class="faq-item">
-            <div class="faq-question">What happens if my domain expires? <span class="toggle-icon">+</span></div>
-            <div class="faq-answer">If your domain expires, it may become available for others to purchase. Some registrars offer grace periods for renewal.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Can I sell my domain name? <span class="toggle-icon">+</span></div>
-            <div class="faq-answer">Yes, domain names can be sold. You can list them on domain marketplaces or auction platforms.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">What is a subdomain? <span class="toggle-icon">+</span></div>
-            <div class="faq-answer">A subdomain is a prefix to your domain (e.g., blog.example.com) and is used to organize or separate content.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How do I renew my domain name? <span class="toggle-icon">+</span></div>
-            <div class="faq-answer">Log in to your registrar account, select your domain, and follow the steps for renewal. Auto-renewal is also an option with most registrars.</div>
-        </div>
-    </div>
-</section>
-
-
-
-
+    </section>
 
 <!-- Thought of a domain Section -->
  <!-- Domain Thought -->

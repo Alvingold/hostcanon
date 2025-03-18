@@ -373,15 +373,22 @@
                                     <i class="bi bi-globe"></i>
                                     <div>
                                         <strong>Shared Hosting</strong>
-                                        <small>...</small>
+                                        <small>Affordable shared hosting</small>
                                     </div>
                                 </a></li>
                                 <li><a class="dropdown-item" href="/hostcanon/wordpress-hosting.php">
                                     <i class="bi bi-wordpress"></i>
                                     <div>
                                         <strong>WordPress Hosting</strong>
-                                        <small>...</small>
+                                        <small>Managed WordPress hosting</small>
                                     </div>
+                                </a></li>
+                                <li><a class="dropdown-item" href="/hostcanon/email-hosting.php">
+                                <i class="bi bi-envelope"></i>
+                                <div>
+                                    <strong>Email Hosting</strong>
+                                    <small>Promote your business with email hosting</small>
+                                </div>
                                 </a></li>
                             </div>
                             <div class="menu-group">
@@ -389,34 +396,8 @@
                                     <i class="bi bi-server"></i>
                                     <div>
                                         <strong>Vps Hosting</strong>
-                                        <small>...</small>
+                                        <small>High performance VPS hosting</small>
                                     </div>
-                                </a></li>
-                            </div>
-                            <div class="menu-group">
-                                <li><a class="dropdown-item" href="#">
-                                    <i class="bi bi-hdd-rack"></i>
-                                    <div>
-                                        <strong>Dedicated Hosting</strong>
-                                        <small>...</small>
-                                    </div>
-                                </a></li>
-                            </div>
-                        </div>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle">Tools & Services</a>
-                    <ul class="dropdown-menu">
-                        <div class="menu-grid">
-                            <div class="menu-group">
-                                <li><a class="dropdown-item" href="/hostcanon/reseller-hosting.php">
-                                    <i class="bi bi-people"></i>
-                                <div>
-                                    <strong>Reseller Hosting</strong>
-                                    <small>Start your own hosting business</small>
-                                </div>
                                 </a></li>
                                 <li><a class="dropdown-item" href="/hostcanon/ecommerce-hosting.php">
                                 <i class="bi bi-shop"></i>
@@ -427,14 +408,29 @@
                                 </a></li>
                             </div>
                             <div class="menu-group">
-                                <li><a class="dropdown-item" href="/hostcanon/email-hosting.php">
-                                <i class="bi bi-envelope"></i>
+                                <li><a class="dropdown-item" href="#">
+                                    <i class="bi bi-hdd-rack"></i>
+                                    <div>
+                                        <strong>Dedicated Hosting</strong>
+                                        <small>High performance dedicated hosting</small>
+                                    </div>
+                                </a></li>
+                                <li><a class="dropdown-item" href="/hostcanon/reseller-hosting.php">
+                                    <i class="bi bi-people"></i>
                                 <div>
-                                    <strong>Email Hosting</strong>
-                                    <small>Promote your business with email hosting</small>
+                                    <strong>Reseller Hosting</strong>
+                                    <small>Start your own hosting business</small>
                                 </div>
                                 </a></li>
                             </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle">Tools & Services</a>
+                    <ul class="dropdown-menu">
+                        <div class="menu-grid">
                             <div class="menu-group">
                                 <li><a class="dropdown-item" href="website-checker.php">
                                 <i class="bi bi-search"></i>

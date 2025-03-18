@@ -36,6 +36,7 @@
             padding: 150px 0 100px;
             position: relative;
             overflow: hidden;
+            height: 100vh;
         }
         
         .hero-btn .btn-primary {
@@ -206,37 +207,39 @@
 
         /* FAQ Section */
         .faq-section {
-            padding: 100px 0;
-            background-color: var(--light-color);
+            background-color: #f5f5f5;
         }
         
         .accordion-item {
             border: none;
-            margin-bottom: 15px;
-            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-radius: 15px !important;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
-        .accordion-header .accordion-button {
-            padding: 20px 25px;
+        .accordion-button {
+            padding: 1.5rem;
             font-weight: 600;
-            background-color: white;
-            color: var(--dark-color);
+            color: #2d2d2d;
+            background: white;
+            border: none;
+            box-shadow: none;
         }
         
         .accordion-button:not(.collapsed) {
-            background-color: white;
-            color: var(--primary-color);
-            box-shadow: none;
+            color: #4B0082;
+            background: linear-gradient(to right, rgba(75, 0, 130, 0.05), transparent);
         }
-        
-        .accordion-button:focus {
-            box-shadow: none;
+
+        .faq-section .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234B0082'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transition: all 0.3s ease;
         }
         
         .accordion-body {
-            padding: 20px 25px;
+            padding: 20px;
+            background-color: white;
         }
         
         /* CTA Section */
@@ -247,28 +250,6 @@
             text-align: center;
         }
         
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 80px 0 20px;
-        }
-        
-        footer h5 {
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-        
-        footer .nav-link {
-            color: rgba(255, 255, 255, 0.7);
-            padding: 5px 0;
-            transition: all 0.3s ease;
-        }
-        
-        footer .nav-link:hover {
-            color: white;
-            transform: translateX(5px);
-        }
         
         .social-icons a {
             display: inline-block;
@@ -294,87 +275,6 @@
             margin-top: 50px;
         }
         
-        /* Responsive */
-        @media (max-width: 991.98px) {
-            .navbar-collapse {
-                background-color: var(--primary-color);
-                padding: 20px;
-                border-radius: 10px;
-                margin-top: 10px;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-        }
-        
-        /* Toggler Icon Animation */
-        .navbar-toggler {
-            border: none;
-            padding: 0;
-            width: 30px;
-            height: 20px;
-            position: relative;
-            transition: .5s ease-in-out;
-        }
-        
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-        
-        .toggler-icon {
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: white;
-            border-radius: 3px;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: .25s ease-in-out;
-        }
-        
-        .middle-bar {
-            margin-top: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        .top-bar {
-            top: 0;
-        }
-        
-        .bottom-bar {
-            bottom: 0;
-        }
-        
-        .navbar-toggler.collapsed .top-bar {
-            transform: rotate(0);
-        }
-        
-        .navbar-toggler.collapsed .middle-bar {
-            opacity: 1;
-        }
-        
-        .navbar-toggler.collapsed .bottom-bar {
-            transform: rotate(0);
-        }
-        
-        .navbar-toggler .top-bar {
-            transform: rotate(135deg);
-            top: 8.5px;
-        }
-        
-        .navbar-toggler .middle-bar {
-            opacity: 0;
-        }
-        
-        .navbar-toggler .bottom-bar {
-            transform: rotate(-135deg);
-            top: 8.5px;
-        }
-
         /* Updated Pricing Section */
         .pricing-section {
             padding: 100px 0;
