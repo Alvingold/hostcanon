@@ -328,91 +328,163 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /* Support Section */
+.support-section {
+    padding: var(--section-padding);
+    background-color: #f8f9fa;
+}
+
+.support-content {
+    padding: 20px;
+}
+
+.support-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.support-feature h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.support-feature .feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.support-feature p {
+    color: #666;
+    margin-left: 3.2rem;
+    
+}
+
+.support-channels h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.support-channel {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.support-channel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    .support-content {
+        padding: 10px 0;
+    }
+    
+    .support-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .support-feature .feature-icon {
+        font-size: 1.8rem;
+    }
+    
+    .support-feature h4 {
+        font-size: 1.2rem;
+    }
+}
         
        /* Guidance Section */
-.guidance {
-    background:white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 140px ;  /* Centers and adds margin*/
-    text-align: center;
-    width: 80%;  /* Adjusted width */
-    max-width: 1300px; /* Ensures it doesn't stretch too much */
+       .guidance {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .guidance h2 {
-    color:var(--primary-color);;
-    font-size: 20px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.step-number {
+    background-color:rgb(78, 41, 104);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    color: #2c3e50;
+    margin-top: 0;
     margin-bottom: 8px;
-    font-weight:bolder;
+    font-size: 18px;
 }
 
-.guidance ol {
-    list-style: none;
-    padding: 0;
+.step-content p {
+    color: #7f8c8d;
+    margin: 0;
+    line-height: 1.5;
 }
 
-.guidance ol li {
-    background: white;
-    margin: 6px 0;
-    padding: 8px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.cta-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #6A0DAD;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color:rgb(78, 41, 104);;
+}
+
+.support-text {
+    margin-top: 10px;
     font-size: 14px;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .guidance, .faq {
-        width: 90%;
-        max-width: 900px;
-        margin: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .guidance, .faq {
-        width: 95%;
-        max-width: 600px;
-        margin: auto;
-        padding: 10px;
-    }
-
-    .guidance h2, .faq h2 {
-        font-size: 18px;
-    }
-
-    .faq-question {
-        font-size: 13px;
-        padding: 8px;
-    }
-
-    .faq-answer {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .guidance, .faq {
-        width: 100%;
-        max-width: 400px;
-        margin: auto;
-        padding: 8px;
-    }
-
-    .guidance h2, .faq h2 {
-        font-size: 16px;
-    }
-
-    .faq-question {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    .faq-answer {
-        font-size: 11px;
-    }
+    color: #7f8c8d;
 }
         /* Responsive */
         @media (max-width: 767px) {
@@ -588,16 +660,116 @@
         </div>
     </section>
 
+<!-- 24/7 Support Section -->
+<section class="support-section">
+    <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">24/7 Dedicated Support</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <img src="assets/media/support.png" alt="24/7 Support Illustration" class="img-fluid">
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="support-content">
+                    <h3 class="mb-4">We've Got Your Back, Around the Clock</h3>
+                    <p class="mb-4">Running a hosting business means supporting your clients whenever they need help. That's why we provide comprehensive support infrastructure to help you succeed.</p>
+                    
+                    <div class="support-features">
+                        <div class="support-feature mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-headset me-3 feature-icon"></i>
+                                <h4 class="m-0">Technical Assistance</h4>
+                            </div>
+                            <p>Our expert technical team is available 24/7 to handle server-side issues, ensuring your clients' websites stay online and perform optimally.</p>
+                        </div>
+                        
+                        <div class="support-feature mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-shield-check me-3 feature-icon"></i>
+                                <h4 class="m-0">Security Monitoring</h4>
+                            </div>
+                            <p>Continuous security monitoring and threat detection to protect your clients' data and websites from malicious attacks.</p>
+                        </div>
+                        
+                        <div class="support-feature mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-speedometer2 me-3 feature-icon"></i>
+                                <h4 class="m-0">Performance Optimization</h4>
+                            </div>
+                            <p>Regular server maintenance and optimization to ensure fast loading times and optimal performance for all hosted websites.</p>
+                        </div>
+                        
+                        <div class="support-feature">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-book me-3 feature-icon"></i>
+                                <h4 class="m-0">Knowledge Resources</h4>
+                            </div>
+                            <p>Access to extensive documentation, tutorials, and resources to help you assist your clients with common hosting issues.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-channels mt-5">
+                        <h4 class="mb-3">Multiple Support Channels</h4>
+                        <div class="d-flex flex-wrap">
+                            <div class="support-channel me-4 mb-3">
+                                <i class="bi bi-chat-dots me-2"></i> Live Chat
+                            </div>
+                            <div class="support-channel me-4 mb-3">
+                                <i class="bi bi-envelope me-2"></i> Email Support
+                            </div>
+                            <div class="support-channel me-4 mb-3">
+                                <i class="bi bi-telephone me-2"></i> Phone Support
+                            </div>
+                            <div class="support-channel mb-3">
+                                <i class="bi bi-ticket me-2"></i> Ticket System
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
      <!-- Guidance Section -->
      <div class="guidance">
-            <h2>How to Start Selling</h2>
-            <ol>
-                <li>Sign up for our reseller hosting plan.</li>
-                <li>Customize and brand your hosting packages.</li>
-                <li>Set your own prices and market your services.</li>
-                <li>Start selling to your customers and earn profits.</li>
-            </ol>
+    <h2>How to Start Selling</h2>
+    <div class="guidance-content">
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sign up for our reseller hosting plan</h3>
+                    <p>Get started with our affordable and reliable reseller packages that include all the tools you need.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Customize and brand your hosting packages</h3>
+                    <p>Make it your own with custom branding, plans, and features tailored to your target audience.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Set your own prices and market your services</h3>
+                    <p>Determine your pricing strategy and use our marketing tools to reach potential customers.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Start selling to your customers and earn profits</h3>
+                    <p>Begin growing your hosting business while we handle the technical infrastructure behind the scenes.</p>
+                </div>
+            </div>
         </div>
+        <div class="cta-container">
+            <a href="#get-started" class="cta-button">Get Started Today</a>
+            <p class="support-text">Need help? <a href="#support">Contact our support team</a></p>
+        </div>
+    </div>
+</div>
+
 
         <!-- FAQ Section -->
     <section class="faq-section">
