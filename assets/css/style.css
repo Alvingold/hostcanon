@@ -592,11 +592,11 @@ body {
 
 
 /* Responsive */
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
     .image-section img{
         display: none;
     }
-}
+} */
 
 
 
