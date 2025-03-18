@@ -110,10 +110,10 @@
             font-weight: 700;
             margin-bottom: 50px;
             position: relative;
-            display: inline-block;
+           /* display: inline-block;*/
         }
         
-        .section-title::after {
+       /* .section-title::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -122,7 +122,7 @@
             height: 4px;
             background-color: var(--primary-color);
             border-radius: 2px;
-        }
+        }*/
         
         .feature-card {
             padding: 30px;
@@ -640,6 +640,7 @@
      <section class="features-section">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-up">Why Choose Our E-commerce Hosting</h2>
+            <p class="text-center" data-aos="fade-up" data-aos-delay="100">Our e-commerce hosting solutions are designed to provide you with everything you need to run a successful online store. Here are some of the key features:</p>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-card">
@@ -691,6 +692,7 @@
     <section class="platforms-section">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-up">Supported E-commerce Platforms</h2>
+            <p class="text-center" data-aos="fade-up" data-aos-delay="100">We support a variety of popular e-commerce platforms, making it easy for you to set up and manage your online store.</p>
             <div class="row mt-5">
                 <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="platform-card">
@@ -728,6 +730,7 @@
     <section class="pricing-section" id="pricing">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-up">Choose Your E-commerce Hosting Plan</h2>
+            <p class="text-center" data-aos="fade-up" data-aos-delay="100">Select the plan that best fits your business needs. All plans come with a 30-day money-back guarantee!</p>
             <div class="row mt-5">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-card">

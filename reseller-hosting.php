@@ -97,10 +97,11 @@
             font-weight: 700;
             margin-bottom: 50px;
             position: relative;
-            display: inline-block;
+            color: var(--primary-color);
+            /*display: inline-block;*/
         }
         
-        .section-title::after {
+        /*.section-title::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -108,7 +109,7 @@
             width: 80px;
             height: 4px;
             background-color: var(--primary-color);
-            border-radius: 2px;
+            border-radius: 2px;*/
         }
 
         @media (max-width: 768px) {
@@ -609,9 +610,10 @@
 </section>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <section class="features-section" id="features">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-up">Why Choose Our Reseller Hosting</h2>
+            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Empower your business with our feature-rich reseller hosting plans designed for success.</p>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-card">
@@ -663,6 +665,7 @@
     <section class="pricing-section" id="pricing">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-up">Affordable Reseller Hosting Plans</h2>
+            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Choose a plan that fits your business needs and start your hosting journey today.</p>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-card">
