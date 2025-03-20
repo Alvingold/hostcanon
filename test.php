@@ -22,15 +22,21 @@
 </section>
 
 <style>
-.dedicated-hero {
+    body{
+    margin: 0;
+    padding: 0;
+    }
+    .dedicated-hero {
     position: relative;
-    background: linear-gradient(135deg, rgba(75, 0, 130, 0.85) 0%, rgba(147, 44, 139, 0.85) 100%), url('server-room.jpg');
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.9) 0%, rgba(147, 44, 139, 0.9) 100%), 
+                url('/assets/media/server-room.png');
     background-size: cover;
     background-position: center;
     color: #fff;
     padding: 120px 0 140px;
     overflow: hidden;
 }
+
 
 .container {
     width: 90%;
