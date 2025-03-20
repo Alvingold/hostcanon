@@ -157,11 +157,11 @@
                             <i class="bi bi-share"></i>
                         </div>
                         <h3>Reseller Hosting</h3>
-                        <p>...</p>
-                        <ul class="solution-features">
+                        <p>Start your own hosting business with our reliable, scalable, and profitable reseller hosting plans.</p>
+                        <!-- <ul class="solution-features">
                             <li><i class="bi bi-check-circle"></i> Unlimited Bandwidth</li>
-                        </ul>
-                        <a href="#Reseller-plans" class="btn btn-outline-primary">Learn More</a>
+                        </ul> -->
+                        <a href="reseller-hosting.php" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
@@ -170,11 +170,11 @@
                             <i class="bi bi-hdd-network"></i>
                         </div>
                         <h3 class="h4">Ecommerce Hosting</h3>
-                        <p>...</p>
-                        <ul class="solution-features">
+                        <p>Power your online store with our fast, secure, and feature-packed e-commerce hosting solutions.</p>
+                        <!-- <ul class="solution-features">
                             <li><i class="bi bi-check-circle"></i> Dedicated Resources</li>
-                        </ul>
-                        <a href="#Ecommerce-plans" class="btn btn-outline-primary">Learn More</a>
+                        </ul> -->
+                        <a href="ecommerce-hosting.php" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -183,11 +183,11 @@
                             <i class="bi bi-server"></i>
                         </div>
                         <h3>Email Hosting</h3>
-                        <p>...</p>
-                        <ul class="solution-features">
+                        <p>Elevate your communication with secure and professional email hosting, tailored for your domain.</p>
+                        <!-- <ul class="solution-features">
                             <li><i class="bi bi-check-circle"></i> Full Server Access</li>
-                        </ul>
-                        <a href="#Email Hosting" class="btn btn-outline-primary">Learn More</a>
+                        </ul> -->
+                        <a href="email-hosting.php" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
             </div>
