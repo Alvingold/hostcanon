@@ -198,7 +198,10 @@
     <!-- Pricing Section -->
     <section class="pricing-section" id="pricing">
         <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up">Affordable Reseller Hosting Plans</h2>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Affordable Hosting Plans</h2>
+                <p class="section-subtitle">Choose the perfect plan for your website or business</p>
+            </div>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-card">
@@ -484,66 +487,62 @@
     <div class="container">
         <div class="future-content">
             <!-- First Row -->
-            <div class="row">
+            <div class="row flex-column-reverse flex-md-row">
                 <!-- Text Content -->
-                <div class="text-section col-md-6">
-                    <h2 class="section-titled">Speed. Reliability. Efficiency.</h2>
+                <div class="text-section col-12 col-md-6 mt-4 mt-md-0">
+                    <h2 class="section-titled">Advanced Hosting Infrastructure</h2>
                     <p class="purple-section-subtitle">
-                        Deliver top-tier performance and ensure your visitors enjoy a seamless browsing experience.
+                        Experience enterprise-grade hosting powered by cutting-edge technology and expert support.
                     </p>
 
                     <div class="domain-info">
                         <div class="purple-domain-text">
-                            <!-- <i class="fas fa-globe"></i> -->
-                            <h3>Global Data Centers</h3>
+                            <h3>NVMe SSD Storage</h3>
                             <p>
-                            Your website connects to the nearest data center in our worldwide network, maximizing speed and efficiency—at no extra cost.
+                            Blazing-fast storage technology that delivers up to 20x faster page loads compared to traditional hosting solutions.
                             </p>
                         </div>
 
                         <div class="purple-domain-text">
-                            <!-- <i class="fas fa-tachometer-alt"></i> -->
-                            <h3>Optimized Performance</h3>
+                            <h3>Smart Caching</h3>
                             <p>
-                            Experience lightning-fast load times and stable performance, even during peak traffic periods.
+                            Built-in LiteSpeed Cache and Redis support to optimize your website's performance automatically.
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Image Section -->
-                <div class="image-section col-md-6">
-                    <img src="assets/media/dom.png" alt="Domain Management" width="100%">  
+                <div class="image-section col-12 col-md-6">
+                    <img src="assets/media/server-infrastructure.png" alt="Server Infrastructure" class="img-fluid">  
                 </div>
             </div>
 
             <!-- Second Row -->
             <div class="row mt-4">
-                <!-- Image Section First -->
-                <div class="image-section col-md-6">
-                    <img src="assets/media/domd.png" alt="Domain Search" width="100%">
+                <!-- Image Section -->
+                <div class="image-section col-12 col-md-6 mb-4 mb-md-0">
+                    <img src="assets/media/security-features.png" alt="Security Features" class="img-fluid">
                 </div>
 
                 <!-- Text Content Second -->
-                <div class="text-section col-md-6">
+                <div class="text-section col-12 col-md-6">
                     <div class="domain-info">
                         <div class="purple-domain-text">
-                            <!-- <i class="fas fa-shield-alt"></i> -->
-                            <h3>Rock-Solid Security</h3>
+                            <h3>Multi-Layer Security</h3>
                             <p>
-                            Secure your site with automated backups, two-factor authentication, and DDoS protection with Cloudflare.
+                            Enterprise-grade firewalls, real-time malware scanning, and free SSL certificates to keep your website secure.
                             </p>
                         </div>
 
                         <div class="purple-domain-text">
-                            <!-- <i class="fas fa-clock"></i> -->
-                            <h3>Guaranteed 99.9% Uptime</h3>
+                            <h3>Expert Support Team</h3>
                             <p>
-                            Your website stays online 24/7 with our industry-leading uptime guarantee.
+                            24/7 access to experienced hosting professionals who can assist with technical issues and optimization.
                             </p>
                         </div>
 
-                        <button class="purple-domain-btn">Get Started</button>
+                        <button class="purple-domain-btn w-100 w-md-auto" onclick="window.location.href='hosting-plans.php'">Choose Your Plan</button>
                     </div>
                 </div>
             </div>
@@ -554,9 +553,12 @@
 
 
 <!-- Difficulty Section -->
- 
 <section class="page-container">
-        <h2 class="section-title">Zero Difficulty</h2>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Zero Difficulty</h2>
+            <p class="section-subtitle">Experience the HostCanon difference with our easy-to-use hosting solutions</p>
+        </div>
         
         <div class="page-service-card">
             <div class="page-service-title">WordPress Wizardry Unleashed</div>
@@ -625,6 +627,7 @@
             
             <a href="#" class="btn-primary-action">Explore E-Commerce Mastery</a>
         </div>
+    </div>
     </section>
 
     
