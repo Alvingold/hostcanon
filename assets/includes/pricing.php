@@ -249,7 +249,7 @@
             color: #2D0050;
         } */
         
-        /* .filter-container {
+        .filter-container {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
@@ -287,9 +287,9 @@
         
         .filter-btn.active {
             border-bottom: 3px solid #FFC107;
-        } */
+        }
         
-        /* .search {
+        .search {
             background: #ffffff;
             border: 1px solid #d0d0d0;
             padding: 10px 18px;
@@ -309,7 +309,7 @@
         .search::placeholder {
             color: #888888;
         }
-         */
+        
         /* .cta-btn {
             background: #F57C00;
             color: white;
@@ -527,7 +527,7 @@
             <div class="tab">Premium</div>
         </div> -->
         
-        <!-- <div class="filter-container">
+        <div class="filter-container">
             <div class="filter-group">
                 <span>Filter by:</span>
                 <button class="filter-btn active">All</button>
@@ -540,7 +540,7 @@
             <div class="filter-group">
                 <input type="text" class="search" placeholder="Search domains...">
             </div>
-        </div> -->
+        </div>
         
         <div class="table-container">
             <table>
@@ -2332,6 +2332,95 @@
                         <td>$64.99 / $59.99</td>
                         <td>Taxi services <span class="badge badge-warning">Transport</span></td>
                     </tr>
+                    <!-- Added .movie domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .movie
+                                <span class="hot-tag">hot</span>
+                            </div>
+                        </td>
+                        <td class="price">$29.99</td>
+                        <td class="promo-text">
+                            ENTERTAINMENT SPECIAL<br>
+                            <span class="special-text">45% OFF</span>
+                        </td>
+                        <td><span class="original-price">$54.99</span></td>
+                        <td>$59.99 / $54.99</td>
+                        <td>Movie industry <span class="badge badge-warning">Entertainment</span></td>
+                    </tr>
+
+                    <!-- Added .art domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .art
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$39.99</td>
+                        <td class="promo-text">
+                            ART SPECIAL<br>
+                            <span class="special-text">30% OFF</span>
+                        </td>
+                        <td><span class="original-price">$56.99</span></td>
+                        <td>$59.99 / $54.99</td>
+                        <td>Art galleries & artists <span class="badge badge-success">Creative</span></td>
+                    </tr>
+
+                    <!-- Added .fit domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .fit
+                                <span class="new-tag">new</span>
+                            </div>
+                        </td>
+                        <td class="price">$19.99</td>
+                        <td class="promo-text">
+                            FITNESS SPECIAL<br>
+                            <span class="special-text">50% OFF</span>
+                        </td>
+                        <td><span class="original-price">$39.99</span></td>
+                        <td>$44.99 / $39.99</td>
+                        <td>Fitness websites <span class="badge badge-info">Health</span></td>
+                    </tr>
+
+                    <!-- Added .farm domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .farm
+                                <span class="hot-tag">hot</span>
+                            </div>
+                        </td>
+                        <td class="price">$24.99</td>
+                        <td class="promo-text">
+                            AGRICULTURE SPECIAL<br>
+                            <span class="special-text">40% OFF</span>
+                        </td>
+                        <td><span class="original-price">$41.99</span></td>
+                        <td>$44.99 / $39.99</td>
+                        <td>Agricultural businesses <span class="badge badge-warning">Agriculture</span></td>
+                    </tr>
+
+                    <!-- Added .casino domain -->
+                    <tr>
+                        <td>
+                            <div class="domain-name">
+                                .casino
+                                <span class="premium-tag">premium</span>
+                            </div>
+                        </td>
+                        <td class="price">$89.99</td>
+                        <td class="promo-text">
+                            GAMING SPECIAL<br>
+                            <span class="special-text">25% OFF</span>
+                        </td>
+                        <td><span class="original-price">$119.99</span></td>
+                        <td>$124.99 / $119.99</td>
+                        <td>Gaming websites <span class="badge badge-success">Gaming</span></td>
+                    </tr>
                 </tbody>
             </table>
         </div> <br> <br>
@@ -2350,6 +2439,104 @@
 
             
             <script>
+                // FILTER FUNCTIONALITY
+                // Get all necessary elements
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const searchInput = document.querySelector('.search');
+                const tableRows = document.querySelectorAll('tbody tr');
+                const initialRowCount = 10;
+                let isExpanded = false;
+
+                // Filter state
+                let currentFilter = 'all';
+                let searchTerm = '';
+
+                // Filter functions
+                function filterDomains() {
+                    let visibleCount = 0;
+                    tableRows.forEach((row, index) => {
+                        const domainCell = row.querySelector('.domain-name');
+                        if (!domainCell) return;
+
+                        const domain = domainCell.textContent.toLowerCase();
+                        const hasOnSale = row.querySelector('.sale-tag') !== null;
+                        const hasPopular = row.querySelector('.hot-tag') !== null;
+                        const hasNew = row.querySelector('.new-tag') !== null;
+                        const hasBusiness = row.querySelector('.badge-success') !== null;
+                        const hasPersonal = !hasBusiness;
+
+                        // Search filter
+                        const matchesSearch = domain.includes(searchTerm.toLowerCase()) ||
+                            row.textContent.toLowerCase().includes(searchTerm.toLowerCase());
+
+                        // Category filter
+                        let matchesFilter = true;
+                        switch(currentFilter) {
+                            case 'all':
+                                matchesFilter = true;
+                                break;
+                            case 'on sale':
+                                matchesFilter = hasOnSale;
+                                break;
+                            case 'popular':
+                                matchesFilter = hasPopular;
+                                break;
+                            case 'new tlds':
+                                matchesFilter = hasNew;
+                                break;
+                            case 'business':
+                                matchesFilter = hasBusiness;
+                                break;
+                            case 'personal':
+                                matchesFilter = hasPersonal;
+                                break;
+                        }
+
+                        const shouldShow = matchesFilter && matchesSearch;
+                        
+                        if (shouldShow) {
+                            visibleCount++;
+                            if (!isExpanded && visibleCount > initialRowCount) {
+                                row.style.display = 'none';
+                            } else {
+                                row.style.display = '';
+                            }
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+
+                    // Update see more button visibility
+                    const seeMoreBtn = document.querySelector('.see-more-btn');
+                    if (seeMoreBtn) {
+                        seeMoreBtn.style.display = (visibleCount > initialRowCount && !isExpanded) ? 'block' : 'none';
+                    }
+                }
+
+                // Event listeners
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Update active state
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+
+                        // Update filter and apply
+                        currentFilter = button.textContent.toLowerCase();
+                        filterDomains();
+                    });
+                });
+
+                searchInput.addEventListener('input', (e) => {
+                    searchTerm = e.target.value;
+                    filterDomains();
+                });
+
+                // Initialize with "All" filter
+                filterDomains();
+
+
+
+                // SEE MORE FUNCTIONALITY AND SORTING ALPHABETICALLY BY DOMAIN NAME FUNCTIONALITY   
             document.addEventListener('DOMContentLoaded', function() {
                 // Sort table rows alphabetically (excluding headers)
                 const tbody = document.querySelector('tbody');
