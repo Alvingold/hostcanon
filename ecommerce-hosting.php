@@ -40,18 +40,6 @@
             overflow: hidden;
         }
         
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60%;
-            height: 100%;
-            background-image: url('assets/media/pattern.svg');
-            background-size: cover;
-            opacity: 0.1;
-        }
-        
         .hero-title {
             font-size: 3.5rem;
             font-weight: 700;
