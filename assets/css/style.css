@@ -1304,14 +1304,14 @@ body {
     margin: 0;
     padding: 15px 90px;
 }
-h2 {
+.success-subtitle {
     color: #4B0082;
     margin-bottom: 10px;
     font-size: 1.8em;
     font-weight: 700;
 }
 
-h2::after {
+.success-subtitle::after {
     content: '';
     display: block;
     width: 40px;
@@ -1398,14 +1398,14 @@ strong {
     .success{
         padding: 15px;
     }
-h2 {
+.success-subtitle {
     color: #4B0082;
     margin-bottom: 10px;
     font-size: clamp(1.2em, 4vw, 1.8em);
     font-weight: 700;
 }
 
-h2::after {
+.success-subtitle::after {
     content: '';
     display: block;
     width: 40px;

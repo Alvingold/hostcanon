@@ -680,7 +680,7 @@
     <!-- Success -->
 
     <section class="success">
-        <h2>Everything You Need for Online Success</h2>
+        <h2 class="success-subtitle">Everything You Need for Online Success</h2>
         <div class="addon-section">
             <div class="addon-card">
                 <h3 class="sub">Domain Registration</h3>
