@@ -408,7 +408,7 @@
                                 </a></li>
                             </div>
                             <div class="menu-group">
-                                <li><a class="dropdown-item" href="#">
+                                <li><a class="dropdown-item" href="/hostcanon/dedicated-hosting.php">
                                     <i class="bi bi-hdd-rack"></i>
                                     <div>
                                         <strong>Dedicated Hosting</strong>

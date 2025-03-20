@@ -1,233 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HostCanon Services</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            
-            background: #ffffff;
-            color: #333;
-        }
-        .success{
-            line-height: 1.4;
-            margin: 0;
-            padding: 15px 50px;
-        }
-        h2 {
-            color: #4B0082;
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            font-weight: 700;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 2px;
-            background: linear-gradient(135deg, #4B0082 0%, #932C8B 100%);
-            margin-top: 8px;
-        }
-
-        .sub {
-            /* color: #932C8B; */
-            color: black;
-            font-size: 1.2em;
-            margin-bottom: 15px;
-        }
-
-        .featured-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .featured-list li {
-            margin: 10px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .featured-list li:before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            color: #932C8B;
-        }
-
-        .calltoaction-button {
-            display: inline-block;
-            padding: 8px 20px;
-            background: linear-gradient(135deg, #4B0082 0%, #932C8B 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 0.9em;
-            box-shadow: 0 3px 10px rgba(75, 0, 130, 0.2);
-        }
-
-        .calltoaction-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(75, 0, 130, 0.3);
-        }
-
-        .addon-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .addon-card {
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(75, 0, 130, 0.1);
-            border: 1px solid rgba(75, 0, 130, 0.1);
-            transition: all 0.3s ease;
-            background: #f9f9f9;
-            cursor: pointer;
-        }
-
-        .addon-card:hover {
-            transform: translateY(-3px);
-        }
-
-        p {
-            color: #666;
-            font-size: 1em;
-        }
-
-        strong {
-            color: #4B0082;
-        }
-
-        @media (max-width: 768px) {
-            .success{
-                padding: 15px;
-            }
-        h2 {
-            color: #4B0082;
-            margin-bottom: 10px;
-            font-size: clamp(1.2em, 4vw, 1.8em);
-            font-weight: 700;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 2px;
-            background: linear-gradient(135deg, #4B0082 0%, #932C8B 100%);
-            margin-top: 8px;
-        }
-
-        .sub {
-            color: #932C8B;
-            font-size: clamp(1em, 3vw, 1.2em);
-            margin-bottom: 15px;
-        }
-
-        .featured-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .featured-list li {
-            margin: 10px 0;
-            padding-left: 25px;
-            position: relative;
-            font-size: clamp(0.9em, 2.5vw, 1em);
-        }
-
-        .featured-list li:before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            color: #932C8B;
-        }
-
-        .calltoaction-button {
-            display: inline-block;
-            padding: clamp(6px, 2vw, 8px) clamp(15px, 4vw, 20px);
-            background: linear-gradient(135deg, #4B0082 0%, #932C8B 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: clamp(0.8em, 2.5vw, 0.9em);
-            box-shadow: 0 3px 10px rgba(75, 0, 130, 0.2);
-        }
-
-        .calltoaction-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(75, 0, 130, 0.3);
-        }
-
-        .addon-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-    }
-        @media (max-width: 576px) {
-            .success{
-                padding: 10px;
-            }
-            .addon-section {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .addon-card {
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(75, 0, 130, 0.1);
-            border: 1px solid rgba(75, 0, 130, 0.1);
-        }
-
-        .addon-card:hover {
-            transform: translateY(-3px);
-        }
-
-        p {
-            color: #666;
-            font-size: clamp(0.9em, 2.5vw, 1em);
-        }
-
-        strong {
-            color: #4B0082;
-        }
-    </style>
-</head>
-<body>
-
-    <section class="success">
-        <h2>Everything You Need for Online Success</h2>
-        <div class="addon-section">
-            <div class="addon-card">
-                <h3 class="sub">Domain Registration</h3>
-                <p>Secure your perfect domain in minutes at competitive prices.</p>
-                <a href="#" class="calltoaction-button">Get Started Now</a>
-            </div>
-            <div class="addon-card">
-                <h3 class="sub">SSL Certificates</h3>
-                <p>Protect your website with industry-leading security solutions.</p>
-                <a href="#" class="calltoaction-button">View Pricing</a>
-            </div>
-            <div class="addon-card">
-                <h3 class="sub">Advanced Server Management & Security</h3>
-                <p>Keep your online business running smoothly with premium tools and services.</p>
-                <a href="#" class="calltoaction-button">Explore More Solutions</a>
+<section class="dedicated-hero">
+    <div class="container">
+        <div class="hero-content">
+            <!-- Text Content -->
+            <div class="hero-text">
+                <span class="hero-badge">Enterprise-Grade Solution</span>
+                <h1>Dedicated Hosting for Ultimate Performance</h1>
+                <p>Unmatched speed, security, and control for your high-traffic websites. Power up your business with HostCanon's dedicated hosting solutions.</p>
+                <div class="hero-actions">
+                    <a href="#" class="hero-btn primary">Get Started</a>
+                    <a href="#" class="hero-btn secondary">View Plans</a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature"><i class="feature-icon speed"></i>99.9% Uptime</div>
+                    <div class="feature"><i class="feature-icon security"></i>DDoS Protection</div>
+                    <div class="feature"><i class="feature-icon support"></i>24/7 Support</div>
+                </div>
             </div>
         </div>
-    </section>
-</body>
-</html>
+    </div>
+    <div class="hero-shape"></div>
+</section>
+
+<style>
+.dedicated-hero {
+    position: relative;
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.85) 0%, rgba(147, 44, 139, 0.85) 100%), url('server-room.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 120px 0 140px;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(5px);
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    letter-spacing: -0.5px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin: 0 0 30px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.hero-btn.primary {
+    background: #fff;
+    color: #4B0082;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-btn.primary:hover {
+    background: #f5f5f5;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn.secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
+
+.hero-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+.hero-features {
+    display: flex;
+    gap: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.feature-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature-icon.speed {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/%3E%3C/svg%3E");
+}
+
+.feature-icon.security {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z'/%3E%3C/svg%3E");
+}
+
+.feature-icon.support {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z'/%3E%3C/svg%3E");
+}
+
+.hero-shape {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .dedicated-hero {
+        padding: 80px 0 100px;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+</style>
