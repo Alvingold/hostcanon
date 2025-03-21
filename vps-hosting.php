@@ -24,7 +24,7 @@
             overflow: hidden;
             height: 100vh;
         }
-        
+
         .hero-btn .btn-primary {
             background: linear-gradient(135deg, #4B0082, #932C8B);
             color: white;
@@ -86,6 +86,19 @@
             font-size: 1.2rem;
             opacity: 0.9;
             margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            .hero-section img{
+                display: none;
+            }
+            
         }
 
         /* Pricing Section */
@@ -225,12 +238,12 @@
             opacity: 0.5;
         }
 
-        .features-section .section-title {
+        /* .features-section .section-title {
             margin-bottom: 3rem;
             color: #2d2d2d;
             font-weight: 800;
             position: relative;
-        }
+        } */
 
         .feature-card {
             background: white;
@@ -278,12 +291,6 @@
             transition: all 0.4s ease;
             font-size: 1.8rem;
             color: #4B0082;
-        }
-
-        .feature-card:hover .feature-icon {
-            background: linear-gradient(135deg, #4B0082, #932C8B);
-            color: white;
-            transform: rotateY(180deg);
         }
 
         .feature-card h4 {
@@ -342,6 +349,70 @@
         </div>
     </section>
 
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title text-center">Why Choose Our VPS Hosting?</h2>
+            <p class="text-center text-muted mt-3 mb-5 fw-bold">Experience the power of dedicated resources and complete control</p>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h4>Lightning Fast Performance</h4>
+                        <p>Powered by NVMe SSD storage and latest-gen processors for up to 20x faster performance than traditional hosting.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>Enterprise Security</h4>
+                        <p>DDoS protection, SSL certificates, automated backups, and 24/7 infrastructure monitoring to keep your data safe.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h4>Full Root Access</h4>
+                        <p>Complete control over your server with root access, choice of OS, and custom resource allocation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h4>Instant Scalability</h4>
+                        <p>Easily upgrade resources as your business grows with zero downtime and no service interruption.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h4>24/7 Expert Support</h4>
+                        <p>Our experienced technical team is available round-the-clock to assist you with any server issues.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <h4>99.9% Uptime</h4>
+                        <p>Guaranteed uptime with redundant infrastructure and constant monitoring for maximum reliability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Vps Services -->
     <section class="pricing-section" id="pricing">
         <div class="container">
@@ -421,68 +492,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <h2 class="section-title text-center">Why Choose Our VPS Hosting?</h2>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-speedometer2"></i>
-                        </div>
-                        <h4>Lightning Fast Performance</h4>
-                        <p>Powered by NVMe SSD storage and latest-gen processors for up to 20x faster performance than traditional hosting.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-                        <h4>Enterprise Security</h4>
-                        <p>DDoS protection, SSL certificates, automated backups, and 24/7 infrastructure monitoring to keep your data safe.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-gear"></i>
-                        </div>
-                        <h4>Full Root Access</h4>
-                        <p>Complete control over your server with root access, choice of OS, and custom resource allocation.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-graph-up"></i>
-                        </div>
-                        <h4>Instant Scalability</h4>
-                        <p>Easily upgrade resources as your business grows with zero downtime and no service interruption.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-headset"></i>
-                        </div>
-                        <h4>24/7 Expert Support</h4>
-                        <p>Our experienced technical team is available round-the-clock to assist you with any server issues.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-clock-history"></i>
-                        </div>
-                        <h4>99.9% Uptime</h4>
-                        <p>Guaranteed uptime with redundant infrastructure and constant monitoring for maximum reliability.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <?php include 'assets/includes/footer.php'; ?>
 
@@ -505,3 +514,4 @@
     </script>
 </body>
 </html>
+

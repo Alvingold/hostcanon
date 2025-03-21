@@ -126,6 +126,10 @@
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
+
+            .hero-section::before{
+                display: none;
+            }
         }
 
         /* Pricing Section */
