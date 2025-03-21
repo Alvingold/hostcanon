@@ -669,38 +669,6 @@
             <a href="#pricing" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Get Started</a>
     </section>
 
-    <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up">What Our Customers Say</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-card">
-                        <p class="testimonial-content">"I've been using Afriportal's e-commerce hosting for my online store, and I couldn't be happier. The speed and reliability are top-notch, and the support team is always there to help when I need it."</p>
-                        <div class="testimonial-author">
-                            <img src="assets/media/user-1.jpg" alt="User 1" class="author-image">
-                            <div class="author-info">
-                                <h5>John Doe</h5>
-                                <p>Owner, Doe's Deals</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-card">
-                        <p class="testimonial-content">"Afriportal's e-commerce hosting has been a game-changer for my business. The platform is easy to use, and the features are exactly what I need to manage my store effectively. I highly recommend it!"</p>
-                        <div class="testimonial-author">
-                            <img src="assets/media/user-2.jpg" alt="User 2" class="author-image">
-                            <div class="author-info">
-                                <h5>Jane Smith</h5>
-                                <p>CEO, Smith's Store</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
     <!-- Footer -->
     <?php include('assets/includes/footer.php'); ?>
     <!-- Scroll to Top Button -->
