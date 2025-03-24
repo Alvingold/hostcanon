@@ -460,11 +460,19 @@
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>Economy</h3>
-                            <div class="price-tag">₦0.00<span class="price-duration">/month</span></div>
+                            <div class="price-tag">₦25,000<span class="price-duration">/month</span></div>
                         </div>
                         <div class="pricing-features">
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> 10GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> Basic Server Monitoring</li>
+                                <li><i class="bi bi-check-circle"></i> Email Support</li>
+                                <li><i class="bi bi-check-circle"></i> Weekly Backups</li>
+                                <li><i class="bi bi-check-circle"></i> Security Updates</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Performance Optimization</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Dedicated Support Team</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Custom Solutions</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -476,11 +484,19 @@
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>Standard</h3>
-                            <div class="price-tag">₦0.00<span class="price-duration">/month</span></div>
+                            <div class="price-tag">₦45,000<span class="price-duration">/month</span></div>
                         </div>
                         <div class="pricing-features">
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> 50GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> Advanced Monitoring</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Email & Phone Support</li>
+                                <li><i class="bi bi-check-circle"></i> Daily Backups</li>
+                                <li><i class="bi bi-check-circle"></i> Security Updates</li>
+                                <li><i class="bi bi-check-circle"></i> Performance Optimization</li>
+                                <li><i class="bi bi-check-circle"></i> Monthly Reports</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Dedicated Support Team</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Custom Solutions</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -492,11 +508,19 @@
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>Business</h3>
-                            <div class="price-tag">₦0.00<span class="price-duration">/month</span></div>
+                            <div class="price-tag">₦85,000<span class="price-duration">/month</span></div>
                         </div>
                         <div class="pricing-features">
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> 100GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> Enterprise Monitoring</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Priority Support</li>
+                                <li><i class="bi bi-check-circle"></i> Hourly Backups</li>
+                                <li><i class="bi bi-check-circle"></i> Real-time Security Updates</li>
+                                <li><i class="bi bi-check-circle"></i> Advanced Performance Tuning</li>
+                                <li><i class="bi bi-check-circle"></i> Weekly Reports</li>
+                                <li><i class="bi bi-check-circle"></i> Dedicated Support Team</li>
+                                <li><i class="bi bi-check-circle"></i> Custom Solutions</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -504,6 +528,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     </section>
 
     <!-- Migration Section -->
