@@ -325,6 +325,131 @@
             }
         }
     </style>
+    <style>
+        /* Server Specifications Styling */
+        .specs-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .specs-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%234B0082" opacity="0.05"/></svg>');
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .spec-card {
+            border: 1px solid rgba(75, 0, 130, 0.1);
+            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .spec-card:hover {
+            transform: translateY(-5px);
+            border-color: #4B0082;
+            box-shadow: 0 15px 35px rgba(75, 0, 130, 0.15) !important;
+        }
+
+        .spec-card h4 {
+            color: #4B0082;
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .spec-card h4 i {
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, rgba(75, 0, 130, 0.1), rgba(147, 44, 139, 0.1));
+            padding: 0.5rem;
+            border-radius: 10px;
+            color: #4B0082;
+        }
+
+        .spec-card ul li {
+            position: relative;
+            padding: 0.75rem 0;
+            margin-bottom: 0;
+            color: #666;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(75, 0, 130, 0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .spec-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .spec-card ul li i {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(75, 0, 130, 0.1);
+            border-radius: 50%;
+            margin-right: 1rem;
+            font-size: 0.8rem;
+            color: #4B0082;
+            transition: all 0.3s ease;
+        }
+
+        .spec-card ul li:hover {
+            color: #4B0082;
+            transform: translateX(5px);
+        }
+
+        .spec-card ul li:hover i {
+            background: #4B0082;
+            color: white;
+        }
+
+        /* FAQ Section Styling */
+        .faq-section {
+            background-color: #ffffff;
+        }
+
+        .accordion-item {
+            border: 1px solid rgba(75, 0, 130, 0.1);
+            margin-bottom: 1rem;
+            border-radius: 10px !important;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            font-weight: 600;
+            color: #2d2d2d;
+            background-color: #fff;
+            box-shadow: none !important;
+            padding: 1.25rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #4B0082;
+            background-color: rgba(75, 0, 130, 0.05);
+        }
+
+        .accordion-button:focus {
+            border-color: rgba(75, 0, 130, 0.1);
+        }
+
+        .accordion-body {
+            padding: 1.25rem;
+            color: #666;
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body class="loading">
     <?php include 'assets/includes/preloader.php'; ?>
@@ -492,6 +617,106 @@
         </div>
     </section>
 
+    <!-- Server Specifications -->
+    <section class="specs-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Premium Server Infrastructure</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="spec-card p-4 rounded-4 shadow-sm h-100">
+                        <h4 class="mb-4">
+                            <i class="bi bi-cpu"></i>
+                            Hardware Specifications
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle-fill"></i>Latest Gen Intel Xeon Processors</li>
+                            <li><i class="bi bi-check-circle-fill"></i>NVMe SSD Storage Arrays</li>
+                            <li><i class="bi bi-check-circle-fill"></i>ECC DDR4 RAM</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Enterprise-grade Network Infrastructure</li>
+                            <li><i class="bi bi-check-circle-fill"></i>RAID-10 Configuration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="spec-card p-4 rounded-4 shadow-sm h-100">
+                        <h4 class="mb-4">
+                            <i class="bi bi-hdd-network"></i>
+                            Network Features
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle-fill"></i>1Gbps Network Port</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Multiple Tier-1 Network Providers</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Advanced DDoS Protection</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Low-latency Global Routes</li>
+                            <li><i class="bi bi-check-circle-fill"></i>IPv4 & IPv6 Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="vpsAccordion">
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is VPS hosting?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#vpsAccordion">
+                                <div class="accordion-body">
+                                    VPS (Virtual Private Server) hosting provides you with dedicated resources on a virtualized server. Unlike shared hosting, you get guaranteed CPU, RAM, and storage allocation, ensuring consistent performance for your applications.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How do I manage my VPS?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#vpsAccordion">
+                                <div class="accordion-body">
+                                    You can manage your VPS through our intuitive control panel or via SSH with full root access. We provide management tools and a user-friendly interface for easy server administration.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Can I upgrade my VPS plan?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#vpsAccordion">
+                                <div class="accordion-body">
+                                    Yes, you can easily upgrade your VPS plan at any time. Our scalable infrastructure allows seamless upgrades with minimal downtime, ensuring your business can grow without constraints.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5" style="background: linear-gradient(135deg, #4B0082, #932C8B);">
+        <div class="container">
+            <div class="row justify-content-center text-center text-white">
+                <div class="col-lg-8" data-aos="zoom-in">
+                    <h2 class="mb-4">Ready to Get Started with VPS Hosting?</h2>
+                    <p class="mb-4">Experience the power of dedicated resources and take your business to the next level</p>
+                    <a href="#pricing" class="btn btn-light btn-lg px-5">Choose Your Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <?php include 'assets/includes/footer.php'; ?>
 
