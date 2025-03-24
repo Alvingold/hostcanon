@@ -392,7 +392,7 @@
                                 </a></li>
                             </div>
                             <div class="menu-group">
-                                <li><a class="dropdown-item" href="#">
+                                <li><a class="dropdown-item" href="/hostcanon/vps-hosting.php">
                                     <i class="bi bi-server"></i>
                                     <div>
                                         <strong>Vps Hosting</strong>
