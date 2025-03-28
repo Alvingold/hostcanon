@@ -625,7 +625,7 @@
             
             <p class="page-service-text">Forget complicated setups and frustrating technical hurdles. Our e-commerce hosting creates the perfect foundation for your online business ambitions. With intelligent caching and next-generation server architecture, your products shine in their best light - loading 20 times faster than standard solutions. Every millisecond matters in the race for conversions, and we've engineered every aspect of our platform to turn browsers into buyers. Build your empire on bedrock that scales with your success, keeping your store responsive even during your biggest sales events.</p>
             
-            <a href="#" class="btn-primary-action">Explore E-Commerce Mastery</a>
+            <a href="ecommerce-hosting.php" class="btn-primary-action">Explore E-Commerce Mastery</a>
         </div>
     </div>
     </section>
@@ -674,7 +674,7 @@
         </div>
         
         <div class="migration-cta">
-            <a href="#" class="migration-button">
+            <a href="domain.php" class="migration-button">
                 <i class="bi bi-arrow-right-circle"></i> Get Started
             </a>
         </div>
@@ -688,7 +688,7 @@
             <div class="addon-card">
                 <h3 class="sub">Domain Registration</h3>
                 <p class="paragraph">Secure your perfect domain in minutes at competitive prices.</p>
-                <a href="#" class="calltoaction-button">Get Started Now</a>
+                <a href="domain.php" class="calltoaction-button">Get Started Now</a>
             </div>
             <div class="addon-card">
                 <h3 class="sub">SSL Certificates</h3>

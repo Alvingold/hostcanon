@@ -282,7 +282,7 @@
         .feature-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, rgba(75, 0, 130, 0.1), rgba(147, 44, 139, 0.1));
+            background: linear-gradient(135deg, #4B0082, #932C8B);
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -290,7 +290,7 @@
             margin-bottom: 1.5rem;
             transition: all 0.4s ease;
             font-size: 1.8rem;
-            color: #4B0082;
+            color: white;
         }
 
         .feature-card h4 {
@@ -324,8 +324,6 @@
                 font-size: 1.5rem;
             }
         }
-    </style>
-    <style>
         /* Server Specifications Styling */
         .specs-section {
             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
