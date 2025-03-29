@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Afriportal Network Limited</title>
+    <title>Welcome to HostCanon</title>
     <link rel="shortcut icon" href="assets/media/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -217,6 +217,9 @@
                                 <li><i class="bi bi-check-circle"></i> 30 cPanel Accounts</li>
                                 <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
                                 <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Free SSL Certificates</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Dedicated IP Address</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -237,8 +240,10 @@
                                 <li><i class="bi bi-check-circle"></i> 1000 GB Bandwidth</li>
                                 <li><i class="bi bi-check-circle"></i> 75 cPanel Accounts</li>
                                 <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
                                 <li><i class="bi bi-check-circle"></i> Priority Support</li>
                                 <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Dedicated IP Address</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -259,6 +264,7 @@
                                 <li><i class="bi bi-check-circle"></i> 2000 GB Bandwidth</li>
                                 <li><i class="bi bi-check-circle"></i> 150 cPanel Accounts</li>
                                 <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
                                 <li><i class="bi bi-check-circle"></i> Priority Support</li>
                                 <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
                                 <li><i class="bi bi-check-circle"></i> Dedicated IP Address</li>
@@ -305,12 +311,6 @@
                                 <span class="feature-stat-number">99.99</span>
                                 <span class="feature-stat-label">% uptime</span>
                             </div>
-                            <div class="feature-arrow">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -335,12 +335,6 @@
                             <div class="feature-stat">
                                 <span class="feature-stat-number">24/7</span>
                                 <span class="feature-stat-label">monitoring</span>
-                            </div>
-                            <div class="feature-arrow">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
                             </div>
                         </div>
                     </div>
@@ -368,12 +362,6 @@
                             <div class="feature-stat">
                                 <span class="feature-stat-number">0.5</span>
                                 <span class="feature-stat-label">s load time</span>
-                            </div>
-                            <div class="feature-arrow">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
                             </div>
                         </div>
                     </div>
@@ -403,12 +391,6 @@
                                 <span class="feature-stat-number">∞</span>
                                 <span class="feature-stat-label">scalability</span>
                             </div>
-                            <div class="feature-arrow">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -433,12 +415,6 @@
                             <div class="feature-stat">
                                 <span class="feature-stat-number">24/7</span>
                                 <span class="feature-stat-label">assistance</span>
-                            </div>
-                            <div class="feature-arrow">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
                             </div>
                         </div>
                     </div>
@@ -465,12 +441,6 @@
                                 <span class="feature-stat-number">30</span>
                                 <span class="feature-stat-label">day retention</span>
                             </div>
-                            <div class="feature-arrow">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -482,152 +452,151 @@
 
 
     <!-- Speed -->
-
     <section class="speed-domain">
-    <div class="container">
-        <div class="future-content">
-            <!-- First Row -->
-            <div class="row flex-column-reverse flex-md-row">
-                <!-- Text Content -->
-                <div class="text-section col-12 col-md-6 mt-4 mt-md-0">
-                    <h2 class="section-titled">Advanced Hosting Infrastructure</h2>
-                    <p class="purple-section-subtitle">
-                        Experience enterprise-grade hosting powered by cutting-edge technology and expert support.
-                    </p>
+        <div class="container">
+            <div class="future-content">
+                <!-- First Row -->
+                <div class="row flex-column-reverse flex-md-row">
+                    <!-- Text Content -->
+                    <div class="text-section col-12 col-md-6 mt-4 mt-md-0">
+                        <h2 class="section-titled">Advanced Hosting Infrastructure</h2>
+                        <p class="purple-section-subtitle">
+                            Experience enterprise-grade hosting powered by cutting-edge technology and expert support.
+                        </p>
 
-                    <div class="domain-info">
-                        <div class="purple-domain-text">
-                            <h3>NVMe SSD Storage</h3>
-                            <p>
-                            Blazing-fast storage technology that delivers up to 20x faster page loads compared to traditional hosting solutions.
-                            </p>
-                        </div>
+                        <div class="domain-info">
+                            <div class="purple-domain-text">
+                                <h3>NVMe SSD Storage</h3>
+                                <p>
+                                Blazing-fast storage technology that delivers up to 20x faster page loads compared to traditional hosting solutions.
+                                </p>
+                            </div>
 
-                        <div class="purple-domain-text">
-                            <h3>Smart Caching</h3>
-                            <p>
-                            Built-in LiteSpeed Cache and Redis support to optimize your website's performance automatically.
-                            </p>
+                            <div class="purple-domain-text">
+                                <h3>Smart Caching</h3>
+                                <p>
+                                Built-in LiteSpeed Cache and Redis support to optimize your website's performance automatically.
+                                </p>
+                            </div>
                         </div>
+                    </div>
+
+                    <!-- Image Section -->
+                    <div class="image-section col-12 col-md-6">
+                        <img src="assets/media/server-infrastructure.png" alt="Server Infrastructure" class="img-fluid">  
                     </div>
                 </div>
 
-                <!-- Image Section -->
-                <div class="image-section col-12 col-md-6">
-                    <img src="assets/media/server-infrastructure.png" alt="Server Infrastructure" class="img-fluid">  
-                </div>
-            </div>
-
-            <!-- Second Row -->
-            <div class="row mt-4">
-                <!-- Image Section -->
-                <div class="image-section col-12 col-md-6 mb-4 mb-md-0">
-                    <img src="assets/media/security-features.png" alt="Security Features" class="img-fluid">
-                </div>
-
-                <!-- Text Content Second -->
-                <div class="text-section col-12 col-md-6">
-                    <div class="domain-info">
-                        <div class="purple-domain-text">
-                            <h3>Multi-Layer Security</h3>
-                            <p>
-                            Enterprise-grade firewalls, real-time malware scanning, and free SSL certificates to keep your website secure.
-                            </p>
-                        </div>
-
-                        <div class="purple-domain-text">
-                            <h3>Expert Support Team</h3>
-                            <p>
-                            24/7 access to experienced hosting professionals who can assist with technical issues and optimization.
-                            </p>
-                        </div>
-
-                        <button class="purple-domain-btn w-100 w-md-auto" onclick="window.location.href='hosting-plans.php'">Choose Your Plan</button>
+                <!-- Second Row -->
+                <div class="row mt-4">
+                    <!-- Image Section -->
+                    <div class="image-section col-12 col-md-6 mb-4 mb-md-0">
+                        <img src="assets/media/security-features.png" alt="Security Features" class="img-fluid">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
+                    <!-- Text Content Second -->
+                    <div class="text-section col-12 col-md-6">
+                        <div class="domain-info">
+                            <div class="purple-domain-text">
+                                <h3>Multi-Layer Security</h3>
+                                <p>
+                                Enterprise-grade firewalls, real-time malware scanning, and free SSL certificates to keep your website secure.
+                                </p>
+                            </div>
 
+                            <div class="purple-domain-text">
+                                <h3>Expert Support Team</h3>
+                                <p>
+                                24/7 access to experienced hosting professionals who can assist with technical issues and optimization.
+                                </p>
+                            </div>
 
-<!-- Difficulty Section -->
-<section class="page-container">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Zero Difficulty</h2>
-            <p class="section-subtitle">Experience the HostCanon difference with our easy-to-use hosting solutions</p>
-        </div>
-        
-        <div class="page-service-card">
-            <div class="page-service-title">WordPress Wizardry Unleashed</div>
-            
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <div class="page-feature-block">
-                        <div class="page-feature-icon">
-                            <i class="bi bi-rocket"></i>
-                        </div>
-                        <div class="page-feature-details">
-                            <div class="page-feature-name">Lightning-Fast Performance</div>
-                            <p class="page-service-text">Pages that load in milliseconds, not seconds, keeping visitors engaged.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="page-feature-block">
-                        <div class="page-feature-icon">
-                            <i class="bi bi-shield"></i>
-                        </div>
-                        <div class="page-feature-details">
-                            <div class="page-feature-name">Rock-Solid Reliability</div>
-                            <p class="page-service-text">Built on cutting-edge technology with expert support you can count on.</p>
+                            <button class="purple-domain-btn w-100 w-md-auto" onclick="window.location.href='#pricing'">Choose Your Plan</button>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <p class="page-service-text">Your WordPress dreams deserve <span class="text-accent">extraordinary hosting</span>. Our managed solutions don't just host - they elevate your digital presence. Powered by cutting-edge technology and backed by experts who truly care, HostCanon delivers performance that defies expectations. Imagine your site handling a sudden influx of visitors with grace, loading pages in milliseconds instead of seconds. This isn't just good for users - it's a love letter to Google's ranking algorithms that reward lightning-fast experiences. Your visitors won't just browse; they'll be captivated by seamless interactions that keep them coming back.</p>
-            
-            <a href="#" class="btn-primary-action">Discover WordPress Excellence</a>
         </div>
-        
-        <div class="page-service-card">
-            <div class="page-service-title">E-Commerce, Simplified</div>
-            
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <div class="page-feature-block">
-                        <div class="page-feature-icon">
-                            <i class="bi bi-cart4"></i>
-                        </div>
-                        <div class="page-feature-details">
-                            <div class="page-feature-name">Conversion-Optimized</div>
-                            <p class="page-service-text">Every millisecond matters - we've engineered our platform to turn browsers into buyers.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="page-feature-block">
-                        <div class="page-feature-icon">
-                            <i class="bi bi-speedometer"></i>
-                        </div>
-                        <div class="page-feature-details">
-                            <div class="page-feature-name">20X Faster Loading</div>
-                            <p class="page-service-text">Advanced caching technologies that leave competitors in the dust.</p>
-                        </div>
-                    </div>
-                </div>
+    </section>
+
+
+
+    <!-- Difficulty Section -->
+    <section class="page-container">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Zero Difficulty</h2>
+                <p class="section-subtitle">Experience the HostCanon difference with our easy-to-use hosting solutions</p>
             </div>
             
-            <p class="page-service-text"><span class="text-accent">Transform Your Vision</span> into a Digital Storefront</p>
+            <div class="page-service-card">
+                <div class="page-service-title">WordPress Wizardry Unleashed</div>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="page-feature-block">
+                            <div class="page-feature-icon">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                            <div class="page-feature-details">
+                                <div class="page-feature-name">Lightning-Fast Performance</div>
+                                <p class="page-service-text">Pages that load in milliseconds, not seconds, keeping visitors engaged.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="page-feature-block">
+                            <div class="page-feature-icon">
+                                <i class="bi bi-shield"></i>
+                            </div>
+                            <div class="page-feature-details">
+                                <div class="page-feature-name">Rock-Solid Reliability</div>
+                                <p class="page-service-text">Built on cutting-edge technology with expert support you can count on.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="page-service-text">Your WordPress dreams deserve <span class="text-accent">extraordinary hosting</span>. Our managed solutions don't just host - they elevate your digital presence. Powered by cutting-edge technology and backed by experts who truly care, HostCanon delivers performance that defies expectations. Imagine your site handling a sudden influx of visitors with grace, loading pages in milliseconds instead of seconds. This isn't just good for users - it's a love letter to Google's ranking algorithms that reward lightning-fast experiences. Your visitors won't just browse; they'll be captivated by seamless interactions that keep them coming back.</p>
+                
+                <a href="#" class="btn-primary-action">Discover WordPress Excellence</a>
+            </div>
             
-            <p class="page-service-text">Forget complicated setups and frustrating technical hurdles. Our e-commerce hosting creates the perfect foundation for your online business ambitions. With intelligent caching and next-generation server architecture, your products shine in their best light - loading 20 times faster than standard solutions. Every millisecond matters in the race for conversions, and we've engineered every aspect of our platform to turn browsers into buyers. Build your empire on bedrock that scales with your success, keeping your store responsive even during your biggest sales events.</p>
-            
-            <a href="ecommerce-hosting.php" class="btn-primary-action">Explore E-Commerce Mastery</a>
+            <div class="page-service-card">
+                <div class="page-service-title">E-Commerce, Simplified</div>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="page-feature-block">
+                            <div class="page-feature-icon">
+                                <i class="bi bi-cart4"></i>
+                            </div>
+                            <div class="page-feature-details">
+                                <div class="page-feature-name">Conversion-Optimized</div>
+                                <p class="page-service-text">Every millisecond matters - we've engineered our platform to turn browsers into buyers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="page-feature-block">
+                            <div class="page-feature-icon">
+                                <i class="bi bi-speedometer"></i>
+                            </div>
+                            <div class="page-feature-details">
+                                <div class="page-feature-name">20X Faster Loading</div>
+                                <p class="page-service-text">Advanced caching technologies that leave competitors in the dust.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="page-service-text"><span class="text-accent">Transform Your Vision</span> into a Digital Storefront</p>
+                
+                <p class="page-service-text">Forget complicated setups and frustrating technical hurdles. Our e-commerce hosting creates the perfect foundation for your online business ambitions. With intelligent caching and next-generation server architecture, your products shine in their best light - loading 20 times faster than standard solutions. Every millisecond matters in the race for conversions, and we've engineered every aspect of our platform to turn browsers into buyers. Build your empire on bedrock that scales with your success, keeping your store responsive even during your biggest sales events.</p>
+                
+                <a href="ecommerce-hosting.php" class="btn-primary-action">Explore E-Commerce Mastery</a>
+            </div>
         </div>
-    </div>
     </section>
 
     
@@ -681,7 +650,6 @@
     </section>
 
     <!-- Success -->
-
     <section class="success">
         <h2 class="success-subtitle">Everything You Need for Online Success</h2>
         <div class="addon-section">

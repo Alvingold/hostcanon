@@ -539,12 +539,14 @@
                         </div>
                         <div class="pricing-features">
                             <ul>
+                                <li><i class="bi bi-check-circle"></i> 10GB Storage</li>
                                 <li><i class="bi bi-check-circle"></i> 5 Email Accounts</li>
-                                <li><i class="bi bi-check-circle"></i> 5GB Storage per Account</li>
+                                <li><i class="bi bi-check-circle"></i> Spam Protection</li>
                                 <li><i class="bi bi-check-circle"></i> Webmail Access</li>
-                                <li><i class="bi bi-check-circle"></i> Basic Spam Protection</li>
-                                <li><i class="bi bi-check-circle"></i> Mobile Device Compatible</li>
-                                <li><i class="bi bi-check-circle"></i> 24/7 Email Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Custom Domain</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Mobile Sync</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Advanced Security</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -561,12 +563,14 @@
                         </div>
                         <div class="pricing-features">
                             <ul>
-                                <li><i class="bi bi-check-circle"></i> 20 Email Accounts</li>
-                                <li><i class="bi bi-check-circle"></i> 10GB Storage per Account</li>
-                                <li><i class="bi bi-check-circle"></i> Webmail & IMAP/POP3</li>
-                                <li><i class="bi bi-check-circle"></i> Advanced Spam & Virus Protection</li>
-                                <li><i class="bi bi-check-circle"></i> Email Forwarding & Autoresponders</li>
-                                <li><i class="bi bi-check-circle"></i> 24/7 Phone & Email Support</li>
+                                <li><i class="bi bi-check-circle"></i> 25GB Storage</li>
+                                <li><i class="bi bi-check-circle"></i> 15 Email Accounts</li>
+                                <li><i class="bi bi-check-circle"></i> Spam Protection</li>
+                                <li><i class="bi bi-check-circle"></i> Webmail Access</li>
+                                <li><i class="bi bi-check-circle"></i> Custom Domain</li>
+                                <li><i class="bi bi-check-circle"></i> Mobile Sync</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Advanced Security</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -583,12 +587,14 @@
                         </div>
                         <div class="pricing-features">
                             <ul>
+                                <li><i class="bi bi-check-circle"></i> 50GB Storage</li>
                                 <li><i class="bi bi-check-circle"></i> Unlimited Email Accounts</li>
-                                <li><i class="bi bi-check-circle"></i> 25GB Storage per Account</li>
-                                <li><i class="bi bi-check-circle"></i> Full Suite Access Options</li>
-                                <li><i class="bi bi-check-circle"></i> Premium Security Features</li>
-                                <li><i class="bi bi-check-circle"></i> Collaborative Tools & Calendar</li>
-                                <li><i class="bi bi-check-circle"></i> Priority 24/7 Support</li>
+                                <li><i class="bi bi-check-circle"></i> Spam Protection</li>
+                                <li><i class="bi bi-check-circle"></i> Webmail Access</li>
+                                <li><i class="bi bi-check-circle"></i> Custom Domain</li>
+                                <li><i class="bi bi-check-circle"></i> Mobile Sync</li>
+                                <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                                <li><i class="bi bi-check-circle"></i> Advanced Security</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">

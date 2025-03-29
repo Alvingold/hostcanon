@@ -545,10 +545,12 @@
                                 <li><i class="bi bi-check-circle"></i> 10GB SSD Storage</li>
                                 <li><i class="bi bi-check-circle"></i> 1 Website</li>
                                 <li><i class="bi bi-check-circle"></i> Free SSL Certificate</li>
-                                <li><i class="bi bi-check-circle"></i> 1-Click Installs</li>
-                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
-                                <li><i class="bi bi-check-circle"></i> Up to 10,000 Monthly Visitors</li>
-                                <li><i class="bi bi-check-circle"></i> 99.9% Uptime Guarantee</li>
+                                <li><i class="bi bi-check-circle"></i> Daily Backups</li>
+                                <li><i class="bi bi-check-circle"></i> Basic CDN</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Premium Themes</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Dedicated IP</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Performance Optimization</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -566,13 +568,15 @@
                         </div>
                         <div class="pricing-features">
                             <ul>
-                                <li><i class="bi bi-check-circle"></i> 50GB SSD Storage</li>
-                                <li><i class="bi bi-check-circle"></i> 5 Websites</li>
+                                <li><i class="bi bi-check-circle"></i> 30GB SSD Storage</li>
+                                <li><i class="bi bi-check-circle"></i> 3 Websites</li>
                                 <li><i class="bi bi-check-circle"></i> Free SSL Certificate</li>
-                                <li><i class="bi bi-check-circle"></i> 1-Click Installs</li>
-                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
-                                <li><i class="bi bi-check-circle"></i> Up to 50,000 Monthly Visitors</li>
-                                <li><i class="bi bi-check-circle"></i> 99.9% Uptime Guarantee</li>
+                                <li><i class="bi bi-check-circle"></i> Daily Backups</li>
+                                <li><i class="bi bi-check-circle"></i> Premium CDN</li>
+                                <li><i class="bi bi-check-circle"></i> Premium Themes</li>
+                                <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Dedicated IP</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Performance Optimization</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -590,12 +594,14 @@
                         <div class="pricing-features">
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> 100GB SSD Storage</li>
-                                <li><i class="bi bi-check-circle"></i> 10 Websites</li>
+                                <li><i class="bi bi-check-circle"></i> Unlimited Websites</li>
                                 <li><i class="bi bi-check-circle"></i> Free SSL Certificate</li>
-                                <li><i class="bi bi-check-circle"></i> 1-Click Installs</li>
-                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
-                                <li><i class="bi bi-check-circle"></i> Up to 100,000 Monthly Visitors</li>
-                                <li><i class="bi bi-check-circle"></i> 99.9% Uptime Guarantee</li>
+                                <li><i class="bi bi-check-circle"></i> Daily Backups</li>
+                                <li><i class="bi bi-check-circle"></i> Premium CDN</li>
+                                <li><i class="bi bi-check-circle"></i> Premium Themes</li>
+                                <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                                <li><i class="bi bi-check-circle"></i> Dedicated IP</li>
+                                <li><i class="bi bi-check-circle"></i> Performance Optimization</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">

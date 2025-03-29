@@ -325,7 +325,7 @@
     border-radius: 15px; 
     bottom: -30px; 
     right: -30px; 
-    max-width: 280px;"
+    max-width: 280px;
 }
 
 .stats-card h5{
@@ -344,7 +344,7 @@
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    margin-right: 15px;"
+    margin-right: 15px;
 }
 
 .benefits-image:hover .stats-card {
@@ -521,12 +521,15 @@
                     </div>
                     <div class="pricing-features">
                         <ul>
-                            <li><i class="bi bi-check"></i> 1 Website</li>
-                            <li><i class="bi bi-check"></i> 5GB SSD Storage</li>
-                            <li><i class="bi bi-check"></i> Unmetered Bandwidth</li>
-                            <li><i class="bi bi-check"></i> Free SSL Certificate</li>
-                            <li><i class="bi bi-check"></i> 1 Email Account</li>
-                            <li><i class="bi bi-check"></i> 24/7 Support</li>
+                            <li><i class="bi bi-check-circle"></i> 10GB SSD Storage</li>
+                            <li><i class="bi bi-check-circle"></i> 1 Website</li>
+                            <li><i class="bi bi-check-circle"></i> 100GB Bandwidth</li>
+                            <li><i class="bi bi-check-circle"></i> Free SSL Certificate</li>
+                            <li><i class="bi bi-check-circle"></i> 5 Email Accounts</li>
+                            <li><i class="bi bi-x-circle text-danger"></i> Daily Backups</li>
+                            <li><i class="bi bi-x-circle text-danger"></i> Priority Support</li>
+                            <li><i class="bi bi-x-circle text-danger"></i> CDN Integration</li>
+                            <li><i class="bi bi-x-circle text-danger"></i> Dedicated IP</li>
                         </ul>
                         </div>
                         <div class="pricing-footer">
@@ -543,12 +546,15 @@
                     </div>
                     <div class="pricing-features">
                         <ul>
-                            <li><i class="bi bi-check"></i> 5 Websites</li>
-                            <li><i class="bi bi-check"></i> 20GB SSD Storage</li>
-                            <li><i class="bi bi-check"></i> Unmetered Bandwidth</li>
-                            <li><i class="bi bi-check"></i> Free SSL Certificate</li>
-                            <li><i class="bi bi-check"></i> 5 Email Accounts</li>
-                            <li><i class="bi bi-check"></i> 24/7 Support</li>
+                            <li><i class="bi bi-check-circle"></i> 30GB SSD Storage</li>
+                            <li><i class="bi bi-check-circle"></i> 3 Websites</li> 
+                            <li><i class="bi bi-check-circle"></i> 500GB Bandwidth</li>
+                            <li><i class="bi bi-check-circle"></i> Free SSL Certificate</li>
+                            <li><i class="bi bi-check-circle"></i> Unlimited Email Accounts</li>
+                            <li><i class="bi bi-check-circle"></i> Daily Backups</li>
+                            <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                            <li><i class="bi bi-x-circle text-danger"></i> CDN Integration</li>
+                            <li><i class="bi bi-x-circle text-danger"></i> Dedicated IP</li>
                         </ul>
                         </div>
                         <div class="pricing-footer">
@@ -565,14 +571,15 @@
                     </div>
                     <div class="pricing-features">
                         <ul>
-                            <li><i class="bi bi-check"></i> Unlimited Websites</li>
-                            <li><i class="bi bi-check"></i> 50GB SSD Storage</li>
-                            <li><i class="bi bi-check"></i> Unmetered Bandwidth</li>
-                            <li><i class="bi bi-check"></i> Free SSL Certificate</li>
-                            <li><i class="bi bi-check"></i> 20 Email Accounts</li>
-                            <li><i class="bi bi-check"></i> Free Domain for 1 Year</li>
-                            <li><i class="bi bi-check"></i> Weekly Backups</li>
-                            <li><i class="bi bi-check"></i> 24/7 Priority Support</li>
+                            <li><i class="bi bi-check-circle"></i> 100GB SSD Storage</li>
+                            <li><i class="bi bi-check-circle"></i> Unlimited Websites</li>
+                            <li><i class="bi bi-check-circle"></i> 2TB Bandwidth</li>
+                            <li><i class="bi bi-check-circle"></i> Free SSL Certificate</li>
+                            <li><i class="bi bi-check-circle"></i> Unlimited Email Accounts</li>
+                            <li><i class="bi bi-check-circle"></i> Daily Backups</li>
+                            <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                            <li><i class="bi bi-check-circle"></i> CDN Integration</li>
+                            <li><i class="bi bi-check-circle"></i> Dedicated IP</li>
                         </ul>
                         </div>
                         <div class="pricing-footer">

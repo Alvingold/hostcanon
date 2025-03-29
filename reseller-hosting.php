@@ -664,6 +664,10 @@
                                 <li><i class="bi bi-check-circle"></i> 30 cPanel Accounts</li>
                                 <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
                                 <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Free SSL Certificates</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Daily Backups</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Dedicated IP Address</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -684,8 +688,11 @@
                                 <li><i class="bi bi-check-circle"></i> 1000 GB Bandwidth</li>
                                 <li><i class="bi bi-check-circle"></i> 75 cPanel Accounts</li>
                                 <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
                                 <li><i class="bi bi-check-circle"></i> Priority Support</li>
                                 <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
+                                <li><i class="bi bi-check-circle"></i> Daily Backups</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Dedicated IP Address</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -706,8 +713,10 @@
                                 <li><i class="bi bi-check-circle"></i> 2000 GB Bandwidth</li>
                                 <li><i class="bi bi-check-circle"></i> 150 cPanel Accounts</li>
                                 <li><i class="bi bi-check-circle"></i> Free WHMCS License</li>
+                                <li><i class="bi bi-check-circle"></i> 24/7 Support</li>
                                 <li><i class="bi bi-check-circle"></i> Priority Support</li>
                                 <li><i class="bi bi-check-circle"></i> Free SSL Certificates</li>
+                                <li><i class="bi bi-check-circle"></i> Daily Backups</li>
                                 <li><i class="bi bi-check-circle"></i> Dedicated IP Address</li>
                             </ul>
                         </div>

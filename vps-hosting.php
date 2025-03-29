@@ -557,6 +557,8 @@
                                 <li><i class="bi bi-check-circle"></i> 1 Dedicated IP</li>
                                 <li><i class="bi bi-check-circle"></i> Full Root Access</li>
                                 <li><i class="bi bi-check-circle"></i> DDoS Protection</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Weekly Backups</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -580,6 +582,7 @@
                                 <li><i class="bi bi-check-circle"></i> Full Root Access</li>
                                 <li><i class="bi bi-check-circle"></i> DDoS Protection</li>
                                 <li><i class="bi bi-check-circle"></i> Priority Support</li>
+                                <li><i class="bi bi-x-circle text-danger"></i> Weekly Backups</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -602,7 +605,7 @@
                                 <li><i class="bi bi-check-circle"></i> 3 Dedicated IPs</li>
                                 <li><i class="bi bi-check-circle"></i> Full Root Access</li>
                                 <li><i class="bi bi-check-circle"></i> DDoS Protection</li>
-                                <li><i class="bi bi-check-circle"></i> 24/7 Priority Support</li>
+                                <li><i class="bi bi-check-circle"></i> Priority Support</li>
                                 <li><i class="bi bi-check-circle"></i> Weekly Backups</li>
                             </ul>
                         </div>
@@ -661,7 +664,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="accordion" id="vpsAccordion">
-                        <div class="accordion-item" data-aos="fade-up">
+                        <div class="accordion-item">
                             <h3 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                     What is VPS hosting?
@@ -673,7 +676,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="accordion-item">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                                     How do I manage my VPS?
@@ -685,7 +688,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="accordion-item">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                                     Can I upgrade my VPS plan?
