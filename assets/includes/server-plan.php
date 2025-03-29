@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Plans</title>
     <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"> -->
     <style>
         body{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,7 +19,7 @@
             overflow-x: hidden;
         }
     /* Base Styles */
-    .pricing-section {
+    .pricings-section {
     padding: 60px 0;
     background: #f8f9fa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -87,6 +87,51 @@
     color: #555;
     font-size: 0.9rem;
 }
+/* Add these new styles */
+.sidebar-filter {
+        width: 100%;
+        max-width: 300px;
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+        margin-right: 30px;
+        height: fit-content;
+    }
+
+    @media (max-width: 991px) {
+        .sidebar-filter {
+            display: none;
+        }
+    }
+
+    .pricings-section {
+        padding: 60px 0;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    @media (min-width: 992px) {
+        .flex-lg-row {
+            flex-direction: row;
+        }
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .mb-lg-0 {
+        @media (min-width: 992px) {
+            margin-bottom: 0 !important;
+        }
+    }
 .range-slider {
     position: relative;
 }
@@ -116,7 +161,7 @@
     display: flex;
     gap: 15px;
 }
-.checkbox-container {
+.checkbox-main-container {
     display: flex;
     align-items: center;
     position: relative;
@@ -126,7 +171,7 @@
     color: #666;
     user-select: none;
 }
-.checkbox-container input {
+.checkbox-main-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -142,10 +187,10 @@
     background-color: #eee;
     border-radius: 4px;
 }
-.checkbox-container:hover input ~ .checkmark {
+.checkbox-main-container:hover input ~ .checkmark {
     background-color: #ccc;
 }
-.checkbox-container input:checked ~ .checkmark {
+.checkbox-main-container input:checked ~ .checkmark {
     background-color: #4B0082;
 }
 .checkmark:after {
@@ -153,10 +198,10 @@
     position: absolute;
     display: none;
 }
-.checkbox-container input:checked ~ .checkmark:after {
+.checkbox-main-container input:checked ~ .checkmark:after {
     display: block;
 }
-.checkbox-container .checkmark:after {
+.checkbox-main-container .checkmark:after {
     left: 7px;
     top: 3px;
     width: 6px;
@@ -304,15 +349,15 @@
     }
 }
 
-/* Pricing Card Styles */
-.pricing-row {
+/* pricings Card Styles */
+.pricings-row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
     justify-content: center;
 }
-.pricing-card {
+.pricings-card {
     background: white;
     border-radius: 20px;
     overflow: hidden;
@@ -323,15 +368,34 @@
     border: 2px solid transparent;
     will-change: transform;
 }
-.pricing-card:hover {
+.pricings-card:hover {
     transform: translateY(-5px);
     border-color: #4B0082;
     box-shadow: 0 10px 20px rgba(75, 0, 130, 0.1);
 }
-.pricing-card.popular {
+.pricings-card.popular {
     border-color: #4B0082;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(75, 0, 130, 0.15);
+}
+.pricings-card-wrapper {
+    flex: 0 0 100%;
+    padding: 15px;
+    max-width: 350px;
+}
+
+@media (min-width: 768px) {
+    .pricings-card-wrapper {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .pricings-card-wrapper {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
 }
 .popular-badge {
     position: absolute;
@@ -355,7 +419,7 @@
     font-size: 0.7rem;
     border-top-left-radius: 6px;
 }
-.pricing-header {
+.pricings-header {
     background: linear-gradient(135deg, #4B0082, #932C8B);
     color: white;
     padding: 1.5rem 1rem;
@@ -363,7 +427,7 @@
     position: relative;
     overflow: hidden;
 }
-.pricing-header::before {
+.pricings-header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -372,7 +436,7 @@
     height: 100%;
     background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.1) 55%, transparent 55%);
 }
-.pricing-header h3 {
+.pricings-header h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     position: relative;
@@ -387,16 +451,16 @@
     font-size: 0.8rem;
     opacity: 0.8;
 }
-.pricing-features {
+.pricings-features {
     padding: 1.2rem;
 }
-.pricing-features ul {
+.pricings-features ul {
     list-style: none;
     padding: 0;
     margin: 0;
     color: #666;
 }
-.pricing-features li {
+.pricings-features li {
     padding: 0.7rem 0;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     display: flex;
@@ -404,10 +468,10 @@
     gap: 0.7rem;
     font-size: 0.9rem;
 }
-.pricing-features li:last-child {
+.pricings-features li:last-child {
     border-bottom: none;
 }
-.pricing-features i {
+.pricings-features i {
     color: #4B0082;
     font-size: 1rem;
     background: rgba(75, 0, 130, 0.1);
@@ -418,7 +482,7 @@
     align-items: center;
     justify-content: center;
 }
-.pricing-footer {
+.pricings-footer {
     padding: 0 1.2rem 1.2rem;
     text-align: center;
 }
@@ -483,10 +547,10 @@
 
 /* Card responsive styles */
 @media (max-width: 1200px) {
-    .pricing-card {
+    .pricings-card {
         margin-bottom: 30px;
     }
-    .pricing-features li {
+    .pricings-features li {
         font-size: 0.85rem;
         padding: 0.6rem 0;
     }
@@ -496,23 +560,23 @@
 }
 
 @media (max-width: 992px) {
-    .pricing-card {
+    .pricings-card {
         margin-bottom: 25px;
         min-height: auto;
     }
-    .pricing-card.popular {
+    .pricings-card.popular {
         transform: none;
     }
-    .pricing-header {
+    .pricings-header {
         padding: 1.2rem 0.8rem;
     }
-    .pricing-header h3 {
+    .pricings-header h3 {
         font-size: 1.1rem;
     }
     .price-tag {
         font-size: 1.6rem;
     }
-    .pricing-features {
+    .pricings-features {
         padding: 1rem;
     }
     .btn-primary {
@@ -522,7 +586,7 @@
 }
 
 @media (max-width: 768px) {
-    .pricing-section {
+    .pricings-section {
         padding: 30px 15px;
     }
     .section-title {
@@ -531,25 +595,25 @@
     .section-subtitle {
         font-size: 1rem;
     }
-    .pricing-card {
+    .pricings-card {
         max-width: 400px;
         margin: 0 auto 20px;
     }
-    .pricing-features li i {
+    .pricings-features li i {
         width: 20px;
         height: 20px;
         font-size: 0.8rem;
     }
-    .pricing-footer {
+    .pricings-footer {
         padding: 0 1rem 1rem;
     }
 }
 
 @media (max-width: 576px) {
-    .pricing-card {
+    .pricings-card {
         margin-bottom: 15px;
     }
-    .pricing-header h3 {
+    .pricings-header h3 {
         font-size: 1rem;
     }
     .price-tag {
@@ -558,7 +622,7 @@
     .price-duration {
         font-size: 0.7rem;
     }
-    .pricing-features li {
+    .pricings-features li {
         font-size: 0.8rem;
         padding: 0.5rem 0;
         gap: 0.5rem;
@@ -577,8 +641,8 @@
     }
 }
 
-/* Container and utility classes */
-.container {
+/* main-container and utility classes */
+.main-container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -587,22 +651,22 @@
 }
 
 @media (min-width: 576px) {
-    .container {
+    .main-container {
         max-width: 540px;
     }
 }
 @media (min-width: 768px) {
-    .container {
+    .main-container {
         max-width: 720px;
     }
 }
 @media (min-width: 992px) {
-    .container {
+    .main-container {
         max-width: 960px;
     }
 }
 @media (min-width: 1200px) {
-    .container {
+    .main-container {
         max-width: 1140px;
     }
 }
@@ -646,8 +710,8 @@
 </style>
 <body>
 
-<section class="pricing-section">
-    <div class="container">
+<section class="pricings-section">
+    <div class="main-container">
         <div class="text-center mb-4">
             <h2 class="section-title">Choose Your Server Plan</h2>
             <p class="section-subtitle">Dedicated resources with full control</p>
@@ -660,7 +724,7 @@
 </button>
 
 <!-- Original Filter Section (hidden on mobile) -->
-<div class="container d-flex flex-column flex-lg-row">
+<div class="main-container d-flex flex-column flex-lg-row">
     <!-- Sidebar Filter Section -->
     <div class="sidebar-filter mb-4 mb-lg-0">
         <div class="filter-section">
@@ -700,12 +764,12 @@
                 <div class="filter-group mb-4">
                     <label>Storage Type</label>
                     <div class="checkbox-group">
-                        <label class="checkbox-container">
+                        <label class="checkbox-main-container">
                             <input type="checkbox" id="ssdFilter" checked>
                             <span class="checkmark"></span>
                             SSD
                         </label>
-                        <label class="checkbox-container">
+                        <label class="checkbox-main-container">
                             <input type="checkbox" id="nvmeFilter" checked>
                             <span class="checkmark"></span>
                             NVMe
@@ -734,63 +798,17 @@
         </div>
     </div>
 
-    <style>
-    /* Add these new styles */
-    .sidebar-filter {
-        width: 100%;
-        max-width: 300px;
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-        margin-right: 30px;
-        height: fit-content;
-    }
-
-    @media (max-width: 991px) {
-        .sidebar-filter {
-            display: none;
-        }
-    }
-
-    .pricing-section {
-        padding: 60px 0;
-    }
-
-    .d-flex {
-        display: flex;
-    }
-
-    .flex-column {
-        flex-direction: column;
-    }
-
-    @media (min-width: 992px) {
-        .flex-lg-row {
-            flex-direction: row;
-        }
-    }
-
-    .mb-4 {
-        margin-bottom: 1.5rem;
-    }
-
-    .mb-lg-0 {
-        @media (min-width: 992px) {
-            margin-bottom: 0 !important;
-        }
-    }
-    </style>
-        <!-- Pricing Cards -->
-        <div class="row pricing-row" id="pricingContainer">
-            <div class="col-lg-3 col-md-6 mb-4" data-cores="4" data-threads="8" data-ram="16" data-price="74.80" data-storage="ssd" data-location="us">
-                <div class="pricing-card">
-                    <div class="pricing-header">
+    
+        <!-- pricings Cards -->
+        <div class="row pricings-row" id="pricingsmain-container">
+            <div class="pricings-card-wrapper" data-cores="4" data-threads="8" data-ram="16" data-price="74.80" data-storage="ssd" data-location="us">
+                <div class="pricings-card">
+                    <div class="pricings-header">
                         <h3>Starter</h3>
                         <div class="price-tag">$74.80<span class="price-duration">/mo</span></div>
                         <div class="location-badge">US East</div>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricings-features">
                         <ul>
                             <li><i class="bi bi-cpu"></i> 4 Cores / 8 Threads</li>
                             <li><i class="bi bi-memory"></i> 16 GB RAM DDR5</li>
@@ -799,19 +817,19 @@
                             <li><i class="bi bi-speedometer2"></i> 1 Gbps Network</li>
                         </ul>
                     </div>
-                    <div class="pricing-footer">
+                    <div class="pricings-footer">
                         <a href="#" class="btn-primary">Get Started</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4" data-cores="8" data-threads="16" data-ram="64" data-price="115.80" data-storage="ssd" data-location="us">
-                <div class="pricing-card">
-                    <div class="pricing-header">
+            <div class="pricings-card-wrapper" data-cores="8" data-threads="16" data-ram="64" data-price="115.80" data-storage="ssd" data-location="us">
+                <div class="pricings-card">
+                    <div class="pricings-header">
                         <h3>Professional</h3>
                         <div class="price-tag">$115.80<span class="price-duration">/mo</span></div>
                         <div class="location-badge">US East</div>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricings-features">
                         <ul>
                             <li><i class="bi bi-cpu"></i> 8 Cores / 16 Threads</li>
                             <li><i class="bi bi-memory"></i> 64 GB RAM DDR5</li>
@@ -820,20 +838,20 @@
                             <li><i class="bi bi-speedometer2"></i> 1 Gbps Network</li>
                         </ul>
                     </div>
-                    <div class="pricing-footer">
+                    <div class="pricings-footer">
                         <a href="#" class="btn-primary">Get Started</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4" data-cores="16" data-threads="32" data-ram="128" data-price="174.25" data-storage="nvme" data-location="us">
-                <div class="pricing-card popular">
+            <div class="pricings-card-wrapper" data-cores="16" data-threads="32" data-ram="128" data-price="174.25" data-storage="nvme" data-location="us">
+                <div class="pricings-card popular">
                     <div class="popular-badge">Popular</div>
-                    <div class="pricing-header">
+                    <div class="pricings-header">
                         <h3>Enterprise</h3>
                         <div class="price-tag">$174.25<span class="price-duration">/mo</span></div>
                         <div class="location-badge">US East</div>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricings-features">
                         <ul>
                             <li><i class="bi bi-cpu"></i> 16 Cores / 32 Threads</li>
                             <li><i class="bi bi-memory"></i> 128 GB RAM DDR5</li>
@@ -842,19 +860,19 @@
                             <li><i class="bi bi-speedometer2"></i> 10 Gbps Network</li>
                         </ul>
                     </div>
-                    <div class="pricing-footer">
+                    <div class="pricings-footer">
                         <a href="#" class="btn-primary">Get Started</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4" data-cores="24" data-threads="48" data-ram="256" data-price="257.80" data-storage="nvme" data-location="us">
-                <div class="pricing-card">
-                    <div class="pricing-header">
+            <div class="pricings-card-wrapper" data-cores="24" data-threads="48" data-ram="256" data-price="257.80" data-storage="nvme" data-location="us">
+                <div class="pricings-card">
+                    <div class="pricings-header">
                         <h3>Ultra</h3>
                         <div class="price-tag">$257.80<span class="price-duration">/mo</span></div>
                         <div class="location-badge">US East</div>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricings-features">
                         <ul>
                             <li><i class="bi bi-cpu"></i> 24 Cores / 48 Threads</li>
                             <li><i class="bi bi-memory"></i> 256 GB RAM DDR5</li>
@@ -863,20 +881,20 @@
                             <li><i class="bi bi-speedometer2"></i> 10 Gbps Network</li>
                         </ul>
                     </div>
-                    <div class="pricing-footer">
+                    <div class="pricings-footer">
                         <a href="#" class="btn-primary">Get Started</a>
                     </div>
                 </div>
             </div>
             <!-- Additional Servers -->
-            <div class="col-lg-3 col-md-6 mb-4" data-cores="8" data-threads="16" data-ram="32" data-price="98.50" data-storage="ssd" data-location="eu">
-                <div class="pricing-card">
-                    <div class="pricing-header">
+            <div class="pricings-card-wrapper" data-cores="8" data-threads="16" data-ram="32" data-price="98.50" data-storage="ssd" data-location="eu">
+                <div class="pricings-card">
+                    <div class="pricings-header">
                         <h3>Euro Standard</h3>
                         <div class="price-tag">$98.50<span class="price-duration">/mo</span></div>
                         <div class="location-badge">EU</div>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricings-features">
                         <ul>
                             <li><i class="bi bi-cpu"></i> 8 Cores / 16 Threads</li>
                             <li><i class="bi bi-memory"></i> 32 GB RAM DDR5</li>
@@ -885,19 +903,19 @@
                             <li><i class="bi bi-speedometer2"></i> 1 Gbps Network</li>
                         </ul>
                     </div>
-                    <div class="pricing-footer">
+                    <div class="pricings-footer">
                         <a href="#" class="btn-primary">Get Started</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4" data-cores="16" data-threads="32" data-ram="64" data-price="145.30" data-storage="nvme" data-location="eu">
-                <div class="pricing-card">
-                    <div class="pricing-header">
+            <div class="pricings-card-wrapper" data-cores="16" data-threads="32" data-ram="64" data-price="145.30" data-storage="nvme" data-location="eu">
+                <div class="pricings-card">
+                    <div class="pricings-header">
                         <h3>Euro Pro</h3>
                         <div class="price-tag">$145.30<span class="price-duration">/mo</span></div>
                         <div class="location-badge">EU</div>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricings-features">
                         <ul>
                             <li><i class="bi bi-cpu"></i> 16 Cores / 32 Threads</li>
                             <li><i class="bi bi-memory"></i> 64 GB RAM DDR5</li>
@@ -906,19 +924,19 @@
                             <li><i class="bi bi-speedometer2"></i> 10 Gbps Network</li>
                         </ul>
                     </div>
-                    <div class="pricing-footer">
+                    <div class="pricings-footer">
                         <a href="#" class="btn-primary">Get Started</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4" data-cores="4" data-threads="8" data-ram="16" data-price="82.40" data-storage="ssd" data-location="asia">
-                <div class="pricing-card">
-                    <div class="pricing-header">
+            <div class="pricings-card-wrapper" data-cores="4" data-threads="8" data-ram="16" data-price="82.40" data-storage="ssd" data-location="asia">
+                <div class="pricings-card">
+                    <div class="pricings-header">
                         <h3>Asia Starter</h3>
                         <div class="price-tag">$82.40<span class="price-duration">/mo</span></div>
                         <div class="location-badge">Asia</div>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricings-features">
                         <ul>
                             <li><i class="bi bi-cpu"></i> 4 Cores / 8 Threads</li>
                             <li><i class="bi bi-memory"></i> 16 GB RAM DDR5</li>
@@ -927,19 +945,19 @@
                             <li><i class="bi bi-speedometer2"></i> 1 Gbps Network</li>
                         </ul>
                     </div>
-                    <div class="pricing-footer">
+                    <div class="pricings-footer">
                         <a href="#" class="btn-primary">Get Started</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4" data-cores="32" data-threads="64" data-ram="256" data-price="295.70" data-storage="nvme" data-location="asia">
-                <div class="pricing-card">
-                    <div class="pricing-header">
+            <div class="pricings-card-wrapper" data-cores="32" data-threads="64" data-ram="256" data-price="295.70" data-storage="nvme" data-location="asia">
+                <div class="pricings-card">
+                    <div class="pricings-header">
                         <h3>Asia Enterprise</h3>
                         <div class="price-tag">$295.70<span class="price-duration">/mo</span></div>
                         <div class="location-badge">Asia</div>
                     </div>
-                    <div class="pricing-features">
+                    <div class="pricings-features">
                         <ul>
                             <li><i class="bi bi-cpu"></i> 32 Cores / 64 Threads</li>
                             <li><i class="bi bi-memory"></i> 256 GB RAM DDR5</li>
@@ -948,7 +966,7 @@
                             <li><i class="bi bi-speedometer2"></i> 10 Gbps Network</li>
                         </ul>
                     </div>
-                    <div class="pricing-footer">
+                    <div class="pricings-footer">
                         <a href="#" class="btn-primary">Get Started</a>
                     </div>
                 </div>
@@ -1153,7 +1171,7 @@ function applyFilters() {
         location: document.getElementById('locationFilter').value
     };
 
-    const cards = document.querySelectorAll('#pricingContainer > div');
+    const cards = document.querySelectorAll('#pricingsmain-container > div');
     let visibleCards = 0;
 
     cards.forEach(card => {
