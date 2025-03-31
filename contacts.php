@@ -15,35 +15,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Delta, Nigeria",
-        "postalCode": "333105",
-        "streetAddress": "128 Isoko Road, Ughelli"
-      },
-      "email": "info@afriportalnetworkltd.com",
-      "member": [
-        {
-          "@type": "Organization"
-        },
-        {
-          "@type": "Organization"
-        }
-      ],
-      "alumni": [
-        {
-          "@type": "Person",
-          "name": "Micah Atoma"
-        }
-      ],
-      "name": "Afriportal Network (APN)",
-      "telephone": "( 234 ) 70 416 734 55"
-    }
-    </script>
 </head>
 <body class="contact-page loading">
     <?php

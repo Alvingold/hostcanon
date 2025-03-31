@@ -661,12 +661,10 @@
             <div class="addon-card">
                 <h3 class="sub">SSL Certificates</h3>
                 <p class="paragraph">Protect your website with industry-leading security solutions.</p>
-                <a href="#" class="calltoaction-button">View Pricing</a>
             </div>
             <div class="addon-card">
                 <h3 class="sub">Advanced Server Management & Security</h3>
                 <p class="paragraph">Keep your online business running smoothly with premium tools and services.</p>
-                <a href="#" class="calltoaction-button">Explore More Solutions</a>
             </div>
         </div>
     </section>
@@ -687,16 +685,6 @@
     <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
     
     <script>
-        <!-- Navigation Scroll Effect -->
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
         // Initialize AOS after preloader removes loading class
         document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('load', function() {
