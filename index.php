@@ -483,7 +483,7 @@
 
                     <!-- Image Section -->
                     <div class="image-section col-12 col-md-6">
-                        <img src="assets/media/server-infrastructure.png" alt="Server Infrastructure" class="img-fluid">  
+                        <img src="assets/media/server-infrastructure.webp" alt="Server Infrastructure" class="img-fluid">  
                     </div>
                 </div>
 
@@ -491,7 +491,7 @@
                 <div class="row mt-4">
                     <!-- Image Section -->
                     <div class="image-section col-12 col-md-6 mb-4 mb-md-0">
-                        <img src="assets/media/security-features.png" alt="Security Features" class="img-fluid">
+                        <img src="assets/media/security-features.webp" alt="Security Features" class="img-fluid">
                     </div>
 
                     <!-- Text Content Second -->

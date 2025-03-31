@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero-shape"><img src="assets/media/server-room.png" alt="Dedicated hosting image" width="100%"></div>
+        <div class="hero-shape"><img src="assets/media/server-room.webp" alt="Dedicated hosting image" width="100%"></div>
     </div>
     
 </section>
@@ -114,83 +114,98 @@
 </section>
 
 
-<!-- Detailed  Features  -->
-<section class="dedicated-features">
-        <div class="features-header">
-            <h2>Engineered Server Solutions</h2>
-            <p>
-                Discover a new paradigm of digital infrastructure. Our dedicated servers are meticulously crafted to deliver unparalleled performance, security, and scalability for businesses that demand excellence.
+<!--Feat Section -->
+<section class="dedicated-feat">
+    <div class="container">
+      <div class="feat-header">
+        <h2>Engineered Server Solutions</h2>
+        <p>
+          Discover a new paradigm of digital infrastructure. Our dedicated servers are meticulously crafted to deliver unparalleled performance, security, and scalability for businesses that demand excellence.
+        </p>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Hyper-Performance Storage</h3>
+            <p class="feature-description">
+              NVMe technology delivering blazing-fast read/write speeds and microsecond latency. Ideal for data-intensive applications, real-time analytics, and high-performance computing environments.
             </p>
+            <span class="feature-badge">Ultra Speed</span>
+          </div>
         </div>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="bi bi-lightning-charge-fill"></i>
-                </div>
-                <h3 class="feature-title">Hyper-Performance Storage</h3>
-                <p class="feature-description">
-                    NVMe technology delivering blazing-fast read/write speeds and microsecond latency. Ideal for data-intensive applications, real-time analytics, and high-performance computing environments.
-                </p>
-                <span class="feature-badge">Ultra Speed</span>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="bi bi-lock-fill"></i>
-                </div>
-                <h3 class="feature-title">Adaptive Security Framework</h3>
-                <p class="feature-description">
-                    Multi-layered security architecture with real-time threat detection, automated risk mitigation, and comprehensive protection against evolving cybersecurity challenges.
-                </p>
-                <span class="feature-badge">Secure</span>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="bi bi-speedometer"></i>
-                </div>
-                <h3 class="feature-title">Intelligent Caching</h3>
-                <p class="feature-description">
-                    Advanced caching ecosystem leveraging Varnish, Memcached, and Redis. Dynamically optimizes data retrieval and application performance with intelligent resource allocation.
-                </p>
-                <span class="feature-badge">Optimized</span>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="bi bi-gear-fill"></i>
-                </div>
-                <h3 class="feature-title">Modular Infrastructure</h3>
-                <p class="feature-description">
-                    Fully customizable server configurations with granular control over CPU, RAM, and storage. Seamless scalability to match your evolving business requirements.
-                </p>
-                <span class="feature-badge">Flexible</span>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="bi bi-clock-fill"></i>
-                </div>
-                <h3 class="feature-title">Reliability Assurance</h3>
-                <p class="feature-description">
-                    Redundant infrastructure with advanced failover mechanisms guaranteeing 99.9% uptime. Continuous monitoring and load balancing for uninterrupted service.
-                </p>
-                <span class="feature-badge">Reliable</span>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="bi bi-headset"></i>
-                </div>
-                <h3 class="feature-title">Expert Support</h3>
-                <p class="feature-description">
-                    24/7 dedicated support from certified technical experts. Immediate response, proactive system management, and comprehensive problem resolution.
-                </p>
-                <span class="feature-badge">Always Available</span>
-            </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-shield-lock-fill"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Adaptive Security Framework</h3>
+            <p class="feature-description">
+              Multi-layered security architecture with real-time threat detection, automated risk mitigation, and comprehensive protection against evolving cybersecurity challenges.
+            </p>
+            <span class="feature-badge">Secure</span>
+          </div>
         </div>
-    </section>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-speedometer2"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Intelligent Caching</h3>
+            <p class="feature-description">
+              Advanced caching ecosystem leveraging Varnish, Memcached, and Redis. Dynamically optimizes data retrieval and application performance with intelligent resource allocation.
+            </p>
+            <span class="feature-badge">Optimized</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-sliders"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Modular Infrastructure</h3>
+            <p class="feature-description">
+              Fully customizable server configurations with granular control over CPU, RAM, and storage. Seamless scalability to match your evolving business requirements.
+            </p>
+            <span class="feature-badge">Flexible</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-check2-circle"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Reliability Assurance</h3>
+            <p class="feature-description">
+              Redundant infrastructure with advanced failover mechanisms guaranteeing 99.9% uptime. Continuous monitoring and load balancing for uninterrupted service.
+            </p>
+            <span class="feature-badge">Reliable</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-headset"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Expert Support</h3>
+            <p class="feature-description">
+              24/7 dedicated support from certified technical experts. Immediate response, proactive system management, and comprehensive problem resolution.
+            </p>
+            <span class="feature-badge">Always Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
 

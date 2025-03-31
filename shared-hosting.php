@@ -425,6 +425,7 @@
             background-color: var(--primary-color);
             padding: var(--section-padding);
             text-align: center;
+            color:white
         }
 
         .cta-section h2 {
