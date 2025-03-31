@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero-shape"><img src="assets/media/server-room.png" alt="Dedicated hosting image" width="100%"></div>
+        <div class="hero-shape"><img src="assets/media/server-room.webp" alt="Dedicated hosting image" width="100%"></div>
     </div>
     
 </section>

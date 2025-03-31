@@ -367,7 +367,7 @@
 
                 <!-- Image Section -->
                 <div class="image-section col-md-6">
-                    <img src="assets/media/dom.png" alt="Domain Management" width="100%">  
+                    <img src="assets/media/dom.webp" alt="Domain Management" width="100%">  
                 </div>
             </div>
 
@@ -375,7 +375,7 @@
             <div class="row mt-4">
                 <!-- Image Section First -->
                 <div class="image-section col-md-6">
-                    <img src="assets/media/domd.png" alt="Domain Search" width="100%" class="file">
+                    <img src="assets/media/domd.webp" alt="Domain Search" width="100%" class="file">
                 </div>
 
                 <!-- Text Content Second -->
