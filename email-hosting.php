@@ -76,18 +76,22 @@
 
         .hero-btn .btn-outline-light {
             color: white;
-            border: 2px solid white;
+            border: none;
             border-radius: 50px;
             padding: 1rem 2rem;
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s ease;
             margin-left: 10px;
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
         }
 
         .hero-btn .btn-outline-light:hover {
-            color: black;
-            background: white;
+            color: white;
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.3);
         }
         
         .hero-title {
@@ -134,9 +138,17 @@
         }
         
         .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+            font-size: 1.8rem;
+            color: white;
         }
         
         .feature-title {
@@ -249,31 +261,42 @@
             color: white;
             text-align: center;
         }
-        
-        
-        .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
+
+        .cta-section .btn-light {
+            background: linear-gradient(135deg, #4B0082, #932C8B);
             color: white;
-            margin-right: 10px;
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            font-size: 1rem;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section .btn-light:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.3);
+            color: white;
+        }
+
+        .cta-section .btn-light::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .cta-section .btn-light:hover::before {
+            left: 100%;
         }
         
-        .social-icons a:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
-            margin-top: 50px;
-        }
         
         /* Updated Pricing Section */
         .pricing-section {
@@ -702,7 +725,7 @@
                     <p class="mb-5">Join thousands of African businesses that trust Afriportal for their email hosting needs.</p>
                     <div class="d-flex justify-content-center gap-3">
                         <a href="#pricing" class="btn btn-light">View Plans</a>
-                        <a href="contacts.php" class="btn btn-outline-light">Contact Us</a>
+                        <a href="contacts.php" class="btn btn-light">Contact Us</a>
                     </div>
                 </div>
             </div>
