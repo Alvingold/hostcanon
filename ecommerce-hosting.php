@@ -127,13 +127,17 @@
         }
         
         .feature-icon {
-            font-size: 1.5rem;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+            font-size: 1.8rem;
             color: white;
-            margin-bottom: 20px;
-            padding: 5px;
-            background: linear-gradient(135deg, #4B0082 0%, #932C8B 100%);
-            border-radius: 12px;
-            margin-bottom: 20px;
         }
         
         .feature-title {
@@ -174,9 +178,18 @@
         }
         
         .platform-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+            font-size: 1.8rem;
+            color: white;
+            margin: 0 auto;
         }
         
         .platform-title {
