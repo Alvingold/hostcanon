@@ -713,6 +713,41 @@
         overflow: hidden;
     }
 }
+
+
+/* Add these rules to your existing CSS */
+.pricings-card-wrapper {
+    flex: 0 0 100%;
+    padding: 15px;
+    max-width: 350px;
+    /* Add this to ensure minimal width */
+    min-width: 200px;
+}
+
+.pricings-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: flex-start; /* Change from center to flex-start */
+    gap: 20px; /* Add consistent gap between cards */
+}
+
+/* Update the media queries */
+@media (min-width: 768px) {
+    .pricings-card-wrapper {
+        flex: 0 0 calc(50% - 40px); /* Account for gap */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (min-width: 992px) {
+    .pricings-card-wrapper {
+        flex: 0 0 calc(25% - 40px); /* Account for gap */
+        max-width: calc(25% - 40px);
+    }
+}
+
 </style>
 <body>
 
@@ -798,9 +833,67 @@
 
     <!-- Modal for Mobile -->
     <div id="filterModal" class="filter-modal">
-        <!-- Keep the existing modal content unchanged -->
         <div class="modal-content">
-            <!-- ... (keep existing modal content) ... -->
+            <div class="modal-header">
+                <h3>Filter Options</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="filter-group mb-4">
+                    <label>CPU Cores</label>
+                    <div class="range-slider">
+                        <input type="range" id="coresSliderModal" min="4" max="64" value="4" class="slider">
+                        <div class="range-value"><span id="coresValueModal">4+</span> Cores</div>
+                    </div>
+                </div>
+                <div class="filter-group mb-4">
+                    <label>Threads</label>
+                    <div class="range-slider">
+                        <input type="range" id="threadsSliderModal" min="8" max="128" value="8" class="slider">
+                        <div class="range-value"><span id="threadsValueModal">8+</span> Threads</div>
+                    </div>
+                </div>
+                <div class="filter-group mb-4">
+                    <label>RAM (GB)</label>
+                    <div class="range-slider">
+                        <input type="range" id="ramSliderModal" min="16" max="512" step="16" value="16" class="slider">
+                        <div class="range-value"><span id="ramValueModal">16+</span> GB</div>
+                    </div>
+                </div>
+                <div class="filter-group mb-4">
+                    <label>Price</label>
+                    <div class="range-slider">
+                        <input type="range" id="priceSliderModal" min="50" max="500" value="300" class="slider">
+                        <div class="range-value">$<span id="priceValueModal">300</span> or less</div>
+                    </div>
+                </div>
+                <div class="filter-group mb-4">
+                    <label>Storage Type</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-main-container">
+                            <input type="checkbox" id="ssdFilterModal" checked>
+                            <span class="checkmark"></span>
+                            SSD
+                        </label>
+                        <label class="checkbox-main-container">
+                            <input type="checkbox" id="nvmeFilterModal" checked>
+                            <span class="checkmark"></span>
+                            NVMe
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-group mb-4">
+                    <label>Location</label>
+                    <select id="locationFilterModal" class="form-select">
+                        <option value="all">All Locations</option>
+                        <option value="us">United States</option>
+                        <option value="eu">Europe</option>
+                        <option value="asia">Asia Pacific</option>
+                    </select>
+                </div>
+                <button id="resetFiltersModal" class="btn-reset">Reset Filters</button>
+                <button id="applyFiltersModal" class="btn-apply">Apply Filters</button>
+            </div>
         </div>
     </div>
 
