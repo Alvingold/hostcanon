@@ -145,18 +145,7 @@
             font-weight: 600;
             margin-bottom: 15px;
         }
-        
-        .popular-badge {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        
+                
         /* Platforms section */
         .platforms-section {
             padding: var(--section-padding);
@@ -574,7 +563,6 @@
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <span class="popular-badge">Most Popular</span>
                             <h3>Business</h3>
                             <div class="price-tag">$24.99<span class="price-duration">/month</span></div>
                             <p>Ideal for growing businesses</p>

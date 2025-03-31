@@ -408,11 +408,6 @@
             transform: translateX(5px);
         }
 
-        .spec-card ul li:hover i {
-            background: #4B0082;
-            color: white;
-        }
-
         /* FAQ Section Styling */
         .faq-section {
             background-color: #ffffff;
@@ -546,7 +541,8 @@
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>Starter VPS</h3>
-                            <div class="price-tag">₦25,000<span class="price-duration">/month</span></div>
+                            <div class="price-tag">$19.99<span class="price-duration">/month</span></div>
+                            <p>For small businesses and personal projects</p>
                         </div>
                         <div class="pricing-features">
                             <ul>
@@ -570,7 +566,8 @@
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>Business VPS</h3>
-                            <div class="price-tag">₦45,000<span class="price-duration">/month</span></div>
+                            <div class="price-tag">$39.99<span class="price-duration">/month</span></div>
+                            <p>For growing businesses and online presence</p>
                         </div>
                         <div class="pricing-features">
                             <ul>
@@ -594,7 +591,8 @@
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>Enterprise VPS</h3>
-                            <div class="price-tag">₦85,000<span class="price-duration">/month</span></div>
+                            <div class="price-tag">$59.99<span class="price-duration">/month</span></div>
+                            <p>For high-traffic websites and applications</p>
                         </div>
                         <div class="pricing-features">
                             <ul>
