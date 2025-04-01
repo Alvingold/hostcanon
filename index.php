@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0">
                     <div class="hero-image-wrapper" data-aos="fade-left">
-                        <img src="assets/media/hero-right.png" alt="Web Hosting" class="img-fluid">
+                        <img src="assets/media/hero-right.webp" alt="Web Hosting" class="img-fluid">
                         <div class="floating-card card-1">
                             <i class="bi bi-hdd-rack"></i>
                             <span>NVMe SSD</span>

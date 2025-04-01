@@ -522,7 +522,7 @@
                 <a href="#pricing" class="btn btn-primary mb-4">View Pricing Plans</a>
             </div>
             <div class="col-lg-6 mt-3 mt-lg-0" data-aos="fade-left">
-                <img src="assets/media/reseller.png" alt="Reseller Hosting Illustration" class="img-fluid">
+                <img src="assets/media/reseller.webp" alt="Reseller Hosting Illustration" class="img-fluid">
             </div>
         </div>
     </div>
@@ -1049,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="benefits-image position-relative">
-                    <img src="assets/media/security-features.png" alt="Shared Hosting Benefits" class="img-fluid rounded shadow">
+                    <img src="assets/media/security-features.webp" alt="Shared Hosting Benefits" class="img-fluid rounded shadow">
                     <div class="stats-card position-absolute p-4 bg-white shadow">
                         <div class="d-flex align-items-center mb-3">
                             <div class="start">
