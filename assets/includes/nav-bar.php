@@ -208,7 +208,6 @@ $prefix = $isInSubdir ? '../' : '';
                 border: none;
                 max-height: none;
                 position: static;
-                transform: none !important;
                 padding: 0.5rem;
                 margin: 0.5rem 0;
                 border-radius: 8px;
@@ -216,6 +215,18 @@ $prefix = $isInSubdir ? '../' : '';
 
             .navbar .dropdown-menu.show {
                 display: block;
+                animation: slideDown 0.3s ease forwards;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
 
             .navbar .menu-grid {
