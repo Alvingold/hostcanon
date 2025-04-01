@@ -248,7 +248,6 @@
         }
 
         .faq-section .accordion-button::after {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234B0082'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1 .708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
             transition: all 0.3s ease;
         }
         
@@ -256,51 +255,8 @@
             padding: 20px;
             background-color: white;
         }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-section .btn-light {
-            background: linear-gradient(135deg, #4B0082, #932C8B);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 1rem 2.5rem;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section .btn-light:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.3);
-            color: white;
-        }
-
-        .cta-section .btn-light::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: all 0.5s ease;
-        }
-
-        .cta-section .btn-light:hover::before {
-            left: 100%;
-        }
-        
-          /* Container styling */
+    
+        /* Container styling */
     .currency-selector {
       max-width: 400px;
       margin: 0 auto;
@@ -503,7 +459,6 @@
                     <p class="hero-subtitle">Elevate your business communication with secure, reliable, and professional email hosting services tailored for African businesses.</p>
                     <div class="hero-btn d-flex gap-3">
                         <a href="#pricing" class="btn btn-primary">View Plans</a>
-                        <a href="contacts.php" class="btn btn-outline-light">Contact Sales</a>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
@@ -773,7 +728,7 @@
             </div>
         </div>
             <!-- Include the currency converter script -->
-  <script>
+<script>
     // Global Currency Converter for Hosting Site Pricing Plans
 
 // Main pricing plans in USD
@@ -1114,24 +1069,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center" data-aos="fade-up">
-                    <h2 class="mb-4">Ready to Upgrade Your Email Experience?</h2>
-                    <p class="mb-5">Join thousands of African businesses that trust Afriportal for their email hosting needs.</p>
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="#pricing" class="btn btn-light">View Plans</a>
-                        <a href="contacts.php" class="btn btn-light">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
 
     <!-- Footer -->
     <?php include('assets/includes/footer.php'); ?>
