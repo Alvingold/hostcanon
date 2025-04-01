@@ -412,9 +412,9 @@
  <!-- Domain Thought -->
  <section class="domain-thought">
     <div class="domain-content">
-        <h2>Have the ideal domain name in mind?</h2>
-        <p>Special rates apply only for the initial term and will renew at standard pricing.</p>
-        <a href="#top" class="back-to-top">Back to Top</a>
+        <h2>Have the ideal Hosting in mind?</h2>
+        <p>Well waste no time pick it now.</p>
+        <a href="#top" class="back-to-top">Get Started</a>
     </div>
 </section>
 
