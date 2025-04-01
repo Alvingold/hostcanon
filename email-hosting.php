@@ -249,7 +249,6 @@
         }
 
         .faq-section .accordion-button::after {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234B0082'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1 .708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
             transition: all 0.3s ease;
         }
         
@@ -257,6 +256,7 @@
             padding: 20px;
             background-color: white;
         }
+<<<<<<< HEAD
         
         /* CTA Section */
         .cta-section {
@@ -300,6 +300,77 @@
         .cta-section .btn-light:hover::before {
             left: 100%;
         }
+=======
+    
+        /* Container styling */
+    .currency-selector {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color:  #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Label styling */
+    .currency-selector label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    
+    /* Select styling */
+    .currency-selector select {
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #fff;
+      font-size: 16px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%23333' d='M7 10l5-5H2z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-size: 12px;
+      transition: border-color 0.3s;
+    }
+    
+    .currency-selector select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    }
+    
+    /* Optgroup styling for organization */
+    .currency-selector optgroup {
+      font-weight: bold;
+      font-style: normal;
+      color: #4a90e2;
+      background-color: #f8f9fa;
+    }
+    
+    /* Option styling */
+    .currency-selector option {
+      padding: 10px;
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    /* Current selection message */
+    .currency-selector p {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--primary-color);
+    }
+    
+    #selected-currency {
+      font-weight: 700;
+      color: #4a90e2;
+    }
+>>>>>>> 59d08a9ffb77247d8d320d3822852ad92a7fe2a1
 
         /* Updated Pricing Section */
         .pricing-section {
@@ -435,7 +506,6 @@
                     <p class="hero-subtitle">Elevate your business communication with secure, reliable, and professional email hosting services tailored for African businesses.</p>
                     <div class="hero-btn d-flex gap-3">
                         <a href="#pricing" class="btn btn-primary">View Plans</a>
-                        <a href="contacts.php" class="btn btn-outline-light">Contact Sales</a>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
@@ -705,7 +775,7 @@
             </div>
         </div>
             <!-- Include the currency converter script -->
-  <script>
+<script>
     // Global Currency Converter for Hosting Site Pricing Plans
 
 // Main pricing plans in USD
@@ -1046,24 +1116,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center" data-aos="fade-up">
-                    <h2 class="mb-4">Ready to Upgrade Your Email Experience?</h2>
-                    <p class="mb-5">Join thousands of African businesses that trust Afriportal for their email hosting needs.</p>
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="#pricing" class="btn btn-light">View Plans</a>
-                        <a href="contacts.php" class="btn btn-light">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
 
     <!-- Footer -->
     <?php include('assets/includes/footer.php'); ?>

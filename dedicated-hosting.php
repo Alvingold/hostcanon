@@ -28,17 +28,10 @@
         <div class="hero-content">
             <!-- Text Content -->
             <div class="hero-text">
-                <span class="hero-badge">Enterprise-Grade Solution</span>
                 <h1>Dedicated Hosting for Ultimate Performance</h1>
                 <p>Unmatched speed, security, and control for your high-traffic websites. Power up your business with HostCanon's dedicated hosting solutions.</p>
                 <div class="hero-actions">
-                    <a href="#" class="hero-btn primary">Get Started</a>
                     <a href="#" class="hero-btn secondary">View Plans</a>
-                </div>
-                <div class="hero-features">
-                    <div class="featuredd"><i class="feature-icon speed"></i>99.9% Uptime</div>
-                    <div class="featuredd"><i class="feature-icon security"></i>DDoS Protection</div>
-                    <div class="featuredd"><i class="feature-icon support"></i>24/7 Support</div>
                 </div>
             </div>
         </div>
@@ -419,9 +412,9 @@
  <!-- Domain Thought -->
  <section class="domain-thought">
     <div class="domain-content">
-        <h2>Have the ideal domain name in mind?</h2>
-        <p>Special rates apply only for the initial term and will renew at standard pricing.</p>
-        <a href="#top" class="back-to-top">Back to Top</a>
+        <h2>Have the ideal Hosting in mind?</h2>
+        <p>Well waste no time pick it now.</p>
+        <a href="#top" class="back-to-top">Get Started</a>
     </div>
 </section>
 
@@ -443,16 +436,6 @@
     <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
     
     <script>
-        <!-- Navigation Scroll Effect -->
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
         // Initialize AOS after preloader removes loading class
         document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('load', function() {

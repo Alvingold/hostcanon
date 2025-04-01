@@ -75,16 +75,22 @@
     color: #333;
 }
 .btn-reset {
-    background: transparent;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 0.85rem;
+    background: linear-gradient(135deg, #4B0082, #932C8B);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    display: inline-block;
+    float: left;
 }
 .btn-reset:hover {
-    background: #f0f0f0;
+    background: linear-gradient(135deg, #3a006a, #7f267a);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(75, 0, 130, 0.2);
 }
 .filter-row {
     display: flex;
@@ -295,7 +301,7 @@
 
 .modal-content {
     background-color: white;
-    margin: 10% auto;
+    margin: 30% auto;
     width: 90%;
     max-width: 500px;
     border-radius: 12px;
