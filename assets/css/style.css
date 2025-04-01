@@ -1389,11 +1389,6 @@ body {
     color: #666;
     font-size: 1em;
 }
-
-strong {
-    color: #4B0082;
-}
-
 @media (max-width: 768px) {
     .success{
         padding: 15px;
@@ -1490,9 +1485,9 @@ strong {
     font-size: clamp(0.9em, 2.5vw, 1em);
 }
 
-strong {
+/* strong {
     color: #4B0082;
-}
+} */
 
 
 
