@@ -28,17 +28,10 @@
         <div class="hero-content">
             <!-- Text Content -->
             <div class="hero-text">
-                <span class="hero-badge">Enterprise-Grade Solution</span>
                 <h1>Dedicated Hosting for Ultimate Performance</h1>
                 <p>Unmatched speed, security, and control for your high-traffic websites. Power up your business with HostCanon's dedicated hosting solutions.</p>
                 <div class="hero-actions">
-                    <a href="#" class="hero-btn primary">Get Started</a>
                     <a href="#" class="hero-btn secondary">View Plans</a>
-                </div>
-                <div class="hero-features">
-                    <div class="featuredd"><i class="feature-icon speed"></i>99.9% Uptime</div>
-                    <div class="featuredd"><i class="feature-icon security"></i>DDoS Protection</div>
-                    <div class="featuredd"><i class="feature-icon support"></i>24/7 Support</div>
                 </div>
             </div>
         </div>

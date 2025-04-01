@@ -1,14 +1,49 @@
- <style>
+<!-- HERO SECTION -->
+<section class="dedicated-hero">
+    <div class="dedicated-container">
+        <!-- Text Content -->
+        <div class="hero-content">
+            <span class="hero-badge">Enterprise-Grade Solution</span>
+            <h1>Dedicated Hosting for <span class="highlight">Ultimate Performance</span></h1>
+            <p>Unmatched speed, security, and control for your mission-critical applications.</p>
+            
+            <!-- Key Stats in Cards -->
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Uptime Guarantee</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Expert Support</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Hardware Control</span>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <a href="#" class="hero-btn primary">Deploy Your Server</a>
+                <a href="#" class="hero-btn secondary">Compare Plans</a>
+            </div>
+        </div>
+        
+        <!-- Server Image -->
+        <div class="hero-image">
+            <img src="assets/media/server-room.webp" alt="Enterprise-grade server infrastructure">
+        </div>
+    </div>
+</section>
+
+<style>
+/* HERO SECTION */
 .dedicated-hero {
     width: 100%;
-    position: relative;
     background: linear-gradient(135deg, rgba(75, 0, 130, 1) 0%, rgba(147, 44, 139, 1) 100%);
-    background-size: cover;
-    background-position: center;
     color: #fff;
-    padding: 100px 0;
+    padding: 80px 0;
     overflow: hidden;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
 }
 
 .dedicated-container {
@@ -17,117 +52,142 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    position: relative;
-    padding: 0 40px;
-    gap: 40px;
+    padding: 0 30px;
+    gap: 60px;
 }
 
 .hero-content {
     width: 50%;
-    z-index: 2;
+    max-width: 580px;
 }
 
-.hero-text h1 {
-    font-size: 3.2rem;
-    margin-bottom: 1.5rem;
+h1 {
+    font-size: 3rem;
+    margin: 16px 0;
     line-height: 1.2;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 800;
 }
 
-.hero-text p {
+h1 .highlight {
+    background: linear-gradient(90deg, #fff, #f0c5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
     font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    opacity: 0.95;
 }
 
 .hero-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-weight: 600;
     backdrop-filter: blur(5px);
+}
+
+/* Stats Section */
+.hero-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fff, #f0c5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 4px;
 }
 
 .hero-actions {
     display: flex;
-    gap: 15px;
-    margin-bottom: 2rem;
+    gap: 16px;
 }
 
 .hero-btn {
-    padding: 12px 28px;
-    border-radius: 6px;
+    padding: 14px 28px;
+    border-radius: 8px;
     font-weight: 600;
-    transition: all 0.3s ease;
     text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 .hero-btn.primary {
     background: #fff;
     color: rgba(75, 0, 130, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero-btn.secondary {
-    border: 2px solid #fff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(5px);
 }
 
 .hero-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-.hero-features {
-    display: flex;
-    gap: 25px;
-}
-
-.featuredd {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
-
-.hero-shape {
+.hero-image {
     width: 50%;
-    position: relative;
 }
 
-.hero-shape img {
-    max-width: 100%;
+.hero-image img {
+    width: 100%;
     height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
-    transition: transform 0.3s ease;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
-.hero-shape img:hover {
-    transform: scale(1.02);
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
     .dedicated-container {
         flex-direction: column;
-        text-align: center;
-        padding: 0 20px;
+        padding: 0 24px;
+        gap: 40px;
     }
 
-    .hero-content, .hero-shape {
+    .hero-content, .hero-image {
         width: 100%;
+        max-width: 600px;
     }
-
-    .hero-actions {
-        justify-content: center;
-    }
-
-    .hero-features {
-        justify-content: center;
+    
+    h1 {
+        font-size: 2.5rem;
     }
 }
 
@@ -136,18 +196,39 @@
         padding: 60px 0;
     }
     
-    .hero-text h1 {
-        font-size: 2.5rem;
+    .hero-stats {
+        flex-direction: column;
+        gap: 12px;
     }
     
-    .hero-features {
-        flex-wrap: wrap;
+    .stat-card {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 12px 16px;
+    }
+    
+    .stat-card:hover {
+        transform: none;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 480px) {
-    .hero-text h1 {
+@media (max-width: 576px) {
+    .dedicated-hero {
+        padding: 40px 0;
+    }
+    
+    h1 {
         font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
     }
 
     .hero-actions {
@@ -157,29 +238,9 @@
     .hero-btn {
         width: 100%;
     }
-}
- </style>
- <!-- HERO SECTION -->
- <section class="dedicated-hero">
-    <div class="dedicated-container">
-        <div class="hero-content">
-            <!-- Text Content -->
-            <div class="hero-text">
-                <span class="hero-badge">Enterprise-Grade Solution</span>
-                <h1>Dedicated Hosting for Ultimate Performance</h1>
-                <p>Unmatched speed, security, and control for your high-traffic websites. Power up your business with HostCanon's dedicated hosting solutions.</p>
-                <div class="hero-actions">
-                    <a href="#" class="hero-btn primary">Get Started</a>
-                    <a href="#" class="hero-btn secondary">View Plans</a>
-                </div>
-                <div class="hero-features">
-                    <div class="featuredd"><i class="feature-icon speed"></i>99.9% Uptime</div>
-                    <div class="featuredd"><i class="feature-icon security"></i>DDoS Protection</div>
-                    <div class="featuredd"><i class="feature-icon support"></i>24/7 Support</div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-shape"><img src="assets/media/server-room.webp" alt="Dedicated hosting image" width="100%"></div>
-    </div>
     
-</section>
+    .hero-image img {
+        border-radius: 12px;
+    }
+}
+</style>
