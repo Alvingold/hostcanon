@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Hosting - Afriportal</title>
+    <title>Email Hosting</title>
+
+    <?php include 'assets/includes/optimize-loading.php'; ?>
+    
     <link rel="shortcut icon" href="assets/media/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -245,7 +248,7 @@
         }
 
         .faq-section .accordion-button::after {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234B0082'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234B0082'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1 .708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
             transition: all 0.3s ease;
         }
         
@@ -418,10 +421,10 @@
         }
     </style>
 </head>
-<body class="loading">
+<body class="email-page loading">
     
     <?php include('assets/includes/nav-bar.php'); ?>
-    <?php include('assets/includes/preloader.php'); ?>
+    <?php include 'assets/includes/preloader.php'; ?>
 
     <!-- Hero Section -->
     <section class="hero-section">

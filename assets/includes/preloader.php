@@ -15,7 +15,7 @@
         align-items: center;
         justify-content: center;
         opacity: 1;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-out;
     }
     
     body:not(.loading) .preloader {
@@ -57,22 +57,19 @@
 <div class="preloader">
     <div class="preloader-content">
         <div class="floating-logo">
-            <img src="/hostcanon/assets/media/preloader.gif" alt="Logo" class="logo">
+            <img src="/hostcanon/assets/media/preloader.gif" alt="Logo" class="logo" width="150" height="150">
         </div>
     </div>
 </div>
 
 <script>
     window.addEventListener('load', function() {
-        setTimeout(function() {
+        setTimeout(() => {
             document.body.classList.remove('loading');
-            // To remove preloader from DOM after fade out
-            setTimeout(function() {
+            setTimeout(() => {
                 const preloader = document.querySelector('.preloader');
-                if (preloader && preloader.parentNode) {
-                    preloader.parentNode.removeChild(preloader);
-                }
-            }, 500);
-        }, 500);
+                if (preloader) preloader.remove();
+            }, 300);
+        }, 300);
     });
 </script>

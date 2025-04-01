@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <title>wordpress-hosting</title>
+    <?php include 'assets/includes/optimize-loading.php'; ?>
     <link rel="shortcut icon" href="assets/media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/bootstrap-icons.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -527,7 +528,8 @@
         }
     </style>
 </head>
-<body>
+<body class="wordpress-page loading">
+<?php include 'assets/includes/preloader.php'; ?>
 <?php include 'assets/includes/nav-bar.php'; ?>
 
 <nav class="header">
