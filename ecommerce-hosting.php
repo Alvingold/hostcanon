@@ -448,7 +448,7 @@
                     <a href="#pricing" class="btn btn-primary">View Pricing Plans</a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="assets/media/ecommerce.png" alt="Reseller Hosting Illustration" class="img-fluid">
+                    <img src="assets/media/ecommerce.webp" alt="Reseller Hosting Illustration" class="img-fluid">
                 </div>
             </div>
         </div>

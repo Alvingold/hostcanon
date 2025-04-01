@@ -663,7 +663,7 @@
                 <a href="#pricing" class="btn btn-primary mb-4">View Pricing Plans</a>
             </div>
             <div class="col-lg-6 mt-3 mt-lg-0" data-aos="fade-left">
-                <img src="assets/media/reseller.png" alt="Reseller Hosting Illustration" class="img-fluid">
+                <img src="assets/media/reseller.webp" alt="Reseller Hosting Illustration" class="img-fluid">
             </div>
         </div>
     </div>

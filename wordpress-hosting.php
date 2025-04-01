@@ -808,7 +808,7 @@
 <!-- Customer support contact section -->
 <div class="customer-call-line">
     <a href="tel: +234 8064075956" class="call-button">
-        <img src="assets/media/call.png" alt="Call Us" class="phone-icon">
+        <img src="assets/media/call.webp" alt="Call Us" class="phone-icon">
         <span>Call Us: +2348064075956</span>
     </a>
 </div>

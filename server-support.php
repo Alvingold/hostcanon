@@ -32,7 +32,7 @@
             top: 0;
             width: 50%;
             height: 100%;
-            background: url('assets/media/hero-img.png') no-repeat center center/cover;
+            background: url('assets/media/hero-img.webp') no-repeat center center/cover;
             opacity: 0.1;
         }
 
@@ -594,7 +594,7 @@
                 
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="support-image">
-                        <img src="assets/media/pattern.png" alt="24/7 Support Team">
+                        <img src="assets/media/pattern.webp" alt="24/7 Support Team">
                     </div>
                 </div>
             </div>

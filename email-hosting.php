@@ -439,7 +439,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="assets/media/email.png" alt="Email Hosting" class="img-fluid">
+                    <img src="assets/media/email.webp" alt="Email Hosting" class="img-fluid">
                 </div>
             </div>
         </div>
