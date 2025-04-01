@@ -23,7 +23,7 @@
 
 
     <!-- HERO SECTION -->
-<section class="dedicated-hero">
+ <section class="dedicated-hero">
     <div class="dedicated-container">
         <div class="hero-content">
             <!-- Text Content -->
@@ -244,6 +244,8 @@
     </div>
 
 
+    <!-- FAQ SECTION -->
+     
 
 
 

@@ -16,7 +16,7 @@
     .footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        /* gap: 2.5rem; */
+        gap: 0.7rem;
         justify-content: space-between;
         align-items: flex-start;
     }
@@ -50,9 +50,9 @@
         color: #e0e0e0;
         font-size: 0.95rem;
     }
-    #footer-hosting{
+    /* #footer-hosting{
         margin-left: 2rem;
-    }
+    } */
     .footer-heading {
         font-size: 1.2rem;
         font-weight: 600;
