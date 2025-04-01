@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to HostCanon</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style">
+    
     <link rel="shortcut icon" href="assets/media/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -158,9 +164,6 @@
                         </div>
                         <h3>Reseller Hosting</h3>
                         <p>Start your own hosting business with our reliable, scalable, and profitable reseller hosting plans.</p>
-                        <!-- <ul class="solution-features">
-                            <li><i class="bi bi-check-circle"></i> Unlimited Bandwidth</li>
-                        </ul> -->
                         <a href="reseller-hosting.php" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
@@ -171,9 +174,6 @@
                         </div>
                         <h3 class="h4">Ecommerce Hosting</h3>
                         <p>Power your online store with our fast, secure, and feature-packed e-commerce hosting solutions.</p>
-                        <!-- <ul class="solution-features">
-                            <li><i class="bi bi-check-circle"></i> Dedicated Resources</li>
-                        </ul> -->
                         <a href="ecommerce-hosting.php" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
@@ -184,9 +184,6 @@
                         </div>
                         <h3>Email Hosting</h3>
                         <p>Elevate your communication with secure and professional email hosting, tailored for your domain.</p>
-                        <!-- <ul class="solution-features">
-                            <li><i class="bi bi-check-circle"></i> Full Server Access</li>
-                        </ul> -->
                         <a href="email-hosting.php" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
@@ -679,22 +676,27 @@
     <!-- Contact Buttons -->
     <?php include 'assets/includes/contact-btn.php'; ?>
     
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
-    
+    <!-- Scripts moved to bottom -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js"></script>
     <script>
-        // Initialize AOS after preloader removes loading class
+        // Initialize AOS only after content loads
         document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    AOS.init({
-                        duration: 1000,
-                        once: true
-                    });
-                }, 600);
-            });
+            // Remove preloader earlier
+            setTimeout(() => {
+                document.body.classList.remove('loading');
+                const preloader = document.querySelector('.preloader');
+                if (preloader) preloader.remove();
+            }, 300);
+
+            // Initialize AOS with shorter duration
+            setTimeout(() => {
+                AOS.init({
+                    duration: 600,
+                    once: true
+                });
+            }, 400);
         });
     </script>
 </body>
