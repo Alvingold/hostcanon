@@ -242,63 +242,6 @@
             opacity: 0.9;
         }
         
-        /* Testimonial section */
-        .testimonial-section {
-            padding: var(--section-padding);
-        }
-        
-        .testimonial-card {
-            padding: 30px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
-            height: 100%;
-            position: relative;
-        }
-        
-        .testimonial-card::before {
-            content: "";
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 4rem;
-            color: var(--primary-color);
-            opacity: 0.2;
-            line-height: 1;
-        }
-        
-        .testimonial-content {
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-            padding-left: 30px;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-image {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
-        
-        .author-info h5 {
-            margin-bottom: 0;
-            font-weight: 600;
-        }
-        
-        .author-info p {
-            margin-bottom: 0;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
         /* Pricing Section */
         .pricing-section {
             padding: 100px 0;
