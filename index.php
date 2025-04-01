@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to HostCanon</title>
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="assets/css/style.css" as="style">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style">
-    
     <link rel="shortcut icon" href="assets/media/favicon.png" type="image/x-icon">
+
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- Bootstrap CSS -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Icons -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
+    
     <!-- Custom CSS -->
+    <link rel="preload" href="assets/css/style.css" as="style">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="home-page loading">
@@ -480,7 +488,7 @@
 
                     <!-- Image Section -->
                     <div class="image-section col-12 col-md-6">
-                        <img src="assets/media/server-infrastructure.webp" alt="Server Infrastructure" class="img-fluid">  
+                        <img src="assets/media/server-infrastructure.webp" alt="Server Infrastructure" class="img-fluid" loading="lazy">  
                     </div>
                 </div>
 
@@ -488,7 +496,7 @@
                 <div class="row mt-4">
                     <!-- Image Section -->
                     <div class="image-section col-12 col-md-6 mb-4 mb-md-0">
-                        <img src="assets/media/security-features.webp" alt="Security Features" class="img-fluid">
+                        <img src="assets/media/security-features.webp" alt="Security Features" class="img-fluid" loading="lazy">
                     </div>
 
                     <!-- Text Content Second -->
@@ -679,24 +687,18 @@
     <!-- Scripts moved to bottom -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script defer src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js"></script>
     <script>
-        // Initialize AOS only after content loads
-        document.addEventListener('DOMContentLoaded', function() {
-            // Remove preloader earlier
-            setTimeout(() => {
-                document.body.classList.remove('loading');
-                const preloader = document.querySelector('.preloader');
-                if (preloader) preloader.remove();
-            }, 300);
+        function initAOS() {
+            AOS.init({
+                duration: 600,
+                once: true,
+                disable: window.innerWidth < 768
+            });
+        }
 
-            // Initialize AOS with shorter duration
-            setTimeout(() => {
-                AOS.init({
-                    duration: 600,
-                    once: true
-                });
-            }, 400);
+        // Let preloader.php handle the timing
+        document.addEventListener('DOMContentLoaded', function() {
+            initAOS();
         });
     </script>
 </body>

@@ -1,0 +1,29 @@
+/* Critical styles */
+:root {
+    --critical-load: initial;
+}
+
+/* Critical styles only */
+/* ...existing code... */
+
+/* Performance optimizations */
+img, video {
+    content-visibility: auto;
+    contain-intrinsic-size: auto;
+}
+
+/* Load non-critical styles asynchronously */
+@media print {
+    /* ...existing code... */
+}
+
+/* Lazy load non-critical styles */
+@media not print {
+    /* ...existing code... */
+}
+
+/* Optimize font loading */
+@font-face {
+    font-display: swap;
+    /* ...existing code... */
+}

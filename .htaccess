@@ -7,6 +7,8 @@
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
 
   # CSS, JavaScript
   ExpiresByType text/css "access plus 1 month"
@@ -16,6 +18,11 @@
   # Others
   ExpiresDefault "access plus 1 month"
 </IfModule>
+
+# Add Cache-Control headers
+<FilesMatch "\.(ico|jpg|jpeg|png|webp|gif|css|js|woff2)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
 
 # Enable Keep-Alive
 <IfModule mod_headers.c>
@@ -33,6 +40,9 @@
     AddOutputFilterByType DEFLATE application/rss+xml
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE font/ttf font/otf font/woff font/woff2
+    AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
 # Set security headers
@@ -41,4 +51,17 @@
     Header set X-XSS-Protection "1; mode=block"
     Header set X-Frame-Options "SAMEORIGIN"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Priority "high" "expr=%{REQUEST_URI} =~ m#\.(css|js|woff2)$#"
+    Header set Cache-Control "no-transform" "expr=%{REQUEST_URI} =~ m#\.(css|js|woff2)$#"
+</IfModule>
+
+# Disable ETags
+FileETag None
+
+# Enable mod_pagespeed if available
+<IfModule pagespeed_module>
+    ModPagespeed on
+    ModPagespeedEnableFilters extend_cache
+    ModPagespeedEnableFilters combine_css
+    ModPagespeedEnableFilters defer_javascript
 </IfModule>
