@@ -233,6 +233,7 @@ $prefix = $isInSubdir ? '../' : '';
                 border: none;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                 transition: all 0.3s ease;
+                color: white;
             }
 
             .navbar .dropdown-item:hover{
