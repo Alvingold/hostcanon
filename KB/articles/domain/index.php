@@ -20,11 +20,11 @@
     <?php 
     // Use absolute paths from the document root
     include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-nav.php';
-    include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-sidebar.php';
     ?>
     
     <div class="container mb-4 mt-4">
         <div class="kb-wrapper">
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-sidebar.php'; ?>
             <main class="kb-main">
                 <div class="article-content">
                     <nav aria-label="breadcrumb">

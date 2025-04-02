@@ -16,10 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
     <style>
-        .server-support-page .hero-section {
+        .server-page .hero-section {
             background: linear-gradient(135deg, rgba(75, 0, 130, 0.95), rgba(147, 44, 139, 0.95));
             padding: 160px 0 100px;
             position: relative;

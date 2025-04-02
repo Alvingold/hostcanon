@@ -379,7 +379,7 @@
         <div class="footer-content">
             <div class="footer-column">
                 <div class="footer-logo">
-                    <img src="/api/placeholder/40/40" alt="HostCanon Logo" />
+                    <img src="#" alt="HostCanon Logo">
                     <!-- <h3>HostCanon</h3> -->
                 </div>
                 <p>Reliable web hosting solutions for businesses of all sizes. Fast, secure, and backed by 24/7 expert support.</p>
