@@ -84,7 +84,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
-    display: inline-block;
+    display: block;
     float: left;
 }
 .btn-reset:hover {
@@ -164,6 +164,7 @@
     border-radius: 5px;
     outline: none;
     -webkit-appearance: none;
+    appearance: none;
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
