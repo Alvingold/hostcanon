@@ -670,7 +670,219 @@
             </div>
         </div>
          <!-- Include the currency converter script -->
-  <script>
+    </section>
+    <!-- Shared Hosting Benefits Section -->
+<section class="benefits-section py-5" id="benefits">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="section-title">
+                    <h2>We provide Shared Hosting with unbeatable features and benefits</h2>
+                </div>
+                <p class="mb-4">Our shared hosting solutions are designed to give you maximum performance, security, and value. Whether you're launching your first website or managing multiple projects, we've got you covered.</p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Free Domain Registration</h5>
+                            <p>Get a free domain name for the first year with any annual hosting plan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>SSD Storage</h5>
+                            <p>Lightning-fast solid-state drives for superior website performance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Free Website Migration</h5>
+                            <p>Our expert team will transfer your existing website for free.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>30-Day Money-Back Guarantee</h5>
+                            <p>Try our hosting risk-free with our no-questions-asked refund policy.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="#pricing" class="btn btn-primary px-4 py-2">View Hosting Plans</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="benefits-image position-relative">
+                    <img src="assets/media/security-features.webp" alt="Shared Hosting Benefits" class="img-fluid rounded shadow">
+                    <div class="stats-card position-absolute p-4 bg-white shadow">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="start">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">99.9%</h5>
+                                <p class="mb-0 text-muted">Uptime Guarantee</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="start">
+                                <i class="bi bi-speedometer2"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">2X</h5>
+                                <p class="mb-0 text-muted">Faster Loading</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- FAQ Section -->
+    <section class="faq-section py-5" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center mb-4" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is shared hosting?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Shared hosting is a type of web hosting where multiple websites share the same server resources. This makes it a cost-effective solution for individuals and small businesses.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How do I migrate my website to your shared hosting?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our team will assist you with the migration process. Simply contact our support team, and we will guide you through the steps.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can I upgrade my plan later?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, you can easily upgrade your hosting plan at any time. Just contact our support team for assistance.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We accept various payment methods including credit cards, PayPal, and bank transfers.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Is there a money-back guarantee?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer a 30-day money-back guarantee on all our hosting plans.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Do you offer a free trial?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We do not offer a free trial, but you can take advantage of our 30-day money-back guarantee to test our services risk-free.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section class="cta-section text-center"  data-aos="fade-right">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Join thousands of satisfied customers and experience the best shared hosting service.</p>
+            <a href="#pricing" class="btn btn-primary">Get Started Now</a>
+        </div>
+    </section>
+   <!-- Footer -->
+   <?php include 'assets/includes/footer.php'; ?>
+    
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
+    
+    <script>
+        <!-- Navigation Scroll Effect -->
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize AOS after preloader removes loading class
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    AOS.init({
+                        duration: 1000,
+                        once: true
+                    });
+                }, 600);
+            });
+        });
+    </script>
+     <script>
     // Global Currency Converter for Hosting Site Pricing Plans
 
 // Main pricing plans in USD
@@ -921,218 +1133,28 @@ document.addEventListener('DOMContentLoaded', function() {
   // Try to detect user's currency automatically
   detectUserCurrency();
 });
+/**
+ * Format price according to currency formatting rules with thousand separators
+ */
+function formatPrice(price, currency) {
+  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
+  
+  // Format the number with proper decimal places
+  let formattedNumber = price.toFixed(format.decimalPlaces);
+  
+  // Add thousand separators
+  // Split number into integer and decimal parts
+  const parts = formattedNumber.split('.');
+  // Add commas to the integer part
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  // Rejoin with decimal part if it exists
+  formattedNumber = parts.join('.');
+  
+  // Apply currency symbol in the correct position
+  return format.position === 'before' 
+    ? `${format.symbol}${formattedNumber}`
+    : `${formattedNumber} ${format.symbol}`;
+}
   </script>
-    </section>
-    <!-- Shared Hosting Benefits Section -->
-<section class="benefits-section py-5" id="benefits">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                <div class="section-title">
-                    <h2>We provide Shared Hosting with unbeatable features and benefits</h2>
-                </div>
-                <p class="mb-4">Our shared hosting solutions are designed to give you maximum performance, security, and value. Whether you're launching your first website or managing multiple projects, we've got you covered.</p>
-                
-                <div class="benefits-list">
-                    <div class="benefit-item d-flex align-items-start mb-3">
-                        <div class="benefit-icon me-3">
-                            <i class="bi bi-check-circle-fill"></i>
-                        </div>
-                        <div>
-                            <h5>Free Domain Registration</h5>
-                            <p>Get a free domain name for the first year with any annual hosting plan.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item d-flex align-items-start mb-3">
-                        <div class="benefit-icon me-3">
-                            <i class="bi bi-check-circle-fill"></i>
-                        </div>
-                        <div>
-                            <h5>SSD Storage</h5>
-                            <p>Lightning-fast solid-state drives for superior website performance.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item d-flex align-items-start mb-3">
-                        <div class="benefit-icon me-3">
-                            <i class="bi bi-check-circle-fill"></i>
-                        </div>
-                        <div>
-                            <h5>Free Website Migration</h5>
-                            <p>Our expert team will transfer your existing website for free.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item d-flex align-items-start">
-                        <div class="benefit-icon me-3">
-                            <i class="bi bi-check-circle-fill"></i>
-                        </div>
-                        <div>
-                            <h5>30-Day Money-Back Guarantee</h5>
-                            <p>Try our hosting risk-free with our no-questions-asked refund policy.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-4">
-                    <a href="#pricing" class="btn btn-primary px-4 py-2">View Hosting Plans</a>
-                </div>
-            </div>
-            
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="benefits-image position-relative">
-                    <img src="assets/media/security-features.webp" alt="Shared Hosting Benefits" class="img-fluid rounded shadow">
-                    <div class="stats-card position-absolute p-4 bg-white shadow">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="start">
-                                <i class="bi bi-rocket"></i>
-                            </div>
-                            <div>
-                                <h5 class="mb-0">99.9%</h5>
-                                <p class="mb-0 text-muted">Uptime Guarantee</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="start">
-                                <i class="bi bi-speedometer2"></i>
-                            </div>
-                            <div>
-                                <h5 class="mb-0">2X</h5>
-                                <p class="mb-0 text-muted">Faster Loading</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- FAQ Section -->
-    <section class="faq-section py-5" id="faq">
-        <div class="container">
-            <h2 class="section-title text-center mb-4" data-aos="fade-up">Frequently Asked Questions</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is shared hosting?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Shared hosting is a type of web hosting where multiple websites share the same server resources. This makes it a cost-effective solution for individuals and small businesses.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How do I migrate my website to your shared hosting?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Our team will assist you with the migration process. Simply contact our support team, and we will guide you through the steps.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Can I upgrade my plan later?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes, you can easily upgrade your hosting plan at any time. Just contact our support team for assistance.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            What payment methods do you accept?
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We accept various payment methods including credit cards, PayPal, and bank transfers.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Is there a money-back guarantee?
-                        </button>
-                    </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes, we offer a 30-day money-back guarantee on all our hosting plans.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingSix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            Do you offer a free trial?
-                        </button>
-                    </h2>
-                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We do not offer a free trial, but you can take advantage of our 30-day money-back guarantee to test our services risk-free.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- Call to Action Section -->
-    <section class="cta-section text-center"  data-aos="fade-right">
-        <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Join thousands of satisfied customers and experience the best shared hosting service.</p>
-            <a href="#pricing" class="btn btn-primary">Get Started Now</a>
-        </div>
-    </section>
-   <!-- Footer -->
-   <?php include 'assets/includes/footer.php'; ?>
-    
-    <!-- Scroll to Top Button -->
-    <?php include 'assets/includes/scroll-up.php'; ?>
-    
-    <!-- Contact Buttons -->
-    <?php include 'assets/includes/contact-btn.php'; ?>
-    
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
-    
-    <script>
-        <!-- Navigation Scroll Effect -->
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Initialize AOS after preloader removes loading class
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    AOS.init({
-                        duration: 1000,
-                        once: true
-                    });
-                }, 600);
-            });
-        });
-    </script>
 </body>
 </html>

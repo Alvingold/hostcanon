@@ -811,258 +811,6 @@
             </div>
         </div>
         <!-- Include the currency converter script -->
-  <script>
-    // Global Currency Converter for Hosting Site Pricing Plans
-
-// Main pricing plans in USD
-const pricingPlans = [
-  { name: "Basic", price: 9.99, features: ["30 GB SSD Storage", "500 GB Bandwidth", "30 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] },
-  { name: "Premium", price: 19.99, features: ["75 GB SSD Storage", "1000 GB Bandwidth", "75 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] },
-  { name: "Business", price: 29.99, features: ["150 GB SSD Storage", "2000 GB Bandwidth", "150 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] }
-];
-
-// Exchange rates (relative to USD)
-// These would typically come from an API in a production environment
-const exchangeRates = {
-  USD: 1.00,      // United States Dollar
-  EUR: 0.92,      // Euro
-  GBP: 0.79,      // British Pound
-  CAD: 1.36,      // Canadian Dollar
-  AUD: 1.53,      // Australian Dollar
-  INR: 83.60,     // Indian Rupee
-  JPY: 151.73,    // Japanese Yen
-  CNY: 7.23,      // Chinese Yuan
-  BRL: 5.15,      // Brazilian Real
-  MXN: 16.73,     // Mexican Peso
-  RUB: 92.16,     // Russian Ruble
-  ZAR: 18.31,     // South African Rand
-  SGD: 1.34,      // Singapore Dollar
-  NZD: 1.66,      // New Zealand Dollar
-  CHF: 0.88,      // Swiss Franc
-  HKD: 7.81,      // Hong Kong Dollar
-  SEK: 10.49,     // Swedish Krona
-  NOK: 10.71,     // Norwegian Krone
-  DKK: 6.87,      // Danish Krone
-  PLN: 3.95,      // Polish Zloty
-  THB: 35.05,     // Thai Baht
-  KRW: 1358.58,   // South Korean Won
-  IDR: 15920.25,  // Indonesian Rupiah
-  SAR: 3.75,      // Saudi Riyal
-  AED: 3.67,      // UAE Dirham
-  MYR: 4.27,      // Malaysian Ringgit
-  PHP: 56.92,     // Philippine Peso
-  TRY: 32.18,     // Turkish Lira
-  EGP: 47.25,     // Egyptian Pound
-  PKR: 278.14,    // Pakistani Rupee
-  NGN: 1485.11,   // Nigerian Naira
-  CLP: 921.85,    // Chilean Peso
-  COP: 3953.38,   // Colombian Peso
-  ARS: 876.50,    // Argentine Peso
-  PEN: 3.72,      // Peruvian Sol
-  VND: 25187.50,  // Vietnamese Dong
-  ILS: 3.68,      // Israeli Shekel
-  CZK: 23.35,     // Czech Koruna
-  HUF: 361.95,    // Hungarian Forint
-  RON: 4.58,      // Romanian Leu
-  BGN: 1.80,      // Bulgarian Lev
-  HRK: 6.97,      // Croatian Kuna
-  ISK: 137.81,    // Icelandic Krona
-  UAH: 39.30,     // Ukrainian Hryvnia
-  QAR: 3.64,      // Qatari Riyal
-  KWD: 0.31,      // Kuwaiti Dinar
-  BHD: 0.38,      // Bahraini Dinar
-  OMR: 0.38,      // Omani Rial
-  JOD: 0.71,      // Jordanian Dinar
-  KZT: 446.92,    // Kazakhstani Tenge
-  BDT: 110.25,    // Bangladeshi Taka
-  LKR: 295.38,    // Sri Lankan Rupee
-  KES: 130.50,    // Kenyan Shilling
-  GHS: 14.75,     // Ghanaian Cedi
-  UGX: 3772.43,   // Ugandan Shilling
-  TZS: 2581.47,   // Tanzanian Shilling
-  ETB: 56.51,     // Ethiopian Birr
-  XOF: 605.02,    // CFA Franc BCEAO
-  XAF: 605.02     // CFA Franc BEAC
-};
-
-// Currency symbols and formatting options
-const currencyFormats = {
-  USD: { symbol: '$', position: 'before', decimalPlaces: 2 },
-  EUR: { symbol: '€', position: 'after', decimalPlaces: 2 },
-  GBP: { symbol: '£', position: 'before', decimalPlaces: 2 },
-  CAD: { symbol: 'C$', position: 'before', decimalPlaces: 2 },
-  AUD: { symbol: 'A$', position: 'before', decimalPlaces: 2 },
-  INR: { symbol: '₹', position: 'before', decimalPlaces: 2 },
-  JPY: { symbol: '¥', position: 'before', decimalPlaces: 0 },
-  CNY: { symbol: '¥', position: 'before', decimalPlaces: 2 },
-  BRL: { symbol: 'R$', position: 'before', decimalPlaces: 2 },
-  MXN: { symbol: 'Mex$', position: 'before', decimalPlaces: 2 },
-  RUB: { symbol: '₽', position: 'after', decimalPlaces: 2 },
-  ZAR: { symbol: 'R', position: 'before', decimalPlaces: 2 },
-  SGD: { symbol: 'S$', position: 'before', decimalPlaces: 2 },
-  NZD: { symbol: 'NZ$', position: 'before', decimalPlaces: 2 },
-  CHF: { symbol: 'CHF', position: 'before', decimalPlaces: 2 },
-  HKD: { symbol: 'HK$', position: 'before', decimalPlaces: 2 },
-  SEK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
-  NOK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
-  DKK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
-  PLN: { symbol: 'zł', position: 'after', decimalPlaces: 2 },
-  THB: { symbol: '฿', position: 'before', decimalPlaces: 2 },
-  KRW: { symbol: '₩', position: 'before', decimalPlaces: 0 },
-  IDR: { symbol: 'Rp', position: 'before', decimalPlaces: 0 },
-  SAR: { symbol: '﷼', position: 'after', decimalPlaces: 2 },
-  AED: { symbol: 'د.إ', position: 'after', decimalPlaces: 2 },
-  MYR: { symbol: 'RM', position: 'before', decimalPlaces: 2 },
-  PHP: { symbol: '₱', position: 'before', decimalPlaces: 2 },
-  TRY: { symbol: '₺', position: 'before', decimalPlaces: 2 },
-  EGP: { symbol: 'E£', position: 'before', decimalPlaces: 2 },
-  PKR: { symbol: '₨', position: 'before', decimalPlaces: 2 },
-  NGN: { symbol: '₦', position: 'before', decimalPlaces: 2 },
-  CLP: { symbol: 'CLP$', position: 'before', decimalPlaces: 0 },
-  COP: { symbol: 'COL$', position: 'before', decimalPlaces: 0 },
-  ARS: { symbol: 'ARS$', position: 'before', decimalPlaces: 2 },
-  PEN: { symbol: 'S/', position: 'before', decimalPlaces: 2 },
-  VND: { symbol: '₫', position: 'after', decimalPlaces: 0 },
-  ILS: { symbol: '₪', position: 'before', decimalPlaces: 2 },
-  CZK: { symbol: 'Kč', position: 'after', decimalPlaces: 2 },
-  HUF: { symbol: 'Ft', position: 'after', decimalPlaces: 0 },
-  RON: { symbol: 'lei', position: 'after', decimalPlaces: 2 },
-  BGN: { symbol: 'лв', position: 'after', decimalPlaces: 2 },
-  HRK: { symbol: 'kn', position: 'after', decimalPlaces: 2 },
-  ISK: { symbol: 'kr', position: 'after', decimalPlaces: 0 },
-  UAH: { symbol: '₴', position: 'after', decimalPlaces: 2 },
-  QAR: { symbol: '﷼', position: 'after', decimalPlaces: 2 },
-  KWD: { symbol: 'د.ك', position: 'after', decimalPlaces: 3 },
-  BHD: { symbol: 'BD', position: 'before', decimalPlaces: 3 },
-  OMR: { symbol: '﷼', position: 'after', decimalPlaces: 3 },
-  JOD: { symbol: 'JD', position: 'before', decimalPlaces: 3 },
-  KZT: { symbol: '₸', position: 'after', decimalPlaces: 2 },
-  BDT: { symbol: '৳', position: 'before', decimalPlaces: 2 },
-  LKR: { symbol: '₨', position: 'before', decimalPlaces: 2 },
-  KES: { symbol: 'KSh', position: 'before', decimalPlaces: 2 },
-  GHS: { symbol: '₵', position: 'before', decimalPlaces: 2 },
-  UGX: { symbol: 'USh', position: 'before', decimalPlaces: 0 },
-  TZS: { symbol: 'TSh', position: 'before', decimalPlaces: 0 },
-  ETB: { symbol: 'Br', position: 'before', decimalPlaces: 2 },
-  XOF: { symbol: 'CFA', position: 'after', decimalPlaces: 0 },
-  XAF: { symbol: 'FCFA', position: 'after', decimalPlaces: 0 }
-};
-
-// Country to currency mapping
-const countryCurrencyMap = {
-  'US': 'USD', 'CA': 'CAD', 'GB': 'GBP', 'AU': 'AUD', 'NZ': 'NZD',
-  'IN': 'INR', 'JP': 'JPY', 'CN': 'CNY', 'BR': 'BRL', 'MX': 'MXN',
-  'RU': 'RUB', 'ZA': 'ZAR', 'SG': 'SGD', 'CH': 'CHF', 'HK': 'HKD',
-  'SE': 'SEK', 'NO': 'NOK', 'DK': 'DKK', 'PL': 'PLN', 'TH': 'THB',
-  'KR': 'KRW', 'ID': 'IDR', 'SA': 'SAR', 'AE': 'AED', 'MY': 'MYR',
-  'PH': 'PHP', 'TR': 'TRY', 'EG': 'EGP', 'PK': 'PKR', 'NG': 'NGN',
-  'CL': 'CLP', 'CO': 'COP', 'AR': 'ARS', 'PE': 'PEN', 'VN': 'VND',
-  'IL': 'ILS', 'CZ': 'CZK', 'HU': 'HUF', 'RO': 'RON', 'BG': 'BGN',
-  'HR': 'HRK', 'IS': 'ISK', 'UA': 'UAH', 'QA': 'QAR', 'KW': 'KWD',
-  'BH': 'BHD', 'OM': 'OMR', 'JO': 'JOD', 'KZ': 'KZT', 'BD': 'BDT',
-  'LK': 'LKR', 'KE': 'KES', 'GH': 'GHS', 'UG': 'UGX', 'TZ': 'TZS',
-  'ET': 'ETB', 'BJ': 'XOF', 'BF': 'XOF', 'CI': 'XOF', 'GW': 'XOF',
-  'ML': 'XOF', 'NE': 'XOF', 'SN': 'XOF', 'TG': 'XOF', 'CM': 'XAF',
-  'CF': 'XAF', 'TD': 'XAF', 'CG': 'XAF', 'GQ': 'XAF', 'GA': 'XAF',
-  // Euro countries
-  'DE': 'EUR', 'FR': 'EUR', 'IT': 'EUR', 'ES': 'EUR', 'PT': 'EUR',
-  'NL': 'EUR', 'BE': 'EUR', 'AT': 'EUR', 'GR': 'EUR', 'IE': 'EUR',
-  'FI': 'EUR', 'SK': 'EUR', 'SI': 'EUR', 'LT': 'EUR', 'LV': 'EUR',
-  'EE': 'EUR', 'CY': 'EUR', 'MT': 'EUR', 'LU': 'EUR', 'MC': 'EUR'
-};
-
-/**
- * Format price according to currency formatting rules
- */
-function formatPrice(price, currency) {
-  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
-  const formattedNumber = price.toFixed(format.decimalPlaces);
-  
-  return format.position === 'before' 
-    ? `${format.symbol}${formattedNumber}`
-    : `${formattedNumber} ${format.symbol}`;
-}
-
-/**
- * Convert price from USD to target currency
- */
-function convertPrice(priceInUSD, targetCurrency) {
-  if (!exchangeRates[targetCurrency]) {
-    console.error(`Currency ${targetCurrency} not supported`);
-    return priceInUSD; // Return original price if currency not found
-  }
-  
-  return priceInUSD * exchangeRates[targetCurrency];
-}
-
-/**
- * Update displayed prices based on selected currency
- */
-function updatePrices(currency) {
-  pricingPlans.forEach((plan, index) => {
-    const convertedPrice = convertPrice(plan.price, currency);
-    const formattedPrice = formatPrice(convertedPrice, currency);
-    
-    // Update price display in DOM
-    const priceElement = document.getElementById(`plan-${index}-price`);
-    if (priceElement) {
-      priceElement.textContent = formattedPrice;
-    }
-  });
-  
-  // Update currency selection display
-  const currencyDisplay = document.getElementById('selected-currency');
-  if (currencyDisplay) {
-    currencyDisplay.textContent = currency;
-  }
-}
-
-/**
- * Get user's country and set appropriate currency
- * This uses the ip-api.com service which has free tier limitations
- */
-function detectUserCurrency() {
-  fetch('http://ip-api.com/json/?fields=countryCode')
-    .then(response => response.json())
-    .then(data => {
-      let currency = 'USD'; // Default
-      
-      if (countryCurrencyMap[data.countryCode]) {
-        currency = countryCurrencyMap[data.countryCode];
-      }
-      
-      // Update currency selector and prices
-      const currencySelector = document.getElementById('currency-selector');
-      if (currencySelector) {
-        currencySelector.value = currency;
-      }
-      
-      updatePrices(currency);
-    })
-    .catch(error => {
-      console.error('Error detecting user location:', error);
-      updatePrices('USD'); // Fallback to USD
-    });
-}
-
-/**
- * Initialize the currency converter when the page loads
- */
-document.addEventListener('DOMContentLoaded', function() {
-  // Create currency selection dropdown
-  const currencySelector = document.getElementById('currency-selector');
-  
-  if (currencySelector) {
-    // Add event listener for currency changes
-    currencySelector.addEventListener('change', function() {
-      updatePrices(this.value);
-    });
-  }
-  
-  // Try to detect user's currency automatically
-  detectUserCurrency();
-});
-  </script>
     </section>
 
     <!-- 24/7 Support Section -->
@@ -1421,5 +1169,281 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     </script>
+
+<script>
+    // Global Currency Converter for Hosting Site Pricing Plans
+
+// Main pricing plans in USD
+const pricingPlans = [
+  { name: "Basic", price: 9.99, features: ["30 GB SSD Storage", "500 GB Bandwidth", "30 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] },
+  { name: "Premium", price: 19.99, features: ["75 GB SSD Storage", "1000 GB Bandwidth", "75 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] },
+  { name: "Business", price: 29.99, features: ["150 GB SSD Storage", "2000 GB Bandwidth", "150 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] }
+];
+
+// Exchange rates (relative to USD)
+// These would typically come from an API in a production environment
+const exchangeRates = {
+  USD: 1.00,      // United States Dollar
+  EUR: 0.92,      // Euro
+  GBP: 0.79,      // British Pound
+  CAD: 1.36,      // Canadian Dollar
+  AUD: 1.53,      // Australian Dollar
+  INR: 83.60,     // Indian Rupee
+  JPY: 151.73,    // Japanese Yen
+  CNY: 7.23,      // Chinese Yuan
+  BRL: 5.15,      // Brazilian Real
+  MXN: 16.73,     // Mexican Peso
+  RUB: 92.16,     // Russian Ruble
+  ZAR: 18.31,     // South African Rand
+  SGD: 1.34,      // Singapore Dollar
+  NZD: 1.66,      // New Zealand Dollar
+  CHF: 0.88,      // Swiss Franc
+  HKD: 7.81,      // Hong Kong Dollar
+  SEK: 10.49,     // Swedish Krona
+  NOK: 10.71,     // Norwegian Krone
+  DKK: 6.87,      // Danish Krone
+  PLN: 3.95,      // Polish Zloty
+  THB: 35.05,     // Thai Baht
+  KRW: 1358.58,   // South Korean Won
+  IDR: 15920.25,  // Indonesian Rupiah
+  SAR: 3.75,      // Saudi Riyal
+  AED: 3.67,      // UAE Dirham
+  MYR: 4.27,      // Malaysian Ringgit
+  PHP: 56.92,     // Philippine Peso
+  TRY: 32.18,     // Turkish Lira
+  EGP: 47.25,     // Egyptian Pound
+  PKR: 278.14,    // Pakistani Rupee
+  NGN: 1485.11,   // Nigerian Naira
+  CLP: 921.85,    // Chilean Peso
+  COP: 3953.38,   // Colombian Peso
+  ARS: 876.50,    // Argentine Peso
+  PEN: 3.72,      // Peruvian Sol
+  VND: 25187.50,  // Vietnamese Dong
+  ILS: 3.68,      // Israeli Shekel
+  CZK: 23.35,     // Czech Koruna
+  HUF: 361.95,    // Hungarian Forint
+  RON: 4.58,      // Romanian Leu
+  BGN: 1.80,      // Bulgarian Lev
+  HRK: 6.97,      // Croatian Kuna
+  ISK: 137.81,    // Icelandic Krona
+  UAH: 39.30,     // Ukrainian Hryvnia
+  QAR: 3.64,      // Qatari Riyal
+  KWD: 0.31,      // Kuwaiti Dinar
+  BHD: 0.38,      // Bahraini Dinar
+  OMR: 0.38,      // Omani Rial
+  JOD: 0.71,      // Jordanian Dinar
+  KZT: 446.92,    // Kazakhstani Tenge
+  BDT: 110.25,    // Bangladeshi Taka
+  LKR: 295.38,    // Sri Lankan Rupee
+  KES: 130.50,    // Kenyan Shilling
+  GHS: 14.75,     // Ghanaian Cedi
+  UGX: 3772.43,   // Ugandan Shilling
+  TZS: 2581.47,   // Tanzanian Shilling
+  ETB: 56.51,     // Ethiopian Birr
+  XOF: 605.02,    // CFA Franc BCEAO
+  XAF: 605.02     // CFA Franc BEAC
+};
+
+// Currency symbols and formatting options
+const currencyFormats = {
+  USD: { symbol: '$', position: 'before', decimalPlaces: 2 },
+  EUR: { symbol: '€', position: 'after', decimalPlaces: 2 },
+  GBP: { symbol: '£', position: 'before', decimalPlaces: 2 },
+  CAD: { symbol: 'C$', position: 'before', decimalPlaces: 2 },
+  AUD: { symbol: 'A$', position: 'before', decimalPlaces: 2 },
+  INR: { symbol: '₹', position: 'before', decimalPlaces: 2 },
+  JPY: { symbol: '¥', position: 'before', decimalPlaces: 0 },
+  CNY: { symbol: '¥', position: 'before', decimalPlaces: 2 },
+  BRL: { symbol: 'R$', position: 'before', decimalPlaces: 2 },
+  MXN: { symbol: 'Mex$', position: 'before', decimalPlaces: 2 },
+  RUB: { symbol: '₽', position: 'after', decimalPlaces: 2 },
+  ZAR: { symbol: 'R', position: 'before', decimalPlaces: 2 },
+  SGD: { symbol: 'S$', position: 'before', decimalPlaces: 2 },
+  NZD: { symbol: 'NZ$', position: 'before', decimalPlaces: 2 },
+  CHF: { symbol: 'CHF', position: 'before', decimalPlaces: 2 },
+  HKD: { symbol: 'HK$', position: 'before', decimalPlaces: 2 },
+  SEK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
+  NOK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
+  DKK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
+  PLN: { symbol: 'zł', position: 'after', decimalPlaces: 2 },
+  THB: { symbol: '฿', position: 'before', decimalPlaces: 2 },
+  KRW: { symbol: '₩', position: 'before', decimalPlaces: 0 },
+  IDR: { symbol: 'Rp', position: 'before', decimalPlaces: 0 },
+  SAR: { symbol: '﷼', position: 'after', decimalPlaces: 2 },
+  AED: { symbol: 'د.إ', position: 'after', decimalPlaces: 2 },
+  MYR: { symbol: 'RM', position: 'before', decimalPlaces: 2 },
+  PHP: { symbol: '₱', position: 'before', decimalPlaces: 2 },
+  TRY: { symbol: '₺', position: 'before', decimalPlaces: 2 },
+  EGP: { symbol: 'E£', position: 'before', decimalPlaces: 2 },
+  PKR: { symbol: '₨', position: 'before', decimalPlaces: 2 },
+  NGN: { symbol: '₦', position: 'before', decimalPlaces: 2 },
+  CLP: { symbol: 'CLP$', position: 'before', decimalPlaces: 0 },
+  COP: { symbol: 'COL$', position: 'before', decimalPlaces: 0 },
+  ARS: { symbol: 'ARS$', position: 'before', decimalPlaces: 2 },
+  PEN: { symbol: 'S/', position: 'before', decimalPlaces: 2 },
+  VND: { symbol: '₫', position: 'after', decimalPlaces: 0 },
+  ILS: { symbol: '₪', position: 'before', decimalPlaces: 2 },
+  CZK: { symbol: 'Kč', position: 'after', decimalPlaces: 2 },
+  HUF: { symbol: 'Ft', position: 'after', decimalPlaces: 0 },
+  RON: { symbol: 'lei', position: 'after', decimalPlaces: 2 },
+  BGN: { symbol: 'лв', position: 'after', decimalPlaces: 2 },
+  HRK: { symbol: 'kn', position: 'after', decimalPlaces: 2 },
+  ISK: { symbol: 'kr', position: 'after', decimalPlaces: 0 },
+  UAH: { symbol: '₴', position: 'after', decimalPlaces: 2 },
+  QAR: { symbol: '﷼', position: 'after', decimalPlaces: 2 },
+  KWD: { symbol: 'د.ك', position: 'after', decimalPlaces: 3 },
+  BHD: { symbol: 'BD', position: 'before', decimalPlaces: 3 },
+  OMR: { symbol: '﷼', position: 'after', decimalPlaces: 3 },
+  JOD: { symbol: 'JD', position: 'before', decimalPlaces: 3 },
+  KZT: { symbol: '₸', position: 'after', decimalPlaces: 2 },
+  BDT: { symbol: '৳', position: 'before', decimalPlaces: 2 },
+  LKR: { symbol: '₨', position: 'before', decimalPlaces: 2 },
+  KES: { symbol: 'KSh', position: 'before', decimalPlaces: 2 },
+  GHS: { symbol: '₵', position: 'before', decimalPlaces: 2 },
+  UGX: { symbol: 'USh', position: 'before', decimalPlaces: 0 },
+  TZS: { symbol: 'TSh', position: 'before', decimalPlaces: 0 },
+  ETB: { symbol: 'Br', position: 'before', decimalPlaces: 2 },
+  XOF: { symbol: 'CFA', position: 'after', decimalPlaces: 0 },
+  XAF: { symbol: 'FCFA', position: 'after', decimalPlaces: 0 }
+};
+
+// Country to currency mapping
+const countryCurrencyMap = {
+  'US': 'USD', 'CA': 'CAD', 'GB': 'GBP', 'AU': 'AUD', 'NZ': 'NZD',
+  'IN': 'INR', 'JP': 'JPY', 'CN': 'CNY', 'BR': 'BRL', 'MX': 'MXN',
+  'RU': 'RUB', 'ZA': 'ZAR', 'SG': 'SGD', 'CH': 'CHF', 'HK': 'HKD',
+  'SE': 'SEK', 'NO': 'NOK', 'DK': 'DKK', 'PL': 'PLN', 'TH': 'THB',
+  'KR': 'KRW', 'ID': 'IDR', 'SA': 'SAR', 'AE': 'AED', 'MY': 'MYR',
+  'PH': 'PHP', 'TR': 'TRY', 'EG': 'EGP', 'PK': 'PKR', 'NG': 'NGN',
+  'CL': 'CLP', 'CO': 'COP', 'AR': 'ARS', 'PE': 'PEN', 'VN': 'VND',
+  'IL': 'ILS', 'CZ': 'CZK', 'HU': 'HUF', 'RO': 'RON', 'BG': 'BGN',
+  'HR': 'HRK', 'IS': 'ISK', 'UA': 'UAH', 'QA': 'QAR', 'KW': 'KWD',
+  'BH': 'BHD', 'OM': 'OMR', 'JO': 'JOD', 'KZ': 'KZT', 'BD': 'BDT',
+  'LK': 'LKR', 'KE': 'KES', 'GH': 'GHS', 'UG': 'UGX', 'TZ': 'TZS',
+  'ET': 'ETB', 'BJ': 'XOF', 'BF': 'XOF', 'CI': 'XOF', 'GW': 'XOF',
+  'ML': 'XOF', 'NE': 'XOF', 'SN': 'XOF', 'TG': 'XOF', 'CM': 'XAF',
+  'CF': 'XAF', 'TD': 'XAF', 'CG': 'XAF', 'GQ': 'XAF', 'GA': 'XAF',
+  // Euro countries
+  'DE': 'EUR', 'FR': 'EUR', 'IT': 'EUR', 'ES': 'EUR', 'PT': 'EUR',
+  'NL': 'EUR', 'BE': 'EUR', 'AT': 'EUR', 'GR': 'EUR', 'IE': 'EUR',
+  'FI': 'EUR', 'SK': 'EUR', 'SI': 'EUR', 'LT': 'EUR', 'LV': 'EUR',
+  'EE': 'EUR', 'CY': 'EUR', 'MT': 'EUR', 'LU': 'EUR', 'MC': 'EUR'
+};
+
+/**
+ * Format price according to currency formatting rules
+ */
+function formatPrice(price, currency) {
+  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
+  const formattedNumber = price.toFixed(format.decimalPlaces);
+  
+  return format.position === 'before' 
+    ? `${format.symbol}${formattedNumber}`
+    : `${formattedNumber} ${format.symbol}`;
+}
+
+/**
+ * Convert price from USD to target currency
+ */
+function convertPrice(priceInUSD, targetCurrency) {
+  if (!exchangeRates[targetCurrency]) {
+    console.error(`Currency ${targetCurrency} not supported`);
+    return priceInUSD; // Return original price if currency not found
+  }
+  
+  return priceInUSD * exchangeRates[targetCurrency];
+}
+
+/**
+ * Update displayed prices based on selected currency
+ */
+function updatePrices(currency) {
+  pricingPlans.forEach((plan, index) => {
+    const convertedPrice = convertPrice(plan.price, currency);
+    const formattedPrice = formatPrice(convertedPrice, currency);
+    
+    // Update price display in DOM
+    const priceElement = document.getElementById(`plan-${index}-price`);
+    if (priceElement) {
+      priceElement.textContent = formattedPrice;
+    }
+  });
+  
+  // Update currency selection display
+  const currencyDisplay = document.getElementById('selected-currency');
+  if (currencyDisplay) {
+    currencyDisplay.textContent = currency;
+  }
+}
+
+/**
+ * Get user's country and set appropriate currency
+ * This uses the ip-api.com service which has free tier limitations
+ */
+function detectUserCurrency() {
+  fetch('http://ip-api.com/json/?fields=countryCode')
+    .then(response => response.json())
+    .then(data => {
+      let currency = 'USD'; // Default
+      
+      if (countryCurrencyMap[data.countryCode]) {
+        currency = countryCurrencyMap[data.countryCode];
+      }
+      
+      // Update currency selector and prices
+      const currencySelector = document.getElementById('currency-selector');
+      if (currencySelector) {
+        currencySelector.value = currency;
+      }
+      
+      updatePrices(currency);
+    })
+    .catch(error => {
+      console.error('Error detecting user location:', error);
+      updatePrices('USD'); // Fallback to USD
+    });
+}
+
+/**
+ * Initialize the currency converter when the page loads
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Create currency selection dropdown
+  const currencySelector = document.getElementById('currency-selector');
+  
+  if (currencySelector) {
+    // Add event listener for currency changes
+    currencySelector.addEventListener('change', function() {
+      updatePrices(this.value);
+    });
+  }
+  
+  // Try to detect user's currency automatically
+  detectUserCurrency();
+});
+
+/**
+ * Format price according to currency formatting rules with thousand separators
+ */
+function formatPrice(price, currency) {
+  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
+  
+  // Format the number with proper decimal places
+  let formattedNumber = price.toFixed(format.decimalPlaces);
+  
+  // Add thousand separators
+  // Split number into integer and decimal parts
+  const parts = formattedNumber.split('.');
+  // Add commas to the integer part
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  // Rejoin with decimal part if it exists
+  formattedNumber = parts.join('.');
+  
+  // Apply currency symbol in the correct position
+  return format.position === 'before' 
+    ? `${format.symbol}${formattedNumber}`
+    : `${formattedNumber} ${format.symbol}`;
+}
+  </script>
 </body>
 </html>

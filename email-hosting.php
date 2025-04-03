@@ -775,7 +775,137 @@
             </div>
         </div>
             <!-- Include the currency converter script -->
-<script>
+    </section>
+
+   <!-- FAQ Section -->
+<section class="faq-section" id="faq">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our email hosting services</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                what is email hosting?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                               Email hosting is a dedicated service that works independently from website hosting. So even while getting everything set up, your business will still be able to operate at full scale.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Can I use my own domain name with your email hosting?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, all our email hosting plans allow you to use your own domain name. If you don't have a domain yet, we can help you register one, or you can use your existing domain with our email services.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How do I access my emails after signing up?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can access your emails through our webmail interface using any web browser, or set up your account with email clients like Microsoft Outlook, Apple Mail, or mobile applications. We provide detailed setup guides for all major platforms.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Is migration from my current email provider included?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, our Business and Enterprise plans include free email migration services. Our team will help you transfer your existing emails, contacts, and calendar data from your current provider to our platform with minimal disruption.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                What security measures do you have in place?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our email hosting includes multi-layer spam filtering, antivirus protection, TLS/SSL encryption for all communications, and two-factor authentication options. Business and Enterprise plans also include advanced phishing protection and email archiving.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Can I upgrade my plan as my business grows?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! You can easily upgrade your email hosting plan at any time through your control panel. The transition is seamless with no downtime, and you'll only pay the prorated difference for the remainder of your billing cycle.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <?php include('assets/includes/footer.php'); ?>
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
+
+
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Google Reviews -->
+    <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
+    
+    <script>
+        // Navigation Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize AOS after preloader removes loading class
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    AOS.init({
+                        duration: 1000,
+                        once: true
+                    });
+                }, 600);
+            });
+        });
+    </script>
+    <script>
     // Global Currency Converter for Hosting Site Pricing Plans
 
 // Main pricing plans in USD
@@ -1026,136 +1156,28 @@ document.addEventListener('DOMContentLoaded', function() {
   // Try to detect user's currency automatically
   detectUserCurrency();
 });
+/**
+ * Format price according to currency formatting rules with thousand separators
+ */
+function formatPrice(price, currency) {
+  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
+  
+  // Format the number with proper decimal places
+  let formattedNumber = price.toFixed(format.decimalPlaces);
+  
+  // Add thousand separators
+  // Split number into integer and decimal parts
+  const parts = formattedNumber.split('.');
+  // Add commas to the integer part
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  // Rejoin with decimal part if it exists
+  formattedNumber = parts.join('.');
+  
+  // Apply currency symbol in the correct position
+  return format.position === 'before' 
+    ? `${format.symbol}${formattedNumber}`
+    : `${formattedNumber} ${format.symbol}`;
+}
   </script>
-    </section>
-
-   <!-- FAQ Section -->
-<section class="faq-section" id="faq">
-    <div class="container">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Frequently Asked Questions</h2>
-            <p>Find answers to common questions about our email hosting services</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto" data-aos="fade-up">
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                what is email hosting?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                               Email hosting is a dedicated service that works independently from website hosting. So even while getting everything set up, your business will still be able to operate at full scale.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Can I use my own domain name with your email hosting?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Yes, all our email hosting plans allow you to use your own domain name. If you don't have a domain yet, we can help you register one, or you can use your existing domain with our email services.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                How do I access my emails after signing up?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                You can access your emails through our webmail interface using any web browser, or set up your account with email clients like Microsoft Outlook, Apple Mail, or mobile applications. We provide detailed setup guides for all major platforms.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Is migration from my current email provider included?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Yes, our Business and Enterprise plans include free email migration services. Our team will help you transfer your existing emails, contacts, and calendar data from your current provider to our platform with minimal disruption.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                What security measures do you have in place?
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Our email hosting includes multi-layer spam filtering, antivirus protection, TLS/SSL encryption for all communications, and two-factor authentication options. Business and Enterprise plans also include advanced phishing protection and email archiving.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                Can I upgrade my plan as my business grows?
-                            </button>
-                        </h2>
-                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Absolutely! You can easily upgrade your email hosting plan at any time through your control panel. The transition is seamless with no downtime, and you'll only pay the prorated difference for the remainder of your billing cycle.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Footer -->
-    <?php include('assets/includes/footer.php'); ?>
-    <!-- Scroll to Top Button -->
-    <?php include 'assets/includes/scroll-up.php'; ?>
-    
-    <!-- Contact Buttons -->
-    <?php include 'assets/includes/contact-btn.php'; ?>
-
-
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Google Reviews -->
-    <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
-    
-    <script>
-        // Navigation Scroll Effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Initialize AOS after preloader removes loading class
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    AOS.init({
-                        duration: 1000,
-                        once: true
-                    });
-                }, 600);
-            });
-        });
-    </script>
 </body>
 </html>
