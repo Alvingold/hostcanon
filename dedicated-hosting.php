@@ -406,21 +406,6 @@
     </div>
 </section>
 
-
-
-<!-- Thought of a domain Section -->
- <!-- Domain Thought -->
- <section class="domain-thought">
-    <div class="domain-content">
-        <h2>Have the ideal Hosting in mind?</h2>
-        <p>Well waste no time pick it now.</p>
-        <a href="#top" class="back-to-top">Get Started</a>
-    </div>
-</section>
-
-
-
-
 <!-- Footer -->
 <?php include 'assets/includes/footer.php'; ?>
     

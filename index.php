@@ -496,9 +496,8 @@
                 <div class="row mt-4">
                     <!-- Image Section -->
                     <div class="image-section col-12 col-md-6 mb-4 mb-md-0">
-                        <img src="assets/media/security-features.webp" alt="Security Features" class="img-fluid" loading="lazy">
+                        <img src="assets/media/security-features.webp" alt="Security Features" class="img-fluid d-none d-md-block" loading="lazy">
                     </div>
-
                     <!-- Text Content Second -->
                     <div class="text-section col-12 col-md-6">
                         <div class="domain-info">

@@ -407,10 +407,6 @@
 <!-- pricing -->
 <?php require "assets/includes/pricing.php" ?>
 
-
-<!--Double Gradient Section -->
-
-
 <!-- digital ecosystem -->
 <section class="double-gradient">
 <section class="digital-section">
@@ -689,18 +685,6 @@
         </div>
     </section>
 
-<!-- Thought of a domain Section -->
- <!-- Domain Thought -->
-<section class="domain-thought">
-    <div class="domain-content">
-        <h2>Have the ideal domain name in mind?</h2>
-        <p>Special rates apply only for the initial term and will renew at standard pricing.</p>
-        <a href="#top" class="back-to-top">Back to Top</a>
-    </div>
-</section>
-
-
-
     <!-- Footer -->
     <?php include('assets/includes/footer.php'); ?>
     
@@ -714,18 +698,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Nav Bar
-        <!-- Navigation Scroll Effect -->
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-
         // FAQ Fuctionality
         document.querySelectorAll('.faq-item').forEach(item => {
         item.addEventListener('click', () => {
