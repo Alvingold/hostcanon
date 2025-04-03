@@ -75,6 +75,6 @@
                     preloader.remove();
                 }
             }, 1000); // Remove after fade completes
-        }, 3000); // Show for 5 seconds
+        }, 2000);
     });
 </script>
