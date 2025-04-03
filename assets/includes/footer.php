@@ -293,10 +293,10 @@
         }
 
         .footer-column.active .footer-links {
-            max-height: 300px;
-            padding: 0.5rem 0 1rem 1rem;
-            margin-top: 0.5rem;
-        }
+        max-height: 500px;
+        padding: 0.5rem 0 1rem 1rem;
+        margin-top: 0.5rem;
+    }
 
         .footer-column.active .footer-links li {
             opacity: 1;
