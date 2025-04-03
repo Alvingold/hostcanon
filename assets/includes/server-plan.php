@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Plans</title>
     <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="assets/css/currency.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"> -->
     <style>
 
@@ -611,6 +612,80 @@
             <h2 class="section-title">Choose Your Server Plan</h2>
             <p class="section-subtitle">Dedicated resources with full control</p>
         </div>
+        <div class="currency-selector">
+    <label for="currency-selector">Select your currency: </label>
+    <select id="currency-selector">
+      <!-- Africa -->
+      <option value="EGP">Egyptian Pound (EGP)</option>
+      <option value="GHS">Ghanaian Cedi (GHS)</option>
+      <option value="KES">Kenyan Shilling (KES)</option>
+      <option value="NGN">Nigerian Naira (NGN)</option>
+      <option value="ZAR">South African Rand (ZAR)</option>
+      <option value="TZS">Tanzanian Shilling (TZS)</option>
+      <option value="UGX">Ugandan Shilling (UGX)</option>
+      <option value="XAF">CFA Franc BEAC (XAF)</option>
+      <option value="XOF">CFA Franc BCEAO (XOF)</option>
+      <option value="ETB">Ethiopian Birr (ETB)</option>
+      
+      <!-- Americas -->
+      <option value="ARS">Argentine Peso (ARS)</option>
+      <option value="BRL">Brazilian Real (BRL)</option>
+      <option value="CAD">Canadian Dollar (CAD)</option>
+      <option value="CLP">Chilean Peso (CLP)</option>
+      <option value="COP">Colombian Peso (COP)</option>
+      <option value="MXN">Mexican Peso (MXN)</option>
+      <option value="PEN">Peruvian Sol (PEN)</option>
+      <option value="USD">US Dollar (USD)</option>
+      
+      <!-- Asia & Pacific -->
+      <option value="AUD">Australian Dollar (AUD)</option>
+      <option value="BDT">Bangladeshi Taka (BDT)</option>
+      <option value="CNY">Chinese Yuan (CNY)</option>
+      <option value="HKD">Hong Kong Dollar (HKD)</option>
+      <option value="INR">Indian Rupee (INR)</option>
+      <option value="IDR">Indonesian Rupiah (IDR)</option>
+      <option value="JPY">Japanese Yen (JPY)</option>
+      <option value="KZT">Kazakhstani Tenge (KZT)</option>
+      <option value="MYR">Malaysian Ringgit (MYR)</option>
+      <option value="NZD">New Zealand Dollar (NZD)</option>
+      <option value="PKR">Pakistani Rupee (PKR)</option>
+      <option value="PHP">Philippine Peso (PHP)</option>
+      <option value="SGD">Singapore Dollar (SGD)</option>
+      <option value="KRW">South Korean Won (KRW)</option>
+      <option value="LKR">Sri Lankan Rupee (LKR)</option>
+      <option value="THB">Thai Baht (THB)</option>
+      <option value="VND">Vietnamese Dong (VND)</option>
+      
+      <!-- Europe -->
+      <option value="EUR">Euro (EUR)</option>
+      <option value="BGN">Bulgarian Lev (BGN)</option>
+      <option value="HRK">Croatian Kuna (HRK)</option>
+      <option value="CZK">Czech Koruna (CZK)</option>
+      <option value="DKK">Danish Krone (DKK)</option>
+      <option value="HUF">Hungarian Forint (HUF)</option>
+      <option value="ISK">Icelandic Krona (ISK)</option>
+      <option value="NOK">Norwegian Krone (NOK)</option>
+      <option value="PLN">Polish Zloty (PLN)</option>
+      <option value="RON">Romanian Leu (RON)</option>
+      <option value="RUB">Russian Ruble (RUB)</option>
+      <option value="SEK">Swedish Krona (SEK)</option>
+      <option value="CHF">Swiss Franc (CHF)</option>
+      <option value="TRY">Turkish Lira (TRY)</option>
+      <option value="GBP">British Pound (GBP)</option>
+      <option value="UAH">Ukrainian Hryvnia (UAH)</option>
+      
+      <!-- Middle East -->
+      <option value="BHD">Bahraini Dinar (BHD)</option>
+      <option value="ILS">Israeli Shekel (ILS)</option>
+      <option value="JOD">Jordanian Dinar (JOD)</option>
+      <option value="KWD">Kuwaiti Dinar (KWD)</option>
+      <option value="OMR">Omani Rial (OMR)</option>
+      <option value="QAR">Qatari Riyal (QAR)</option>
+      <option value="SAR">Saudi Riyal (SAR)</option>
+      <option value="AED">UAE Dirham (AED)</option>
+    </select>
+    <p>Showing prices in <span id="selected-currency">USD</span></p>
+  </div>
         
         <!-- Filter Section -->
         <!-- Mobile Filter Button (shows on small screens) -->
@@ -751,14 +826,14 @@
         </div>
     </div>
 
-    
+
         <!-- pricings Cards -->
         <div class="row pricings-row" id="pricingsmain-container">
             <div class="pricings-card-wrapper" data-cores="4" data-threads="8" data-ram="16" data-price="74.80" data-storage="ssd" data-location="us">
                 <div class="pricings-card">
                     <div class="pricings-header">
-                        <h3>Starter</h3>
-                        <div class="price-tag">$74.80<span class="price-duration">/mo</span></div>
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="price-tag" id="plan-0-price">$74.80<span class="price-duration">/mo</span></div>
                         <div class="location-badge">US East</div>
                     </div>
                     <div class="pricings-features">
@@ -778,8 +853,8 @@
             <div class="pricings-card-wrapper" data-cores="8" data-threads="16" data-ram="64" data-price="115.80" data-storage="ssd" data-location="us">
                 <div class="pricings-card">
                     <div class="pricings-header">
-                        <h3>Professional</h3>
-                        <div class="price-tag">$115.80<span class="price-duration">/mo</span></div>
+                        <h3 class="plan-name">Professional</h3>
+                        <div class="price-tag" id="plan-1-price">$115.80<span class="price-duration">/mo</span></div>
                         <div class="location-badge">US East</div>
                     </div>
                     <div class="pricings-features">
@@ -800,8 +875,8 @@
                 <div class="pricings-card popular">
                     <div class="popular-badge">Popular</div>
                     <div class="pricings-header">
-                        <h3>Enterprise</h3>
-                        <div class="price-tag">$174.25<span class="price-duration">/mo</span></div>
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="price-tag" id="plan-2-price">$174.25<span class="price-duration">/mo</span></div>
                         <div class="location-badge">US East</div>
                     </div>
                     <div class="pricings-features">
@@ -821,8 +896,8 @@
             <div class="pricings-card-wrapper" data-cores="24" data-threads="48" data-ram="256" data-price="257.80" data-storage="nvme" data-location="us">
                 <div class="pricings-card">
                     <div class="pricings-header">
-                        <h3>Ultra</h3>
-                        <div class="price-tag">$257.80<span class="price-duration">/mo</span></div>
+                        <h3 class="plan-name">Ultra</h3>
+                        <div class="price-tag" id="plan-3-price">$257.80<span class="price-duration">/mo</span></div>
                         <div class="location-badge">US East</div>
                     </div>
                     <div class="pricings-features">
@@ -843,8 +918,8 @@
             <div class="pricings-card-wrapper" data-cores="8" data-threads="16" data-ram="32" data-price="98.50" data-storage="ssd" data-location="eu">
                 <div class="pricings-card">
                     <div class="pricings-header">
-                        <h3>Euro Standard</h3>
-                        <div class="price-tag">$98.50<span class="price-duration">/mo</span></div>
+                        <h3 class="plan-name">Euro Standard</h3>
+                        <div class="price-tag" id="plan-4-price">$98.50<span class="price-duration">/mo</span></div>
                         <div class="location-badge">EU</div>
                     </div>
                     <div class="pricings-features">
@@ -864,8 +939,8 @@
             <div class="pricings-card-wrapper" data-cores="16" data-threads="32" data-ram="64" data-price="145.30" data-storage="nvme" data-location="eu">
                 <div class="pricings-card">
                     <div class="pricings-header">
-                        <h3>Euro Pro</h3>
-                        <div class="price-tag">$145.30<span class="price-duration">/mo</span></div>
+                        <h3 class="plan-name">Euro Pro</h3>
+                        <div class="price-tag" id="plan-5-price">$145.30<span class="price-duration">/mo</span></div>
                         <div class="location-badge">EU</div>
                     </div>
                     <div class="pricings-features">
@@ -885,8 +960,8 @@
             <div class="pricings-card-wrapper" data-cores="4" data-threads="8" data-ram="16" data-price="82.40" data-storage="ssd" data-location="asia">
                 <div class="pricings-card">
                     <div class="pricings-header">
-                        <h3>Asia Starter</h3>
-                        <div class="price-tag">$82.40<span class="price-duration">/mo</span></div>
+                        <h3 class="plan-name">Asia Starter</h3>
+                        <div class="price-tag" id="plan-6-price">$82.40<span class="price-duration">/mo</span></div>
                         <div class="location-badge">Asia</div>
                     </div>
                     <div class="pricings-features">
@@ -906,8 +981,8 @@
             <div class="pricings-card-wrapper" data-cores="32" data-threads="64" data-ram="256" data-price="295.70" data-storage="nvme" data-location="asia">
                 <div class="pricings-card">
                     <div class="pricings-header">
-                        <h3>Asia Enterprise</h3>
-                        <div class="price-tag">$295.70<span class="price-duration">/mo</span></div>
+                        <h3 class="plan-name">Asia Enterprise</h3>
+                        <div class="price-tag" id="plan-7-price">$295.70<span class="price-duration">/mo</span></div>
                         <div class="location-badge">Asia</div>
                     </div>
                     <div class="pricings-features">
@@ -940,7 +1015,264 @@
 
 <!-- Bootstrap Icons CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<script>
+    // Global Currency Converter for Hosting Site Pricing Plans
 
+// Main pricing plans in USD
+const pricingPlans = [
+  { name: "Starter", price: 74.80, features: ["4 Cores / 8 Threads", "16 GB RAM DDR5", "1x 480 GB SSD", "F1 IPv4 Address",  "1 Gbps Network"] },
+  { name: "Professional", price: 115.80, features: ["8 Cores / 16 Threads",  "64 GB RAM DDR5", "2x 960 GB SSD","F1 IPv4 Address", "1 Gbps Network"] },
+  { name: "Enterprise", price: 174.25, features: ["16 Cores / 32 Threads", "128 GB RAM DDR5", "2x 960GB NVMe", "1 IPv4 Address", "10 Gbps Network"] },
+  { name: "Ultra", price: 257.80, features: ["24 Cores / 48 Threads",  "256 GB RAM DDR5", "2x 960 GB NVMe SSD", "1 IPv4 Address", "10 Gbps Network"] },
+  { name: "Euro Standard", price: 98.50, features: ["8 Cores / 16 Threads", "32 GB RAM DDR5",  "1x 960 GB SSD", "1 IPv4 Address", "1 Gbps Network"] },
+  { name: "Euro Pro", price: 145.30, features: ["16 Cores / 32 Threads",  "64 GB RAM DDR5", "2x 480 GB NVMe", "1 IPv4 Address", "10 Gbps Network"] },
+  { name: "Asia Starter", price: 82.40, features: ["4 Cores / 8 Threads", "16 GB RAM DDR5", "1x 480 GB SSD", "1 IPv4 Address", "1 Gbps Network"] },
+  { name: "Asia Enterprise", price: 295.70, features: ["32 Cores / 64 Threads",  "256 GB RAM DDR5", "2x 1.9 TB NVMe SSD", "1 IPv4 Address", "10 Gbps Network"] }
+];
+
+// Replace the static exchangeRates object with this variable declaration
+let exchangeRates = {};
+
+// Add this function to fetch real-time exchange rates
+async function fetchExchangeRates() {
+  try {
+    // Replace with your API endpoint and API key
+    const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+    const data = await response.json();
+    
+    // Update the rates in your application
+    exchangeRates = data.rates;
+    
+    // Update displayed prices with new rates
+    const currentCurrency = document.getElementById('currency-selector').value;
+    updatePrices(currentCurrency);
+    
+  } catch (error) {
+    console.error('Error fetching exchange rates:', error);
+    // Fallback to some default rates if the API call fails
+  }
+}
+
+// Then in your existing DOMContentLoaded event listener, add the call to fetchExchangeRates:
+document.addEventListener('DOMContentLoaded', function() {
+  // Create currency selection dropdown
+  const currencySelector = document.getElementById('currency-selector');
+  
+  if (currencySelector) {
+    // Add event listener for currency changes
+    currencySelector.addEventListener('change', function() {
+      updatePrices(this.value);
+    });
+  }
+  
+  // Fetch real-time exchange rates
+  fetchExchangeRates();
+  
+  // If you also want to keep the user currency detection:
+  // detectUserCurrency();
+});
+
+// Currency symbols and formatting options
+const currencyFormats = {
+  USD: { symbol: '$', position: 'before', decimalPlaces: 2 },
+  EUR: { symbol: '€', position: 'after', decimalPlaces: 2 },
+  GBP: { symbol: '£', position: 'before', decimalPlaces: 2 },
+  CAD: { symbol: 'C$', position: 'before', decimalPlaces: 2 },
+  AUD: { symbol: 'A$', position: 'before', decimalPlaces: 2 },
+  INR: { symbol: '₹', position: 'before', decimalPlaces: 2 },
+  JPY: { symbol: '¥', position: 'before', decimalPlaces: 0 },
+  CNY: { symbol: '¥', position: 'before', decimalPlaces: 2 },
+  BRL: { symbol: 'R$', position: 'before', decimalPlaces: 2 },
+  MXN: { symbol: 'Mex$', position: 'before', decimalPlaces: 2 },
+  RUB: { symbol: '₽', position: 'after', decimalPlaces: 2 },
+  ZAR: { symbol: 'R', position: 'before', decimalPlaces: 2 },
+  SGD: { symbol: 'S$', position: 'before', decimalPlaces: 2 },
+  NZD: { symbol: 'NZ$', position: 'before', decimalPlaces: 2 },
+  CHF: { symbol: 'CHF', position: 'before', decimalPlaces: 2 },
+  HKD: { symbol: 'HK$', position: 'before', decimalPlaces: 2 },
+  SEK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
+  NOK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
+  DKK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
+  PLN: { symbol: 'zł', position: 'after', decimalPlaces: 2 },
+  THB: { symbol: '฿', position: 'before', decimalPlaces: 2 },
+  KRW: { symbol: '₩', position: 'before', decimalPlaces: 0 },
+  IDR: { symbol: 'Rp', position: 'before', decimalPlaces: 0 },
+  SAR: { symbol: '﷼', position: 'after', decimalPlaces: 2 },
+  AED: { symbol: 'د.إ', position: 'after', decimalPlaces: 2 },
+  MYR: { symbol: 'RM', position: 'before', decimalPlaces: 2 },
+  PHP: { symbol: '₱', position: 'before', decimalPlaces: 2 },
+  TRY: { symbol: '₺', position: 'before', decimalPlaces: 2 },
+  EGP: { symbol: 'E£', position: 'before', decimalPlaces: 2 },
+  PKR: { symbol: '₨', position: 'before', decimalPlaces: 2 },
+  NGN: { symbol: '₦', position: 'before', decimalPlaces: 2 },
+  CLP: { symbol: 'CLP$', position: 'before', decimalPlaces: 0 },
+  COP: { symbol: 'COL$', position: 'before', decimalPlaces: 0 },
+  ARS: { symbol: 'ARS$', position: 'before', decimalPlaces: 2 },
+  PEN: { symbol: 'S/', position: 'before', decimalPlaces: 2 },
+  VND: { symbol: '₫', position: 'after', decimalPlaces: 0 },
+  ILS: { symbol: '₪', position: 'before', decimalPlaces: 2 },
+  CZK: { symbol: 'Kč', position: 'after', decimalPlaces: 2 },
+  HUF: { symbol: 'Ft', position: 'after', decimalPlaces: 0 },
+  RON: { symbol: 'lei', position: 'after', decimalPlaces: 2 },
+  BGN: { symbol: 'лв', position: 'after', decimalPlaces: 2 },
+  HRK: { symbol: 'kn', position: 'after', decimalPlaces: 2 },
+  ISK: { symbol: 'kr', position: 'after', decimalPlaces: 0 },
+  UAH: { symbol: '₴', position: 'after', decimalPlaces: 2 },
+  QAR: { symbol: '﷼', position: 'after', decimalPlaces: 2 },
+  KWD: { symbol: 'د.ك', position: 'after', decimalPlaces: 3 },
+  BHD: { symbol: 'BD', position: 'before', decimalPlaces: 3 },
+  OMR: { symbol: '﷼', position: 'after', decimalPlaces: 3 },
+  JOD: { symbol: 'JD', position: 'before', decimalPlaces: 3 },
+  KZT: { symbol: '₸', position: 'after', decimalPlaces: 2 },
+  BDT: { symbol: '৳', position: 'before', decimalPlaces: 2 },
+  LKR: { symbol: '₨', position: 'before', decimalPlaces: 2 },
+  KES: { symbol: 'KSh', position: 'before', decimalPlaces: 2 },
+  GHS: { symbol: '₵', position: 'before', decimalPlaces: 2 },
+  UGX: { symbol: 'USh', position: 'before', decimalPlaces: 0 },
+  TZS: { symbol: 'TSh', position: 'before', decimalPlaces: 0 },
+  ETB: { symbol: 'Br', position: 'before', decimalPlaces: 2 },
+  XOF: { symbol: 'CFA', position: 'after', decimalPlaces: 0 },
+  XAF: { symbol: 'FCFA', position: 'after', decimalPlaces: 0 }
+};
+
+// Country to currency mapping
+const countryCurrencyMap = {
+  'US': 'USD', 'CA': 'CAD', 'GB': 'GBP', 'AU': 'AUD', 'NZ': 'NZD',
+  'IN': 'INR', 'JP': 'JPY', 'CN': 'CNY', 'BR': 'BRL', 'MX': 'MXN',
+  'RU': 'RUB', 'ZA': 'ZAR', 'SG': 'SGD', 'CH': 'CHF', 'HK': 'HKD',
+  'SE': 'SEK', 'NO': 'NOK', 'DK': 'DKK', 'PL': 'PLN', 'TH': 'THB',
+  'KR': 'KRW', 'ID': 'IDR', 'SA': 'SAR', 'AE': 'AED', 'MY': 'MYR',
+  'PH': 'PHP', 'TR': 'TRY', 'EG': 'EGP', 'PK': 'PKR', 'NG': 'NGN',
+  'CL': 'CLP', 'CO': 'COP', 'AR': 'ARS', 'PE': 'PEN', 'VN': 'VND',
+  'IL': 'ILS', 'CZ': 'CZK', 'HU': 'HUF', 'RO': 'RON', 'BG': 'BGN',
+  'HR': 'HRK', 'IS': 'ISK', 'UA': 'UAH', 'QA': 'QAR', 'KW': 'KWD',
+  'BH': 'BHD', 'OM': 'OMR', 'JO': 'JOD', 'KZ': 'KZT', 'BD': 'BDT',
+  'LK': 'LKR', 'KE': 'KES', 'GH': 'GHS', 'UG': 'UGX', 'TZ': 'TZS',
+  'ET': 'ETB', 'BJ': 'XOF', 'BF': 'XOF', 'CI': 'XOF', 'GW': 'XOF',
+  'ML': 'XOF', 'NE': 'XOF', 'SN': 'XOF', 'TG': 'XOF', 'CM': 'XAF',
+  'CF': 'XAF', 'TD': 'XAF', 'CG': 'XAF', 'GQ': 'XAF', 'GA': 'XAF',
+  // Euro countries
+  'DE': 'EUR', 'FR': 'EUR', 'IT': 'EUR', 'ES': 'EUR', 'PT': 'EUR',
+  'NL': 'EUR', 'BE': 'EUR', 'AT': 'EUR', 'GR': 'EUR', 'IE': 'EUR',
+  'FI': 'EUR', 'SK': 'EUR', 'SI': 'EUR', 'LT': 'EUR', 'LV': 'EUR',
+  'EE': 'EUR', 'CY': 'EUR', 'MT': 'EUR', 'LU': 'EUR', 'MC': 'EUR'
+};
+
+/**
+ * Format price according to currency formatting rules
+ */
+function formatPrice(price, currency) {
+  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
+  const formattedNumber = price.toFixed(format.decimalPlaces);
+  
+  return format.position === 'before' 
+    ? `${format.symbol}${formattedNumber}`
+    : `${formattedNumber} ${format.symbol}`;
+}
+
+/**
+ * Convert price from USD to target currency
+ */
+function convertPrice(priceInUSD, targetCurrency) {
+  if (!exchangeRates[targetCurrency]) {
+    console.error(`Currency ${targetCurrency} not supported`);
+    return priceInUSD; // Return original price if currency not found
+  }
+  
+  return priceInUSD * exchangeRates[targetCurrency];
+}
+
+/**
+ * Update displayed prices based on selected currency
+ */
+function updatePrices(currency) {
+  pricingPlans.forEach((plan, index) => {
+    const convertedPrice = convertPrice(plan.price, currency);
+    const formattedPrice = formatPrice(convertedPrice, currency);
+    
+    // Update price display in DOM
+    const priceElement = document.getElementById(`plan-${index}-price`);
+    if (priceElement) {
+      priceElement.textContent = formattedPrice;
+    }
+  });
+  
+  // Update currency selection display
+  const currencyDisplay = document.getElementById('selected-currency');
+  if (currencyDisplay) {
+    currencyDisplay.textContent = currency;
+  }
+}
+
+/**
+ * Get user's country and set appropriate currency
+ * This uses the ip-api.com service which has free tier limitations
+ */
+function detectUserCurrency() {
+  fetch('http://ip-api.com/json/?fields=countryCode')
+    .then(response => response.json())
+    .then(data => {
+      let currency = 'USD'; // Default
+      
+      if (countryCurrencyMap[data.countryCode]) {
+        currency = countryCurrencyMap[data.countryCode];
+      }
+      
+      // Update currency selector and prices
+      const currencySelector = document.getElementById('currency-selector');
+      if (currencySelector) {
+        currencySelector.value = currency;
+      }
+      
+      updatePrices(currency);
+    })
+    .catch(error => {
+      console.error('Error detecting user location:', error);
+      updatePrices('USD'); // Fallback to USD
+    });
+}
+
+/**
+ * Initialize the currency converter when the page loads
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Create currency selection dropdown
+  const currencySelector = document.getElementById('currency-selector');
+  
+  if (currencySelector) {
+    // Add event listener for currency changes
+    currencySelector.addEventListener('change', function() {
+      updatePrices(this.value);
+    });
+  }
+  
+  // Try to detect user's currency automatically
+  detectUserCurrency();
+});
+
+/**
+ * Format price according to currency formatting rules with thousand separators
+ */
+function formatPrice(price, currency) {
+  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
+  
+  // Format the number with proper decimal places
+  let formattedNumber = price.toFixed(format.decimalPlaces);
+  
+  // Add thousand separators
+  // Split number into integer and decimal parts
+  const parts = formattedNumber.split('.');
+  // Add commas to the integer part
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  // Rejoin with decimal part if it exists
+  formattedNumber = parts.join('.');
+  
+  // Apply currency symbol in the correct position
+  return format.position === 'before' 
+    ? `${format.symbol}${formattedNumber}`
+    : `${formattedNumber} ${format.symbol}`;
+}
+  </script>
 <script defer>
     
     document.addEventListener('DOMContentLoaded', function() {

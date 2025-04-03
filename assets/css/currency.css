@@ -1,4 +1,12 @@
-   /* Container styling */
+:root {
+  --primary-color: #4B0082;
+  --secondary-color: #6A0DAD;
+  --accent-color: #9370DB;
+  --text-light: #FFFFFF;
+  --text-dark: #333333;
+  --section-padding: 80px 0;
+}
+ /* Container styling */
    .currency-selector {
     max-width: 400px;
     margin: 0 auto;
