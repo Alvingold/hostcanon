@@ -90,73 +90,73 @@
         }
 
         /* Container styling */
-    .currency-selector {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color:  #f8f9fa;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Label styling */
-    .currency-selector label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: var(--primary-color);
-    }
-    
-    /* Select styling */
-    .currency-selector select {
-      width: 100%;
-      padding: 10px 15px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      background-color: #fff;
-      font-size: 16px;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%23333' d='M7 10l5-5H2z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 15px center;
-      background-size: 12px;
-      transition: border-color 0.3s;
-    }
-    
-    .currency-selector select:focus {
-      outline: none;
-      border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
-    }
-    
-    /* Optgroup styling for organization */
-    .currency-selector optgroup {
-      font-weight: bold;
-      font-style: normal;
-      color: #4a90e2;
-      background-color: #f8f9fa;
-    }
-    
-    /* Option styling */
-    .currency-selector option {
-      padding: 10px;
-      background-color: var(--primary-color);
-      color: white;
-    }
-    
-    /* Current selection message */
-    .currency-selector p {
-      margin-top: 16px;
-      font-size: 14px;
-      color: var(--primary-color);
-    }
-    
-    #selected-currency {
-      font-weight: 700;
-      color: #4a90e2;
-    }
+        .currency-selector {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color:  #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Label styling */
+        .currency-selector label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--primary-color);
+        }
+        
+        /* Select styling */
+        .currency-selector select {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+        font-size: 16px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%23333' d='M7 10l5-5H2z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 12px;
+        transition: border-color 0.3s;
+        }
+        
+        .currency-selector select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+        }
+        
+        /* Optgroup styling for organization */
+        .currency-selector optgroup {
+        font-weight: bold;
+        font-style: normal;
+        color: #4a90e2;
+        background-color: #f8f9fa;
+        }
+        
+        /* Option styling */
+        .currency-selector option {
+        padding: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        }
+        
+        /* Current selection message */
+        .currency-selector p {
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--primary-color);
+        }
+        
+        #selected-currency {
+        font-weight: 700;
+        color: #4a90e2;
+        }
 
         /* Pricing Section */
         .pricing-section {
@@ -324,140 +324,140 @@
         }
 
         /* Shared Hosting Benefits Section Styles */
-.benefits-section {
-    padding: 100px 0;
-    background-color: #f8f9fa;
-    overflow: hidden;
-}
+        .benefits-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
 
-.benefits-section .section-title h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: var(--primary-color);
-    line-height: 1.3;
-}
+        .benefits-section .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            line-height: 1.3;
+        }
 
-@media (max-width: 768px) {
-    .benefits-section .section-title h2 {
-        font-size: 1.8rem;
-    }
-}
+        @media (max-width: 768px) {
+            .benefits-section .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
 
-.benefits-list {
-    margin-top: 30px;
-}
+        .benefits-list {
+            margin-top: 30px;
+        }
 
-.benefit-item {
-    margin-bottom: 20px;
-}
+        .benefit-item {
+            margin-bottom: 20px;
+        }
 
-.benefit-item h5 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #333;
-}
+        .benefit-item h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
 
-.benefit-item p {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 0;
-}
+        .benefit-item p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 0;
+        }
 
-.benefit-icon {
-    flex-shrink: 0;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-}
-.benefit a{
-     background: linear-gradient(135deg, #4B0082, #932C8B);
-     border: none;
-     border-radius: 30px;
-}
+        .benefit-icon {
+            flex-shrink: 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        .benefit a{
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border: none;
+            border-radius: 30px;
+        }
 
-.benefits-image {
-    position: relative;
-    padding: 20px;
-    border-radius: 20px;
-}
+        .benefits-image {
+            position: relative;
+            padding: 20px;
+            border-radius: 20px;
+        }
 
-.benefits-image img {
-    box-shadow: 0 25px 50px rgba(75, 0, 130, 0.1);
-    transition: all 0.5s ease;
-}
+        .benefits-image img {
+            box-shadow: 0 25px 50px rgba(75, 0, 130, 0.1);
+            transition: all 0.5s ease;
+        }
 
-.benefits-image:hover img {
-    transform: translateY(-10px);
-}
+        .benefits-image:hover img {
+            transform: translateY(-10px);
+        }
 
-.stats-card {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border-radius: 15px; 
-    bottom: -30px; 
-    right: -30px; 
-    max-width: 280px;
-}
+        .stats-card {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-radius: 15px; 
+            bottom: -30px; 
+            right: -30px; 
+            max-width: 280px;
+        }
 
-.stats-card h5{
-    color: #4B0082;
-}
+        .stats-card h5{
+            color: #4B0082;
+        }
 
-.stats-card i{
-    color: #4B0082; 
-    font-size: 1.5rem;
-}
-.stats-card .start{
-    width: 50px; 
-    height: 50px; 
-    border-radius: 12px; 
-    background: rgba(75, 0, 130, 0.1); 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    margin-right: 15px;
-}
+        .stats-card i{
+            color: #4B0082; 
+            font-size: 1.5rem;
+        }
+        .stats-card .start{
+            width: 50px; 
+            height: 50px; 
+            border-radius: 12px; 
+            background: rgba(75, 0, 130, 0.1); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 15px;
+        }
 
-.benefits-image:hover .stats-card {
-    transform: translateY(-5px) translateX(-5px);
-}
+        .benefits-image:hover .stats-card {
+            transform: translateY(-5px) translateX(-5px);
+        }
 
-.btn-primary {
-    background: linear-gradient(135deg, #4B0082, #932C8B);
-    border: none;
-    padding: 12px 30px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
+        .btn-primary {
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(75, 0, 130, 0.2);
-}
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.2);
+        }
 
-/* Animation styles for AOS */
-[data-aos="fade-right"] {
-    transform: translateX(-50px);
-    opacity: 0;
-    transition-property: transform, opacity;
-}
+        /* Animation styles for AOS */
+        [data-aos="fade-right"] {
+            transform: translateX(-50px);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
 
-[data-aos="fade-left"] {
-    transform: translateX(50px);
-    opacity: 0;
-    transition-property: transform, opacity;
-}
+        [data-aos="fade-left"] {
+            transform: translateX(50px);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
 
-[data-aos="fade-right"].aos-animate,
-[data-aos="fade-left"].aos-animate {
-    transform: translateX(0);
-    opacity: 1;
-}
+        [data-aos="fade-right"].aos-animate,
+        [data-aos="fade-left"].aos-animate {
+            transform: translateX(0);
+            opacity: 1;
+        }
 
- /* FAQ Section */
- .faq-section {
+        /* FAQ Section */
+        .faq-section {
             background-color: #f5f5f5;
         }
         
@@ -493,21 +493,21 @@
             background-color: white;
         }
 
-.cta-section {
-            background-color: var(--primary-color);
-            padding: var(--section-padding);
-            text-align: center;
-            color:white
-        }
+        .cta-section {
+                    background-color: var(--primary-color);
+                    padding: var(--section-padding);
+                    text-align: center;
+                    color:white
+                }
 
-        .cta-section h2 {
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
+                .cta-section h2 {
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
 
     </style>
 </head>
-<body>
+<body class="loading">
 <?php include 'assets/includes/preloader.php';
     include 'assets/includes/nav-bar.php'; ?>
 
