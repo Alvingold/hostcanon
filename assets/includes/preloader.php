@@ -74,7 +74,7 @@
                 if (preloader && preloader.parentElement) {
                     preloader.remove();
                 }
-            }, 1000); // Remove after fade completes
-        }, 2000);
+            }, 1000); 
+        }, 1000);
     });
 </script>
