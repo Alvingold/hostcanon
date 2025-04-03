@@ -91,6 +91,78 @@
             left: 100%;
         }
 
+<<<<<<< HEAD
+=======
+        /* Container styling */
+        .currency-selector {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color:  #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Label styling */
+        .currency-selector label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--primary-color);
+        }
+        
+        /* Select styling */
+        .currency-selector select {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+        font-size: 16px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%23333' d='M7 10l5-5H2z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 12px;
+        transition: border-color 0.3s;
+        }
+        
+        .currency-selector select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+        }
+        
+        /* Optgroup styling for organization */
+        .currency-selector optgroup {
+        font-weight: bold;
+        font-style: normal;
+        color: #4a90e2;
+        background-color: #f8f9fa;
+        }
+        
+        /* Option styling */
+        .currency-selector option {
+        padding: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        }
+        
+        /* Current selection message */
+        .currency-selector p {
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--primary-color);
+        }
+        
+        #selected-currency {
+        font-weight: 700;
+        color: #4a90e2;
+        }
+
+>>>>>>> cc84cad1cf3d4e40d0554cf9fffca2f8c03e5529
         /* Pricing Section */
         .pricing-section {
             padding: 100px 0;
@@ -257,140 +329,140 @@
         }
 
         /* Shared Hosting Benefits Section Styles */
-.benefits-section {
-    padding: 100px 0;
-    background-color: #f8f9fa;
-    overflow: hidden;
-}
+        .benefits-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
 
-.benefits-section .section-title h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: var(--primary-color);
-    line-height: 1.3;
-}
+        .benefits-section .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            line-height: 1.3;
+        }
 
-@media (max-width: 768px) {
-    .benefits-section .section-title h2 {
-        font-size: 1.8rem;
-    }
-}
+        @media (max-width: 768px) {
+            .benefits-section .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
 
-.benefits-list {
-    margin-top: 30px;
-}
+        .benefits-list {
+            margin-top: 30px;
+        }
 
-.benefit-item {
-    margin-bottom: 20px;
-}
+        .benefit-item {
+            margin-bottom: 20px;
+        }
 
-.benefit-item h5 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #333;
-}
+        .benefit-item h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
 
-.benefit-item p {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 0;
-}
+        .benefit-item p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 0;
+        }
 
-.benefit-icon {
-    flex-shrink: 0;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-}
-.benefit a{
-     background: linear-gradient(135deg, #4B0082, #932C8B);
-     border: none;
-     border-radius: 30px;
-}
+        .benefit-icon {
+            flex-shrink: 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        .benefit a{
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border: none;
+            border-radius: 30px;
+        }
 
-.benefits-image {
-    position: relative;
-    padding: 20px;
-    border-radius: 20px;
-}
+        .benefits-image {
+            position: relative;
+            padding: 20px;
+            border-radius: 20px;
+        }
 
-.benefits-image img {
-    box-shadow: 0 25px 50px rgba(75, 0, 130, 0.1);
-    transition: all 0.5s ease;
-}
+        .benefits-image img {
+            box-shadow: 0 25px 50px rgba(75, 0, 130, 0.1);
+            transition: all 0.5s ease;
+        }
 
-.benefits-image:hover img {
-    transform: translateY(-10px);
-}
+        .benefits-image:hover img {
+            transform: translateY(-10px);
+        }
 
-.stats-card {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border-radius: 15px; 
-    bottom: -30px; 
-    right: -30px; 
-    max-width: 280px;
-}
+        .stats-card {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-radius: 15px; 
+            bottom: -30px; 
+            right: -30px; 
+            max-width: 280px;
+        }
 
-.stats-card h5{
-    color: #4B0082;
-}
+        .stats-card h5{
+            color: #4B0082;
+        }
 
-.stats-card i{
-    color: #4B0082; 
-    font-size: 1.5rem;
-}
-.stats-card .start{
-    width: 50px; 
-    height: 50px; 
-    border-radius: 12px; 
-    background: rgba(75, 0, 130, 0.1); 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    margin-right: 15px;
-}
+        .stats-card i{
+            color: #4B0082; 
+            font-size: 1.5rem;
+        }
+        .stats-card .start{
+            width: 50px; 
+            height: 50px; 
+            border-radius: 12px; 
+            background: rgba(75, 0, 130, 0.1); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 15px;
+        }
 
-.benefits-image:hover .stats-card {
-    transform: translateY(-5px) translateX(-5px);
-}
+        .benefits-image:hover .stats-card {
+            transform: translateY(-5px) translateX(-5px);
+        }
 
-.btn-primary {
-    background: linear-gradient(135deg, #4B0082, #932C8B);
-    border: none;
-    padding: 12px 30px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
+        .btn-primary {
+            background: linear-gradient(135deg, #4B0082, #932C8B);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(75, 0, 130, 0.2);
-}
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.2);
+        }
 
-/* Animation styles for AOS */
-[data-aos="fade-right"] {
-    transform: translateX(-50px);
-    opacity: 0;
-    transition-property: transform, opacity;
-}
+        /* Animation styles for AOS */
+        [data-aos="fade-right"] {
+            transform: translateX(-50px);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
 
-[data-aos="fade-left"] {
-    transform: translateX(50px);
-    opacity: 0;
-    transition-property: transform, opacity;
-}
+        [data-aos="fade-left"] {
+            transform: translateX(50px);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
 
-[data-aos="fade-right"].aos-animate,
-[data-aos="fade-left"].aos-animate {
-    transform: translateX(0);
-    opacity: 1;
-}
+        [data-aos="fade-right"].aos-animate,
+        [data-aos="fade-left"].aos-animate {
+            transform: translateX(0);
+            opacity: 1;
+        }
 
- /* FAQ Section */
- .faq-section {
+        /* FAQ Section */
+        .faq-section {
             background-color: #f5f5f5;
         }
         
@@ -426,21 +498,21 @@
             background-color: white;
         }
 
-.cta-section {
-            background-color: var(--primary-color);
-            padding: var(--section-padding);
-            text-align: center;
-            color:white
-        }
+        .cta-section {
+                    background-color: var(--primary-color);
+                    padding: var(--section-padding);
+                    text-align: center;
+                    color:white
+                }
 
-        .cta-section h2 {
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
+                .cta-section h2 {
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
 
     </style>
 </head>
-<body>
+<body class="loading">
 <?php include 'assets/includes/preloader.php';
     include 'assets/includes/nav-bar.php'; ?>
 
@@ -1156,5 +1228,201 @@ function formatPrice(price, currency) {
     : `${formattedNumber} ${format.symbol}`;
 }
   </script>
+<<<<<<< HEAD
+=======
+    </section>
+    <!-- Shared Hosting Benefits Section -->
+<section class="benefits-section py-5" id="benefits">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="section-title">
+                    <h2>We provide Shared Hosting with unbeatable features and benefits</h2>
+                </div>
+                <p class="mb-4">Our shared hosting solutions are designed to give you maximum performance, security, and value. Whether you're launching your first website or managing multiple projects, we've got you covered.</p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Free Domain Registration</h5>
+                            <p>Get a free domain name for the first year with any annual hosting plan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>SSD Storage</h5>
+                            <p>Lightning-fast solid-state drives for superior website performance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Free Website Migration</h5>
+                            <p>Our expert team will transfer your existing website for free.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>30-Day Money-Back Guarantee</h5>
+                            <p>Try our hosting risk-free with our no-questions-asked refund policy.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="#pricing" class="btn btn-primary px-4 py-2">View Hosting Plans</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="benefits-image position-relative">
+                    <img src="assets/media/security-features.webp" alt="Shared Hosting Benefits" class="img-fluid rounded shadow">
+                    <div class="stats-card position-absolute p-4 bg-white shadow">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="start">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">99.9%</h5>
+                                <p class="mb-0 text-muted">Uptime Guarantee</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="start">
+                                <i class="bi bi-speedometer2"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">2X</h5>
+                                <p class="mb-0 text-muted">Faster Loading</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- FAQ Section -->
+    <section class="faq-section py-5" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center mb-4" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is shared hosting?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Shared hosting is a type of web hosting where multiple websites share the same server resources. This makes it a cost-effective solution for individuals and small businesses.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How do I migrate my website to your shared hosting?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our team will assist you with the migration process. Simply contact our support team, and we will guide you through the steps.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can I upgrade my plan later?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, you can easily upgrade your hosting plan at any time. Just contact our support team for assistance.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We accept various payment methods including credit cards, PayPal, and bank transfers.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Is there a money-back guarantee?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer a 30-day money-back guarantee on all our hosting plans.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Do you offer a free trial?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We do not offer a free trial, but you can take advantage of our 30-day money-back guarantee to test our services risk-free.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section class="cta-section text-center"  data-aos="fade-right">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Join thousands of satisfied customers and experience the best shared hosting service.</p>
+            <a href="#pricing" class="btn btn-primary">Get Started Now</a>
+        </div>
+    </section>
+   <!-- Footer -->
+   <?php include 'assets/includes/footer.php'; ?>
+    
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+>>>>>>> cc84cad1cf3d4e40d0554cf9fffca2f8c03e5529
 </body>
 </html>

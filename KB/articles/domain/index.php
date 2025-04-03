@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domain Articles - Knowledge Base</title>
+    <title>Domain Knowledge Base - HostCanon</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -17,12 +17,14 @@
     <link rel="stylesheet" href="../../assets/css/kb-styles.css">
 </head>
 <body class="kb-page">
-    <?php include '../../../knowledge-base/includes/kb-nav.php'; ?>
+    <?php 
+    // Use absolute paths from the document root
+    include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-nav.php';
+    ?>
     
     <div class="container mb-4 mt-4">
         <div class="kb-wrapper">
-            <?php include '../../../knowledge-base/includes/kb-sidebar.php'; ?>
-            
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-sidebar.php'; ?>
             <main class="kb-main">
                 <div class="article-content">
                     <nav aria-label="breadcrumb">

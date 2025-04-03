@@ -26,7 +26,6 @@
             padding: 150px 0 100px;
             position: relative;
             overflow: hidden;
-            height: 100vh;
         }
 
         .hero-btn .btn-primary {

@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="kbNavbar">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/hostcanon/knowledge-base/index.php">Knowledge Base Home</a>
+                    <a class="nav-link" href="/hostcanon/KB/knowledge-base.php">Knowledge Base Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/hostcanon/knowledge-base/faq.php">FAQ</a>
+                    <a class="nav-link" href="/hostcanon/KB/faq.php">FAQ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/hostcanon/contacts.php">Contact Support</a>

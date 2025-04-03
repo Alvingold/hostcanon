@@ -167,6 +167,11 @@
     }
 }
 
+/* Disable loading state until preloader is implemented */
+.kb-page.loading {
+    overflow: auto;
+}
+
 /* Category Overview Styles */
 .kb-category-card {
     background: white;

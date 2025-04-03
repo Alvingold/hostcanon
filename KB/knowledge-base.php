@@ -108,8 +108,7 @@
     </style>
 </head>
 <body class="kb-page loading">
-    <!-- <?php include '../assets/includes/preloader.php'; ?> -->
-    <?php include '../assets/includes/nav-bar.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/assets/includes/nav-bar.php'; ?>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -210,8 +209,8 @@
         </div>
     </section>
 
-    <?php include('../assets/includes/footer.php'); ?>
-    <?php include '../assets/includes/scroll-up.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/assets/includes/footer.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/assets/includes/scroll-up.php'; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -1009,5 +1009,100 @@ function formatPrice(price, currency) {
     : `${formattedNumber} ${format.symbol}`;
 }
   </script>
+<<<<<<< HEAD
+=======
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is e-commerce hosting?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            E-commerce hosting is a type of web hosting service that is optimized for online stores. It provides the necessary resources and features to run an e-commerce website, such as secure payment processing, shopping cart functionality, and inventory management tools.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What are the benefits of e-commerce hosting?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            E-commerce hosting offers several benefits, including fast loading times, secure transactions, scalability, and reliable uptime. It also provides tools and features to help you manage your online store more efficiently and effectively.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How do I choose the right e-commerce hosting plan?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            When choosing an e-commerce hosting plan, consider factors such as your store's size, traffic volume, budget, and technical requirements. Look for a plan that offers the right balance of resources, features, and support to meet your needs.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Can I upgrade my e-commerce hosting plan?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, most e-commerce hosting providers offer scalable plans that allow you to upgrade or downgrade your hosting resources as needed. This flexibility ensures that your online store can grow and adapt to changing demands.
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title" data-aos="fade-up">Ready to Launch Your Online Store?</h2>
+            <p class="cta-subtitle" data-aos="fade-up" data-aos-delay="100">Choose from our e-commerce hosting plans and start selling online today. We're here to help you succeed!</p>
+            <a href="#pricing" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Get Started</a>
+    </section>
+
+    <!-- Footer -->
+    <?php include('assets/includes/footer.php'); ?>
+    <!-- Scroll to Top Button -->
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    
+    <!-- Contact Buttons -->
+    <?php include 'assets/includes/contact-btn.php'; ?>
+
+    
+          <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS after preloader removes loading class
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    AOS.init({
+                        duration: 1000,
+                        once: true
+                    });
+                }, 600);
+            });
+        });
+    </script>
+>>>>>>> cc84cad1cf3d4e40d0554cf9fffca2f8c03e5529
 </body>
 </html>

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/kb-styles.css">
 </head>
 <body class="kb-page">
-    <?php include 'assets/includes/kb-nav.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-nav.php'; ?>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -50,7 +50,7 @@
     
     <div class="container" style="margin-top: -50px; position: relative;">
         <div class="kb-wrapper">
-            <?php include 'assets/includes/kb-sidebar.php'; ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-sidebar.php'; ?>
             
             <main class="kb-main">
                 <div class="category-overview" id="categoryOverview">
@@ -97,7 +97,7 @@
         </div>
     </div>
 
-    <?php include '../assets/includes/footer.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/assets/includes/footer.php'; ?>
     <?php include '../assets/includes/scroll-up.php'; ?>
 
     <!-- Bootstrap JS -->

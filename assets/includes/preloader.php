@@ -15,10 +15,11 @@
         align-items: center;
         justify-content: center;
         opacity: 1;
-        transition: all 0.3s ease-out;
+        transition: all 1s ease-out;
+        visibility: visible;
     }
     
-    body:not(.loading) .preloader {
+    .preloader.fade-out {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -57,7 +58,7 @@
 <div class="preloader">
     <div class="preloader-content">
         <div class="floating-logo">
-            <img src="/hostcanon/assets/media/preloader.gif" alt="Logo" class="logo" width="150" height="150">
+            <img src="./assets/media/preloader.gif" alt="Logo" class="logo" width="150" height="150">
         </div>
     </div>
 </div>
@@ -65,11 +66,15 @@
 <script>
     window.addEventListener('load', function() {
         setTimeout(() => {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('fade-out');
             document.body.classList.remove('loading');
+            
             setTimeout(() => {
-                const preloader = document.querySelector('.preloader');
-                if (preloader) preloader.remove();
-            }, 300);
-        }, 300);
+                if (preloader && preloader.parentElement) {
+                    preloader.remove();
+                }
+            }, 1000); // Remove after fade completes
+        }, 2000);
     });
 </script>

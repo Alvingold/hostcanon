@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="../../assets/css/kb-styles.css">
 </head>
 <body class="kb-page">
-    <?php include '../../../knowledge-base/includes/kb-nav.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-nav.php'; ?>
     
     <div class="container mb-4 mt-4">
         <div class="kb-wrapper">
-            <?php include '../../../knowledge-base/includes/kb-sidebar.php'; ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-sidebar.php'; ?>
             
             <main class="kb-main">
                 <div class="article-content" data-aos="fade-in" data-aos-delay="200">
