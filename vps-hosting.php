@@ -819,9 +819,9 @@
 
 // Main pricing plans in USD
 const pricingPlans = [
-  { name: "Basic", price: 9.99, features: ["2 vCPU Cores", "2GB RAM", "40GB SSD Storage", "2TB Bandwidth", " 1 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] },
-  { name: "Premium", price: 19.99, features: ["4 vCPU Cores", "4GB RAM", "80GB SSD Storage", "4TB Bandwidth", "2 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] },
-  { name: "Business", price: 29.99, features: ["8 vCPU Cores", "8GB RAM", "160GB SSD Storage", "8TB Bandwidth", "3 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] }
+  { name: "Starter VPS", price: 19.99, features: ["2 vCPU Cores", "2GB RAM", "40GB SSD Storage", "2TB Bandwidth", " 1 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] },
+  { name: "Business VPS", price: 39.99, features: ["4 vCPU Cores", "4GB RAM", "80GB SSD Storage", "4TB Bandwidth", "2 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] },
+  { name: "Enterprise VPS", price: 59.99, features: ["8 vCPU Cores", "8GB RAM", "160GB SSD Storage", "8TB Bandwidth", "3 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] }
 ];
 
 // Exchange rates (relative to USD)
