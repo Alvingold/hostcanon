@@ -1164,74 +1164,52 @@
 
 // Main pricing plans in USD
 const pricingPlans = [
-  { name: "Basic", price: 9.99, features: ["30 GB SSD Storage", "500 GB Bandwidth", "30 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] },
-  { name: "Premium", price: 19.99, features: ["75 GB SSD Storage", "1000 GB Bandwidth", "75 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] },
-  { name: "Business", price: 29.99, features: ["150 GB SSD Storage", "2000 GB Bandwidth", "150 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] }
+  { name: "Starter", price: 24.99, features: ["30 GB SSD Storage", "500 GB Bandwidth", "30 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] },
+  { name: "Professional", price: 49.99, features: ["75 GB SSD Storage", "1000 GB Bandwidth", "75 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] },
+  { name: "Enterprise", price: 89.99, features: ["150 GB SSD Storage", "2000 GB Bandwidth", "150 cPanel Accounts", "Free WHMCS License", "24/7 Support", "Priority Support", "Free SSL Certificates", "Daily Backups", "Dedicated IP Address"] }
 ];
 
-// Exchange rates (relative to USD)
-// These would typically come from an API in a production environment
-const exchangeRates = {
-  USD: 1.00,      // United States Dollar
-  EUR: 0.92,      // Euro
-  GBP: 0.79,      // British Pound
-  CAD: 1.36,      // Canadian Dollar
-  AUD: 1.53,      // Australian Dollar
-  INR: 83.60,     // Indian Rupee
-  JPY: 151.73,    // Japanese Yen
-  CNY: 7.23,      // Chinese Yuan
-  BRL: 5.15,      // Brazilian Real
-  MXN: 16.73,     // Mexican Peso
-  RUB: 92.16,     // Russian Ruble
-  ZAR: 18.31,     // South African Rand
-  SGD: 1.34,      // Singapore Dollar
-  NZD: 1.66,      // New Zealand Dollar
-  CHF: 0.88,      // Swiss Franc
-  HKD: 7.81,      // Hong Kong Dollar
-  SEK: 10.49,     // Swedish Krona
-  NOK: 10.71,     // Norwegian Krone
-  DKK: 6.87,      // Danish Krone
-  PLN: 3.95,      // Polish Zloty
-  THB: 35.05,     // Thai Baht
-  KRW: 1358.58,   // South Korean Won
-  IDR: 15920.25,  // Indonesian Rupiah
-  SAR: 3.75,      // Saudi Riyal
-  AED: 3.67,      // UAE Dirham
-  MYR: 4.27,      // Malaysian Ringgit
-  PHP: 56.92,     // Philippine Peso
-  TRY: 32.18,     // Turkish Lira
-  EGP: 47.25,     // Egyptian Pound
-  PKR: 278.14,    // Pakistani Rupee
-  NGN: 1485.11,   // Nigerian Naira
-  CLP: 921.85,    // Chilean Peso
-  COP: 3953.38,   // Colombian Peso
-  ARS: 876.50,    // Argentine Peso
-  PEN: 3.72,      // Peruvian Sol
-  VND: 25187.50,  // Vietnamese Dong
-  ILS: 3.68,      // Israeli Shekel
-  CZK: 23.35,     // Czech Koruna
-  HUF: 361.95,    // Hungarian Forint
-  RON: 4.58,      // Romanian Leu
-  BGN: 1.80,      // Bulgarian Lev
-  HRK: 6.97,      // Croatian Kuna
-  ISK: 137.81,    // Icelandic Krona
-  UAH: 39.30,     // Ukrainian Hryvnia
-  QAR: 3.64,      // Qatari Riyal
-  KWD: 0.31,      // Kuwaiti Dinar
-  BHD: 0.38,      // Bahraini Dinar
-  OMR: 0.38,      // Omani Rial
-  JOD: 0.71,      // Jordanian Dinar
-  KZT: 446.92,    // Kazakhstani Tenge
-  BDT: 110.25,    // Bangladeshi Taka
-  LKR: 295.38,    // Sri Lankan Rupee
-  KES: 130.50,    // Kenyan Shilling
-  GHS: 14.75,     // Ghanaian Cedi
-  UGX: 3772.43,   // Ugandan Shilling
-  TZS: 2581.47,   // Tanzanian Shilling
-  ETB: 56.51,     // Ethiopian Birr
-  XOF: 605.02,    // CFA Franc BCEAO
-  XAF: 605.02     // CFA Franc BEAC
-};
+// Replace the static exchangeRates object with this variable declaration
+let exchangeRates = {};
+
+// Add this function to fetch real-time exchange rates
+async function fetchExchangeRates() {
+  try {
+    // Replace with your API endpoint and API key
+    const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+    const data = await response.json();
+    
+    // Update the rates in your application
+    exchangeRates = data.rates;
+    
+    // Update displayed prices with new rates
+    const currentCurrency = document.getElementById('currency-selector').value;
+    updatePrices(currentCurrency);
+    
+  } catch (error) {
+    console.error('Error fetching exchange rates:', error);
+    // Fallback to some default rates if the API call fails
+  }
+}
+
+// Then in your existing DOMContentLoaded event listener, add the call to fetchExchangeRates:
+document.addEventListener('DOMContentLoaded', function() {
+  // Create currency selection dropdown
+  const currencySelector = document.getElementById('currency-selector');
+  
+  if (currencySelector) {
+    // Add event listener for currency changes
+    currencySelector.addEventListener('change', function() {
+      updatePrices(this.value);
+    });
+  }
+  
+  // Fetch real-time exchange rates
+  fetchExchangeRates();
+  
+  // If you also want to keep the user currency detection:
+  // detectUserCurrency();
+});
 
 // Currency symbols and formatting options
 const currencyFormats = {
