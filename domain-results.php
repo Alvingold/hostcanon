@@ -14,25 +14,52 @@ if (empty($searchedDomain)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domain Search Results - <?php echo $searchedDomain; ?></title>
+
+    <?php include 'assets/includes/optimize-loading.php'; ?>
     <!-- Link to your CSS -->
     <link rel="stylesheet" href="path/to/your/styles.css">
     <!-- Add Bootstrap Icons if you're using them -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Add results page styling -->
     <link rel="stylesheet" href="assets/css/domain-results.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="domain.php">Domain Search</a>
-                </div>
-                <!-- Add your navigation links here -->
-            </nav>
+    <?php include 'assets/includes/preloader.php'; ?>
+
+
+    <!-- Nav Bar -->
+    <nav class="kb-navbar navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/hostcanon/index.php">
+            <img src="/hostcanon/assets/media/afriportal.png" alt="Afriportal Logo" height="40">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kbNavbar">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="kbNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/hostcanon/KB/knowledge-base.php">Knowledge Base Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/hostcanon/KB/faq.php">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/hostcanon/contacts.php">Contact Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/hostcanon/index.php">Back to Main Site</a>
+                </li>
+            </ul>
         </div>
-    </header>
+    </div>
+</nav>
+
 
     <!-- Search Results Section -->
     <section class="results-section">
@@ -80,13 +107,8 @@ if (empty($searchedDomain)) {
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2025 Domain Search Service. All rights reserved.</p>
-        </div>
-    </footer>
-
+    <?php include('assets/includes/footer.php'); ?>
     <!-- Results Page JavaScript -->
-    <script src="/assets/js/domain-results.js"></script>
+    <script src="assets/js/domain-results.js"></script>
 </body>
 </html>
