@@ -87,6 +87,6 @@ if (empty($searchedDomain)) {
     </footer>
 
     <!-- Results Page JavaScript -->
-    <script src="Java/domain-results.js"></script>
+    <script src="/assets/js/domain-results.js"></script>
 </body>
 </html>
