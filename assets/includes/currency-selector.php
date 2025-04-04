@@ -645,7 +645,7 @@
    * This uses the ip-api.com service which has free tier limitations
    */
   function detectUserCurrency() {
-      fetch('http://ip-api.com/json/?fields=countryCode')
+    fetch('https://ip-api.com/json/?fields=countryCode')
           .then(response => response.json())
           .then(data => {
               let currency = 'USD'; // Default
