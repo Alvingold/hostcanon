@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +56,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: all 0.5s ease;
         }
 
@@ -78,13 +79,13 @@
             color: black;
             background: white;
         }
-        
+
         .hero-title {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
         }
-        
+
         .hero-subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
@@ -95,13 +96,15 @@
             .hero-title {
                 font-size: 2.5rem;
             }
+
             .hero-subtitle {
                 font-size: 1rem;
             }
-            .hero-section img{
+
+            .hero-section img {
                 display: none;
             }
-            
+
         }
 
         /* Pricing Section */
@@ -109,7 +112,7 @@
             padding: 100px 0;
             background: #f8f9fa;
         }
-        
+
         .pricing-card {
             background: white;
             border-radius: 20px;
@@ -120,13 +123,13 @@
             position: relative;
             border: 2px solid transparent;
         }
-        
+
         .pricing-card:hover {
             transform: translateY(-10px);
             border-color: #4B0082;
             box-shadow: 0 20px 40px rgba(75, 0, 130, 0.1);
         }
-        
+
         .pricing-header {
             background: linear-gradient(135deg, #4B0082, #932C8B);
             color: white;
@@ -143,50 +146,50 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.1) 55%, transparent 55%);
+            background: linear-gradient(45deg, transparent 45%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.1) 55%, transparent 55%);
         }
-        
+
         .pricing-header h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             position: relative;
         }
-        
+
         .price-tag {
             font-size: 3rem;
             font-weight: 700;
             margin: 1rem 0;
             line-height: 1;
         }
-        
+
         .price-duration {
             font-size: 1rem;
             opacity: 0.8;
         }
-        
+
         .pricing-features {
             padding: 2rem;
         }
-        
+
         .pricing-features ul {
             list-style: none;
             padding: 0;
             margin: 0;
             color: #666;
         }
-        
+
         .pricing-features li {
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
+
         .pricing-features li:last-child {
             border-bottom: none;
         }
-        
+
         .pricing-features i {
             color: #4B0082;
             font-size: 1.2rem;
@@ -198,12 +201,12 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .pricing-footer {
             padding: 0 2rem 2rem;
             text-align: center;
         }
-        
+
         .pricing-card .btn {
             border: 2px solid #4B0082;
             border-radius: 30px;
@@ -215,7 +218,7 @@
             transition: all 0.3s ease;
             width: 100%;
         }
-        
+
         .pricing-card .btn:hover {
             color: white;
             background: linear-gradient(135deg, #4B0082, #932C8B);
@@ -315,18 +318,19 @@
             .features-section {
                 padding: 60px 0;
             }
-            
+
             .feature-card {
                 padding: 1.5rem;
                 margin-bottom: 1rem;
             }
-            
+
             .feature-icon {
                 width: 60px;
                 height: 60px;
                 font-size: 1.5rem;
             }
         }
+
         /* Server Specifications Styling */
         .specs-section {
             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -447,11 +451,11 @@
         }
     </style>
 </head>
+
 <body class="loading">
     <?php include 'assets/includes/preloader.php'; ?>
-    <?php include 'assets/includes/contact-btn.php'; ?>
     <?php include 'assets/includes/nav-bar.php'; ?>
-    <?php include 'assets/includes/scroll-up.php'; ?>
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
@@ -533,7 +537,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Vps Services -->
     <section class="pricing-section" id="pricing">
         <div class="container">
@@ -721,36 +725,29 @@
             </div>
         </div>
     </section>
-
+    
+    <?php include 'assets/includes/scroll-up.php'; ?>
+    <?php include 'assets/includes/contact-btn.php'; ?>
     <?php include 'assets/includes/footer.php'; ?>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
     <script>
-        // Initialize AOS after preloader removes loading class
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    AOS.init({
-                        duration: 1000,
-                        once: true
-                    });
-                }, 600);
-            });
-        });
+        // Global Currency Converter for Hosting Site Pricing Plans
+        // Main pricing plans in USD
+        const pricingPlans = [{
+                name: "Starter VPS",
+                price: 19.99,
+                features: ["2 vCPU Cores", "2GB RAM", "40GB SSD Storage", "2TB Bandwidth", " 1 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"]
+            },
+            {
+                name: "Business VPS",
+                price: 39.99,
+                features: ["4 vCPU Cores", "4GB RAM", "80GB SSD Storage", "4TB Bandwidth", "2 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"]
+            },
+            {
+                name: "Enterprise VPS",
+                price: 59.99,
+                features: ["8 vCPU Cores", "8GB RAM", "160GB SSD Storage", "8TB Bandwidth", "3 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"]
+            }
+        ];
     </script>
-     <script>
-    // Global Currency Converter for Hosting Site Pricing Plans
-
-// Main pricing plans in USD
-const pricingPlans = [
-  { name: "Starter VPS", price: 19.99, features: ["2 vCPU Cores", "2GB RAM", "40GB SSD Storage", "2TB Bandwidth", " 1 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] },
-  { name: "Business VPS", price: 39.99, features: ["4 vCPU Cores", "4GB RAM", "80GB SSD Storage", "4TB Bandwidth", "2 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] },
-  { name: "Enterprise VPS", price: 59.99, features: ["8 vCPU Cores", "8GB RAM", "160GB SSD Storage", "8TB Bandwidth", "3 Dedicated IP", "Full Root Access", "DDoS Protection", "Priority Support", "Weekly Backups"] }
-];
-  </script>
 </body>
 </html>
-

@@ -17,7 +17,6 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/currency.css">
     <style>
         :root {
             --primary-color: #4B0082;
@@ -771,6 +770,181 @@
             <a href="#pricing" class="btn btn-primary">Get Started Now</a>
         </div>
     </section>
+    </section>
+    <!-- Shared Hosting Benefits Section -->
+<section class="benefits-section py-5" id="benefits">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="section-title">
+                    <h2>We provide Shared Hosting with unbeatable features and benefits</h2>
+                </div>
+                <p class="mb-4">Our shared hosting solutions are designed to give you maximum performance, security, and value. Whether you're launching your first website or managing multiple projects, we've got you covered.</p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Free Domain Registration</h5>
+                            <p>Get a free domain name for the first year with any annual hosting plan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>SSD Storage</h5>
+                            <p>Lightning-fast solid-state drives for superior website performance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start mb-3">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Free Website Migration</h5>
+                            <p>Our expert team will transfer your existing website for free.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex align-items-start">
+                        <div class="benefit-icon me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div>
+                            <h5>30-Day Money-Back Guarantee</h5>
+                            <p>Try our hosting risk-free with our no-questions-asked refund policy.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="#pricing" class="btn btn-primary px-4 py-2">View Hosting Plans</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="benefits-image position-relative">
+                    <img src="assets/media/security-features.webp" alt="Shared Hosting Benefits" class="img-fluid rounded shadow">
+                    <div class="stats-card position-absolute p-4 bg-white shadow">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="start">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">99.9%</h5>
+                                <p class="mb-0 text-muted">Uptime Guarantee</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="start">
+                                <i class="bi bi-speedometer2"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">2X</h5>
+                                <p class="mb-0 text-muted">Faster Loading</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- FAQ Section -->
+    <section class="faq-section py-5" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center mb-4" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is shared hosting?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Shared hosting is a type of web hosting where multiple websites share the same server resources. This makes it a cost-effective solution for individuals and small businesses.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How do I migrate my website to your shared hosting?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our team will assist you with the migration process. Simply contact our support team, and we will guide you through the steps.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can I upgrade my plan later?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, you can easily upgrade your hosting plan at any time. Just contact our support team for assistance.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We accept various payment methods including credit cards, PayPal, and bank transfers.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Is there a money-back guarantee?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer a 30-day money-back guarantee on all our hosting plans.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Do you offer a free trial?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We do not offer a free trial, but you can take advantage of our 30-day money-back guarantee to test our services risk-free.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section class="cta-section text-center"  data-aos="fade-right">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Join thousands of satisfied customers and experience the best shared hosting service.</p>
+            <a href="#pricing" class="btn btn-primary">Get Started Now</a>
+        </div>
+    </section>
    <!-- Footer -->
    <?php include 'assets/includes/footer.php'; ?>
     
@@ -781,285 +955,14 @@
     <?php include 'assets/includes/contact-btn.php'; ?>
     
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
-    
     <script>
-        <!-- Navigation Scroll Effect -->
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Initialize AOS after preloader removes loading class
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    AOS.init({
-                        duration: 1000,
-                        once: true
-                    });
-                }, 600);
-            });
-        });
+        // Global Currency Converter for Hosting Site Pricing Plans
+        // Main pricing plans in USD
+        const pricingPlans = [
+        { name: "Shared Starter", price: 2.99, features: ["10GB SSD Storage", "1 Website", "100GB Bandwidth", "Free SSL Certificate", " 5 Email Accounts", "Daily Backups", "Priority Support", "CDN Integration", "Dedicated IP Address"] },
+        { name: "Shared Basic", price: 4.99, features: ["30GB SSD Storage", "3 Website", "500GB Bandwidth", "Free SSL Certificate", "Unlimited Email Accounts", "Daily Backups", "Priority Support", "CDN Integration", "Dedicated IP Address"] },
+        { name: "Shared Business", price: 7.99, features: ["100GB SSD Storage", "unlimited websites", "2TB Bandwidth", "Free SSL Certificate", "Unlimited Email Accounts", "Daily Backups", "Priority Support", "CDN Integration", "Dedicated IP Address"] }
+        ];
     </script>
-     <script>
-    // Global Currency Converter for Hosting Site Pricing Plans
-
-// Main pricing plans in USD
-const pricingPlans = [
-  { name: "Shared Starter", price: 2.99, features: ["10GB SSD Storage", "1 Website", "100GB Bandwidth", "Free SSL Certificate", " 5 Email Accounts", "Daily Backups", "Priority Support", "CDN Integration", "Dedicated IP Address"] },
-  { name: "Shared Basic", price: 4.99, features: ["30GB SSD Storage", "3 Website", "500GB Bandwidth", "Free SSL Certificate", "Unlimited Email Accounts", "Daily Backups", "Priority Support", "CDN Integration", "Dedicated IP Address"] },
-  { name: "Shared Business", price: 7.99, features: ["100GB SSD Storage", "unlimited websites", "2TB Bandwidth", "Free SSL Certificate", "Unlimited Email Accounts", "Daily Backups", "Priority Support", "CDN Integration", "Dedicated IP Address"] }
-];
-
-// Replace the static exchangeRates object with this variable declaration
-let exchangeRates = {};
-
-// Add this function to fetch real-time exchange rates
-async function fetchExchangeRates() {
-  try {
-    // Replace with your API endpoint and API key
-    const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-    const data = await response.json();
-    
-    // Update the rates in your application
-    exchangeRates = data.rates;
-    
-    // Update displayed prices with new rates
-    const currentCurrency = document.getElementById('currency-selector').value;
-    updatePrices(currentCurrency);
-    
-  } catch (error) {
-    console.error('Error fetching exchange rates:', error);
-    // Fallback to some default rates if the API call fails
-  }
-}
-
-// Then in your existing DOMContentLoaded event listener, add the call to fetchExchangeRates:
-document.addEventListener('DOMContentLoaded', function() {
-  // Create currency selection dropdown
-  const currencySelector = document.getElementById('currency-selector');
-  
-  if (currencySelector) {
-    // Add event listener for currency changes
-    currencySelector.addEventListener('change', function() {
-      updatePrices(this.value);
-    });
-  }
-  
-  // Fetch real-time exchange rates
-  fetchExchangeRates();
-  
-  // If you also want to keep the user currency detection:
-  // detectUserCurrency();
-});
-
-// Currency symbols and formatting options
-const currencyFormats = {
-  USD: { symbol: '$', position: 'before', decimalPlaces: 2 },
-  EUR: { symbol: '€', position: 'after', decimalPlaces: 2 },
-  GBP: { symbol: '£', position: 'before', decimalPlaces: 2 },
-  CAD: { symbol: 'C$', position: 'before', decimalPlaces: 2 },
-  AUD: { symbol: 'A$', position: 'before', decimalPlaces: 2 },
-  INR: { symbol: '₹', position: 'before', decimalPlaces: 2 },
-  JPY: { symbol: '¥', position: 'before', decimalPlaces: 0 },
-  CNY: { symbol: '¥', position: 'before', decimalPlaces: 2 },
-  BRL: { symbol: 'R$', position: 'before', decimalPlaces: 2 },
-  MXN: { symbol: 'Mex$', position: 'before', decimalPlaces: 2 },
-  RUB: { symbol: '₽', position: 'after', decimalPlaces: 2 },
-  ZAR: { symbol: 'R', position: 'before', decimalPlaces: 2 },
-  SGD: { symbol: 'S$', position: 'before', decimalPlaces: 2 },
-  NZD: { symbol: 'NZ$', position: 'before', decimalPlaces: 2 },
-  CHF: { symbol: 'CHF', position: 'before', decimalPlaces: 2 },
-  HKD: { symbol: 'HK$', position: 'before', decimalPlaces: 2 },
-  SEK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
-  NOK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
-  DKK: { symbol: 'kr', position: 'after', decimalPlaces: 2 },
-  PLN: { symbol: 'zł', position: 'after', decimalPlaces: 2 },
-  THB: { symbol: '฿', position: 'before', decimalPlaces: 2 },
-  KRW: { symbol: '₩', position: 'before', decimalPlaces: 0 },
-  IDR: { symbol: 'Rp', position: 'before', decimalPlaces: 0 },
-  SAR: { symbol: '﷼', position: 'after', decimalPlaces: 2 },
-  AED: { symbol: 'د.إ', position: 'after', decimalPlaces: 2 },
-  MYR: { symbol: 'RM', position: 'before', decimalPlaces: 2 },
-  PHP: { symbol: '₱', position: 'before', decimalPlaces: 2 },
-  TRY: { symbol: '₺', position: 'before', decimalPlaces: 2 },
-  EGP: { symbol: 'E£', position: 'before', decimalPlaces: 2 },
-  PKR: { symbol: '₨', position: 'before', decimalPlaces: 2 },
-  NGN: { symbol: '₦', position: 'before', decimalPlaces: 2 },
-  CLP: { symbol: 'CLP$', position: 'before', decimalPlaces: 0 },
-  COP: { symbol: 'COL$', position: 'before', decimalPlaces: 0 },
-  ARS: { symbol: 'ARS$', position: 'before', decimalPlaces: 2 },
-  PEN: { symbol: 'S/', position: 'before', decimalPlaces: 2 },
-  VND: { symbol: '₫', position: 'after', decimalPlaces: 0 },
-  ILS: { symbol: '₪', position: 'before', decimalPlaces: 2 },
-  CZK: { symbol: 'Kč', position: 'after', decimalPlaces: 2 },
-  HUF: { symbol: 'Ft', position: 'after', decimalPlaces: 0 },
-  RON: { symbol: 'lei', position: 'after', decimalPlaces: 2 },
-  BGN: { symbol: 'лв', position: 'after', decimalPlaces: 2 },
-  HRK: { symbol: 'kn', position: 'after', decimalPlaces: 2 },
-  ISK: { symbol: 'kr', position: 'after', decimalPlaces: 0 },
-  UAH: { symbol: '₴', position: 'after', decimalPlaces: 2 },
-  QAR: { symbol: '﷼', position: 'after', decimalPlaces: 2 },
-  KWD: { symbol: 'د.ك', position: 'after', decimalPlaces: 3 },
-  BHD: { symbol: 'BD', position: 'before', decimalPlaces: 3 },
-  OMR: { symbol: '﷼', position: 'after', decimalPlaces: 3 },
-  JOD: { symbol: 'JD', position: 'before', decimalPlaces: 3 },
-  KZT: { symbol: '₸', position: 'after', decimalPlaces: 2 },
-  BDT: { symbol: '৳', position: 'before', decimalPlaces: 2 },
-  LKR: { symbol: '₨', position: 'before', decimalPlaces: 2 },
-  KES: { symbol: 'KSh', position: 'before', decimalPlaces: 2 },
-  GHS: { symbol: '₵', position: 'before', decimalPlaces: 2 },
-  UGX: { symbol: 'USh', position: 'before', decimalPlaces: 0 },
-  TZS: { symbol: 'TSh', position: 'before', decimalPlaces: 0 },
-  ETB: { symbol: 'Br', position: 'before', decimalPlaces: 2 },
-  XOF: { symbol: 'CFA', position: 'after', decimalPlaces: 0 },
-  XAF: { symbol: 'FCFA', position: 'after', decimalPlaces: 0 }
-};
-
-// Country to currency mapping
-const countryCurrencyMap = {
-  'US': 'USD', 'CA': 'CAD', 'GB': 'GBP', 'AU': 'AUD', 'NZ': 'NZD',
-  'IN': 'INR', 'JP': 'JPY', 'CN': 'CNY', 'BR': 'BRL', 'MX': 'MXN',
-  'RU': 'RUB', 'ZA': 'ZAR', 'SG': 'SGD', 'CH': 'CHF', 'HK': 'HKD',
-  'SE': 'SEK', 'NO': 'NOK', 'DK': 'DKK', 'PL': 'PLN', 'TH': 'THB',
-  'KR': 'KRW', 'ID': 'IDR', 'SA': 'SAR', 'AE': 'AED', 'MY': 'MYR',
-  'PH': 'PHP', 'TR': 'TRY', 'EG': 'EGP', 'PK': 'PKR', 'NG': 'NGN',
-  'CL': 'CLP', 'CO': 'COP', 'AR': 'ARS', 'PE': 'PEN', 'VN': 'VND',
-  'IL': 'ILS', 'CZ': 'CZK', 'HU': 'HUF', 'RO': 'RON', 'BG': 'BGN',
-  'HR': 'HRK', 'IS': 'ISK', 'UA': 'UAH', 'QA': 'QAR', 'KW': 'KWD',
-  'BH': 'BHD', 'OM': 'OMR', 'JO': 'JOD', 'KZ': 'KZT', 'BD': 'BDT',
-  'LK': 'LKR', 'KE': 'KES', 'GH': 'GHS', 'UG': 'UGX', 'TZ': 'TZS',
-  'ET': 'ETB', 'BJ': 'XOF', 'BF': 'XOF', 'CI': 'XOF', 'GW': 'XOF',
-  'ML': 'XOF', 'NE': 'XOF', 'SN': 'XOF', 'TG': 'XOF', 'CM': 'XAF',
-  'CF': 'XAF', 'TD': 'XAF', 'CG': 'XAF', 'GQ': 'XAF', 'GA': 'XAF',
-  // Euro countries
-  'DE': 'EUR', 'FR': 'EUR', 'IT': 'EUR', 'ES': 'EUR', 'PT': 'EUR',
-  'NL': 'EUR', 'BE': 'EUR', 'AT': 'EUR', 'GR': 'EUR', 'IE': 'EUR',
-  'FI': 'EUR', 'SK': 'EUR', 'SI': 'EUR', 'LT': 'EUR', 'LV': 'EUR',
-  'EE': 'EUR', 'CY': 'EUR', 'MT': 'EUR', 'LU': 'EUR', 'MC': 'EUR'
-};
-
-/**
- * Format price according to currency formatting rules
- */
-function formatPrice(price, currency) {
-  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
-  const formattedNumber = price.toFixed(format.decimalPlaces);
-  
-  return format.position === 'before' 
-    ? `${format.symbol}${formattedNumber}`
-    : `${formattedNumber} ${format.symbol}`;
-}
-
-/**
- * Convert price from USD to target currency
- */
-function convertPrice(priceInUSD, targetCurrency) {
-  if (!exchangeRates[targetCurrency]) {
-    console.error(`Currency ${targetCurrency} not supported`);
-    return priceInUSD; // Return original price if currency not found
-  }
-  
-  return priceInUSD * exchangeRates[targetCurrency];
-}
-
-/**
- * Update displayed prices based on selected currency
- */
-function updatePrices(currency) {
-  pricingPlans.forEach((plan, index) => {
-    const convertedPrice = convertPrice(plan.price, currency);
-    const formattedPrice = formatPrice(convertedPrice, currency);
-    
-    // Update price display in DOM
-    const priceElement = document.getElementById(`plan-${index}-price`);
-    if (priceElement) {
-      priceElement.textContent = formattedPrice;
-    }
-  });
-  
-  // Update currency selection display
-  const currencyDisplay = document.getElementById('selected-currency');
-  if (currencyDisplay) {
-    currencyDisplay.textContent = currency;
-  }
-}
-
-/**
- * Get user's country and set appropriate currency
- * This uses the ip-api.com service which has free tier limitations
- */
-function detectUserCurrency() {
-  fetch('http://ip-api.com/json/?fields=countryCode')
-    .then(response => response.json())
-    .then(data => {
-      let currency = 'USD'; // Default
-      
-      if (countryCurrencyMap[data.countryCode]) {
-        currency = countryCurrencyMap[data.countryCode];
-      }
-      
-      // Update currency selector and prices
-      const currencySelector = document.getElementById('currency-selector');
-      if (currencySelector) {
-        currencySelector.value = currency;
-      }
-      
-      updatePrices(currency);
-    })
-    .catch(error => {
-      console.error('Error detecting user location:', error);
-      updatePrices('USD'); // Fallback to USD
-    });
-}
-
-/**
- * Initialize the currency converter when the page loads
- */
-document.addEventListener('DOMContentLoaded', function() {
-  // Create currency selection dropdown
-  const currencySelector = document.getElementById('currency-selector');
-  
-  if (currencySelector) {
-    // Add event listener for currency changes
-    currencySelector.addEventListener('change', function() {
-      updatePrices(this.value);
-    });
-  }
-  
-  // Try to detect user's currency automatically
-  detectUserCurrency();
-});
-/**
- * Format price according to currency formatting rules with thousand separators
- */
-function formatPrice(price, currency) {
-  const format = currencyFormats[currency] || { symbol: currency, position: 'before', decimalPlaces: 2 };
-  
-  // Format the number with proper decimal places
-  let formattedNumber = price.toFixed(format.decimalPlaces);
-  
-  // Add thousand separators
-  // Split number into integer and decimal parts
-  const parts = formattedNumber.split('.');
-  // Add commas to the integer part
-  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  // Rejoin with decimal part if it exists
-  formattedNumber = parts.join('.');
-  
-  // Apply currency symbol in the correct position
-  return format.position === 'before' 
-    ? `${format.symbol}${formattedNumber}`
-    : `${formattedNumber} ${format.symbol}`;
-}
-  </script>
-  
-  </body>
+</body>
 </html>

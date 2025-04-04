@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce Hosting</title>
 
     <?php include 'assets/includes/optimize-loading.php'; ?>
-    
+
     <link rel="shortcut icon" href="assets/media/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,13 +28,13 @@
             --text-dark: #333333;
             --section-padding: 80px 0;
         }
-        
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
             background-color: #f9f9f9;
         }
-        
+
         /* Hero Section */
         .hero-section {
             background-color: var(--primary-color);
@@ -42,20 +43,20 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-title {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-        
+
         .hero-subtitle {
             font-size: 1.25rem;
             margin-bottom: 30px;
             opacity: 0.9;
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, #4B0082, #932C8B);
             color: white;
@@ -69,7 +70,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(75, 0, 130, 0.3);
@@ -83,8 +84,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: all 0.5s ease; 
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s ease;
         }
 
         .btn-primary:hover::before {
@@ -92,19 +93,19 @@
         }
 
         /* Features Section */
-          .features-section {
+        .features-section {
             padding: var(--section-padding);
         }
-        
+
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 50px;
             position: relative;
-           /* display: inline-block;*/
+            /* display: inline-block;*/
         }
-        
-       /* .section-title::after {
+
+        /* .section-title::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -114,7 +115,7 @@
             background-color: var(--primary-color);
             border-radius: 2px;
         }*/
-        
+
         .feature-card {
             padding: 30px;
             border-radius: 10px;
@@ -123,12 +124,12 @@
             transition: all 0.3s ease;
             height: 100%;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .feature-icon {
             width: 70px;
             height: 70px;
@@ -142,18 +143,18 @@
             font-size: 1.8rem;
             color: white;
         }
-        
+
         .feature-title {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 15px;
         }
-                
+
         /* Platforms section */
         .platforms-section {
             padding: var(--section-padding);
         }
-        
+
         .platform-card {
             text-align: center;
             padding: 30px;
@@ -163,12 +164,12 @@
             transition: all 0.3s ease;
             height: 100%;
         }
-        
+
         .platform-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .platform-icon {
             width: 70px;
             height: 70px;
@@ -183,19 +184,19 @@
             color: white;
             margin: 0 auto;
         }
-        
+
         .platform-title {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 15px;
         }
-        
+
         /* FAQ Section */
         .faq-section {
             padding: var(--section-padding);
             background-color: #f5f5f5;
         }
-        
+
         .accordion-item {
             border: none;
             margin-bottom: 15px;
@@ -203,28 +204,28 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .accordion-button {
             font-weight: 600;
             padding: 20px;
             background-color: white;
             color: var(--text-dark);
         }
-        
+
         .accordion-button:not(.collapsed) {
             background-color: var(--primary-color);
             color: var(--text-light);
         }
-        
+
         .accordion-button:focus {
             box-shadow: none;
         }
-        
+
         .accordion-body {
             padding: 20px;
             background-color: white;
         }
-        
+
         /* Call to action section */
         .cta-section {
             padding: var(--section-padding);
@@ -232,25 +233,25 @@
             color: var(--text-light);
             text-align: center;
         }
-        
+
         .cta-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
         }
-        
+
         .cta-subtitle {
             font-size: 1.25rem;
             margin-bottom: 30px;
             opacity: 0.9;
         }
-        
+
         /* Pricing Section */
         .pricing-section {
             padding: 100px 0;
             background: #f8f9fa;
         }
-        
+
         .pricing-card {
             background: white;
             border-radius: 20px;
@@ -261,13 +262,13 @@
             position: relative;
             border: 2px solid transparent;
         }
-        
+
         .pricing-card:hover {
             transform: translateY(-10px);
             border-color: #4B0082;
             box-shadow: 0 20px 40px rgba(75, 0, 130, 0.1);
         }
-        
+
         .pricing-header {
             background: linear-gradient(135deg, #4B0082, #932C8B);
             color: white;
@@ -284,50 +285,50 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.1) 55%, transparent 55%);
+            background: linear-gradient(45deg, transparent 45%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.1) 55%, transparent 55%);
         }
-        
+
         .pricing-header h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             position: relative;
         }
-        
+
         .price-tag {
             font-size: 3rem;
             font-weight: 700;
             margin: 1rem 0;
             line-height: 1;
         }
-        
+
         .price-duration {
             font-size: 1rem;
             opacity: 0.8;
         }
-        
+
         .pricing-features {
             padding: 2rem;
         }
-        
+
         .pricing-features ul {
             list-style: none;
             padding: 0;
             margin: 0;
             color: #666;
         }
-        
+
         .pricing-features li {
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
+
         .pricing-features li:last-child {
             border-bottom: none;
         }
-        
+
         .pricing-features i {
             color: #4B0082;
             font-size: 1.2rem;
@@ -339,12 +340,12 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .pricing-footer {
             padding: 0 2rem 2rem;
             text-align: center;
         }
-        
+
         .pricing-card .btn {
             border: 2px solid #4B0082;
             border-radius: 30px;
@@ -356,7 +357,7 @@
             transition: all 0.3s ease;
             width: 100%;
         }
-        
+
         .pricing-card .btn:hover {
             color: white;
             background: linear-gradient(135deg, #4B0082, #932C8B);
@@ -365,12 +366,13 @@
         }
     </style>
 </head>
+
 <body class="ecommerce-page loading">
-    
-<?php include('assets/includes/nav-bar.php'); ?>
-<?php include('assets/includes/preloader.php'); ?>
- <!-- Hero Section -->
- <section class="hero-section">
+
+    <?php include('assets/includes/nav-bar.php'); ?>
+    <?php include('assets/includes/preloader.php'); ?>
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
@@ -385,8 +387,8 @@
         </div>
     </section>
 
-     <!-- Features Section -->
-     <section class="features-section">
+    <!-- Features Section -->
+    <section class="features-section">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-up">Why Choose Our E-commerce Hosting</h2>
             <p class="text-center" data-aos="fade-up" data-aos-delay="100">Our e-commerce hosting solutions are designed to provide you with everything you need to run a successful online store. Here are some of the key features:</p>
@@ -482,7 +484,7 @@
             <p class="text-center" data-aos="fade-up" data-aos-delay="100">Select the plan that best fits your business needs. All plans come with a 30-day money-back guarantee!</p>
 
             <?php include 'assets/includes/currency-selector.php'; ?>
-            
+
             <div class="row mt-5">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-card">
@@ -559,7 +561,7 @@
                         </div>
                     </div>
                 </div>
-                 <!-- Include the currency converter script -->
+                <!-- Include the currency converter script -->
     </section>
 
     <!-- FAQ Section -->
@@ -630,49 +632,31 @@
     <?php include('assets/includes/footer.php'); ?>
     <!-- Scroll to Top Button -->
     <?php include 'assets/includes/scroll-up.php'; ?>
-    
+
     <!-- Contact Buttons -->
     <?php include 'assets/includes/contact-btn.php'; ?>
 
-    
-          <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://static.elfsight.com/apps/google-reviews/stable/472cfdc9950a5d6058a097e99a4203036834b5ca/app/googleReviews.js" defer="defer" charset="utf-8"></script>
-    
+
     <script>
-        <!-- Navigation Scroll Effect -->
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        // Global Currency Converter for Hosting Site Pricing Plans
+
+        // Main pricing plans in USD
+        const pricingPlans = [{
+                name: "Starter",
+                price: 9.99,
+                features: ["10GB SSD Storage", "1 Website", "Free SSL Certificate", "Daily Backups", "Basic CDN", "Premium Themes", "Priority Support", "Dedicated IP", "Performance Optimization"]
+            },
+            {
+                name: "Business",
+                price: 24.99,
+                features: ["30GB SSD Storage", "3 Website", "Free SSL Certificate", "Daily Backups", "Premium CDN", "Premium Themes", "Priority Support", "Dedicated IP", "Performance Optimization"]
+            },
+            {
+                name: "Enterprise",
+                price: 49.99,
+                features: ["100GB SSD Storage", "Unlimited Websites", "Free SSL Certificate", "Daily Backups", "Premium CDN", "Premium Themes", "Priority Support", "Dedicated IP", "Performance Optimization"]
             }
-        });
-
-        // Initialize AOS after preloader removes loading class
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    AOS.init({
-                        duration: 1000,
-                        once: true
-                    });
-                }, 600);
-            });
-        });
+        ];
     </script>
-
-<script>
-    // Global Currency Converter for Hosting Site Pricing Plans
-
-// Main pricing plans in USD
-const pricingPlans = [
-  { name: "Starter", price: 9.99, features: ["10GB SSD Storage", "1 Website", "Free SSL Certificate", "Daily Backups", "Basic CDN", "Premium Themes", "Priority Support", "Dedicated IP", "Performance Optimization"] },
-  { name: "Business", price: 24.99, features: ["30GB SSD Storage", "3 Website", "Free SSL Certificate", "Daily Backups", "Premium CDN", "Premium Themes", "Priority Support", "Dedicated IP", "Performance Optimization"] },
-  { name: "Enterprise", price: 49.99, features: ["100GB SSD Storage", "Unlimited Websites", "Free SSL Certificate", "Daily Backups", "Premium CDN", "Premium Themes", "Priority Support", "Dedicated IP", "Performance Optimization"] }
-];
-</script>
 </body>
 </html>

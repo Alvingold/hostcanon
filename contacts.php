@@ -246,21 +246,10 @@
     <!-- Contact Buttons -->
     <?php include 'assets/includes/contact-btn.php'; ?>
      
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
     <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
         document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('load', function() {
                 setTimeout(function() {
