@@ -142,7 +142,7 @@
                             </div>
                             <h3 class="h4 mb-3">Learn FAQ</h3>
                             <p class="text-muted mb-4">Check if there is an answer in the base of typical questions.</p>
-                            <a href="knowledge-base/faq.php" class="btn btn-outline-primary">View FAQs</a>
+                            <a href="KB/faq.php" class="btn btn-outline-primary">View FAQs</a>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                             </div>
                             <h3 class="h4 mb-3">Knowledge Base</h3>
                             <p class="text-muted mb-4">Find the answer to commonly asked questions and useful web hosting how-to articles.</p>
-                            <a href="knowledge-base/index.php" class="btn btn-outline-primary">Browse Articles</a>
+                            <a href="KB/knowledge-base.php" class="btn btn-outline-primary">Browse Articles</a>
                         </div>
                     </div>
                 </div>

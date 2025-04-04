@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tld = domainParts.pop();
         const domainName = domainParts.join('.');
         
-        // Set pricing based on TLD
+        // Enhanced TLD pricing list with more options
         const tldPrices = {
             'com': 12.99,
             'net': 11.99,
@@ -81,7 +81,30 @@ document.addEventListener('DOMContentLoaded', function() {
             'io': 39.99,
             'co': 24.99,
             'app': 15.99,
-            'dev': 14.99
+            'dev': 14.99,
+            'ai': 69.99,
+            'me': 19.99,
+            'tech': 39.99,
+            'store': 49.99,
+            'online': 29.99,
+            'site': 24.99,
+            'xyz': 9.99,
+            'info': 12.99,
+            'biz': 16.99,
+            'blog': 17.99,
+            'design': 45.99,
+            'shop': 29.99,
+            'club': 9.99,
+            'us': 8.99,
+            'uk': 9.99,
+            'ca': 12.99,
+            'au': 12.99,
+            'email': 19.99,
+            'live': 19.99,
+            'agency': 24.99,
+            'cloud': 19.99,
+            'digital': 29.99,
+            'media': 24.99
         };
         const price = tldPrices[tld] || 9.99;
         
@@ -131,11 +154,41 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If we get any records, domain exists
                 const isAvailable = !data.Answer || data.Answer.length === 0;
                 const tld = domain.split('.').pop();
-                const price = {
+                
+                // Use the expanded TLD pricing for fallback too
+                const tldPrices = {
                     'com': 12.99,
                     'net': 11.99,
-                    'org': 10.99
-                }[tld] || 9.99;
+                    'org': 10.99,
+                    'io': 39.99,
+                    'co': 24.99,
+                    'app': 15.99,
+                    'dev': 14.99,
+                    'ai': 69.99,
+                    'me': 19.99,
+                    'tech': 39.99,
+                    'store': 49.99,
+                    'online': 29.99,
+                    'site': 24.99,
+                    'xyz': 9.99,
+                    'info': 12.99,
+                    'biz': 16.99,
+                    'blog': 17.99,
+                    'design': 45.99,
+                    'shop': 29.99,
+                    'club': 9.99,
+                    'us': 8.99,
+                    'uk': 9.99,
+                    'ca': 12.99,
+                    'au': 12.99,
+                    'email': 19.99,
+                    'live': 19.99,
+                    'agency': 24.99,
+                    'cloud': 19.99,
+                    'digital': 29.99,
+                    'media': 24.99
+                };
+                const price = tldPrices[tld] || 9.99;
                 
                 console.log(`Fallback DNS check for ${domain}: ${isAvailable ? 'Available' : 'Not Available'}`);
                 
@@ -231,8 +284,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const domainName = domainParts[0];
         const currentTld = domainParts.length > 1 ? `.${domainParts[1]}` : '.com';
         
-        // Common TLDs to check (exclude current TLD)
-        const tlds = ['.com', '.net', '.org', '.io', '.co', '.app', '.dev'].filter(tld => tld !== currentTld);
+        // Expanded list of TLDs to check (exclude current TLD)
+        const tlds = [
+            '.com', '.net', '.org', '.io', '.co', '.app', '.dev', 
+            '.ai', '.me', '.tech', '.store', '.online', '.site', 
+            '.xyz', '.info', '.biz', '.blog', '.design', '.shop', 
+            '.club', '.us', '.uk', '.ca', '.au'
+        ].filter(tld => tld !== currentTld);
         
         // Create alternative domain suggestions
         let alternativesHTML = '';
@@ -275,15 +333,41 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(data => {
                 const tld = domain.split('.').pop();
-                const price = {
+                
+                // Use expanded TLD pricing list
+                const tldPrices = {
                     'com': 12.99,
                     'net': 11.99,
                     'org': 10.99,
                     'io': 39.99,
                     'co': 24.99,
                     'app': 15.99,
-                    'dev': 14.99
-                }[tld] || 9.99;
+                    'dev': 14.99,
+                    'ai': 69.99,
+                    'me': 19.99,
+                    'tech': 39.99,
+                    'store': 49.99,
+                    'online': 29.99,
+                    'site': 24.99,
+                    'xyz': 9.99,
+                    'info': 12.99,
+                    'biz': 16.99,
+                    'blog': 17.99,
+                    'design': 45.99,
+                    'shop': 29.99,
+                    'club': 9.99,
+                    'us': 8.99,
+                    'uk': 9.99,
+                    'ca': 12.99,
+                    'au': 12.99,
+                    'email': 19.99,
+                    'live': 19.99,
+                    'agency': 24.99,
+                    'cloud': 19.99,
+                    'digital': 29.99,
+                    'media': 24.99
+                };
+                const price = tldPrices[tld] || 9.99;
                 
                 updateAlternativeDomain(card, {
                     available: data.available,
@@ -298,11 +382,41 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(data => {
                         const isAvailable = !data.Answer || data.Answer.length === 0;
                         const tld = domain.split('.').pop();
-                        const price = {
+                        
+                        // Use expanded TLD pricing here too
+                        const tldPrices = {
                             'com': 12.99,
                             'net': 11.99,
-                            'org': 10.99
-                        }[tld] || 9.99;
+                            'org': 10.99,
+                            'io': 39.99,
+                            'co': 24.99,
+                            'app': 15.99,
+                            'dev': 14.99,
+                            'ai': 69.99,
+                            'me': 19.99,
+                            'tech': 39.99,
+                            'store': 49.99,
+                            'online': 29.99,
+                            'site': 24.99,
+                            'xyz': 9.99,
+                            'info': 12.99,
+                            'biz': 16.99,
+                            'blog': 17.99,
+                            'design': 45.99,
+                            'shop': 29.99,
+                            'club': 9.99,
+                            'us': 8.99,
+                            'uk': 9.99,
+                            'ca': 12.99,
+                            'au': 12.99,
+                            'email': 19.99,
+                            'live': 19.99,
+                            'agency': 24.99,
+                            'cloud': 19.99,
+                            'digital': 29.99,
+                            'media': 24.99
+                        };
+                        const price = tldPrices[tld] || 9.99;
                         
                         updateAlternativeDomain(card, {
                             available: isAvailable,
