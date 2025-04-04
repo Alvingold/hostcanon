@@ -35,58 +35,59 @@
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-color), #2c0449);
-            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #4B0082, #6A1B9A, #4A148C);
+            padding: 180px 0 120px;
             position: relative;
             overflow: hidden;
             height: 100vh;
         }
         
-        .wc-btn .btn{
-            background: linear-gradient(135deg, #4B0082, #932C8B);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 1rem 2.5rem;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .wc-btn .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(75, 0, 130, 0.3);
-            color: white;
-        }
-
-        .wc-btn .btn::before {
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: all 0.5s ease;
+            background: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .wc-btn .btn {
+            background: linear-gradient(135deg, #9C27B0, #673AB7);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 1.2rem 3rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.3);
         }
 
-        .wc-btn .btn:hover::before {
-            left: 100%;
+        .wc-btn .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(156, 39, 176, 0.4);
+            background: linear-gradient(135deg, #673AB7, #9C27B0);
         }
         
         .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.8rem;
+            line-height: 1.2;
+            background: linear-gradient(to right, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         .hero-text {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
             opacity: 0.9;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
         }
                 
         /* Features Section */
@@ -571,23 +572,5 @@
     
     <!-- Contact Buttons -->
     <?php include 'assets/includes/contact-btn.php'; ?>
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        // Initialize AOS after preloader removes loading class
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    AOS.init({
-                        duration: 1000,
-                        once: true
-                    });
-                }, 600);
-            });
-        });
-    </script>
 </body>
 </html>

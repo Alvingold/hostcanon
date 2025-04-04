@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/media/favicon.png" type="image/x-icon">
+
+    <?php include 'assets/includes/optimize-loading.php'; ?>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -19,7 +21,7 @@
     <title>HostCanon - Dedicated Hosting</title>
 </head>
 
-<body>
+<body class="loading">
     <?php include 'assets/includes/preloader.php';
     include 'assets/includes/nav-bar.php'; ?>
 
@@ -416,10 +418,6 @@
 
     <!-- Contact Buttons -->
     <?php include 'assets/includes/contact-btn.php'; ?>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         // FAQ Fuctionality

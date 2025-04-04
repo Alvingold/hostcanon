@@ -682,10 +682,7 @@
     
     <!-- Contact Buttons -->
     <?php include 'assets/includes/contact-btn.php'; ?>
-    
-    <!-- Scripts moved to bottom -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <?php include 'assets/includes/optimize-loading.php'; ?>
     <script>
         function initAOS() {
             AOS.init({

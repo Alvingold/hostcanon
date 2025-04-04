@@ -17,7 +17,6 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/currency.css">
     <style>
         :root {
             --primary-color: #4B0082;
@@ -956,21 +955,7 @@
     <?php include 'assets/includes/contact-btn.php'; ?>
     
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
     <script>
-        // Initialize AOS after preloader removes loading class
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    AOS.init({
-                        duration: 1000,
-                        once: true
-                    });
-                }, 600);
-            });
-        });
-
         // Global Currency Converter for Hosting Site Pricing Plans
         // Main pricing plans in USD
         const pricingPlans = [
