@@ -16,8 +16,6 @@ if (empty($searchedDomain)) {
     <title>Domain Search Results - <?php echo $searchedDomain; ?></title>
 
     <?php include 'assets/includes/optimize-loading.php'; ?>
-    <!-- Link to your CSS -->
-    <link rel="stylesheet" href="path/to/your/styles.css">
     <!-- Add Bootstrap Icons if you're using them -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Add Bootstrap CSS -->
@@ -26,10 +24,6 @@ if (empty($searchedDomain)) {
     <link rel="stylesheet" href="assets/css/domain-results.css">
 </head>
 <body>
-    <!-- Header -->
-    <?php include 'assets/includes/preloader.php'; ?>
-
-
     <!-- Nav Bar -->
     <nav class="kb-navbar navbar navbar-expand-lg fixed-top">
     <div class="container">
