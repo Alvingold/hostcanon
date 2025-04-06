@@ -17,14 +17,11 @@
     <link rel="stylesheet" href="../../assets/css/kb-styles.css">
 </head>
 <body class="kb-page">
-    <?php 
-    // Use absolute paths from the document root
-    include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-nav.php';
-    ?>
+    <?php include '../../includes/kb-nav.php'; ?>
     
     <div class="container mb-4 mt-4">
         <div class="kb-wrapper">
-            <?php include $_SERVER['DOCUMENT_ROOT'] . '/hostcanon/KB/includes/kb-sidebar.php'; ?>
+            <?php include '../../includes/kb-sidebar.php'; ?>
             <main class="kb-main">
                 <div class="article-content">
                     <nav aria-label="breadcrumb">
