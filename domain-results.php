@@ -38,7 +38,7 @@ if (empty($searchedDomain)) {
         <div class="collapse navbar-collapse" id="kbNavbar">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/hostcanon/KB/knowledge-base.php">Knowledge Base Home</a>
+                    <a class="nav-link" href="index.php">Home Page</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/hostcanon/KB/faq.php">FAQ</a>
@@ -47,7 +47,7 @@ if (empty($searchedDomain)) {
                     <a class="nav-link" href="/hostcanon/contacts.php">Contact Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/hostcanon/index.php">Back to Main Site</a>
+                    <a class="nav-link" href="domain.php">Back to Domain Page</a>
                 </li>
             </ul>
         </div>
@@ -95,7 +95,7 @@ if (empty($searchedDomain)) {
             <div class="domain-cta">
                 <h3>Need help choosing the right domain?</h3>
                 <p>Our domain experts are ready to assist you.</p>
-                <a href="contact.php" class="contact-btn">Contact Support</a>
+                <a href="contacts.php" class="contact-btn">Contact Support</a>
             </div>
         </div>
     </section>

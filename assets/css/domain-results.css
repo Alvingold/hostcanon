@@ -210,7 +210,7 @@ body {
     border: 5px solid rgba(75, 0, 130, 0.2);
     border-top: 5px solid #4B0082;
     border-radius: 50%;
-    border-left-color: #0d6efd;
+    border-left-color: #4B0082;
     animation: spin 1s linear infinite;
     margin-bottom: 15px;
 }
@@ -325,8 +325,8 @@ body {
 
 .whois-btn {
     background-color: transparent;
-    color: #0d6efd;
-    border: 1px solid #0d6efd;
+    color: #4B0082;
+    border: 1px solid #4B0082;
 }
 
 .whois-btn:hover {
@@ -334,13 +334,21 @@ body {
 }
 
 .make-offer-btn {
-    background-color: #0d6efd;
-    color: white;
+    background: linear-gradient(to right, #4B0082, #8B008B);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 28px;
     border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .make-offer-btn:hover {
-    background-color: #0b5ed7;
+    background-color: #8B008B;
 }
 
 .retry-btn {
@@ -422,7 +430,7 @@ body {
 
 .alt-domain-price {
     font-weight: 500;
-    color: #0d6efd;
+    color: #0D6EFD;;
 }
 
 /* Domain CTA */
@@ -440,7 +448,7 @@ body {
 
 .contact-btn {
     display: inline-block;
-    background-color: #0d6efd;
+    background-color: #4B0082;
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -451,7 +459,7 @@ body {
 }
 
 .contact-btn:hover {
-    background-color: #0b5ed7;
+    background-color: #8B008B;
 }
 
 /* Error Message */
