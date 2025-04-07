@@ -17,6 +17,7 @@ $prefix = $isInSubdir ? '../' : '';
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
 
+
     /* Logo */
     .navbar-brand img {
         height: 50px;
@@ -53,186 +54,6 @@ $prefix = $isInSubdir ? '../' : '';
         transition: width 0.3s ease;
     }
 
-    /* User Actions Section */
-    .user-actions {
-        display: flex;
-        align-items: center;
-        margin-left: 1.5rem;
-    }
-
-    /* Search Button */
-    .search-btn {
-        background: transparent;
-        border: none;
-        color: white;
-        padding: 0.5rem;
-        margin-right: 1rem;
-        transition: all 0.3s ease;
-    }
-
-    .search-btn:hover {
-        color: orange;
-        transform: scale(1.1);
-    }
-
-    /* Cart Button */
-    .cart-btn {
-        position: relative;
-        background: transparent;
-        border: none;
-        color: white;
-        padding: 0.5rem;
-        margin-right: 1rem;
-        transition: all 0.3s ease;
-    }
-
-    .cart-btn:hover {
-        color: orange;
-        transform: scale(1.1);
-    }
-
-    .cart-badge {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        background: orange;
-        color: #4B0082;
-        border-radius: 50%;
-        width: 18px;
-        height: 18px;
-        font-size: 0.7rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-    }
-
-    /* Auth Buttons */
-    .auth-btn {
-        color: white;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 50px;
-        padding: 0.5rem 1.2rem;
-        margin-left: 0.5rem;
-        transition: all 0.3s ease;
-        font-weight: 500;
-        font-size: 0.9rem;
-        text-decoration: none;
-    }
-
-    .auth-btn:hover {
-        background: orange;
-        color: #4B0082;
-        border-color: orange;
-        transform: translateY(-2px);
-    }
-
-    .auth-btn.signup {
-        background: orange;
-        color: #4B0082;
-        border-color: orange;
-    }
-
-    .auth-btn.signup:hover {
-        background: #ffb733;
-    }
-
-    /* Search Modal */
-    .search-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(75, 0, 130, 0.98);
-        z-index: 2000;
-        display: none;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .search-modal.show {
-        display: flex;
-        opacity: 1;
-    }
-
-    .search-modal-content {
-        width: 80%;
-        max-width: 800px;
-        margin: auto;
-    }
-
-    .search-modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2rem;
-    }
-
-    .search-modal-header h3 {
-        color: white;
-        margin: 0;
-    }
-
-    .search-modal-close {
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .search-modal-close:hover {
-        color: orange;
-        transform: rotate(90deg);
-    }
-
-    .search-form {
-        position: relative;
-    }
-
-    .search-input {
-        width: 100%;
-        padding: 1rem 1.5rem;
-        border: none;
-        border-radius: 50px;
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .search-input:focus {
-        outline: none;
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
-        border-color: rgba(255, 165, 0, 0.5);
-    }
-
-    .search-submit {
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        border: none;
-        background: orange;
-        color: #4B0082;
-        border-radius: 50px;
-        width: 45px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-    }
-
-    .search-submit:hover {
-        background: #ffb733;
-        transform: scale(1.05);
-    }
-
     /* Dropdown Styles */
     @media (min-width: 992px) {
         .navbar .nav-item.dropdown {
@@ -256,6 +77,10 @@ $prefix = $isInSubdir ? '../' : '';
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             pointer-events: none;
             margin-top: 15px !important;
+            max-height: 80vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 165, 0, 0.5) rgba(75, 0, 130, 0.1);
         }
 
         .navbar .dropdown:hover .dropdown-menu,
@@ -288,6 +113,25 @@ $prefix = $isInSubdir ? '../' : '';
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar-track {
+            background: rgba(75, 0, 130, 0.1);
+            border-radius: 4px;
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 165, 0, 0.5);
+            border-radius: 4px;
+            border: 2px solid rgba(75, 0, 130, 0.1);
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 165, 0, 0.7);
         }
 
         .navbar .dropdown-menu .menu-grid {
@@ -363,20 +207,26 @@ $prefix = $isInSubdir ? '../' : '';
             max-height: calc(100vh - 100px);
             overflow-y: auto;
             scrollbar-width: thin;
-            scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+            scrollbar-color: rgba(255, 165, 0, 0.5) rgba(75, 0, 130, 0.1);
         }
 
         .navbar-collapse::-webkit-scrollbar {
-            width: 5px;
+            width: 8px;
         }
 
         .navbar-collapse::-webkit-scrollbar-track {
-            background: transparent;
+            background: rgba(75, 0, 130, 0.1);
+            border-radius: 4px;
         }
 
         .navbar-collapse::-webkit-scrollbar-thumb {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
+            background-color: rgba(255, 165, 0, 0.5);
+            border-radius: 4px;
+            border: 2px solid rgba(75, 0, 130, 0.1);
+        }
+
+        .navbar-collapse::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 165, 0, 0.7);
         }
 
         .navbar .dropdown-menu {
@@ -445,35 +295,6 @@ $prefix = $isInSubdir ? '../' : '';
 
         .navbar .dropdown-item small {
             display: none;
-        }
-
-        /* Mobile User Actions */
-        .user-actions {
-            display: flex;
-            flex-direction: column;
-            margin: 1rem 0 0;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .user-actions .auth-btns {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 1rem;
-            width: 100%;
-        }
-
-        .user-actions .auth-btn {
-            flex: 1;
-            text-align: center;
-            margin-left: 0;
-        }
-
-        .search-btn, .cart-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 0.5rem;
-            margin: 0 0.5rem 0 0;
         }
     }
 
@@ -727,47 +548,9 @@ $prefix = $isInSubdir ? '../' : '';
                     </ul>
                 </li>
             </ul>
-            
-            <!-- New User Actions Section -->
-            <div class="user-actions">
-                <!-- Search Button -->
-                <button type="button" class="search-btn" id="searchBtn">
-                    <i class="bi bi-search"></i>
-                </button>
-                
-                <!-- Cart Button -->
-                <a href="<?php echo $prefix; ?>cart.php" class="cart-btn">
-                    <i class="bi bi-cart"></i>
-                    <span class="cart-badge">0</span>
-                </a>
-                
-                <!-- Auth Buttons -->
-                <div class="auth-btns">
-                    <a href="<?php echo $prefix; ?>login.php" class="auth-btn login">Login</a>
-                    <a href="<?php echo $prefix; ?>signup.php" class="auth-btn signup">Sign Up</a>
-                </div>
-            </div>
         </div>
     </div>
 </nav>
-
-<!-- Search Modal -->
-<div class="search-modal" id="searchModal">
-    <div class="search-modal-content">
-        <div class="search-modal-header">
-            <h3>Search Our Website</h3>
-            <button type="button" class="search-modal-close" id="searchClose">
-                <i class="bi bi-x-lg"></i>
-            </button>
-        </div>
-        <form class="search-form">
-            <input type="text" class="search-input" placeholder="What are you looking for?">
-            <button type="submit" class="search-submit">
-                <i class="bi bi-search"></i>
-            </button>
-        </form>
-    </div>
-</div>
 
 <script>
     // Scroll handler
@@ -822,37 +605,5 @@ $prefix = $isInSubdir ? '../' : '';
                 });
             }
         });
-
-        // Search Modal Functionality
-        const searchBtn = document.getElementById('searchBtn');
-        const searchModal = document.getElementById('searchModal');
-        const searchClose = document.getElementById('searchClose');
-
-        if (searchBtn && searchModal && searchClose) {
-            searchBtn.addEventListener('click', function() {
-                searchModal.classList.add('show');
-                setTimeout(() => {
-                    document.querySelector('.search-input').focus();
-                }, 300);
-            });
-
-            searchClose.addEventListener('click', function() {
-                searchModal.classList.remove('show');
-            });
-
-            // Close search modal when clicking outside
-            searchModal.addEventListener('click', function(e) {
-                if (e.target === searchModal) {
-                    searchModal.classList.remove('show');
-                }
-            });
-
-            // Close search modal with escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && searchModal.classList.contains('show')) {
-                    searchModal.classList.remove('show');
-                }
-            });
-        }
     });
 </script>
