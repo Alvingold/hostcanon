@@ -592,7 +592,7 @@
                 
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="support-image">
-                        <img src="assets/media/pattern.webp" alt="24/7 Support Team">
+                        <img src="assets/media/pattern.webp" alt="24/7 Support Team" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -605,16 +605,5 @@
     
     <!-- Contact Buttons -->
     <?php include 'assets/includes/contact-btn.php'; ?>
-
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JS -->
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-
-    </script>
 </body>
 </html>

@@ -1,3 +1,10 @@
+<?php
+// Calculate relative path to KB root
+$currentPath = $_SERVER['PHP_SELF'];
+$kbRoot = '/hostcanon/KB/';
+$depth = substr_count(str_replace($kbRoot, '', $currentPath), '/');
+$prefix = str_repeat('../', $depth);
+?>
 <style>
     /* KB Navigation Styles */
 .kb-navbar {
@@ -100,8 +107,8 @@
 </style>
 <nav class="kb-navbar navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="/hostcanon/index.php">
-            <img src="/hostcanon/assets/media/afriportal.png" alt="Afriportal Logo" height="40">
+        <a class="navbar-brand" href="<?php echo $prefix; ?>../index.php">
+            <img src="<?php echo $prefix; ?>../assets/media/afriportal.png" alt="Afriportal Logo" height="40">
         </a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kbNavbar">
             <span class="toggler-icon top-bar"></span>
@@ -111,16 +118,16 @@
         <div class="collapse navbar-collapse" id="kbNavbar">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/hostcanon/KB/knowledge-base.php">Knowledge Base Home</a>
+                    <a class="nav-link" href="<?php echo $prefix; ?>knowledge-base.php">Knowledge Base Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/hostcanon/KB/faq.php">FAQ</a>
+                    <a class="nav-link" href="<?php echo $prefix; ?>faq.php">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/hostcanon/contacts.php">Contact Support</a>
+                    <a class="nav-link" href="<?php echo $prefix; ?>../contacts.php">Contact Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/hostcanon/index.php">Back to Main Site</a>
+                    <a class="nav-link" href="<?php echo $prefix; ?>../index.php">Back to Main Site</a>
                 </li>
             </ul>
         </div>

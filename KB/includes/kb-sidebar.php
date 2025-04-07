@@ -17,7 +17,7 @@
             </a>
             <div class="collapse" id="domainCollapse">
                 <ul class="sub-nav">
-                    <li><a href="/hostcanon/knowledge-base/articles/domain/registration.php">Domain Registration</a></li>
+                    <li><a href="../articles/domain/registration.php">Domain Registration</a></li>
                 </ul>
             </div>
         </li>
@@ -27,9 +27,9 @@
             </a>
             <div class="collapse" id="vpsCollapse">
                 <ul class="sub-nav">
-                    <li><a href="articles/vps/management.php">VPS Management</a></li>
-                    <li><a href="articles/vps/backup.php">Backups</a></li>
-                    <li><a href="articles/vps/security.php">Security</a></li>
+                    <li><a href="../articles/vps/management.php">VPS Management</a></li>
+                    <li><a href="../articles/vps/backup.php">Backups</a></li>
+                    <li><a href="../articles/vps/security.php">Security</a></li>
                 </ul>
             </div>
         </li>

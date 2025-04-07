@@ -77,6 +77,10 @@ $prefix = $isInSubdir ? '../' : '';
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             pointer-events: none;
             margin-top: 15px !important;
+            max-height: 80vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 165, 0, 0.5) rgba(75, 0, 130, 0.1);
         }
 
         .navbar .dropdown:hover .dropdown-menu,
@@ -109,6 +113,25 @@ $prefix = $isInSubdir ? '../' : '';
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar-track {
+            background: rgba(75, 0, 130, 0.1);
+            border-radius: 4px;
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 165, 0, 0.5);
+            border-radius: 4px;
+            border: 2px solid rgba(75, 0, 130, 0.1);
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 165, 0, 0.7);
         }
 
         .navbar .dropdown-menu .menu-grid {
@@ -184,20 +207,26 @@ $prefix = $isInSubdir ? '../' : '';
             max-height: calc(100vh - 100px);
             overflow-y: auto;
             scrollbar-width: thin;
-            scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+            scrollbar-color: rgba(255, 165, 0, 0.5) rgba(75, 0, 130, 0.1);
         }
 
         .navbar-collapse::-webkit-scrollbar {
-            width: 5px;
+            width: 8px;
         }
 
         .navbar-collapse::-webkit-scrollbar-track {
-            background: transparent;
+            background: rgba(75, 0, 130, 0.1);
+            border-radius: 4px;
         }
 
         .navbar-collapse::-webkit-scrollbar-thumb {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
+            background-color: rgba(255, 165, 0, 0.5);
+            border-radius: 4px;
+            border: 2px solid rgba(75, 0, 130, 0.1);
+        }
+
+        .navbar-collapse::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 165, 0, 0.7);
         }
 
         .navbar .dropdown-menu {
