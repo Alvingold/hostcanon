@@ -32,7 +32,7 @@
 </head>
 <body class="home-page loading">
     <?php include 'assets/includes/preloader.php';
-    include 'assets/includes/jav-bar.php'; ?>
+    include 'assets/includes/nav-bar.php'; ?>
 
     <!-- Hero Section -->
     <section class="hero position-relative overflow-hidden">
