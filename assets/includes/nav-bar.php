@@ -61,7 +61,7 @@ $prefix = $isInSubdir ? '../' : '';
     }
 
     /* Search Button */
-    .search-btn {
+    .search-btns {
         background: transparent;
         border: none;
         color: white;
@@ -70,11 +70,7 @@ $prefix = $isInSubdir ? '../' : '';
         transition: all 0.3s ease;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
-    .search-btn:hover {
+    .search-btns:hover {
         color: orange;
     }
 
@@ -120,11 +116,7 @@ $prefix = $isInSubdir ? '../' : '';
         transition: all 0.3s ease;
         font-weight: 500;
         font-size: 0.9rem;
-<<<<<<< HEAD
         text-decoration: none;
-=======
-        text-decoration: none;;
->>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
     }
 
     .auth-btn:hover {
@@ -199,7 +191,7 @@ $prefix = $isInSubdir ? '../' : '';
         position: relative;
     }
 
-    .search-input {
+    .search-inputs {
         width: 100%;
         padding: 1rem 1.5rem;
         border: none;
@@ -211,7 +203,7 @@ $prefix = $isInSubdir ? '../' : '';
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .search-input:focus {
+    .search-inputs:focus {
         outline: none;
         background: rgba(255, 255, 255, 0.15);
         box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
@@ -453,12 +445,8 @@ $prefix = $isInSubdir ? '../' : '';
             display: none;
         }
 
-<<<<<<< HEAD
-        /* Mobile User Actions */
-=======
 
         /* Improved Mobile User Actions */
->>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
         .user-actions {
             display: flex;
             flex-direction: row;
@@ -480,7 +468,7 @@ $prefix = $isInSubdir ? '../' : '';
                 margin-left: 0;
             }
 
-            .search-btn,
+            .search-btns,
             .cart-btn {
                 background: rgba(255, 255, 255, 0.05);
                 border-radius: 8px;
@@ -499,20 +487,9 @@ $prefix = $isInSubdir ? '../' : '';
             gap: 0.5rem;
         }
 
-<<<<<<< HEAD
-        .user-actions .auth-btn {
-            flex: 1;
-            text-align: center;
-            margin-left: 0;
-        }
-
-        .search-btns, .cart-btn {
-            background: rgba(255, 255, 255, 0.05);
-=======
-        .search-btns,
+        .search-btnss,
         .cart-btn {
             background: rgba(255, 255, 255, 0.1);
->>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
             border-radius: 8px;
             padding: 0.7rem;
             margin-right: 0.5rem;
@@ -520,10 +497,6 @@ $prefix = $isInSubdir ? '../' : '';
             align-items: center;
             justify-content: center;
         }
-<<<<<<< HEAD
-    }
-=======
->>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
 
         .auth-btn {
             padding: 0.6rem 1rem;
@@ -791,7 +764,7 @@ $prefix = $isInSubdir ? '../' : '';
             <!-- New User Actions Section -->
             <div class="user-actions">
                 <!-- Search Button -->
-                <button type="button" class="search-btn" id="searchBtn">
+                <button type="button" class="search-btns" id="searchBtn">
                     <i class="bi bi-search"></i>
                 </button>
 
@@ -820,7 +793,7 @@ $prefix = $isInSubdir ? '../' : '';
             </button>
         </div>
         <form class="search-form">
-            <input type="text" class="search-input" placeholder="What are you looking for?">
+            <input type="text" class="search-inputs" placeholder="What are you looking for?">
             <button type="submit" class="search-submit">
                 <i class="bi bi-search"></i>
             </button>
@@ -891,7 +864,7 @@ $prefix = $isInSubdir ? '../' : '';
             searchBtn.addEventListener('click', function() {
                 searchModal.classList.add('show');
                 setTimeout(() => {
-                    document.querySelector('.search-input').focus();
+                    document.querySelector('.search-inputs').focus();
                 }, 300);
             });
 

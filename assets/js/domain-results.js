@@ -1,42 +1,22 @@
-// domain-results.js - Improved domain availability checker
+// domain-results.js - Domain availability checker using free RDAP API
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get domain from URL parameter
     const urlParams = new URLSearchParams(window.location.search);
     const domain = urlParams.get('domain');
     
-    // Cache for domain results to avoid duplicate API calls
-    const domainCache = {};
-    
-    // API request queue to handle rate limiting
-    const requestQueue = [];
-    const MAX_CONCURRENT_REQUESTS = 5;
-    let activeRequests = 0;
-    
-    // Get UI elements
-    const loadingIndicator = document.getElementById('loading-indicator');
-    const mainDomainResult = document.getElementById('main-domain-result');
-    const alternativeDomains = document.getElementById('alternative-domains');
-    const availableDomains = document.getElementById('available-domains');
-    const searchInput = document.getElementById('results-search-input');
-    const searchButton = document.getElementById('results-search-btn');
-    
-    // Create available domains section if it doesn't exist
-    if (!availableDomains) {
-        const availableSection = document.createElement('div');
-        availableSection.id = 'available-domains';
-        availableSection.innerHTML = `
-            <h2>Available Domains</h2>
-            <div class="available-domains-grid"></div>
-        `;
-        alternativeDomains.parentNode.insertBefore(availableSection, alternativeDomains.nextSibling);
-    }
-    
     // Ensure domain has proper format (add .com if no TLD specified)
     let formattedDomain = domain;
     if (domain && !domain.includes('.')) {
         formattedDomain = domain + '.com';
     }
+    
+    // Get UI elements
+    const loadingIndicator = document.getElementById('loading-indicator');
+    const mainDomainResult = document.getElementById('main-domain-result');
+    const alternativeDomains = document.getElementById('alternative-domains');
+    const searchInput = document.getElementById('results-search-input');
+    const searchButton = document.getElementById('results-search-btn');
     
     // Set the search input value to the current domain
     if (formattedDomain) {
@@ -83,35 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingIndicator.style.display = 'none';
     }
     
-    // Queue management for API requests
-    function queueRequest(callback) {
-        requestQueue.push(callback);
-        processQueue();
-    }
-    
-    function processQueue() {
-        if (requestQueue.length === 0 || activeRequests >= MAX_CONCURRENT_REQUESTS) {
-            return;
-        }
-        
-        activeRequests++;
-        const nextRequest = requestQueue.shift();
-        
-        nextRequest().finally(() => {
-            activeRequests--;
-            setTimeout(processQueue, 100); // Small delay between requests
-        });
-    }
-    
     // Function to check domain availability using RDAP API
     function checkDomainAvailability(domain) {
-        // If already in cache, use cached result
-        if (domainCache[domain]) {
-            console.log(`Using cached result for ${domain}: ${domainCache[domain].available ? 'Available' : 'Not Available'}`);
-            displayDomainResult(domain, domainCache[domain]);
-            return Promise.resolve(domainCache[domain]);
-        }
-        
         // Show loading indicator
         loadingIndicator.style.display = 'flex';
         
@@ -157,141 +110,99 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log(`Checking availability for domain: ${domain}`);
         
-        return new Promise((resolve, reject) => {
-            queueRequest(() => {
-                return fetch(`https://rdap.org/domain/${domain}`)
-                    .then(response => {
-                        console.log(`RDAP response status for ${domain}: ${response.status}`);
-                        
-                        // Explicitly handle 404 as available
-                        if (response.status === 404) {
-                            console.log(`Domain ${domain} is available (404 response)`);
-                            return { available: true };
-                        } else if (response.ok) {
-                            console.log(`Domain ${domain} exists (response OK)`);
-                            return response.json().then(data => {
-                                return { available: false, data: data };
-                            });
-                        } else {
-                            console.log(`Error checking ${domain}: ${response.status}`);
-                            throw new Error(`HTTP Error: ${response.status}`);
-                        }
-                    })
-                    .then(data => {
-                        console.log(`Processing availability data for ${domain}: ${data.available ? 'Available' : 'Not Available'}`);
-                        const result = { 
-                            available: data.available, 
-                            price: price 
-                        };
-                        
-                        // Cache the result
-                        domainCache[domain] = result;
-                        
-                        // Display result if this is the main domain
-                        if (domain === formattedDomain) {
-                            displayDomainResult(domain, result);
-                            loadingIndicator.style.display = 'none';
-                        }
-                        
-                        // Add to available domains list if available
-                        if (data.available) {
-                            addToAvailableDomains(domain, result);
-                        }
-                        
-                        resolve(result);
-                        return result;
-                    })
-                    .catch(error => {
-                        console.error('Error checking domain availability:', error);
-                        // If there's a specific error, try DNS lookup as fallback
-                        return fallbackDnsCheck(domain).then(resolve).catch(reject);
+        // Use the free RDAP API to check domain status
+        fetch(`https://rdap.org/domain/${domain}`)
+            .then(response => {
+                console.log(`RDAP response status for ${domain}: ${response.status}`);
+                
+                // Explicitly handle 404 as available
+                if (response.status === 404) {
+                    console.log(`Domain ${domain} is available (404 response)`);
+                    return { available: true };
+                } else if (response.ok) {
+                    console.log(`Domain ${domain} exists (response OK)`);
+                    return response.json().then(data => {
+                        return { available: false, data: data };
                     });
+                } else {
+                    console.log(`Error checking ${domain}: ${response.status}`);
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
+            })
+            .then(data => {
+                console.log(`Processing availability data for ${domain}: ${data.available ? 'Available' : 'Not Available'}`);
+                displayDomainResult(domain, { 
+                    available: data.available, 
+                    price: price 
+                });
+                loadingIndicator.style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Error checking domain availability:', error);
+                // If there's a specific error, try DNS lookup as fallback
+                fallbackDnsCheck(domain);
             });
-        });
     }
     
     // Fallback DNS lookup when RDAP fails
     function fallbackDnsCheck(domain) {
         console.log(`Using fallback DNS check for domain: ${domain}`);
         
-        return new Promise((resolve, reject) => {
-            queueRequest(() => {
-                return fetch(`https://dns.google/resolve?name=${domain}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        // If we get any records, domain exists
-                        const isAvailable = !data.Answer || data.Answer.length === 0;
-                        const tld = domain.split('.').pop();
-                        
-                        // Use the expanded TLD pricing for fallback too
-                        const tldPrices = {
-                            'com': 12.99,
-                            'net': 11.99,
-                            'org': 10.99,
-                            'io': 39.99,
-                            'co': 24.99,
-                            'app': 15.99,
-                            'dev': 14.99,
-                            'ai': 69.99,
-                            'me': 19.99,
-                            'tech': 39.99,
-                            'store': 49.99,
-                            'online': 29.99,
-                            'site': 24.99,
-                            'xyz': 9.99,
-                            'info': 12.99,
-                            'biz': 16.99,
-                            'blog': 17.99,
-                            'design': 45.99,
-                            'shop': 29.99,
-                            'club': 9.99,
-                            'us': 8.99,
-                            'uk': 9.99,
-                            'ca': 12.99,
-                            'au': 12.99,
-                            'email': 19.99,
-                            'live': 19.99,
-                            'agency': 24.99,
-                            'cloud': 19.99,
-                            'digital': 29.99,
-                            'media': 24.99
-                        };
-                        const price = tldPrices[tld] || 9.99;
-                        
-                        console.log(`Fallback DNS check for ${domain}: ${isAvailable ? 'Available' : 'Not Available'}`);
-                        
-                        const result = { 
-                            available: isAvailable, 
-                            price: price 
-                        };
-                        
-                        // Cache the result
-                        domainCache[domain] = result;
-                        
-                        // Display result if this is the main domain
-                        if (domain === formattedDomain) {
-                            displayDomainResult(domain, result);
-                            loadingIndicator.style.display = 'none';
-                        }
-                        
-                        // Add to available domains list if available
-                        if (isAvailable) {
-                            addToAvailableDomains(domain, result);
-                        }
-                        
-                        resolve(result);
-                        return result;
-                    })
-                    .catch(error => {
-                        console.error('Error in fallback DNS check:', error);
-                        if (domain === formattedDomain) {
-                            displayErrorResult(domain);
-                            loadingIndicator.style.display = 'none';
-                        }
-                        reject(error);
-                    });
+        fetch(`https://dns.google/resolve?name=${domain}`)
+            .then(response => response.json())
+            .then(data => {
+                // If we get any records, domain exists
+                const isAvailable = !data.Answer || data.Answer.length === 0;
+                const tld = domain.split('.').pop();
+                
+                // Use the expanded TLD pricing for fallback too
+                const tldPrices = {
+                    'com': 12.99,
+                    'net': 11.99,
+                    'org': 10.99,
+                    'io': 39.99,
+                    'co': 24.99,
+                    'app': 15.99,
+                    'dev': 14.99,
+                    'ai': 69.99,
+                    'me': 19.99,
+                    'tech': 39.99,
+                    'store': 49.99,
+                    'online': 29.99,
+                    'site': 24.99,
+                    'xyz': 9.99,
+                    'info': 12.99,
+                    'biz': 16.99,
+                    'blog': 17.99,
+                    'design': 45.99,
+                    'shop': 29.99,
+                    'club': 9.99,
+                    'us': 8.99,
+                    'uk': 9.99,
+                    'ca': 12.99,
+                    'au': 12.99,
+                    'email': 19.99,
+                    'live': 19.99,
+                    'agency': 24.99,
+                    'cloud': 19.99,
+                    'digital': 29.99,
+                    'media': 24.99
+                };
+                const price = tldPrices[tld] || 9.99;
+                
+                console.log(`Fallback DNS check for ${domain}: ${isAvailable ? 'Available' : 'Not Available'}`);
+                
+                displayDomainResult(domain, { 
+                    available: isAvailable, 
+                    price: price 
+                });
+                loadingIndicator.style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Error in fallback DNS check:', error);
+                displayErrorResult(domain);
+                loadingIndicator.style.display = 'none';
             });
-        });
     }
     
     // Function to display domain availability result
@@ -366,38 +277,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Function to add a domain to the available domains section
-    function addToAvailableDomains(domain, data) {
-        const availableGrid = document.querySelector('.available-domains-grid');
-        
-        // Create the domain card if it doesn't exist
-        if (!document.querySelector(`.available-domain-card[data-domain="${domain}"]`)) {
-            const domainCard = document.createElement('div');
-            domainCard.className = 'available-domain-card';
-            domainCard.setAttribute('data-domain', domain);
-            
-            domainCard.innerHTML = `
-                <div class="available-domain-name">${domain}</div>
-                <div class="available-domain-price">$${data.price}/yr</div>
-                <button class="available-add-to-cart-btn">Add to Cart</button>
-            `;
-            
-            availableGrid.appendChild(domainCard);
-            
-            // Add event listener to the add to cart button
-            const addToCartBtn = domainCard.querySelector('.available-add-to-cart-btn');
-            addToCartBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                addDomainToCart(domain, data.price);
-            });
-            
-            // Make entire card clickable to add to cart
-            domainCard.addEventListener('click', function() {
-                addDomainToCart(domain, data.price);
-            });
-        }
-    }
-    
     // Function to generate alternative domain suggestions
     function generateAlternatives(domain) {
         // Extract the domain name without TLD
@@ -434,70 +313,122 @@ document.addEventListener('DOMContentLoaded', function() {
             const altDomain = card.getAttribute('data-domain');
             checkAlternativeDomain(altDomain, card);
         });
-        
-        // Check for any manually entered domains
-        const manualDomainsInput = document.getElementById('manual-domains-input');
-        if (manualDomainsInput) {
-            const checkManualBtn = document.getElementById('check-manual-domains');
-            
-            checkManualBtn.addEventListener('click', function() {
-                const manualDomains = manualDomainsInput.value.split(',').map(d => d.trim()).filter(d => d);
-                
-                manualDomains.forEach(manualDomain => {
-                    // Ensure the domain has proper format
-                    let formattedManualDomain = manualDomain;
-                    if (!manualDomain.includes('.')) {
-                        formattedManualDomain = manualDomain + '.com';
-                    }
-                    
-                    // Check availability
-                    checkDomainAvailability(formattedManualDomain);
-                });
-            });
-        } else {
-            // Create manual domain input section
-            const manualSection = document.createElement('div');
-            manualSection.className = 'manual-domains-section';
-            manualSection.innerHTML = `
-                <h3>Check Additional Domains</h3>
-                <div class="manual-domains-form">
-                    <input type="text" id="manual-domains-input" placeholder="Enter domains separated by commas" class="form-control">
-                    <button id="check-manual-domains" class="btn btn-primary">Check</button>
-                </div>
-                <p class="manual-domains-help">Example: mydomain.co, mydomain.dev, custom-domain.com</p>
-            `;
-            
-            alternativeDomains.parentNode.insertBefore(manualSection, alternativeDomains.nextSibling);
-            
-            // Add event listener to the check button
-            const checkManualBtn = document.getElementById('check-manual-domains');
-            checkManualBtn.addEventListener('click', function() {
-                const manualDomainsInput = document.getElementById('manual-domains-input');
-                const manualDomains = manualDomainsInput.value.split(',').map(d => d.trim()).filter(d => d);
-                
-                manualDomains.forEach(manualDomain => {
-                    // Ensure the domain has proper format
-                    let formattedManualDomain = manualDomain;
-                    if (!manualDomain.includes('.')) {
-                        formattedManualDomain = manualDomain + '.com';
-                    }
-                    
-                    // Check availability
-                    checkDomainAvailability(formattedManualDomain);
-                });
-            });
-        }
     }
     
     // Function to check alternative domain availability
     function checkAlternativeDomain(domain, card) {
-        checkDomainAvailability(domain).then(data => {
-            updateAlternativeDomain(card, data);
-        }).catch(error => {
-            console.error(`Error processing alternative domain ${domain}:`, error);
-            card.querySelector('.alt-domain-status').textContent = 'Error';
-            card.classList.add('error');
-        });
+        // Use the same RDAP API for alternative domains
+        fetch(`https://rdap.org/domain/${domain}`)
+            .then(response => {
+                // Explicitly handle 404 as available
+                if (response.status === 404) {
+                    return { available: true };
+                } else if (response.ok) {
+                    return response.json().then(data => {
+                        return { available: false, data: data };
+                    });
+                } else {
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
+            })
+            .then(data => {
+                const tld = domain.split('.').pop();
+                
+                // Use expanded TLD pricing list
+                const tldPrices = {
+                    'com': 12.99,
+                    'net': 11.99,
+                    'org': 10.99,
+                    'io': 39.99,
+                    'co': 24.99,
+                    'app': 15.99,
+                    'dev': 14.99,
+                    'ai': 69.99,
+                    'me': 19.99,
+                    'tech': 39.99,
+                    'store': 49.99,
+                    'online': 29.99,
+                    'site': 24.99,
+                    'xyz': 9.99,
+                    'info': 12.99,
+                    'biz': 16.99,
+                    'blog': 17.99,
+                    'design': 45.99,
+                    'shop': 29.99,
+                    'club': 9.99,
+                    'us': 8.99,
+                    'uk': 9.99,
+                    'ca': 12.99,
+                    'au': 12.99,
+                    'email': 19.99,
+                    'live': 19.99,
+                    'agency': 24.99,
+                    'cloud': 19.99,
+                    'digital': 29.99,
+                    'media': 24.99
+                };
+                const price = tldPrices[tld] || 9.99;
+                
+                updateAlternativeDomain(card, {
+                    available: data.available,
+                    price: price
+                });
+            })
+            .catch(error => {
+                console.error(`Error checking alternative domain ${domain}:`, error);
+                // Try DNS lookup as fallback
+                fetch(`https://dns.google/resolve?name=${domain}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const isAvailable = !data.Answer || data.Answer.length === 0;
+                        const tld = domain.split('.').pop();
+                        
+                        // Use expanded TLD pricing here too
+                        const tldPrices = {
+                            'com': 12.99,
+                            'net': 11.99,
+                            'org': 10.99,
+                            'io': 39.99,
+                            'co': 24.99,
+                            'app': 15.99,
+                            'dev': 14.99,
+                            'ai': 69.99,
+                            'me': 19.99,
+                            'tech': 39.99,
+                            'store': 49.99,
+                            'online': 29.99,
+                            'site': 24.99,
+                            'xyz': 9.99,
+                            'info': 12.99,
+                            'biz': 16.99,
+                            'blog': 17.99,
+                            'design': 45.99,
+                            'shop': 29.99,
+                            'club': 9.99,
+                            'us': 8.99,
+                            'uk': 9.99,
+                            'ca': 12.99,
+                            'au': 12.99,
+                            'email': 19.99,
+                            'live': 19.99,
+                            'agency': 24.99,
+                            'cloud': 19.99,
+                            'digital': 29.99,
+                            'media': 24.99
+                        };
+                        const price = tldPrices[tld] || 9.99;
+                        
+                        updateAlternativeDomain(card, {
+                            available: isAvailable,
+                            price: price
+                        });
+                    })
+                    .catch(error => {
+                        console.error(`Error in fallback DNS check for ${domain}:`, error);
+                        card.querySelector('.alt-domain-status').textContent = 'Error';
+                        card.classList.add('error');
+                    });
+            });
     }
     
     // Function to update alternative domain card with result
@@ -545,8 +476,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             if (data.success) {
                 alert(`${domain} has been added to your cart!`);
-                // Update cart count in UI if needed
-                updateCartCounter();
             } else {
                 alert(`Failed to add ${domain} to cart: ${data.message}`);
             }
