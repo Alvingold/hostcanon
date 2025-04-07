@@ -61,11 +61,7 @@ $prefix = $isInSubdir ? '../' : '';
     }
 
     /* Search Button */
-<<<<<<< HEAD
-    .search-btns {
-=======
     .search-btn {
->>>>>>> 5004b581adbb9bf650fff02966d2d15cd754c541
         background: transparent;
         border: none;
         color: white;
@@ -74,11 +70,7 @@ $prefix = $isInSubdir ? '../' : '';
         transition: all 0.3s ease;
     }
 
-<<<<<<< HEAD
-    .search-btns:hover {
-=======
     .search-btn:hover {
->>>>>>> 5004b581adbb9bf650fff02966d2d15cd754c541
         color: orange;
         transform: scale(1.1);
     }
@@ -126,10 +118,7 @@ $prefix = $isInSubdir ? '../' : '';
         transition: all 0.3s ease;
         font-weight: 500;
         font-size: 0.9rem;
-<<<<<<< HEAD
-=======
         text-decoration: none;
->>>>>>> 5004b581adbb9bf650fff02966d2d15cd754c541
     }
 
     .auth-btn:hover {
@@ -458,17 +447,6 @@ $prefix = $isInSubdir ? '../' : '';
             display: none;
         }
 
-<<<<<<< HEAD
-        /* Improved Mobile User Actions */
-    .user-actions {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin: 1rem 0 0;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-=======
         /* Mobile User Actions */
         .user-actions {
             display: flex;
@@ -491,13 +469,12 @@ $prefix = $isInSubdir ? '../' : '';
             margin-left: 0;
         }
 
-        .search-btn, .cart-btn {
+        .search-btns, .cart-btn {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 0.5rem;
             margin: 0 0.5rem 0 0;
         }
->>>>>>> 5004b581adbb9bf650fff02966d2d15cd754c541
     }
 
     .user-actions .utility-btns {
@@ -786,11 +763,7 @@ $prefix = $isInSubdir ? '../' : '';
             <!-- New User Actions Section -->
             <div class="user-actions">
                 <!-- Search Button -->
-<<<<<<< HEAD
-                <button type="button" class="search-btns" id="searchBtn">
-=======
                 <button type="button" class="search-btn" id="searchBtn">
->>>>>>> 5004b581adbb9bf650fff02966d2d15cd754c541
                     <i class="bi bi-search"></i>
                 </button>
                 
