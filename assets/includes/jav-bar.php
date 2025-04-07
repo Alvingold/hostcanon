@@ -118,6 +118,7 @@ $prefix = $isInSubdir ? '../' : '';
         transition: all 0.3s ease;
         font-weight: 500;
         font-size: 0.9rem;
+        text-decoration: none;
     }
 
     .auth-btn:hover {
