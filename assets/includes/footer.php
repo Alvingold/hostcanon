@@ -1,3 +1,9 @@
+<?php
+// To Determine if we're in a subdirectory by checking if KB/ or get-started/ is in the current path
+$isInSubdir = (strpos($_SERVER['PHP_SELF'], '/KB/') !== false || strpos($_SERVER['PHP_SELF'], '/get-started/') !== false);
+$prefix = $isInSubdir ? '../' : '';
+?>
+
 <style>
     /* HostCanon Footer Styles - For Include Folder */
     .footer {
@@ -379,7 +385,7 @@
         <div class="footer-content">
             <div class="footer-column">
                 <div class="footer-logo">
-                    <img src="#" alt="HostCanon Logo">
+                    <img src="<?php echo $prefix; ?>assets/media/afriportal.png" alt="HostCanon Logo">
                     <!-- <h3>HostCanon</h3> -->
                 </div>
                 <p>Reliable web hosting solutions for businesses of all sizes. Fast, secure, and backed by 24/7 expert support.</p>
@@ -410,14 +416,14 @@
                     <span class="dropdown-icon"><i class="bi bi-chevron-down"></i></span>
                 </h4>
                 <ul class="footer-links">
-                    <li><a href="shared-hosting.php">Shared Hosting</a></li>
-                    <li><a href="vps-hosting.php">VPS Hosting</a></li>
-                    <li><a href="dedicated-servers.php">Dedicated Servers</a></li>
-                    <li><a href="wordpress-hosting.php">WordPress Hosting</a></li>
-                    <li><a href="reseller-hosting.php">Reseller Hosting</a></li>
-                    <li><a href="email-hosting.php">Email Hosting</a></li>
-                    <li><a href="website-checker.php">Website Checker</a></li>
-                    <li><a href="ecommerce-hosting.php">Ecommerce Hosting</a></li>
+                    <li><a href="<?php echo $prefix; ?>shared-hosting.php">Shared Hosting</a></li>
+                    <li><a href="<?php echo $prefix; ?>vps-hosting.php">VPS Hosting</a></li>
+                    <li><a href="<?php echo $prefix; ?>dedicated-servers.php">Dedicated Servers</a></li>
+                    <li><a href="<?php echo $prefix; ?>wordpress-hosting.php">WordPress Hosting</a></li>
+                    <li><a href="<?php echo $prefix; ?>reseller-hosting.php">Reseller Hosting</a></li>
+                    <li><a href="<?php echo $prefix; ?>email-hosting.php">Email Hosting</a></li>
+                    <li><a href="<?php echo $prefix; ?>website-checker.php">Website Checker</a></li>
+                    <li><a href="<?php echo $prefix; ?>ecommerce-hosting.php">Ecommerce Hosting</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -426,11 +432,11 @@
                     <span class="dropdown-icon"><i class="bi bi-chevron-down"></i></span>
                 </h4>
                 <ul class="footer-links">
-                    <li><a href="#">Domain Registration</a></li>
-                    <li><a href="#">Domain Transfer</a></li>
-                    <li><a href="#">Domain Backorder</a></li>
-                    <li><a href="website-checker.php">Website Checker</a></li>
-                    <li><a href="#">SSL Certificates</a></li>
+                    <li><a href="<?php echo $prefix; ?>domain.php">Domain Registration</a></li>
+                    <li><a href="<?php echo $prefix; ?>domain-transfer.php">Domain Transfer</a></li>
+                    <li><a href="<?php echo $prefix; ?>domain-backorder.php">Domain Backorder</a></li>
+                    <li><a href="<?php echo $prefix; ?>website-checker.php">Website Checker</a></li>
+                    <li><a href="<?php echo $prefix; ?>ssl-certificates.php">SSL Certificates</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -439,12 +445,12 @@
                     <span class="dropdown-icon"><i class="bi bi-chevron-down"></i></span>
                 </h4>
                 <ul class="footer-links">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Press Releases</a></li>
-                    <li><a href="contacts.php">Contact Us</a></li>
+                    <li><a href="<?php echo $prefix; ?>about.php">About Us</a></li>
+                    <li><a href="<?php echo $prefix; ?>team.php">Our Team</a></li>
+                    <li><a href="<?php echo $prefix; ?>careers.php">Careers</a></li>
+                    <li><a href="<?php echo $prefix; ?>blog.php">Blog</a></li>
+                    <li><a href="<?php echo $prefix; ?>press.php">Press Releases</a></li>
+                    <li><a href="<?php echo $prefix; ?>contacts.php">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -453,13 +459,13 @@
                     <span class="dropdown-icon"><i class="bi bi-chevron-down"></i></span>
                 </h4>
                 <ul class="footer-links">
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="knowledge-base/index.php">Knowledge Base</a></li>
-                    <li><a href="contacts.php">Contact Us</a></li>
-                    <li><a href="#">Submit a Ticket</a></li>
-                    <li><a href="#">Live Chat</a></li>
-                    <li><a href="server-support.php">Server Support</a></li>
-                    <li><a href="knowledge-base/faq.php">FAQ</a></li>
+                    <li><a href="<?php echo $prefix; ?>help.php">Help Center</a></li>
+                    <li><a href="<?php echo $prefix; ?>KB/knowledge-base.php">Knowledge Base</a></li>
+                    <li><a href="<?php echo $prefix; ?>contacts.php">Contact Us</a></li>
+                    <li><a href="<?php echo $prefix; ?>submit-ticket.php">Submit a Ticket</a></li>
+                    <li><a href="<?php echo $prefix; ?>live-chat.php">Live Chat</a></li>
+                    <li><a href="<?php echo $prefix; ?>server-support.php">Server Support</a></li>
+                    <li><a href="<?php echo $prefix; ?>KB/faq.php">FAQ</a></li>
                 </ul>
             </div>
         </div>

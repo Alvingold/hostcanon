@@ -1,6 +1,6 @@
 <?php
-//To  Determine if we're in a subdirectory by checking if KB/ is in the current path
-$isInSubdir = strpos($_SERVER['PHP_SELF'], '/KB/') !== false;
+//To  Determine if we're in a subdirectory by checking if KB/ or get-started/ is in the current path
+$isInSubdir = (strpos($_SERVER['PHP_SELF'], '/KB/') !== false || strpos($_SERVER['PHP_SELF'], '/get-started/') !== false);
 $prefix = $isInSubdir ? '../' : '';
 ?>
 
@@ -70,12 +70,14 @@ $prefix = $isInSubdir ? '../' : '';
         transition: all 0.3s ease;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
     .search-btn:hover {
         color: orange;
-        transform: scale(1.1);
     }
 
-    /* Cart Button */
     .cart-btn {
         position: relative;
         background: transparent;
@@ -118,7 +120,11 @@ $prefix = $isInSubdir ? '../' : '';
         transition: all 0.3s ease;
         font-weight: 500;
         font-size: 0.9rem;
+<<<<<<< HEAD
         text-decoration: none;
+=======
+        text-decoration: none;;
+>>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
     }
 
     .auth-btn:hover {
@@ -447,22 +453,53 @@ $prefix = $isInSubdir ? '../' : '';
             display: none;
         }
 
+<<<<<<< HEAD
         /* Mobile User Actions */
+=======
+
+        /* Improved Mobile User Actions */
+>>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
         .user-actions {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
             margin: 1rem 0 0;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            /* Mobile User Actions */
+            .user-actions .auth-btns {
+                display: flex;
+                gap: 0.5rem;
+                margin-top: 1rem;
+                width: 100%;
+            }
+
+            .user-actions .auth-btn {
+                flex: 1;
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .search-btn,
+            .cart-btn {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 8px;
+                padding: 0.5rem;
+                margin: 0 0.5rem 0 0;
+            }
+        }
+
+        .user-actions .utility-btns {
+            display: flex;
+            align-items: center;
         }
 
         .user-actions .auth-btns {
             display: flex;
             gap: 0.5rem;
-            margin-top: 1rem;
-            width: 100%;
         }
 
+<<<<<<< HEAD
         .user-actions .auth-btn {
             flex: 1;
             text-align: center;
@@ -471,42 +508,33 @@ $prefix = $isInSubdir ? '../' : '';
 
         .search-btns, .cart-btn {
             background: rgba(255, 255, 255, 0.05);
+=======
+        .search-btns,
+        .cart-btn {
+            background: rgba(255, 255, 255, 0.1);
+>>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
             border-radius: 8px;
-            padding: 0.5rem;
-            margin: 0 0.5rem 0 0;
+            padding: 0.7rem;
+            margin-right: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> d68964869c4dbceadb5b0688da4dd95e22bd5b83
+
+        .auth-btn {
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Improved navbar toggle */
+        .navbar-toggler {
+            margin-right: 0.5rem;
         }
     }
-
-    .user-actions .utility-btns {
-        display: flex;
-        align-items: center;
-    }
-
-    .user-actions .auth-btns {
-        display: flex;
-        gap: 0.5rem;
-    }
-
-    .search-btns, .cart-btn {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        padding: 0.7rem;
-        margin-right: 0.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .auth-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.85rem;
-    }
-
-    /* Improved navbar toggle */
-    .navbar-toggler {
-        margin-right: 0.5rem;
-    }
-}
 
 
     .navbar .container {
@@ -759,24 +787,23 @@ $prefix = $isInSubdir ? '../' : '';
                     </ul>
                 </li>
             </ul>
-            
+
             <!-- New User Actions Section -->
             <div class="user-actions">
                 <!-- Search Button -->
                 <button type="button" class="search-btn" id="searchBtn">
                     <i class="bi bi-search"></i>
                 </button>
-                
+
                 <!-- Cart Button -->
                 <a href="<?php echo $prefix; ?>cart.php" class="cart-btn">
                     <i class="bi bi-cart"></i>
                     <span class="cart-badge">0</span>
                 </a>
-                
+
                 <!-- Auth Buttons -->
                 <div class="auth-btns">
-                    <a href="<?php echo $prefix; ?>login.php" class="auth-btn login">Login</a>
-                    <a href="<?php echo $prefix; ?>signup.php" class="auth-btn signup">Sign Up</a>
+                    <a href="<?php echo $prefix; ?>get-started/form.php" class="auth-btn signup">Get Started</a>
                 </div>
             </div>
         </div>
