@@ -524,6 +524,79 @@ $prefix = $isInSubdir ? '../' : '';
         display: none !important;
     }
 
+
+    /* Cart Modal */
+
+    .cart-modal {
+        background: rgba(75, 0, 130, 0.98);
+    }
+
+    .cart-modal .modal-content {
+        background: transparent;
+        border: none;
+    }
+
+    .cart-modal .modal-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+    }
+
+    .cart-modal .modal-title {
+        color: white;
+        font-weight: 600;
+    }
+
+    .cart-modal .btn-close {
+        color: white;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+    }
+
+    .cart-modal .btn-close:hover {
+        opacity: 1;
+        transform: rotate(90deg);
+    }
+
+    .cart-modal .modal-body {
+        padding: 2rem 1.5rem;
+        color: white;
+    }
+
+    .cart-modal .empty-cart {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .cart-modal .empty-cart i {
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: 1rem;
+    }
+
+    .cart-modal .empty-cart p {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1.5rem;
+    }
+
+    .cart-modal .modal-footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+    }
+
+    .cart-modal .checkout-btn {
+        background: orange;
+        color: #4B0082;
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .cart-modal .checkout-btn:hover {
+        background: #ffb733;
+        transform: translateY(-2px);
+    }
     @media (min-width: 992px) {
         .navbar .dropdown-menu {
             position: absolute;
@@ -761,7 +834,7 @@ $prefix = $isInSubdir ? '../' : '';
                 </li>
             </ul>
 
-            <!-- New User Actions Section -->
+            <!-- User Actions Section -->
             <div class="user-actions">
                 <!-- Search Button -->
                 <button type="button" class="search-btns" id="searchBtn">
@@ -769,10 +842,10 @@ $prefix = $isInSubdir ? '../' : '';
                 </button>
 
                 <!-- Cart Button -->
-                <a href="<?php echo $prefix; ?>cart.php" class="cart-btn">
+                <button type="button" class="cart-btn" id="cartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">
                     <i class="bi bi-cart"></i>
                     <span class="cart-badge">0</span>
-                </a>
+                </button>
 
                 <!-- Auth Buttons -->
                 <div class="auth-btns">
@@ -798,6 +871,27 @@ $prefix = $isInSubdir ? '../' : '';
                 <i class="bi bi-search"></i>
             </button>
         </form>
+    </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal fade cart-modal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="empty-cart">
+                    <i class="bi bi-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="checkout-btn" disabled>Proceed to Checkout</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -886,5 +980,32 @@ $prefix = $isInSubdir ? '../' : '';
                 }
             });
         }
+    });
+
+
+    // Cart Modal Functionality
+    const cartBtn = document.querySelector('.cart-btn');
+    const cartBadge = document.querySelector('.cart-badge');
+
+    // Update cart count (example)
+    function updateCartCount(count) {
+        cartBadge.textContent = count;
+        if (count > 0) {
+            cartBadge.style.display = 'flex';
+        } else {
+            cartBadge.style.display = 'none';
+        }
+    }
+
+    // Initialize cart count to 0
+    updateCartCount(0);
+
+    // Add click animation to cart button
+    cartBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = 'scale(1)';
+        }, 100);
     });
 </script>

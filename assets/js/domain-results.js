@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Get domain parts
         const domainParts = domain.split('.');
         const tld = domainParts.pop();
-        const domainName = domainParts.join('.');
         
         // Enhanced TLD pricing list with more options
         const tldPrices = {
@@ -141,8 +140,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Error checking domain availability:', error);
                 // If there's a specific error, try DNS lookup as fallback
                 fallbackDnsCheck(domain);
-            });
-    }
+                });
+        }
+    
+        // Function to update alternative domain card with availability and price
+        function updateAlternativeDomain(card, data) {
+            const statusElement = card.querySelector('.alt-domain-status');
+            const priceElement = card.querySelector('.alt-domain-price');
+            
+            if (data.available) {
+                statusElement.textContent = 'Available';
+                priceElement.textContent = `$${data.price}/year`;
+                card.classList.add('available');
+            } else {
+                statusElement.textContent = 'Unavailable';
+                card.classList.add('unavailable');
+            }
+        }
+    });
     
     // Fallback DNS lookup when RDAP fails
     function fallbackDnsCheck(domain) {
@@ -430,60 +445,45 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
             });
     }
-    
-    // Function to update alternative domain card with result
-    function updateAlternativeDomain(card, data) {
-        const statusElement = card.querySelector('.alt-domain-status');
-        const priceElement = card.querySelector('.alt-domain-price');
-        
-        if (data.available) {
-            statusElement.textContent = 'Available';
-            priceElement.textContent = `$${data.price || '9.99'}/yr`;
-            card.classList.add('available');
-            
-            // Add click event to add to cart
-            card.addEventListener('click', function() {
-                const domain = this.getAttribute('data-domain');
-                const price = data.price || '9.99';
-                addDomainToCart(domain, price);
-            });
-        } else {
-            statusElement.textContent = 'Taken';
-            card.classList.add('unavailable');
-        }
-    }
-    
     // Function to add domain to cart
-    function addDomainToCart(domain, price) {
-        // You'll need to implement this based on your cart system
-        // This is a simplified example
-        alert(`Domain ${domain} added to cart at $${price}/year`);
-        
-        // If you have a cart API endpoint:
-        /*
-        fetch('add-to-cart.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                domain: domain,
-                price: price,
-                type: 'domain'
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(`${domain} has been added to your cart!`);
-            } else {
-                alert(`Failed to add ${domain} to cart: ${data.message}`);
-            }
-        })
-        .catch(error => {
-            console.error('Error adding to cart:', error);
-            alert(`Error adding ${domain} to cart. Please try again.`);
-        });
-        */
+function addDomainToCart(domain, price) {
+    // Show loading state
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    if (addToCartBtn) {
+        addToCartBtn.disabled = true;
+        addToCartBtn.textContent = 'Adding...';
     }
-});
+
+    fetch('/hostcanon/cart/add-domain.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify({
+            domain: domain,
+            price: parseFloat(price),
+            type: 'domain'
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Update cart UI
+            const cartCounter = document.querySelector('.cart-counter');
+            if (cartCounter) {
+                cartCounter.textContent = data.cartCount;
+                cartCounter.style.display = 'block';
+            }
+            
+            // Show success message
+            alert(`${domain} has been added to your cart!`);
+        } else {
+            throw new Error(data.message || 'Failed to add domain to cart');
+        }
+    })
+    .catch(error => {
+        console.error('Error adding to cart:', error);
+        alert(`Error adding ${domain} to cart. Please try again.`);
+    });
+}
